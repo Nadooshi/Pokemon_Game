@@ -1,0 +1,1 @@
+map = trainer_preset
