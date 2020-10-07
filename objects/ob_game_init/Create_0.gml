@@ -305,7 +305,7 @@ enum _ABILITY_STATE {
 globalvar ability_text;
 i=1
 ability_text[i++] = "incineration"  // горение*
-ability_text[i++] = "burn"          // ожог - шрам
+ability_text[i++] = "burn"          // ожог - шрам*
 ability_text[i++] = "bleed"			//*
 ability_text[i++] = "leech"			//*
 ability_text[i++] = "poison"		//*
@@ -334,9 +334,9 @@ ability_text[i++] = "telekinesis"
 ability_text[i++] = "teleport"		
 ability_text[i++] = "meleeup"		//*
 ability_text[i++] = "rangeup"		//*
-ability_text[i++] = "heal"			//
-ability_text[i++] = "medicine"		
-ability_text[i++] = "cure"			
+ability_text[i++] = "heal"			//*
+ability_text[i++] = "medicine"		//
+ability_text[i++] = "cure"			//
 ability_text[i++] = "clear"         // снятие эффектов
 ability_text[i++] = "confidence"    // уверенность
 ability_text[i++] = "reflect"		// рикошет*
@@ -376,6 +376,9 @@ state_object[_ABILITY_STATE.meleeup		] = ob_state_meleeup;
 state_object[_ABILITY_STATE.rangeup		] = ob_state_rangeup;
 state_object[_ABILITY_STATE.reflect		] = ob_state_reflect;
 state_object[_ABILITY_STATE.disgust		] = ob_state_disgust;
+state_object[_ABILITY_STATE.burn		] = ob_state_burn;
+state_object[_ABILITY_STATE.heal		] = ob_state_heal;
+
 
 #endregion
 

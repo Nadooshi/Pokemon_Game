@@ -88,7 +88,7 @@ function sc_deal_damage(argument0, argument1) {
 				var stun_action = ds_map_create()
 				var stun_active = ds_map_create()
 				stun_active[? "name"] = "stun"
-				stun_active[? "state_time"] = ds_map_find_value(_action[? "active"], "state_time")
+				stun_active[? "state_time"] = ds_map_find_value(_action[? "active"], "state_time")  Ошибка! Здесь не должна быть текущая атака _action. Что-то другое.
 				stun_action[? "active"] = stun_active
 				with _pokemon_id_attack
 					sc_apply_state(ob_state_stun, 0, _pokemon_id_attack, stun_action);
