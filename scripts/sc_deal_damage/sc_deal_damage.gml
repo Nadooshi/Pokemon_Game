@@ -15,9 +15,12 @@ function sc_deal_damage(argument0, argument1) {
 	// apply state
 	if ds_exists(states, ds_type_list)
 	if not ds_list_empty(states) {
-		var _list = ds_list_create();
-		for (var i=0; i<ds_list_size(states); i++)
-			_list[| i]=states[| i].object_index
+		var _list = ds_list_create()    // state object indexes
+		var _id_list = ds_list_create() // state object ids
+		for (var i=0; i<ds_list_size(states); i++) {
+			_list[| i] = states[| i].object_index
+			_id_list[| i] = states[| i].id
+		}
 		if ds_list_find_index(_list, state_object[_ABILITY_STATE.block])>=0 {
 			_dmg = 0
 			with instance_create_layer(x, y, "Particles", ob_particle_text)
@@ -80,6 +83,7 @@ function sc_deal_damage(argument0, argument1) {
 			}
 		}
 		if ds_list_find_index(_list, state_object[_ABILITY_STATE.disgust])>=0 {
+			var _k = ds_list_find_index(_list, state_object[_ABILITY_STATE.disgust])
 			switch _action[? "type"] {			
 				case _ATTACK_TYPE.front:
 				case _ATTACK_TYPE.lunge:
@@ -88,7 +92,9 @@ function sc_deal_damage(argument0, argument1) {
 				var stun_action = ds_map_create()
 				var stun_active = ds_map_create()
 				stun_active[? "name"] = "stun"
-				stun_active[? "state_time"] = ds_map_find_value(_action[? "active"], "state_time")  Ошибка! Здесь не должна быть текущая атака _action. Что-то другое.
+				stun_active[? "state"] = _ABILITY_STATE.stun
+				stun_active[? "in_state"] = _ABILITY_STATE.none
+				stun_active[? "state_time"] = _id_list[| _k].hit_count / 2
 				stun_action[? "active"] = stun_active
 				with _pokemon_id_attack
 					sc_apply_state(ob_state_stun, 0, _pokemon_id_attack, stun_action);

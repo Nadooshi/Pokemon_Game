@@ -51,7 +51,7 @@ function sc_apply_state() {
 	
 		if not _ok {
 			with instance_create_layer(x, y, "Particles", ob_particle_text)
-				caption = ability_text[ds_map_find_value(_action[? "active"], "state")] + " failed! (("
+				caption = _action[? "active"][? "name"] + " failed!"
 			exit
 		}
 		// create state instance

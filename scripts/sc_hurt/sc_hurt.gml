@@ -10,7 +10,7 @@ function sc_hurt(argument0) {
 
 	// death
 	if health_cur = 0 
-		event_perform(ev_destroy, 0)
+		event_perform_object(ob_player, ev_destroy, 0)
 	
 
 

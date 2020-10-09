@@ -325,7 +325,7 @@ ability_text[i++] = "disgust"		// отвращение*
 ability_text[i++] = "target"		//*
 ability_text[i++] = "loser"         // неуклюжесть*
 ability_text[i++] = "knockdown"     // отдача. толчок с падением*
-ability_text[i++] = "blast"			//*
+ability_text[i++] = "blast"			// урон с отбрасыванием*
 ability_text[i++] = "revenge"		//*
 ability_text[i++] = "kamikaze"		//*
 ability_text[i++] = "mindcontrol"   // гипноз
@@ -335,10 +335,10 @@ ability_text[i++] = "teleport"
 ability_text[i++] = "meleeup"		//*
 ability_text[i++] = "rangeup"		//*
 ability_text[i++] = "heal"			//*
-ability_text[i++] = "medicine"		//
-ability_text[i++] = "cure"			//
-ability_text[i++] = "clear"         // снятие эффектов
-ability_text[i++] = "confidence"    // уверенность
+ability_text[i++] = "medicine"		//*
+ability_text[i++] = "cure"			//*
+ability_text[i++] = "clear"         // снятие эффектов*
+ability_text[i++] = "confidence"    // уверенность*
 ability_text[i++] = "reflect"		// рикошет*
 ability_text[i++] = "block"			//*
 ability_text[i++] = "dextery"		// уклонение*
@@ -378,6 +378,10 @@ state_object[_ABILITY_STATE.reflect		] = ob_state_reflect;
 state_object[_ABILITY_STATE.disgust		] = ob_state_disgust;
 state_object[_ABILITY_STATE.burn		] = ob_state_burn;
 state_object[_ABILITY_STATE.heal		] = ob_state_heal;
+state_object[_ABILITY_STATE.clear		] = ob_state_clear;
+state_object[_ABILITY_STATE.confidence	] = ob_state_confidance;
+state_object[_ABILITY_STATE.medicine	] = ob_state_medicine;
+state_object[_ABILITY_STATE.cure		] = ob_state_cure;
 
 
 #endregion

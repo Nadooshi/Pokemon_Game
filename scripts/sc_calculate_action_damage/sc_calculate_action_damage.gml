@@ -129,9 +129,9 @@ function sc_calculate_action_damage(argument0, argument1, argument2) {
 		if _abil[? "state"] = _ABILITY_STATE.kamikaze {
 			potential_damage = _p_attack.health_cur
 			with _p_attack
-				sc_hurt(health_cur + 1)
+				sc_hurt(health_cur * 1.1)
 		
-			show_message(string(potential_damage))
+			//show_message(string(potential_damage))
 		}
 		//
 	}

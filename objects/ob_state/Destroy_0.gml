@@ -7,3 +7,4 @@ if i != -1
 for (var  i=0; i<ds_list_size(pokemon_id.states); i++)
 with pokemon_id.states[| i]
 	index = i
+	
