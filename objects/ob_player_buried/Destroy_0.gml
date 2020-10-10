@@ -8,3 +8,6 @@ maxSpeed = o_maxSpeed
 position_stage = _ATTACK_TG.ground
 
 sc_player_stop_set()
+
+if health_cur<=0
+	event_perform_object(ob_player, ev_destroy, 0)

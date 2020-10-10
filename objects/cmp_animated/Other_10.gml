@@ -1,21 +1,13 @@
 /// @desc Init
-var _sp_name = ""
-var _asset = noone
-var _asset_name = ""
-var _props = ""
+var _tags = ""
 
 if sprite_exists(sprite_index) {
-	_sp_name = sprite_get_name(sprite_index)
-	_asset = sprite_index - 1
-	if sprite_exists(_asset) {
-		_asset_name = sprite_get_name(_asset)
-		if string_pos(_sp_name, _asset_name) > 0
-			_props = string_copy(_asset_name, string_pos("___", _asset_name)+3, string_length(_asset_name))
-		p_looped = string_pos("L", _props) > 0
-		p_4dir   = string_pos("4", _props) > 0
-		p_stable = string_pos("S", _props) > 0
-		p_ray	 = string_pos("R", _props) > 0
-	}
+	_tags = string(asset_get_tags(sprite_index, asset_sprite))
+	p_looped = string_pos("loop", _tags) > 0
+	p_4dir   = string_pos("4_dir", _tags) > 0
+	p_stable = string_pos("stab", _tags) > 0
+	p_ray	 = string_pos("ray", _tags) > 0
+	
 	sprite_speed = 1 / (60 / sprite_get_speed(sprite_index)) // 1frame / (60 gamefps / sprite_fps)
 }
 

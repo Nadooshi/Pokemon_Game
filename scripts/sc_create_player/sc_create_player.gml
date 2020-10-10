@@ -42,6 +42,17 @@ function sc_create_player(argument0, argument1) {
 			}
 			ds_list_add(action_list, a_map)
 		}
+		// load passives
+		if not is_undefined(pokemon_map[? "passive_1"])
+		if pokemon_map[? "passive_1"] != "" {
+			passive_state1 = ds_map_create()
+			ds_map_read(passive_state1, ini_read_string("abilities", pokemon_map[? "passive_1"], ""))
+		}
+		if not is_undefined(pokemon_map[? "passive_2"])
+		if pokemon_map[? "passive_2"] != "" {
+			passive_state2 = ds_map_create()
+			ds_map_read(passive_state2, ini_read_string("abilities", pokemon_map[? "passive_2"], ""))
+		}
 		ini_close()
 	
 		// set start position 

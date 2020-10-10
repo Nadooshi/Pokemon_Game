@@ -133,6 +133,9 @@
   },
   "resourceVersion": "1.0",
   "name": "sp_attack_2",
-  "tags": [],
+  "tags": [
+    "4_dir",
+    "loop",
+  ],
   "resourceType": "GMSprite",
 }

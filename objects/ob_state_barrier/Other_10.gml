@@ -10,5 +10,3 @@ var _val = ds_map_find_value(action[? "active"], "state_value");
 pokemon_id.shield += _val
 
 
-
-

@@ -23,7 +23,7 @@ function sc_apply_state() {
 			_st = ds_list_find_value(states, i)
 			if instance_exists(_st) 
 			if _st.name = _name
-				exit
+				return false
 		}
 	
 		// check in_state
@@ -52,7 +52,7 @@ function sc_apply_state() {
 		if not _ok {
 			with instance_create_layer(x, y, "Particles", ob_particle_text)
 				caption = _action[? "active"][? "name"] + " failed!"
-			exit
+			return false
 		}
 		// create state instance
 		var _state_inst = instance_create_layer(x, y, "Particles", _state_obj)
@@ -71,6 +71,6 @@ function sc_apply_state() {
 	
 	}
 
-
+	return true
 
 }

@@ -77,6 +77,8 @@
   },
   "resourceVersion": "1.0",
   "name": "sp_pr_attack_32",
-  "tags": [],
+  "tags": [
+    "ray",
+  ],
   "resourceType": "GMSprite",
 }

@@ -18,6 +18,4 @@ function sc_load_new_pokemon(argument0) {
 
 	return _pokemon
 
-
-
 }

@@ -120,7 +120,7 @@
             {"id":"a8acb942-53b4-45b9-8078-f977d9438f6b","Key":15.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"9a8a22d8-4401-4de5-a5e2-03723b058491","path":"sprites/sp_attack_14/sp_attack_14.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"modifiers":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack",},
     ],
-    "visibleRange": {"x":0.0,"y":0.0,},
+    "visibleRange": null,
     "lockOrigin": false,
     "showBackdrop": true,
     "showBackdropImage": false,
@@ -150,6 +150,8 @@
   },
   "resourceVersion": "1.0",
   "name": "sp_attack_14",
-  "tags": [],
+  "tags": [
+    "4_dir",
+  ],
   "resourceType": "GMSprite",
 }

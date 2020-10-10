@@ -291,6 +291,7 @@
     {"id":{"name":"sp_attack_22___4","path":"sprites/sp_attack_22___4/sp_attack_22___4.yy",},"order":36,},
     {"id":{"name":"sp_attack_22","path":"sprites/sp_attack_22/sp_attack_22.yy",},"order":37,},
     {"id":{"name":"sp_attack_23___4L","path":"sprites/sp_attack_23___4L/sp_attack_23___4L.yy",},"order":38,},
+    {"id":{"name":"sp_biome_aura","path":"sprites/sp_biome_aura/sp_biome_aura.yy",},"order":13,},
     {"id":{"name":"sp_attack_23","path":"sprites/sp_attack_23/sp_attack_23.yy",},"order":39,},
     {"id":{"name":"sp_attack_24___4","path":"sprites/sp_attack_24___4/sp_attack_24___4.yy",},"order":40,},
     {"id":{"name":"sp_pokeworld_88","path":"sprites/sp_pokeworld_88/sp_pokeworld_88.yy",},"order":88,},
@@ -587,7 +588,6 @@
     {"id":{"name":"rm_battle","path":"rooms/rm_battle/rm_battle.yy",},"order":3,},
     {"id":{"name":"rm_endbattle","path":"rooms/rm_endbattle/rm_endbattle.yy",},"order":4,},
     {"id":{"name":"note0","path":"notes/note0/note0.yy",},"order":0,},
-    {"id":{"name":"nt_sprite_properties","path":"notes/nt_sprite_properties/nt_sprite_properties.yy",},"order":1,},
   ],
   "Options": [
     {"name":"Linux","path":"options/linux/options_linux.yy",},

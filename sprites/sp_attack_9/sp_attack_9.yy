@@ -150,6 +150,8 @@
   },
   "resourceVersion": "1.0",
   "name": "sp_attack_9",
-  "tags": [],
+  "tags": [
+    "4_dir",
+  ],
   "resourceType": "GMSprite",
 }

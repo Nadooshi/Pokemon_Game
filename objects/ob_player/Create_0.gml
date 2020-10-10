@@ -73,4 +73,10 @@ position_stage = _ATTACK_TG.ground
 delayed_bullet = ds_list_create()
 states = ds_list_create()
 
+passive_state1 = noone
+passive_state2 = noone
+alarm_set(0,30)
+
+in_biome = ds_list_create()
+
 target = ob_cursor

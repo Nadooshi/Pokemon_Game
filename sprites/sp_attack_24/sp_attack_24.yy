@@ -212,6 +212,8 @@
   },
   "resourceVersion": "1.0",
   "name": "sp_attack_24",
-  "tags": [],
+  "tags": [
+    "4_dir",
+  ],
   "resourceType": "GMSprite",
 }
