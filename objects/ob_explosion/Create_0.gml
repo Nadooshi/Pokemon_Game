@@ -6,3 +6,4 @@ d_alpha = 0.025
 phase = 0
 init_image_index = image_index
 init_sprite_index = sprite_index
+play_sound = true

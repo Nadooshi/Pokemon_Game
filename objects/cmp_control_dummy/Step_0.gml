@@ -3,7 +3,7 @@
 if not canMove
 	exit
 
-array_copy(keys_before, 0, keys, 0, array_length_1d(keys))
+array_copy(keys_before, 0, keys, 0, array_length(keys))
 prev_doMove = doMove
 
 target = sc_find_nearest_target(id)

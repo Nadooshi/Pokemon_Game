@@ -43,3 +43,5 @@ if attack_warmup > 0 {
 		doActionNum = -1
 	}
 }
+
+

@@ -179,9 +179,6 @@ function sc_player_attack_set() {
 		sprite_index = asset_get_index(_a_map[? "anim"])
 		image_blend = sc_make_attack_colour(_a_map)
 	}
-
-
-
-
-
 }
+
+

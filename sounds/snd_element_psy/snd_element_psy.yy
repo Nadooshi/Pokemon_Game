@@ -10,8 +10,8 @@
     "name": "audiogroup_default",
     "path": "audiogroups/audiogroup_default",
   },
-  "soundFile": "snd_element_psy",
-  "duration": 1.70876408,
+  "soundFile": "snd_element_psy.wav",
+  "duration": 1.359014,
   "parent": {
     "name": "Attack_Elements",
     "path": "folders/Sounds/Attack_Elements.yy",

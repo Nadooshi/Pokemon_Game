@@ -10,8 +10,8 @@
     "name": "audiogroup_default",
     "path": "audiogroups/audiogroup_default",
   },
-  "soundFile": "snd_element_ground",
-  "duration": 1.077472,
+  "soundFile": "snd_element_ground.wav",
+  "duration": 1.11534,
   "parent": {
     "name": "Attack_Elements",
     "path": "folders/Sounds/Attack_Elements.yy",

@@ -87,15 +87,15 @@
     {"compositeImage":{"FrameId":{"name":"bad05da8-7e31-4c29-931a-5118c345cafc","path":"sprites/sp_poke_dead/sp_poke_dead.yy",},"LayerId":null,"resourceVersion":"1.0","name":"composite","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
         {"FrameId":{"name":"bad05da8-7e31-4c29-931a-5118c345cafc","path":"sprites/sp_poke_dead/sp_poke_dead.yy",},"LayerId":{"name":"23327909-aaf2-45e1-8f87-76438d349178","path":"sprites/sp_poke_dead/sp_poke_dead.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
       ],"parent":{"name":"sp_poke_dead","path":"sprites/sp_poke_dead/sp_poke_dead.yy",},"resourceVersion":"1.0","name":"bad05da8-7e31-4c29-931a-5118c345cafc","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"594bb14d-2457-4532-a591-2aa2bf394ae2","path":"sprites/sp_poke_dead/sp_poke_dead.yy",},"LayerId":null,"resourceVersion":"1.0","name":"composite","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"594bb14d-2457-4532-a591-2aa2bf394ae2","path":"sprites/sp_poke_dead/sp_poke_dead.yy",},"LayerId":{"name":"23327909-aaf2-45e1-8f87-76438d349178","path":"sprites/sp_poke_dead/sp_poke_dead.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sp_poke_dead","path":"sprites/sp_poke_dead/sp_poke_dead.yy",},"resourceVersion":"1.0","name":"594bb14d-2457-4532-a591-2aa2bf394ae2","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"f677e692-e7bd-4171-b795-d34daa083981","path":"sprites/sp_poke_dead/sp_poke_dead.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"f677e692-e7bd-4171-b795-d34daa083981","path":"sprites/sp_poke_dead/sp_poke_dead.yy",},"LayerId":{"name":"23327909-aaf2-45e1-8f87-76438d349178","path":"sprites/sp_poke_dead/sp_poke_dead.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"sp_poke_dead","path":"sprites/sp_poke_dead/sp_poke_dead.yy",},"resourceVersion":"1.0","name":"f677e692-e7bd-4171-b795-d34daa083981","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
     "spriteId": {"name":"sp_poke_dead","path":"sprites/sp_poke_dead/sp_poke_dead.yy",},
     "timeUnits": 1,
     "playback": 1,
-    "playbackSpeed": 10.0,
+    "playbackSpeed": 7.0,
     "playbackSpeedType": 0,
     "autoRecord": true,
     "volume": 1.0,
@@ -125,10 +125,10 @@
             {"id":"539841b0-ead6-48a1-8174-50a816fb84b1","Key":18.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"02b4682b-cf0e-417c-b103-208f02e414e8","path":"sprites/sp_poke_dead/sp_poke_dead.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"e07c73cb-e03e-4875-9730-95f98ce0c893","Key":19.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"4e1907ce-66d5-46ab-9a63-2c653cd89924","path":"sprites/sp_poke_dead/sp_poke_dead.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"3885e559-2c4a-459c-9d17-9f78ecbc2dc9","Key":20.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"bad05da8-7e31-4c29-931a-5118c345cafc","path":"sprites/sp_poke_dead/sp_poke_dead.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-            {"id":"c89f5647-0d34-4ee3-8a83-6ff0d33bb756","Key":21.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"594bb14d-2457-4532-a591-2aa2bf394ae2","path":"sprites/sp_poke_dead/sp_poke_dead.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"014826cc-30fb-4bd6-a50d-b9a62e726f9c","Key":21.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"f677e692-e7bd-4171-b795-d34daa083981","path":"sprites/sp_poke_dead/sp_poke_dead.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"modifiers":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack",},
     ],
-    "visibleRange": {"x":0.0,"y":0.0,},
+    "visibleRange": null,
     "lockOrigin": false,
     "showBackdrop": true,
     "showBackdropImage": false,
