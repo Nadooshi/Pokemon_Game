@@ -482,6 +482,7 @@
     {"id":{"name":"ob_frame_trainer","path":"objects/ob_frame_trainer/ob_frame_trainer.yy",},"order":5,},
     {"id":{"name":"ob_slot_icon","path":"objects/ob_slot_icon/ob_slot_icon.yy",},"order":1,},
     {"id":{"name":"ob_slot_icon_preview","path":"objects/ob_slot_icon_preview/ob_slot_icon_preview.yy",},"order":6,},
+    {"id":{"name":"ob_state_kamikaze","path":"objects/ob_state_kamikaze/ob_state_kamikaze.yy",},"order":33,},
     {"id":{"name":"ob_button_edit_trainer","path":"objects/ob_button_edit_trainer/ob_button_edit_trainer.yy",},"order":7,},
     {"id":{"name":"ob_frame_trainer_1","path":"objects/ob_frame_trainer_1/ob_frame_trainer_1.yy",},"order":8,},
     {"id":{"name":"ob_frame_trainer_2","path":"objects/ob_frame_trainer_2/ob_frame_trainer_2.yy",},"order":9,},
