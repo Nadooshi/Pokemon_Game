@@ -5,7 +5,7 @@ sc_composed_add_component(cmp_collidable_hazard)
 event_inherited();
 
 depth = (room_height - bbox_top) * 0.5
-tiles = 0   // tiles array
+tiles = []
 tiles_count = 0
 var tiles_id = layer_tilemap_get_id("Tiles_Debris")
 tileset = tilemap_get_tileset(tiles_id)

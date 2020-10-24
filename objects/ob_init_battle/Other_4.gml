@@ -3,14 +3,16 @@
 var _start_area = instance_find(ob_start_area, 0)
 
 var _list = player1_trainer[? "active_pokemon_list"]
+player1_trainer[? "pokemon_ids"] = ds_list_create()
 for (var i=0; i<ds_list_size(_list); i++) 
 with sc_create_player(_list[| i], player1_trainer) {
 	while not place_meeting(x, y, ob_start_area) {
 		x = _start_area.bbox_left + random(_start_area.bbox_right  - _start_area.bbox_left)
 		y = _start_area.bbox_top  + random(_start_area.bbox_bottom - _start_area.bbox_top )
 	}
-//	sc_composed_add_component(cmp_control_keyb, true)
-	sc_composed_add_component(cmp_control_path, true)
+	sc_composed_add_component(cmp_control_keyb, true)
+//	sc_composed_add_component(cmp_control_path, true)
+//	sc_composed_add_component(cmp_control_dummy, true)
 
 	// set pokemon id for ob_pokeface
 	with ob_ui_pokeface_1
@@ -18,11 +20,13 @@ with sc_create_player(_list[| i], player1_trainer) {
 		pokemon_id = other.id
 		break	
 	}
+	ds_list_add(player1_trainer[? "pokemon_ids"], id)
 }
 
 var _start_area = instance_find(ob_start_area, 1)
 
 var _list = player2_trainer[? "active_pokemon_list"]
+player2_trainer[? "pokemon_ids"] = ds_list_create()
 for (var i=0; i<ds_list_size(_list); i++) 
 with sc_create_player(_list[| i], player2_trainer) {
 	while not place_meeting(x, y, ob_start_area) {
@@ -31,7 +35,7 @@ with sc_create_player(_list[| i], player2_trainer) {
 	}
 	
 //=================================================================	
-	sc_composed_add_component(cmp_control_path, true) // AI control
+	sc_composed_add_component(cmp_control_dummy, true)
 //=================================================================	
 
 	// set pokemon id for ob_pokeface
@@ -40,6 +44,7 @@ with sc_create_player(_list[| i], player2_trainer) {
 		pokemon_id = other.id
 		break	
 	}
+	ds_list_add(player2_trainer[? "pokemon_ids"], id)
 }
 
 with ob_ui_pokeface_1 

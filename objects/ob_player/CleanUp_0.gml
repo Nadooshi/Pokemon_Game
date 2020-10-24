@@ -18,3 +18,4 @@ ds_list_destroy(action_list)
 ds_list_destroy(delayed_bullet)
 
 ds_list_destroy(states)
+ds_list_destroy(in_biome)

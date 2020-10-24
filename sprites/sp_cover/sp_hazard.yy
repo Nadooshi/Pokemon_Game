@@ -60,7 +60,7 @@
     "eventStubScript": null,
     "parent": {"name":"sp_hazard","path":"sprites/sp_hazard/sp_hazard.yy",},
     "resourceVersion": "1.3",
-    "name": "sp_hazard",
+    "name": "",
     "tags": [],
     "resourceType": "GMSequence",
   },

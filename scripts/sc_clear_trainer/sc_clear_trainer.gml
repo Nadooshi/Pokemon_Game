@@ -19,6 +19,10 @@ function sc_clear_trainer(argument0) {
 		if ds_exists(_map[? "awards"], ds_type_list)
 			ds_list_destroy(_map[? "awards"])
 		
+		if not is_undefined(_map[? "pokemon_ids"])
+		if ds_exists(_map[? "pokemon_ids"], ds_type_list)
+			ds_list_destroy(_map[? "pokemon_ids"])
+		
 		ds_map_destroy(_map)
 	}
 

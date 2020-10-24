@@ -2,6 +2,7 @@
 
 event_inherited()
 
+ds_list_delete(trainer[? "pokemon_ids"], ds_list_find_index(trainer[? "pokemon_ids"], id))
 
 with instance_create_depth(x, y, depth, ob_explosion) {
 	sprite_index = other.sprite_index
@@ -21,3 +22,4 @@ if sc_does_exist(passive_state1)
 if sc_does_exist(passive_state2)
 	ds_map_destroy(passive_state2)
 instance_deactivate_object(id)
+
