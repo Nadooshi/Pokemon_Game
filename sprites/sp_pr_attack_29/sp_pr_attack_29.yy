@@ -7,9 +7,9 @@
   "edgeFiltering": false,
   "collisionTolerance": 0,
   "swfPrecision": 2.525,
-  "bbox_left": 0,
+  "bbox_left": 4,
   "bbox_right": 11,
-  "bbox_top": 0,
+  "bbox_top": 1,
   "bbox_bottom": 14,
   "HTile": false,
   "VTile": false,
@@ -60,7 +60,7 @@
             {"id":"2f448909-aec1-40ab-b073-658a534c47f3","Key":3.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"d67a7f18-557d-4cee-a2b0-b61dd14a509b","path":"sprites/sp_pr_attack_29/sp_pr_attack_29.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"modifiers":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack",},
     ],
-    "visibleRange": {"x":0.0,"y":0.0,},
+    "visibleRange": null,
     "lockOrigin": false,
     "showBackdrop": true,
     "showBackdropImage": false,
@@ -92,6 +92,7 @@
   "name": "sp_pr_attack_29",
   "tags": [
     "stab",
+    "loop",
   ],
   "resourceType": "GMSprite",
 }

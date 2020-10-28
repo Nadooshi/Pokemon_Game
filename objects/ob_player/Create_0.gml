@@ -17,8 +17,10 @@ pokemon_map = ds_map_create()
 action_list = ds_list_create()
 
 doMove = false
-doActionNum = -1
 canMove = true
+accel = 0
+
+doActionNum = -1
 
 dirframe[d.Right] = 0
 dirframe[d.Up   ] = 2

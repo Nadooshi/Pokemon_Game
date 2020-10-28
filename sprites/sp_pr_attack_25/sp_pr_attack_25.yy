@@ -92,6 +92,7 @@
   "name": "sp_pr_attack_25",
   "tags": [
     "stab",
+    "loop",
   ],
   "resourceType": "GMSprite",
 }

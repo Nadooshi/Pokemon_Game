@@ -60,7 +60,7 @@
             {"id":"9e87b534-349b-4a38-aed7-ed36f1babee3","Key":3.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"c7fb4af3-7920-4cf0-b165-966b34be5f8b","path":"sprites/sp_pr_attack_19/sp_pr_attack_19.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"modifiers":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack",},
     ],
-    "visibleRange": {"x":0.0,"y":0.0,},
+    "visibleRange": null,
     "lockOrigin": false,
     "showBackdrop": true,
     "showBackdropImage": false,
@@ -91,7 +91,8 @@
   "resourceVersion": "1.0",
   "name": "sp_pr_attack_19",
   "tags": [
-    "nolp",
+    "stab",
+    "loop",
   ],
   "resourceType": "GMSprite",
 }

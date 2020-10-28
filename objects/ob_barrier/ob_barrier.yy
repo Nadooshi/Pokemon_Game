@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "sp_hazard",
-    "path": "sprites/sp_hazard/sp_hazard.yy",
+    "name": "sp_pr_attack_19",
+    "path": "sprites/sp_pr_attack_19/sp_pr_attack_19.yy",
   },
   "solid": false,
   "visible": true,

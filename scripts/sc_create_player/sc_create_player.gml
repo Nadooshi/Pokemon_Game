@@ -6,7 +6,8 @@ function sc_create_player(argument0, argument1) {
 	var _trainer = argument1
 	var _result = noone
 	var _sp = noone
-
+	var _acc = [0.3 , 0.1, 0.05 ,0.01]
+	
 	with instance_create_layer(0, 0, "Game", ob_player) {
 		// create pokemon
 		_result = id
@@ -17,6 +18,7 @@ function sc_create_player(argument0, argument1) {
 		health_max = pokemon_map[? "health"]
 		health_cur = health_max
 		maxSpeed =  pokemon_map[? "ap"] * 0.25
+		accel = _acc[size]
 		_sp = asset_get_index("sp_pokeworld_" + string(pokemon_map[? "face"]))
 		if sprite_exists(_sp)
 			sprite_index = _sp

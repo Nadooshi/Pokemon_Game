@@ -91,7 +91,8 @@
   "resourceVersion": "1.0",
   "name": "sp_pr_attack_20",
   "tags": [
-    "nolp",
+    "stab",
+    "loop",
   ],
   "resourceType": "GMSprite",
 }

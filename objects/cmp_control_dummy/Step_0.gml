@@ -3,14 +3,14 @@
 if not canMove
 	exit
 
-array_copy(keys_before, 0, keys, 0, array_length(keys))
+
 prev_doMove = doMove
 
 target = sc_find_nearest_target(id)
 var _target_d = 0
 if sc_does_exist(target) {
 	_target_d = distance_to_point(target.x, target.y)
-	direction = point_direction(x, y, target.x, target.y)
+	tgAngle = point_direction(x, y, target.x, target.y)
 	if _target_d > 16 // 16
 		sc_player_move_set()
 	else 

@@ -90,6 +90,9 @@
   },
   "resourceVersion": "1.0",
   "name": "sp_pr_attack_21",
-  "tags": [],
+  "tags": [
+    "stab",
+    "loop",
+  ],
   "resourceType": "GMSprite",
 }
