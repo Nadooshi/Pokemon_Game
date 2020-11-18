@@ -27,3 +27,56 @@ ability in copied action of other objects is destroyed... This causes a crash
 	[ DONE! ]
 	
 
+28.10.20
+	sc_deal_damage
+		- перенести гору условий в соответствующие ob_states.
+		[ DONE! ]
+		- в	этом скрипте используется sc_calcualte_damage, откуда тоже надо вытащить код, связанный со статами
+		
+	Добавить в структуру ob_state:
+	events:
+		- before applying (условия из sc_deal_damage)	(OnApply event)
+			  значит ob_state должен быть создан заранее (?) и изначально деактивирован.
+			  Активируется если в before applying все условия выполнены
+		- other state is being applied					(OnOtherApply event) (OnCheckConflict)
+			  часто в before applying (OnApply) стат должен проверить уже наложенные статы на совместимость
+			  (not hardcoded!). Накладываемый стат производит эту проверку через вызов у них этого события.
+	properties:
+		- activated (bool)
+			
+	ob_player
+		//damage_mod				// умножение в sc_calculate_action_damage
+		//range_damage_mod = 1		// превращается в damage_mod в sc_player_attack_set
+		//melee_damage_mod = 1		// -----//------
+		//speed_mod = 0				// прибавление в sc_player_move_set
+		//accuracy_mod = 0			//прибавление в sc_check_accuracy
+		//dodge_mod = 0				//прибавление в sc_check_accuracy
+		Когда добавляли ob_state, не нужно было затрагивать структуру ob_pokemon!
+		Изменять значения должны ob_states. У ob_player каждое событие, происходящее с ним должно 
+		перехватываться наложенными статами...
+			- Движение
+			- Получение урона
+			- Нанесение урона
+		
+	ob_bullet (, ob_attack, ob_damage_area)
+		ev_destroy
+		Снаряд при столкновении не уничтожается	сразу и потом применяет нужный стат, а, до уничтожения,
+		решение о дальнейших действиях принимается с участием кода в имеющихся на тот момент ob_state
+		у цели и у снаряда, и ob_bullet (ob_attack, ob_damage_area). Это необходимо, так как каждый тип атаки
+		ведет себя по-разному например при reflect.
+
+
+31.10.20
+	ob_particle_text
+		- возможна множественная генерация вылетающих сообщений одновременно, например при уроне. 
+		Cделать вылетание в разных направлениях
+		
+	(ob_ui_pokeface)
+	ob_bar_shield
+		- добавить
+		- исчезает при shield = 0 
+		
+	(ob_ui_pokeface)
+	ob_bar
+		- при первом появлении в него записывается изначальное значение как максимальное
+

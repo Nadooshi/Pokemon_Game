@@ -1,5 +1,5 @@
 /// @desc apply passive state
-
+//STAT
 if sc_does_exist(passive_state2) {
 	var _state_obj = state_object[passive_state2[? "state"]];
 	if not object_exists(_state_obj) {
@@ -28,11 +28,10 @@ if sc_does_exist(passive_state2) {
 			_ok = sc_apply_state(_state_obj, 0, id, p_action)
 			ds_map_destroy(p_action)
 		}
-		if _ok {
-			alarm_set(1, (passive_state2[? "state_time"] + passive_state2[? "state_cooldown"]) * 60)
-			alarm_set(0, 30)
-		} else
-			alarm_set(1,30)
+		if _ok
+			alarm_set(0, max(alarm_get(0), 30))
+			
+		alarm_set(1, (passive_state2[? "state_time"] + passive_state2[? "state_cooldown"]) * 60)
 	}
 }
 

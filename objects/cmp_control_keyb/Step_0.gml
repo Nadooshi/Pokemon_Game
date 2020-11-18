@@ -67,3 +67,7 @@ if canMove {
 		event_perform(ev_other, ev_user4)
 }
 
+// suicide
+if keys[k.Suicide]
+	sc_hurt(health_cur)
+

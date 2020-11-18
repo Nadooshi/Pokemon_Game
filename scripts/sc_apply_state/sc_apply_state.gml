@@ -25,35 +25,10 @@ function sc_apply_state() {
 			if _st.name = _name
 				return false
 		}
-	
-		// check in_state
-		var _ins_sign  = ds_map_find_value(_action[? "active"], "in_state_sign")
-		var _ins_state = ds_map_find_value(_action[? "active"], "in_state")
-		var _ok = true
-	
-		if _ins_state != _ABILITY_STATE.none
-		for (var i=0; i<ds_list_size(states); i++) {
-			_st = ds_list_find_value(states, i)
-			if instance_exists(_st)
-			if _ins_sign = 0 {  // only if no in_state
-				if _st.image_index = _ins_state {
-					_ok = false
-					break
-				}
-			} else  // only if in_state present
-			if _st.image_index = _ins_state {
-				_ok = true
-				break
-			} else
-				_ok = false
-		
-		}	
-	
-		if not _ok {
-			with instance_create_layer(x, y, "Particles", ob_particle_text)
-				caption = _action[? "active"][? "name"] + " failed!"
+
+		if not sc_state_check_compatible(_action)
 			return false
-		}
+	
 		// create state instance
 		var _state_inst = instance_create_layer(x, y, "Particles", _state_obj)
 		with _state_inst {

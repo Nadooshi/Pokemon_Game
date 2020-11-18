@@ -1,7 +1,7 @@
 /// @desc Deal damage
 
 with pokemon_id {
-	if damage_mod > 0.5 // half all state in stun
+	if damage_mod > 0.5
 		damage_mod = 0.5
 	speed_mod = maxSpeed * -0.5
 	if moveSpeed > 0
@@ -10,7 +10,7 @@ with pokemon_id {
 		dodge_mod = 0.5
 	if accuracy_mod > -0.5
 		accuracy_mod = -0.5
-	power_reg = 0.1 // 0.3
+	power_reg = min(power_reg, 0.1) // 0.3
 }
 
 alarm[0] = period;

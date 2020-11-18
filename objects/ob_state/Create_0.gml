@@ -11,3 +11,7 @@ name = ""
 
 image_xscale = 0.10
 image_yscale = 0.10
+
+// state events
+onDamage = noone
+

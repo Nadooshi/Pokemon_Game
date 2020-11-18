@@ -1,5 +1,6 @@
 /// @desc 
 
+// switch selection
 var _i = keyboard_key-49
 if not (_i>=0 and _i<=5) exit
 
@@ -16,6 +17,5 @@ if sc_does_exist(list[| _i]) {
 		}
 	}	
 }
-
 
  

@@ -53,7 +53,7 @@ function sc_calculate_action_damage(argument0, argument1, argument2) {
 	result = potential_damage // previously
 		//show_message("Clear damage: " + string(_debug_val) + " modify: " + string(_p_attack.damage_mod) + " result: " + string(result))
 
-	// apply state x2,x3,x4
+	//STAT apply state x2,x3,x4
 	var _mlt = 1
 	var _mlt_rate = 0
 	var _r_ = 0
@@ -101,7 +101,7 @@ function sc_calculate_action_damage(argument0, argument1, argument2) {
 			}
 		}
 	}
-	//-----------------------------------------------------
+	//STAT -----------------------------------------------------
 	if sc_does_exist(_abil) {
 		// apply state 'random damage'
 		if _abil[? "state"] = _ABILITY_STATE.random_x {
