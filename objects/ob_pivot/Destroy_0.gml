@@ -11,3 +11,4 @@ with instance_create_layer(x, y, "Particles", ob_damage_area) {
 	timeout = 1
 }
 
+

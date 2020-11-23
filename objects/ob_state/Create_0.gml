@@ -13,5 +13,6 @@ image_xscale = 0.10
 image_yscale = 0.10
 
 // state events
-onDamage = noone
+onDamage = noone	// when pokemon is getting damaged
+onAttack = noone	// when pokemon creates attacks
 

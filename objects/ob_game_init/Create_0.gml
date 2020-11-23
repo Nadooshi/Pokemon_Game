@@ -198,8 +198,10 @@ enum _ATTACK_TYPE {
 	wave,
 	barrier,
 	ray,
-	swoop
+	swoop,
+	pivot		// technical (no state reaction)
 }
+
 globalvar attack_type_text
 var i=0
 attack_type_text[i++] = "melee"

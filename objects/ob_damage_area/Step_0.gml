@@ -9,6 +9,7 @@ ds_list_clear(just_damaged) // list to be damaged
 var _action = action
 var _damage_area = id
 var _ok = true
+
 _action[? "lastX"] = x
 _action[? "lastY"] = y
 _action[? "dir"] = direction
@@ -27,6 +28,29 @@ if ds_list_find_index(other.last_damaged, id) = -1 {
 		if sc_check_affect(other.pokemon_id, id, _action[? "affect"]) 
 		if sc_check_accuracy(other.id, id, _action) 
 			ds_list_add(other.just_damaged, id)
+	}
+}
+
+for (var i=0; i<ds_list_size(just_damaged); i++)
+	ds_list_add(last_damaged, just_damaged[| i])
+	
+// do chain damage
+if ds_list_size(just_damaged) > 0
+if _action[? "bullet_phys"] = _BULLET_PH.chain {
+	chain_dmg_target = sc_chain_damage()
+	if sc_does_exist(chain_dmg_target) {
+		with instance_create_layer(chain_dmg_target.x, chain_dmg_target.y, "Particles", ob_pivot) {
+			ds_map_copy(action, other.action)
+			action[? "type"] = _ATTACK_TYPE.pivot
+			action[? "range"] *= 0.5
+			pokemon_id = other.pokemon_id
+			hurt_time = other.hurt_time
+			timeout = 1
+		}
+	//	show_message(
+	//		pokemon_id.pokemon_map[? "title"] + " does chain damage to " +
+	//		chain_dmg_target.pokemon_map[? "title"]
+	//	)
 	}
 }
 
@@ -70,9 +94,7 @@ with just_damaged[| i] {
 	}
 }
 
-for (var i=0; i<ds_list_size(just_damaged); i++)
-	ds_list_add(last_damaged, just_damaged[| i])
-
+	
 if timeout>0 {
 	timeout--
 	if timeout<=0 

@@ -17,5 +17,5 @@ image_xscale = 1.5
 image_yscale = 1.5
 
 size = _SIZE.tiny  // for size of collision area
-list_missed = ds_list_create()
-accuracy_done_for = noone
+list_missed = ds_list_create()  // ids accuracy failed for
+accuracy_done_for = noone		// id accuracy succeed for

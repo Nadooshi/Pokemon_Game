@@ -1,4 +1,4 @@
-/// @desc After collision
+/// @desc After collision (from step)
 
 event_inherited()
 

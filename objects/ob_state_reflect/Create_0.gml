@@ -47,6 +47,7 @@ onDamage = function (_dmg, _damaged_player_id, _action) {
 				}
 				break;
 			}
+/*
 			case _ATTACK_TYPE.wave:{
 				with instance_create_layer(x, y+9, "Particles", ob_bullet_wave) {
 					ds_map_copy(action, _action)
@@ -55,6 +56,7 @@ onDamage = function (_dmg, _damaged_player_id, _action) {
 					timeout = 30 * 0.1 * _action[? "range"]
 					damage_mod = other.damage_mod
 					accuracy_mod = other.accuracy_mod
+					ds_list_add(list_missed, _damaged_player_id)	// prevent repeating reflect
 					direction = 180 - _action[? "dir"]
 					image_angle = direction
 					sprite_index = asset_get_index(_action[? "p_anim"])
@@ -62,11 +64,12 @@ onDamage = function (_dmg, _damaged_player_id, _action) {
 					if _action[? "range"] = 0
 						d_size = 0
 					else
-						d_size = ((_action[? "radius"]) / timeout)					
+						d_size = ((_action[? "radius"]) / timeout)
 				}
 				break;
 			}
+*/
 		}
-	}			
+	}
 	return _dmg	
 }

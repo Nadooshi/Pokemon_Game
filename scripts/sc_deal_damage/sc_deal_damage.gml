@@ -8,10 +8,6 @@ function sc_deal_damage(argument0, argument1) {
 	var _pokemon_id_attack = argument1
 	var _dmg = sc_calculate_action_damage(_action, pokemon_map, _pokemon_id_attack)
 
-	if _action[? "bullet_phys"] = _BULLET_PH.chain
-	with other
-		chain_dmg_target = sc_chain_damage()
-
 	//STAT pokemon states react on damage
 	if ds_exists(states, ds_type_list)
 	if not ds_list_empty(states) {

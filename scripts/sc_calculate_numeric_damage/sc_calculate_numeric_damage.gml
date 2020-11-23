@@ -24,9 +24,11 @@ function sc_calculate_numeric_damage(argument0, argument1, argument2, argument3)
 		var _table_entry = _p_target_elem[_pe]
 		for (var _ae = 0; _ae < 2; _ae++) {
 			var _c_ = 1
-			_c_ *= (_table_entry[0] == _elem_action[_ae]) ? 0.5 : 1
-			_c_ *= (_table_entry[1] == _elem_action[_ae]) ? 2 : 1
-			_c_ *= (_table_entry[2] == _elem_action[_ae]) ? 2 : 1
+			if array_length(_table_entry)=3 {
+				_c_ *= (_table_entry[0] == _elem_action[_ae]) ? 0.5 : 1
+				_c_ *= (_table_entry[1] == _elem_action[_ae]) ? 2 : 1
+				_c_ *= (_table_entry[2] == _elem_action[_ae]) ? 2 : 1
+			}
 			_coeff += _c_
 		}
 	}

@@ -3,6 +3,7 @@
 event_inherited()
 if sc_does_exist(action)
 if not is_undefined(action[? "active"])
+// STAT
 if ds_map_find_value(action[? "active"], "state") = _ABILITY_STATE.blast {
 	var _rad = ds_map_find_value(action[? "active"], "state_time")
 	with instance_create_layer(x, y, "Particles", ob_damage_area) {

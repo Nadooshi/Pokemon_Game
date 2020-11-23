@@ -35,9 +35,11 @@ function sc_calculate_action_damage(argument0, argument1, argument2) {
 		var _table_entry = _p_target_elem[_pe]
 		for (var _ae = 0; _ae < 2; _ae++) {
 			var _dmg_coeff = 1
-			_dmg_coeff *= (_table_entry[0] == _elem_action[_ae]) ? 0.5 : 1
-			_dmg_coeff *= (_table_entry[1] == _elem_action[_ae]) ? 2 : 1
-			_dmg_coeff *= (_table_entry[2] == _elem_action[_ae]) ? 2 : 1
+			if array_length(_table_entry)=3 {
+				_dmg_coeff *= (_table_entry[0] == _elem_action[_ae]) ? 0.5 : 1
+				_dmg_coeff *= (_table_entry[1] == _elem_action[_ae]) ? 2 : 1
+				_dmg_coeff *= (_table_entry[2] == _elem_action[_ae]) ? 2 : 1
+			}
 			_dmg[_pe, _ae] = _dmg[_pe, _ae] * _dmg_coeff
 		}
 	}
@@ -126,8 +128,6 @@ function sc_calculate_action_damage(argument0, argument1, argument2) {
 			potential_damage = _p_attack.health_max - _p_attack.health_cur
 			show_message(string(potential_damage))
 		}
-		if _abil[? "state"] = _ABILITY_STATE.kamikaze 
-			potential_damage = _p_attack.health_cur		
 	}
 	//-----------------------------------------------------
 

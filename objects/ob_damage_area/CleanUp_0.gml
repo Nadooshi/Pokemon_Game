@@ -6,4 +6,4 @@ ds_list_destroy(just_damaged)
 
 ds_map_destroy(action)
 
-show_debug_message(object_get_name(object_index)+ " (" + string(id)+") has been cleaned up");
+//show_debug_message(object_get_name(object_index)+ " (" + string(id)+") has been cleaned up");
