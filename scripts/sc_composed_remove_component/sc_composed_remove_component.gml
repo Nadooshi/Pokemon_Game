@@ -10,12 +10,13 @@ function sc_composed_remove_component() {
 	if not object_exists(_cmp)
 		exit
 
-	ds_list_delete(component_list, ds_list_find_index(component_list, _cmp))
-	component_count = ds_list_size(component_list)
-
-	if _event
-		event_perform_object(_cmp, ev_destroy, 0)
-
+	var _cmp_index = ds_list_find_index(component_list, _cmp)
+	if _cmp_index != -1 {
+		ds_list_delete(component_list, _cmp_index)
+		component_count = ds_list_size(component_list)
+		if _event
+			event_perform_object(_cmp, ev_destroy, 0)
+	}
 
 
 }

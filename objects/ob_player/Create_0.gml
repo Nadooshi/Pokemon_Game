@@ -59,6 +59,7 @@ health_reg = 0.5
 hurt_cur = 0
 hurt_reg = 0.5
 
+
 shield = 0 // for barrier state
 
 attack_warmup = 0   // sec
@@ -68,6 +69,7 @@ melee_damage_mod = 1 // -----//------
 speed_mod = 0 // прибавление в sc_player_move_set
 accuracy_mod = 0 //прибавление в sc_check_accuracy
 dodge_mod = 0 //прибавление в sc_check_accuracy
+parry_mod = 1
 
 trainer = noone
 position_stage = _ATTACK_TG.ground

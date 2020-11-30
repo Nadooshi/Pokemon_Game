@@ -6,9 +6,4 @@ var _t = ds_map_find_value(action[? "active"], "state_time");
 hit_count = _t * 2
 
 alarm[0] = period;
-
-with pokemon_id_attack
-	sc_hurt(other.damage)
-
-
-
+modify = 1 - (ds_map_find_value(action[? "active"], "state_value") *0.01)

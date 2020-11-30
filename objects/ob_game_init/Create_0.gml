@@ -385,6 +385,7 @@ state_object[_ABILITY_STATE.confidence	] = ob_state_confidance;
 state_object[_ABILITY_STATE.medicine	] = ob_state_medicine;
 state_object[_ABILITY_STATE.cure		] = ob_state_cure;
 state_object[_ABILITY_STATE.kamikaze	] = ob_state_kamikaze;
+state_object[_ABILITY_STATE.lulling		] = ob_state_lulling;
 
 
 #endregion

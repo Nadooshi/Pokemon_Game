@@ -31,7 +31,6 @@
     {"isDnD":false,"eventNum":14,"eventType":7,"collisionObjectId":null,"parent":{"name":"ob_player_buried","path":"objects/ob_player_buried/ob_player_buried.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
     {"isDnD":false,"eventNum":0,"eventType":1,"collisionObjectId":null,"parent":{"name":"ob_player_buried","path":"objects/ob_player_buried/ob_player_buried.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
     {"isDnD":false,"eventNum":0,"eventType":3,"collisionObjectId":null,"parent":{"name":"ob_player_buried","path":"objects/ob_player_buried/ob_player_buried.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
-    {"isDnD":false,"eventNum":16,"eventType":7,"collisionObjectId":null,"parent":{"name":"ob_player_buried","path":"objects/ob_player_buried/ob_player_buried.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
   ],
   "properties": [],
   "overriddenProperties": [],
