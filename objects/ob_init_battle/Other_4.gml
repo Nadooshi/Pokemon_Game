@@ -11,7 +11,7 @@ with sc_create_player(_list[| i], player1_trainer) {
 		y = _start_area.bbox_top  + random(_start_area.bbox_bottom - _start_area.bbox_top )
 	}
 //=================================================================	
-	sc_composed_add_component(cmp_control_keyb, true)
+	sc_composed_add_component(cmp_control_dummy, true)
 //=================================================================	
 
 	// set pokemon id for ob_pokeface
@@ -35,7 +35,7 @@ with sc_create_player(_list[| i], player2_trainer) {
 	}
 	
 //=================================================================	
-//	sc_composed_add_component(cmp_control_dummy, true) // AI control
+	sc_composed_add_component(cmp_control_dummy, true) // AI control
 //=================================================================	
 
 	// set pokemon id for ob_pokeface

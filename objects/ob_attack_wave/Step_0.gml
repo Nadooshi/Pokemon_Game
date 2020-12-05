@@ -19,7 +19,7 @@ if not shot_done {
 	bullet.image_angle = bullet.direction
 	bullet.sprite_index = asset_get_index(action[? "p_anim"])
 	bullet.image_blend = sc_make_attack_colour(action)
-	if action[? "range"] = 0
+	if action[? "radius"] = 0
 		bullet.d_size = 0
 	else
 		bullet.d_size = ((action[? "radius"] * 2) / bullet.timeout)

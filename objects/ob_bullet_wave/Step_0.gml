@@ -27,7 +27,7 @@ if action[? "bullet_phys"] != _BULLET_PH.piercer {
 		}
 	}
 	if _collided
-		event_perform(ev_other, ev_user1) // split wave
+		event_perform(ev_other, ev_user1) // split wave (after collision)
 } else {
 //  pierced
 //	show_message("Pierced") 

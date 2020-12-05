@@ -3,7 +3,7 @@
 // Inherit the parent event
 event_inherited();
 
-size = 0
+size = 1
 d_size = 0
 
 dot_count = 5

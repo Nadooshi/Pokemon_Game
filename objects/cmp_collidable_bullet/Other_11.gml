@@ -18,4 +18,3 @@ if object_is_ancestor(collided_with.object_index, ob_bullet) {
 	}
 } else
 	instance_destroy()
-

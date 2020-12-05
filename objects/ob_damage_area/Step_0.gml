@@ -23,11 +23,14 @@ with ob_player
 if ds_list_find_index(other.last_damaged, id) = -1 {
 	_d = distance_to_point(other.x, other.y)
 	if _d <= other.radius {
-		if hurt_timeout <= 0
+		//if hurt_timeout <= 0
 		if (_action[? "tgTo"] & position_stage) != 0 
-		if sc_check_affect(other.pokemon_id, id, _action[? "affect"]) 
-		if sc_check_accuracy(other.id, id, _action) 
-			ds_list_add(other.just_damaged, id)
+		if sc_check_affect(other.pokemon_id, id, _action[? "affect"]) {
+			if sc_check_accuracy(other.id, id, _action) 
+				ds_list_add(other.just_damaged, id)
+			else
+				ds_list_add(other.last_damaged, id)
+		}
 	}
 }
 
@@ -59,10 +62,10 @@ for (var i=0; i<ds_list_size(just_damaged); i++)
 with just_damaged[| i] {
 	if _action[? "delay"] = 0 {
 		// deal damage
-		if hurt_timeout <= 0 {
-			hurt_timeout = other.hurt_time
-			sc_deal_damage(_action, other.pokemon_id)
-		}
+		//if hurt_timeout <= 0 {
+		hurt_timeout = other.hurt_time
+		sc_deal_damage(_action, other.pokemon_id)
+		
 	} else {   // do delayed damage
 		_ok = true
 		var k = 0

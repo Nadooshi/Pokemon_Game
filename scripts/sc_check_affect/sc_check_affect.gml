@@ -15,13 +15,15 @@ function sc_check_affect(argument0, argument1, argument2) {
 		if (_att_p.trainer = _dmg_p.trainer) and (_att_p != _dmg_p)
 			return true	
 	}
+/* не правильно работает столкновение снарядов с _attack_affect.friend
+Снаряды врезаются в хозяина, но ненаносят урона. Яркий пример Чармандер - Fier wave */
+
+
 	if (_affect & _ATTACK_AFFECT.itself) = _ATTACK_AFFECT.itself {
 		if _att_p = _dmg_p
 			return true	
 	}
-
+	
 	return false
-
-
-
 }
+

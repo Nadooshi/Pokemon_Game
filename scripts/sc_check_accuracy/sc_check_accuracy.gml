@@ -23,9 +23,9 @@ function sc_check_accuracy(argument0, argument1, argument2) {
 		}
 		_rate_coeff += _tg_p.dodge_mod // !!! dodge_mod reduce dodge 
 		var _hit_rate = _action[? "accuracy"] * (_rate_coeff + _obj.accuracy_mod)
+		//show_debug_message("Accuracy = " + string(_hit_rate) + "%")
 		var _random = random(1.0)
-		var _success = _random <= _hit_rate
-		if _success
+		if _random <= _hit_rate
 			return true
 	
 		with instance_create_layer(x, y, "Particles", ob_particle_text)

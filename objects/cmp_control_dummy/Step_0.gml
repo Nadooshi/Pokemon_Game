@@ -41,8 +41,9 @@ if attack_timeout > 0 {
 		}		
 		attack_timeout = random_range(0.3, 1)
 	}
-
-}
+} else
+	attack_timeout = random_range(0.3, 1)
+	
 
 // for barrier
 if not instance_exists(target) exit

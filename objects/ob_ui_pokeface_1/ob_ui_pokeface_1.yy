@@ -29,7 +29,7 @@
     {"x":0.0,"y":128.0,},
   ],
   "eventList": [
-    {"isDnD":false,"eventNum":1,"eventType":5,"collisionObjectId":null,"parent":{"name":"ob_ui_pokeface_1","path":"objects/ob_ui_pokeface_1/ob_ui_pokeface_1.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"isDnD":false,"eventNum":1,"eventType":9,"collisionObjectId":null,"parent":{"name":"ob_ui_pokeface_1","path":"objects/ob_ui_pokeface_1/ob_ui_pokeface_1.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
     {"isDnD":false,"eventNum":4,"eventType":7,"collisionObjectId":null,"parent":{"name":"ob_ui_pokeface_1","path":"objects/ob_ui_pokeface_1/ob_ui_pokeface_1.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
   ],
   "properties": [],
