@@ -29,6 +29,7 @@ if pokemon_id.states[| i].id != id
 	case ob_state_target:
 	case ob_state_medicine:
 	case ob_state_cure:
+	case ob_state_lulling:
 		instance_destroy(pokemon_id.states[| i])
 	}
 

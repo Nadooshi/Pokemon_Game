@@ -14,6 +14,7 @@ if pokemon_id.states[| i].id != id
 	case ob_state_stun:
 	case ob_state_terror:
 	case ob_state_weak:
+	case ob_state_lulling:
 		instance_destroy(pokemon_id.states[| i])
 	}
 

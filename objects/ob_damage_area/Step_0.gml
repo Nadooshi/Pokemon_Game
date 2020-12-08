@@ -16,10 +16,11 @@ _action[? "dir"] = direction
 _action[? "hurt_time"] = hurt_time
 
 if sc_does_exist(accuracy_done_for)
-if ds_list_find_index(last_damaged, accuracy_done_for) = -1
+if ds_list_find_index(last_damaged, accuracy_done_for) = -1 
 	ds_list_add(just_damaged, accuracy_done_for)
 
 with ob_player
+if ds_list_find_index(other.just_damaged, id) = -1 
 if ds_list_find_index(other.last_damaged, id) = -1 {
 	_d = distance_to_point(other.x, other.y)
 	if _d <= other.radius {
@@ -33,6 +34,7 @@ if ds_list_find_index(other.last_damaged, id) = -1 {
 		}
 	}
 }
+
 
 for (var i=0; i<ds_list_size(just_damaged); i++)
 	ds_list_add(last_damaged, just_damaged[| i])

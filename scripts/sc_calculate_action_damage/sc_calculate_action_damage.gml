@@ -126,7 +126,6 @@ function sc_calculate_action_damage(argument0, argument1, argument2) {
 		// apply state 'revenge'
 		if _abil[? "state"] = _ABILITY_STATE.revenge {
 			potential_damage = _p_attack.health_max - _p_attack.health_cur
-			//show_message(string(potential_damage))
 		}
 	}
 	//-----------------------------------------------------

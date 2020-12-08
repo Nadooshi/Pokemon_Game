@@ -6,3 +6,4 @@ alpha = 0
 vspeed = -5
 phase = 0
 caption = ""
+blend_mode = bm_normal
