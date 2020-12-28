@@ -521,6 +521,8 @@ globalvar player2_trainer;
 player1_trainer = noone; //sc_new_trainer()
 player2_trainer = noone; //sc_new_trainer()
 
+globalvar log_battle; log_battle = ds_list_create()
+
 globalvar maxchannel;
 maxchannel = 5
 

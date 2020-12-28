@@ -14,10 +14,10 @@ if sc_does_exist(passive_state2) {
 	if object_exists(_state_obj)
 		// check apply state rate
 	var _ok = false
-	if passive_state2[? "in_health_sign"] = 0
+	if passive_state2[? "in_health_sign"] = 0 // below
 		if (health_cur / health_max * 100) < passive_state2[? "marker_health"]
 			_ok = true
-	if passive_state2[? "in_health_sign"] = 1
+	if passive_state2[? "in_health_sign"] = 1 // over
 		if (health_cur / health_max * 100) > passive_state2[? "marker_health"]
 			_ok = true
 	if _ok {
@@ -25,14 +25,14 @@ if sc_does_exist(passive_state2) {
 		if _r_ <= _rate {
 			var p_action = ds_map_create()
 			p_action[? "active"] = passive_state2
-			_ok = sc_apply_state(_state_obj, 0, id, p_action)
+			sc_apply_state(_state_obj, 0, id, p_action)
 			ds_map_destroy(p_action)
 		}
-		if _ok
-			alarm_set(0, max(alarm_get(0), 30))
-			
+		
 		alarm_set(1, (passive_state2[? "state_time"] + passive_state2[? "state_cooldown"]) * 60)
-	}
+	} else 
+		alarm_set(1, (passive_state2[? "state_cooldown"]) * 60)
+
 }
 
 

@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "sp_for_hurt",
-    "path": "sprites/sp_for_hurt/sp_for_hurt.yy",
+    "name": "sp_for_damage",
+    "path": "sprites/sp_for_damage/sp_for_damage.yy",
   },
   "solid": false,
   "visible": true,

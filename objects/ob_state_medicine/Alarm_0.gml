@@ -16,5 +16,6 @@ if pokemon_id.states[| i].id != id
 	case ob_state_bleeding:
 	case ob_state_infestation:
 	case ob_state_leech:
+	case ob_state_burn:
 		instance_destroy(pokemon_id.states[| i])
 	}

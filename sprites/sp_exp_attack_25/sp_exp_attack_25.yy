@@ -85,6 +85,8 @@
   },
   "resourceVersion": "1.0",
   "name": "sp_exp_attack_25",
-  "tags": [],
+  "tags": [
+    "nolp",
+  ],
   "resourceType": "GMSprite",
 }

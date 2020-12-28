@@ -79,7 +79,8 @@ states = ds_list_create()
 
 passive_state1 = noone
 passive_state2 = noone
-alarm_set(0,30)
+alarm_set(0,10)
+alarm_set(1,30)
 
 in_biome = ds_list_create()
 

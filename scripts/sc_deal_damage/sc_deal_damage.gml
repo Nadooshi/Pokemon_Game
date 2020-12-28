@@ -30,7 +30,8 @@ function sc_deal_damage(argument0, argument1) {
 		if _r_ <= _rate
 			sc_apply_state(_state_obj, _dmg, _pokemon_id_attack, _action);
 	}
-
+	
+	sc_logging_battle(_pokemon_id_attack, id, _action, "health", _dmg, "injured")
 
 
 }

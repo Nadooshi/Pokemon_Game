@@ -60,7 +60,7 @@
     "eventStubScript": null,
     "parent": {"name":"sp_for_hurt","path":"sprites/sp_for_hurt/sp_for_hurt.yy",},
     "resourceVersion": "1.3",
-    "name": "",
+    "name": "sp_for_hurt",
     "tags": [],
     "resourceType": "GMSequence",
   },
