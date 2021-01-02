@@ -528,4 +528,3 @@ maxchannel = 5
 
 audio_channel_num(maxchannel)
 audio_set_master_gain(0, 0.5)
-

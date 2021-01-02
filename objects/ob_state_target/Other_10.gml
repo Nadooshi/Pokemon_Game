@@ -11,3 +11,5 @@ modify = (ds_map_find_value(action[? "active"], "state_value")) * 0.01
 if pokemon_id.accuracy_mod < modify
 	pokemon_id.accuracy_mod = modify
 
+var _val_txt = string(modify * 100) + "%"
+sc_logging_state_powered(pokemon_id, name, "gaining", "accuracy", _val_txt)

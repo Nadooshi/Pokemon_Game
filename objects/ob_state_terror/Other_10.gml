@@ -10,3 +10,5 @@ alarm[0] = period;
 pokemon_id.power_cur = 0
 pokemon_id.power_reg = 0 // 0.3
 	
+sc_logging_state_cursed(pokemon_id, name, "losing power")
+

@@ -126,6 +126,9 @@ function sc_calculate_action_damage(argument0, argument1, argument2) {
 		// apply state 'revenge'
 		if _abil[? "state"] = _ABILITY_STATE.revenge {
 			potential_damage = _p_attack.health_max - _p_attack.health_cur
+			var _nam_txt = ds_map_find_value(_abil[? "state"], "name")
+			var _val_txt = "looking forward to vengeance by " + string(potential_damage) +"."
+			sc_logging_state_cursed(_p_attack, _nam_txt, _val_txt)
 		}
 	}
 	//-----------------------------------------------------

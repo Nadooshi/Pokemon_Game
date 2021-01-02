@@ -39,6 +39,7 @@ function sc_apply_state() {
 			if not is_undefined(_action)
 			if ds_exists(_action, ds_type_map) {
 				name = ds_map_find_value(_action[? "active"], "name");
+				action = ds_map_create() // без этой строчки происходят неведовые вещи. Вылетает из-за пустого action
 				ds_map_copy(action, _action);
 			}
 		}

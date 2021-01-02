@@ -1,5 +1,6 @@
 /// @desc 
 
+sc_logging_state_over(pokemon_id, name)
 var i = ds_list_find_index(pokemon_id.states, id)
 if i != -1
 	ds_list_delete(pokemon_id.states, i);

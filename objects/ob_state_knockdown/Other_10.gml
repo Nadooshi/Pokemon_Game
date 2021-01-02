@@ -8,3 +8,5 @@ hit_count = _t * 2
 alarm[0] = period;
 
 knock_dir = point_direction(action[? "lastX"], action[? "lastY"], pokemon_id.x, pokemon_id.y)
+
+sc_logging_state_cursed(pokemon_id, name, "thrown to the side")

@@ -3,7 +3,7 @@
 // Inherit the parent event
 event_inherited();
 
-damage = pokemon_id.health_cur + 1
+damage = pokemon_id.health_cur
 alarm[0] = period;
 
 

@@ -18,6 +18,7 @@
         {"properties":[],"isDnd":false,"objectId":{"name":"ob_cursor","path":"objects/ob_cursor/ob_cursor.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":-16.0,"y":-8.0,"resourceVersion":"1.0","name":"inst_1823587D","tags":[],"resourceType":"GMRInstance",},
         {"properties":[],"isDnd":false,"objectId":{"name":"ob_weather_control","path":"objects/ob_weather_control/ob_weather_control.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":0.28125,"scaleY":0.28125,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":596.0,"y":36.0,"resourceVersion":"1.0","name":"inst_2001573B","tags":[],"resourceType":"GMRInstance",},
         {"properties":[],"isDnd":false,"objectId":{"name":"ob_weather_windarrow","path":"objects/ob_weather_windarrow/ob_weather_windarrow.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":596.0,"y":36.0,"resourceVersion":"1.0","name":"inst_F490E2","tags":[],"resourceType":"GMRInstance",},
+        {"properties":[],"isDnd":false,"objectId":{"name":"ob_logger","path":"objects/ob_logger/ob_logger.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":0.0,"y":-64.0,"resourceVersion":"1.0","name":"inst_309C5389","tags":[],"resourceType":"GMRInstance",},
       ],"visible":true,"depth":-5100,"userdefinedDepth":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"gridX":32,"gridY":32,"layers":[
         {"instances":[
             {"properties":[
@@ -592,6 +593,7 @@
     {"name":"inst_2001573B","path":"rooms/rm_battle/rm_battle.yy",},
     {"name":"inst_F490E2","path":"rooms/rm_battle/rm_battle.yy",},
     {"name":"inst_2C17EA67","path":"rooms/rm_battle/rm_battle.yy",},
+    {"name":"inst_309C5389","path":"rooms/rm_battle/rm_battle.yy",},
   ],
   "inheritCreationOrder": false,
   "sequenceId": null,

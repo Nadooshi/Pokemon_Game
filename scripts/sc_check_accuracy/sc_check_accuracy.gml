@@ -11,11 +11,13 @@ function sc_check_accuracy(argument0, argument1, argument2) {
 	if ds_list_find_index(_obj.list_missed, _tg_p) = -1 {
 		switch _tg_p.pokemon_map[? "size"] {
 		case _SIZE.tiny:
-			_rate_coeff = 0.5
+			_rate_coeff = 0.75
 			break
 		case _SIZE.normal:
-		case _SIZE.big:
 			_rate_coeff = 1
+			break
+		case _SIZE.big:
+			_rate_coeff = 1.33
 			break
 		case _SIZE.giant:
 			_rate_coeff = 2
@@ -23,7 +25,6 @@ function sc_check_accuracy(argument0, argument1, argument2) {
 		}
 		_rate_coeff += _tg_p.dodge_mod // !!! dodge_mod reduce dodge 
 		var _hit_rate = _action[? "accuracy"] * (_rate_coeff + _obj.accuracy_mod)
-		//show_debug_message("Accuracy = " + string(_hit_rate) + "%")
 		var _random = random(1.0)
 		if _random <= _hit_rate
 			return true
@@ -31,6 +32,7 @@ function sc_check_accuracy(argument0, argument1, argument2) {
 		with instance_create_layer(x, y, "Particles", ob_particle_text)
 			caption = "MISS!"
 		ds_list_add(_obj.list_missed, _tg_p)	
+		sc_logging_miss(_obj.pokemon_id, _tg_p, _action)
 	}
 
 	return false

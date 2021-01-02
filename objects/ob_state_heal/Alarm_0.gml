@@ -6,6 +6,8 @@ with pokemon_id
 	else
 		health_cur += other.damage
 
+sc_logging_state_rises(pokemon_id, name, "getting stronger", "health", damage)
+
 alarm[0] = period;
 if --hit_count < 0
 	instance_destroy()

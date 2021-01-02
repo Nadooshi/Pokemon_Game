@@ -11,3 +11,4 @@ alarm[0] = period;
 with pokemon_id
 	event_perform(ev_other, ev_user6)
 
+sc_logging_state_cursed(pokemon_id, name, "sweet sleep.")

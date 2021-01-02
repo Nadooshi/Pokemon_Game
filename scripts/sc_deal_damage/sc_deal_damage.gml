@@ -16,7 +16,7 @@ function sc_deal_damage(argument0, argument1) {
 			_dmg = states[| i].onDamage(_dmg, id, _action, _pokemon_id_attack, states[| i])
 
 	}
-	sc_hurt(_dmg);
+	sc_hurt(_dmg, _pokemon_id_attack, _action);
 
 	// apply state
 	if sc_does_exist(_action[? "active"]) {
@@ -31,7 +31,7 @@ function sc_deal_damage(argument0, argument1) {
 			sc_apply_state(_state_obj, _dmg, _pokemon_id_attack, _action);
 	}
 	
-	sc_logging_battle(_pokemon_id_attack, id, _action, "health", _dmg, "injured")
+	sc_logging_damage(_pokemon_id_attack, id, _action, _dmg)
 
 
 }

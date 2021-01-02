@@ -69,5 +69,6 @@ if canMove {
 
 // suicide
 if keys[k.Suicide]
-	sc_hurt(health_cur)
+	sc_hurt(health_cur + 1, id, undefined)
+
 

@@ -401,7 +401,6 @@
     {"id":{"name":"snd_pokedie","path":"sounds/snd_pokedie/snd_pokedie.yy",},"order":0,},
     {"id":{"name":"sc_hurt","path":"scripts/sc_hurt/sc_hurt.yy",},"order":6,},
     {"id":{"name":"sp_attack_35","path":"sprites/sp_attack_35/sp_attack_35.yy",},"order":35,},
-    {"id":{"name":"sc_shield_damage","path":"scripts/sc_shield_damage/sc_shield_damage.yy",},"order":7,},
     {"id":{"name":"sc_check_affect","path":"scripts/sc_check_affect/sc_check_affect.yy",},"order":8,},
     {"id":{"name":"sc_check_accuracy","path":"scripts/sc_check_accuracy/sc_check_accuracy.yy",},"order":9,},
     {"id":{"name":"ob_state_confidance","path":"objects/ob_state_confidance/ob_state_confidance.yy",},"order":30,},

@@ -9,7 +9,7 @@ function sc_load_trainer(argument0, argument1) {
 	if file_exists("trainer_saves/" + _fname) {
 		ini_open("trainer_saves/" + _fname)
 			ds_map_read(_ds, ini_read_string("trainer", "map", _ds))
-			// sc_new_trainer must be here!
+			
 			_ds[? "active_pokemon_list"] = ds_list_create(); ds_list_clear(_ds[? "active_pokemon_list"])
 			_ds[? "caught_pokemon_list"] = ds_list_create(); ds_list_clear(_ds[? "caught_pokemon_list"])
 			_ds[? "inventory"]	= array_create(trainer_inv_size, noone)

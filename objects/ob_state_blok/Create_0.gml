@@ -18,6 +18,6 @@ onDamage = function (_dmg, _damaged_player_id, _action, _att_player, _state_id) 
 	_dmg *= _damaged_player_id.parry_mod
 	with _damaged_player_id
 	with instance_create_layer(x, y, "Particles", ob_particle_text)
-		caption = ("Parry x" + string_format(_state_id.modify * 100, 3, 0) + " %")
+		caption = ("Parry x" + string_format((1 - _state_id.modify) * 100, 3, 0) + " %")
 	return _dmg	
 }

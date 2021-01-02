@@ -163,11 +163,11 @@ function sc_player_attack_set() {
 			sc_player_move()
 			break
 		default:
-	//		timeout = 24
-	//		canMove = false
 			sc_player_stop_set()
 			attack_ob_id = instance_create_layer(x, y, "Particles", ob_attack)
+
 	}
+	sc_logging_action(id, _a_map)
 	// STAT
 	var _st_objs = ds_list_create()
 	for (var i=0; i<ds_list_size(states); i++)
@@ -188,6 +188,7 @@ function sc_player_attack_set() {
 		sprite_index = asset_get_index(_a_map[? "anim"])
 		image_blend = sc_make_attack_colour(_a_map)
 	}
+	
 }
 
 
