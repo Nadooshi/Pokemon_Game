@@ -44,6 +44,7 @@ _z = 0
 attack_ob_id = noone
 
 scBehaviour = noone
+succeeded_behaviour = noone
 
 selected = false
 timeout = 0

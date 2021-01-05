@@ -5,8 +5,10 @@ if not init
 
 event_inherited()
 
-if script_exists(scBehaviour)
-	script_execute(scBehaviour)
+if script_exists(scBehaviour) or is_method(scBehaviour)
+	if script_execute(scBehaviour)
+		succeeded_behaviour = scBehaviour
+
 //else
 //	sc_player_stop_set()
 

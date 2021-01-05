@@ -11,14 +11,12 @@ ds_map_copy(current_trainer, trainer_preset)
 
 #region // add random pokemons
 var _count = irandom(12)+3  // 3..15
-repeat (_count) {
-	var n		 = irandom(pokemon_list_count-1)
-	var _name	 = ds_map_find_first(pokemon_list)
-	for (var i=1; i<=n; i++)
-		_name = ds_map_find_next(pokemon_list, _name)
-
+var _name	 = ds_map_find_first(pokemon_list)
+for (var n=0; n<pokemon_list_count; n++) {
 	ds_list_add(current_trainer[? "caught_pokemon_list"], sc_load_new_pokemon(_name))
+	_name = ds_map_find_next(pokemon_list, _name)
 }
+ds_list_shuffle(current_trainer[? "caught_pokemon_list"])
 #endregion
 
 sc_save_trainer()

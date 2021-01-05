@@ -4,7 +4,7 @@ function sc_player_move() {
 
 	// turn
 	var aDiff = angle_difference(tgAngle, direction)
-	if abs(aDiff) > 50 {
+	if abs(aDiff) > 90 {
 		moveSpeed = 0
 		direction = tgAngle
 	}
