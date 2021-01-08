@@ -89,7 +89,7 @@ with just_damaged[| i] {
 				pokemon_id_damaged = other.id
 				pokemon_id_attack = _damage_area.pokemon_id
 				ds_map_copy(action, _action)
-				timeout = action[? "delay"]
+				timeout = action[? "delay"]   // in seconds
 				hurt_time = _damage_area.hurt_time
 				damage_mod = other.damage_mod
 				image_blend  = _damage_area.image_blend

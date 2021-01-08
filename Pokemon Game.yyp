@@ -654,7 +654,7 @@
     {"folderPath":"folders/Sequences.yy","order":1,"resourceVersion":"1.0","name":"Sequences","tags":[],"resourceType":"GMFolder",},
     {"folderPath":"folders/Animation Curves.yy","order":2,"resourceVersion":"1.0","name":"Animation Curves","tags":[],"resourceType":"GMFolder",},
     {"folderPath":"folders/Sounds/Effects.yy","order":2,"resourceVersion":"1.0","name":"Effects","tags":[],"resourceType":"GMFolder",},
-    {"folderPath":"folders/Scripts/battle/player/ai.yy","order":10,"resourceVersion":"1.0","name":"ai","tags":[],"resourceType":"GMFolder",},
+    {"folderPath":"folders/Scripts/battle/player/ai.yy","order":11,"resourceVersion":"1.0","name":"ai","tags":[],"resourceType":"GMFolder",},
     {"folderPath":"folders/Objects/End_Battle.yy","order":8,"resourceVersion":"1.0","name":"End_Battle","tags":[],"resourceType":"GMFolder",},
   ],
   "AudioGroups": [

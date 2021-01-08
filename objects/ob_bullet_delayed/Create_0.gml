@@ -2,7 +2,7 @@
 
 pokemon_id_damaged = noone
 pokemon_id_attack = noone
-timeout = 0
+timeout = 0    // in seconds
 action = ds_map_create() // copy of pokemon action 
 hurt_time = 0
 damage_mod = 1
