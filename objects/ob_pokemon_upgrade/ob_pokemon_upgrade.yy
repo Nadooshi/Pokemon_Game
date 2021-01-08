@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "sp_shield_icon",
-    "path": "sprites/sp_shield_icon/sp_shield_icon.yy",
+    "name": "sp_upgrade",
+    "path": "sprites/sp_upgrade/sp_upgrade.yy",
   },
   "solid": false,
   "visible": true,
@@ -11,7 +11,7 @@
   "physicsObject": false,
   "physicsSensor": false,
   "physicsShape": 1,
-  "physicsGroup": 0,
+  "physicsGroup": 1,
   "physicsDensity": 0.5,
   "physicsRestitution": 0.1,
   "physicsLinearDamping": 0.1,
@@ -24,11 +24,11 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "ui_pictures",
-    "path": "folders/Objects/ui_pictures.yy",
+    "name": "End_Battle",
+    "path": "folders/Objects/End_Battle.yy",
   },
   "resourceVersion": "1.0",
-  "name": "ob_shield_state",
+  "name": "ob_pokemon_upgrade",
   "tags": [],
   "resourceType": "GMObject",
 }
