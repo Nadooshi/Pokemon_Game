@@ -12,6 +12,7 @@ dirangle[d.Down ] = 270
 
 counter = 0
 scBehaviour = sc_ai_idle
+prev_behaviour = noone
 
 enum _ATTACK_PURPOSE {
 	near,

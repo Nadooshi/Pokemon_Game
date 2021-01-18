@@ -6,6 +6,13 @@ if not canMove
 
 prev_doMove = doMove
 
-if not sc_does_exist(target)
-	scBehaviour = sc_ai_new_target
+if scBehaviour = sc_player_stop_set {
+	if sc_does_exist(target)
+		scBehaviour =  sc_ai_follow_target
+	else
+		scBehaviour = sc_ai_idle
+}
 
+if scBehaviour != prev_behaviour
+	show_debug_message("AI: behaviour changed to " + script_get_name(scBehaviour))
+prev_behaviour = scBehaviour
