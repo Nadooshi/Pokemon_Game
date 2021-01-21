@@ -17,13 +17,13 @@ for (var i=0; i<ds_list_size(states); i++)
 if instance_exists(states[| i])
 	instance_destroy(states[| i])
 
-if sc_does_exist(passive_state1)
+if sc_does_exist(passive_state1)     
 	ds_map_destroy(passive_state1)
 if sc_does_exist(passive_state2)
 	ds_map_destroy(passive_state2)
-if ds_list_size(trainer[? "pokemon_ids"]) = 0
-	with ob_cursor
-		alarm_set(0, 300)
+//if ds_list_size(trainer[? "pokemon_ids"]) = 0
+//	with ob_cursor
+//		alarm_set(0, 300)
 
 show_debug_message(object_get_name(object_index) + " (" + string(id)+") deactivated" )
 instance_deactivate_object(id)

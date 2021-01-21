@@ -8,3 +8,14 @@ if ds_exists(pokemon_id.states, ds_type_list) {
 	_y = y - sprite_height * 0.5;
 }
 
+var _c = ""
+with pokemon_id 
+if ds_list_find_index(component_list, cmp_control_ai) {
+	var _action = action_list[| plannedActionNum] 
+	if not is_undefined(_action)
+		_c = _action[? "name"]
+	else
+		_c = " .zZ !!!11"
+}
+
+caption = _c

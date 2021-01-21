@@ -17,8 +17,11 @@ bullet.y = (y + 5) + lengthdir_y (_sz, pokemon_id.direction)
 
 timeout--
 if timeout <=0 {
-	pokemon_id.canMove = true
-	pokemon_id.scBehaviour = sc_player_stop_set
+	with pokemon_id {
+		canMove = true
+		scBehaviour = sc_player_stop_set
+		sc_player_stop_set()
+	}
 	instance_destroy()
 }
 

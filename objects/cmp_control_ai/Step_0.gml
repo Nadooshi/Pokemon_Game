@@ -16,3 +16,10 @@ if scBehaviour = sc_player_stop_set {
 if scBehaviour != prev_behaviour
 	show_debug_message("AI: behaviour changed to " + script_get_name(scBehaviour))
 prev_behaviour = scBehaviour
+
+var _a_map = action_list[| plannedActionNum]
+if not is_undefined(_a_map)
+if _a_map[? "ap"] > power_cur {
+	target = noone
+	
+}

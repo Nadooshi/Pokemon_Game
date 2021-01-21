@@ -22,3 +22,8 @@ for (var i=0; i<ds_list_size(pokemon_id.states); i++) {
 	}
 }
 
+var _x = x - (sprite_width * 0.5)
+draw_set_color(0)
+	draw_text_transformed(_x, y, caption, 0.35, 0.35, 0)
+draw_set_color(c_white)
+	draw_text_transformed(_x-2, y-2, caption, 0.35, 0.35, 0)

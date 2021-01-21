@@ -5,6 +5,7 @@ event_inherited();
 
 list = noone
 pokemon_id = noone
+caption = ""
 
 selected = false
 

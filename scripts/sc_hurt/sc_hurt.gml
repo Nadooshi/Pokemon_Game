@@ -22,7 +22,7 @@ function sc_hurt(argument0, argument1, argument2) {
 	
 	with instance_create_layer(x + random(20)-10, y + random(20)-10, "Particles", ob_particle_text) {
 		caption = "-" + string(_dmg)
-		blend_mode = bm_add
+		//blend_mode = bm_add
 		image_blend = c_red
 	}
 

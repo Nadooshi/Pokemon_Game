@@ -31,6 +31,8 @@ if ds_list_find_index(other.last_damaged, id) = -1 {
 				ds_list_add(other.just_damaged, id)
 			else
 				ds_list_add(other.last_damaged, id)
+			if _action[? "type"] = _ATTACK_TYPE.front  // hit once
+				break
 		}
 	}
 }

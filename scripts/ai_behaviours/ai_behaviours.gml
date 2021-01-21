@@ -17,7 +17,7 @@ function sc_ai_move_idle(){
 	if timeout <= 0 {
 		sc_player_stop_set()
 		scBehaviour = sc_ai_idle
-		timeout = 100 + random(250)
+		timeout = 50 + random(200)
 	} else
 		sc_player_move()
 	return false
@@ -42,8 +42,8 @@ function sc_ai_new_target() {
 			return false
 	
 		var _a_map = action_list[| plannedActionNum]
-		neededDist = (_a_map[? "range"] * 18) - 32  // 60 * 0.1 * moveSpeed (3)
-		neededDist = max(32, neededDist)
+		neededDist = (_a_map[? "range"] * 18) - 16  // 60 * 0.1 * moveSpeed (3)
+		neededDist = max(16, neededDist)
 		scBehaviour = sc_ai_follow_target
 		
 	}
