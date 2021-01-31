@@ -38,15 +38,18 @@ function sc_ai_new_target() {
 			var _att_num = irandom(_attCount-1)
 			plannedActionNum = att_list[plannedPurpose][| _att_num]
 		}
-		if plannedActionNum < 0
+		if plannedActionNum < 0 {
+			scBehaviour = sc_ai_new_target
 			return false
-	
+		}
 		var _a_map = action_list[| plannedActionNum]
 		neededDist = (_a_map[? "range"] * 18) - 16  // 60 * 0.1 * moveSpeed (3)
 		neededDist = max(16, neededDist)
 		scBehaviour = sc_ai_follow_target
 		
-	}
+	} else
+		plannedActionNum = -1
+	
 //	scBehaviour = sc_ai_idle
 //	timeout = 5 + random(20)
 }
@@ -71,8 +74,8 @@ function sc_ai_follow_target() {
 		_lunge_d = (pokemon_map[? "ap"] * 0.66) * _lunge_map[? "range"] * 6 + 32
 	}
 	// do Lunge
-	if (doActionNum = -1) and
-	   (_lunge_num != -1) and 
+	if (doActionNum < 0) and
+	   (_lunge_num >= 0) and 
 	   ((_target_d > neededDist ) and (_lunge_d <= neededDist)) {
 		doActionNum = _lunge_num
 		show_debug_message(
@@ -81,7 +84,7 @@ function sc_ai_follow_target() {
 		)
 		event_perform(ev_other, ev_user3) // attack
 	} else
-	if (doActionNum = -1) and
+	if (doActionNum < 0) and
 	   (_target_d <= neededDist) {
 		// do multiple attacks using full power
 		doActionNum = plannedActionNum

@@ -13,6 +13,9 @@ moveSpeed = 0
 canMove = false
 position_stage = _ATTACK_TG.ground
 doActionNum = -1
+attack_warmup = 0
+target = noone
+plannedActionNum = -1
 
 image_index = 2
 image_angle = choose(-90, 90)

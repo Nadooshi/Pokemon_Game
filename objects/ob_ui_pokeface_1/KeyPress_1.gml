@@ -18,14 +18,14 @@ if sc_does_exist(list[| _i]) {
 			if instance_exists(selected_id)
 			with selected_id {
 				sc_composed_remove_component(cmp_control_keyb)
-				sc_composed_add_component(cmp_control_dummy)
-				attack_timeout = random_range(0.3, 1)
+				sc_composed_add_component(cmp_control_ai)
+				//attack_timeout = random_range(0.3, 1)
 				//show_debug_message(pokemon_map[? "title"] + ": " + string(array_from_component_list(component_list)) )
 			}
 			selected_id = id
 			sc_battle_update_actions()
 			// switch cmp_control
-			sc_composed_remove_component(cmp_control_dummy)
+			sc_composed_remove_component(cmp_control_ai)
 			sc_composed_add_component(cmp_control_keyb, true)
 			doActionNum = -1
 			//show_debug_message(pokemon_map[? "title"] + ": " + string(array_from_component_list(component_list)))
