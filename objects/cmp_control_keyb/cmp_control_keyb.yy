@@ -24,8 +24,8 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "components",
-    "path": "folders/Objects/Battle/components.yy",
+    "name": "controls",
+    "path": "folders/Objects/Battle/components/controls.yy",
   },
   "resourceVersion": "1.0",
   "name": "cmp_control_keyb",

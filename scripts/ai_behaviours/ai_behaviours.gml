@@ -43,11 +43,11 @@ function sc_ai_new_target() {
 			return false
 		}
 		var _a_map = action_list[| plannedActionNum]
-		neededDist = (_a_map[? "range"] * 18) - 16  // 60 * 0.1 * moveSpeed (3)
-		neededDist = max(16, neededDist)
+		neededDist = (_a_map[? "range"] * 18) - 8  // 60 * 0.1 * moveSpeed (3)
+		neededDist = max(24, neededDist)
 		scBehaviour = sc_ai_follow_target
 		
-	} else
+	} else 
 		plannedActionNum = -1
 	
 //	scBehaviour = sc_ai_idle
@@ -62,7 +62,8 @@ function sc_ai_follow_target() {
 	tgAngle = point_direction(x, y, target.x, target.y)
 	tgX = target.x
 	tgY = target.y
-	var _target_d = distance_to_point(target.x, target.y)
+	var _doAttack = false
+	var _target_d = point_distance(x, y+12, target.x, target.y+12)
 	var _lunge_d = 0
 	var _lunge_num = -1
 	var _lungeCount = ds_list_size(att_list[_ATTACK_PURPOSE.move])
@@ -82,14 +83,22 @@ function sc_ai_follow_target() {
 			"AI: " +pokemon_map[? "title"] +" tries lunge with "+ action_list[| doActionNum][? "name"] + "; " +
 			" tgDist = " + string(_target_d) + "; lungeDist = " + string(_lunge_d)
 		)
-		event_perform(ev_other, ev_user3) // attack
+		_doAttack = true
 	} else
 	if (doActionNum < 0) and
 	   (_target_d <= neededDist) {
 		// do multiple attacks using full power
 		doActionNum = plannedActionNum
+		_doAttack = true
+		if plannedPurpose = _ATTACK_PURPOSE.far
+		if collision_line(x, y+12, target.x, target.y+12, ob_hazard, false, false) {
+			_doAttack = false
+			doActionNum = -1
+		}
+    }
+	if _doAttack
 		event_perform(ev_other, ev_user3) // attack
-	} else {
+	else {
 		// get closer
 		sc_player_move()
 	}
