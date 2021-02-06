@@ -42,8 +42,8 @@ if not ds_exists(att_list[_ATTACK_PURPOSE.move], ds_type_list)
 if not ds_exists(att_list[_ATTACK_PURPOSE.barrier], ds_type_list)
 	att_list[_ATTACK_PURPOSE.barrier] = ds_list_create()
 
-if not ds_exists(att_list[_ATTACK_PURPOSE.support], ds_type_list)
-	att_list[_ATTACK_PURPOSE.support] = ds_list_create()
+//if not ds_exists(att_list[_ATTACK_PURPOSE.support], ds_type_list)
+//	att_list[_ATTACK_PURPOSE.support] = ds_list_create()
 
 scBehaviour = sc_player_stop_set
 

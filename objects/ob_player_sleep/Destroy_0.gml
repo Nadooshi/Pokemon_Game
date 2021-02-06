@@ -8,7 +8,7 @@ if sprite_exists(_sp)
 
 maxSpeed = o_maxSpeed
 canMove = true
-sc_player_stop_set()
+scBehaviour = sc_player_stop_set
 
 image_angle = 0
 

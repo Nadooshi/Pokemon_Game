@@ -87,6 +87,10 @@ function sc_ai_follow_target() {
 	} else
 	if (doActionNum < 0) and
 	   (_target_d <= neededDist) {
+		if plannedActionNum = -1 {
+			scBehaviour = sc_ai_new_target()
+			exit
+		}
 		// do multiple attacks using full power
 		doActionNum = plannedActionNum
 		_doAttack = true

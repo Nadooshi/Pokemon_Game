@@ -16,6 +16,7 @@ doActionNum = -1
 attack_warmup = 0
 target = noone
 plannedActionNum = -1
+scBehaviour = noone
 
 image_index = 2
 image_angle = choose(-90, 90)

@@ -10,7 +10,7 @@ image_xscale = size * 1.5
 image_yscale = size * 1.5
 
 
-if action[? "bullet_phys"] != _BULLET_PH.piercer {
+//if action[? "bullet_phys"] != _BULLET_PH.piercer {
 	var _angle = degtorad(direction)
 	var _step = size * 12 * 1.5 / (dot_count - 1)
 	var _h_count = -floor(dot_count * 0.5)
@@ -28,10 +28,10 @@ if action[? "bullet_phys"] != _BULLET_PH.piercer {
 	}
 	if _collided
 		event_perform(ev_other, ev_user1) // split wave (after collision)
-} else {
+//} else {
 //  pierced
 //	show_message("Pierced") 
-}
+//}
 
 timeout--
 if timeout<=0 {
