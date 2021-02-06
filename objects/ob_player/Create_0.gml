@@ -48,6 +48,7 @@ succeeded_behaviour = noone
 selected = false
 timeout = 0
 hurt_timeout = 0  // timeout after taking damage (sec)
+counter = 0
 
 power_max = 100
 power_cur = 100

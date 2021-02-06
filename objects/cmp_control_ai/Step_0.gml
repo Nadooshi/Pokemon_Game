@@ -1,5 +1,4 @@
 /// @desc 
-counter++
 
 if not canMove
 	exit

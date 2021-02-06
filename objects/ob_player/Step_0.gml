@@ -3,6 +3,8 @@
 if not init
 	event_perform(ev_other, ev_user0)
 
+counter++
+
 event_inherited()
 
 if script_exists(scBehaviour) or is_method(scBehaviour)

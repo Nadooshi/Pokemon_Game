@@ -2,14 +2,18 @@
 event_inherited()
 
 draw_sprite(sp_shadowworld, size, x, y + 12)
-//if hurt_timeout > 0 {
-//	draw_set_color(c_red)
-//	draw_set_alpha(0.25)
-//	draw_rectangle(bbox_left, bbox_top, bbox_right, bbox_bottom, false)
-//	draw_set_color(c_white)
-//	draw_set_alpha(1)
-//}
 
 draw_self()
+
+if hurt_timeout > 0 {
+	var _col = c_white
+	if (counter mod 3)
+		_col = c_fuchsia
+	else
+		_col = c_aqua
+	gpu_set_blendmode(bm_add)
+	draw_sprite_ext(sprite_index, image_index, x+random(2.2)-1.1, y+random(2.2)-1.1, image_xscale*1.1, image_yscale*1.1, image_angle, _col, 1)
+	gpu_set_blendmode(bm_normal)
+}
 
 

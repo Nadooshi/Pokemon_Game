@@ -28,7 +28,7 @@ function sc_ai_new_target() {
 	target = sc_find_nearest_target(id)
 	
 	if sc_does_exist(target) {
-		tgAngle = point_direction(x, y, target.x, target.y)
+		tgAngle = point_direction(x, y+12, target.x, target.y+12)
 		tgX = target.x
 		tgY = target.y
 		// plan action
@@ -43,8 +43,8 @@ function sc_ai_new_target() {
 			return false
 		}
 		var _a_map = action_list[| plannedActionNum]
-		neededDist = (_a_map[? "range"] * 18) - 8  // 60 * 0.1 * moveSpeed (3)
-		neededDist = max(24, neededDist)
+		neededDist = (_a_map[? "range"] * 18) - 12  // 60 * 0.1 * moveSpeed (3)
+		neededDist = max(6, neededDist)
 		scBehaviour = sc_ai_follow_target
 		
 	} else 
@@ -59,11 +59,14 @@ function sc_ai_follow_target() {
 		scBehaviour = sc_player_stop_set
 		return false
 	}
-	tgAngle = point_direction(x, y, target.x, target.y)
+	tgAngle = point_direction(x, y+12, target.x, target.y+12)
 	tgX = target.x
 	tgY = target.y
 	var _doAttack = false
-	var _target_d = point_distance(x, y+12, target.x, target.y+12)
+//	var _target_d = point_distance(x, y+12, target.x, target.y+12)
+	// get distance btw collision areas
+	var _target_d = distance_to_point(target.x, target.y) - 12
+	
 	var _lunge_d = 0
 	var _lunge_num = -1
 	var _lungeCount = ds_list_size(att_list[_ATTACK_PURPOSE.move])
