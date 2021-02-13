@@ -12,7 +12,7 @@ dirangle[d.Down ] = 270
 
 counter = 0
 scBehaviour = sc_ai_idle
-prev_behaviour = noone
+prev_behaviour = sc_ai_idle
 
 enum _ATTACK_PURPOSE {
 	near,
@@ -26,7 +26,8 @@ enum _ATTACK_PURPOSE {
 
 plannedPurpose = -1
 plannedActionNum = -1
-neededDist = 32  // min dist for chosen attack
+//neededDist = 32  // min dist for chosen attack
+last_done = false  // last attack was successful
 
 att_list = array_create(_ATTACK_PURPOSE.count, noone) // actionNums
 

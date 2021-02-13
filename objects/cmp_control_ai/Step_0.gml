@@ -18,12 +18,11 @@ if script_exists(scBehaviour) or is_method(scBehaviour) {
 	prev_behaviour = scBehaviour
 }
 
-var _a_map = action_list[| plannedActionNum]
-if not is_undefined(_a_map)
-if _a_map[? "ap"] > power_cur {
-	target = noone
-	
-}
+//var _a_map = action_list[| plannedActionNum]
+//if not is_undefined(_a_map)
+//if _a_map[? "ap"] > power_cur {
+//	target = noone
+//}
 
 if not sc_does_exist(target)
 	plannedActionNum = -1

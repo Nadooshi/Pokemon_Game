@@ -16,7 +16,7 @@ if not instance_exists(pokemon_id)
 	var _t = 60 * 0.1 * action[? "range"]
 	var _d = 999
 	if instance_exists(pokemon_id.target)
-		_d = distance_to_point(pokemon_id.target.x, pokemon_id.target.y) / _pokemon_speed + 8
+		_d = distance_to_point(pokemon_id.target.x, pokemon_id.target.y+12) / _pokemon_speed + 8
 	_t = min(_t, _d)
 
 	// create bullet

@@ -42,6 +42,8 @@ function sc_create_player(argument0, argument1) {
 				if sc_does_exist(_map_abil)
 					a_map[? "active"] = _map_abil
 			}
+			if not sc_precalc_action_values(a_map, id)
+				show_message("NO distance calculated")
 			ds_list_add(action_list, a_map)
 		}
 		// load passives
