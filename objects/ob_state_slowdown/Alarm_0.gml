@@ -2,7 +2,7 @@
 
 if pokemon_id.speed_mod > modify
 	pokemon_id.speed_mod = modify
-	power_reg = 0.15 // 0.3
+	power_reg = 0.1 // 0.2
 
 alarm[0] = period;
 if --hit_count < 0

@@ -1,3 +1,3 @@
-/// @desc Modify damage
+/// @desc Mog damage empty
 
 

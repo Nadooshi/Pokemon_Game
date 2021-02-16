@@ -7,6 +7,5 @@ hit_count = _t * 2
 
 alarm[0] = period;
 
-var _val_txt = "half"
-sc_logging_state_powered(pokemon_id, name, "reduce", "several parameters by", _val_txt)
+sc_logging_state_powered(pokemon_id, name, "reduce", "several parameters by", "half")
 

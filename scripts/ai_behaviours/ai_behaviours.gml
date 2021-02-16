@@ -3,7 +3,7 @@
 function sc_ai_idle(){
 	timeout--
 	if timeout <= 0 {
-		timeout = 10 + random(25)
+		timeout = 20 + random(50)
 		tgAngle = direction + (90 - random(180))
 		scBehaviour = sc_ai_move_idle
 		sc_ai_new_target()
@@ -12,12 +12,16 @@ function sc_ai_idle(){
 
 
 function sc_ai_move_idle(){
-	speed_mod = -0.5
+	if maxSpeed > 0
+		speed_mod = maxSpeed * -0.5
+	if moveSpeed > 0
+		moveSpeed = max(0.25, maxSpeed + speed_mod)
 	timeout--
 	if timeout <= 0 {
 		sc_player_stop_set()
 		scBehaviour = sc_ai_idle
 		timeout = 50 + random(200)
+		speed_mod = 0
 	} else
 		sc_player_move()
 	return false

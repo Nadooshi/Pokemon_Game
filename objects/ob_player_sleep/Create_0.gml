@@ -17,6 +17,9 @@ attack_warmup = 0
 target = noone
 plannedActionNum = -1
 scBehaviour = noone
+power_reg = 0.2
+health_reg = 0.3
+hurt_reg = 0.3
 
 image_index = 2
 image_angle = choose(-90, 90)
