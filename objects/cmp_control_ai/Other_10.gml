@@ -18,6 +18,7 @@ for (var i=0; i<ds_list_size(action_list); i++) {
 		case _ATTACK_TYPE.aura:
 		case _ATTACK_TYPE.pool: {
 			ds_list_add(att_list[_ATTACK_PURPOSE.area], i)
+			break
 		}
 	
 		case _ATTACK_TYPE.lunge:

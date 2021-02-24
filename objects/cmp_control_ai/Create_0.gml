@@ -48,5 +48,6 @@ if not ds_exists(att_list[_ATTACK_PURPOSE.barrier], ds_type_list)
 
 scBehaviour = sc_player_stop_set
 
-actionQueue = ds_queue_create()
+ai_groups = ds_map_create()
+
 

@@ -8,6 +8,7 @@ event_inherited();
 d_alpha = 0
 alpha = 1
 speed = 0
+radius = 0
 
 init = false
 

@@ -36,7 +36,12 @@ function sc_ai_new_target() {
 		tgX = target.x
 		tgY = target.y
 		// plan action
-		plannedPurpose = sc_choose([_ATTACK_PURPOSE.near, _ATTACK_PURPOSE.far], [1, 1])
+		plannedPurpose = sc_choose([
+			_ATTACK_PURPOSE.near,
+			_ATTACK_PURPOSE.far,
+			_ATTACK_PURPOSE.area],
+			[1, 1, 1]
+		)
 		
 //		plannedPurpose = choose(_ATTACK_PURPOSE.near, _ATTACK_PURPOSE.far)
 		var _attCount = ds_list_size(att_list[plannedPurpose])
@@ -49,6 +54,15 @@ function sc_ai_new_target() {
 			return false
 		}
 		scBehaviour = sc_ai_follow_target
+		switch plannedPurpose {
+		case _ATTACK_PURPOSE.near:
+		case _ATTACK_PURPOSE.far:
+			scBehaviour = sc_ai_follow_target
+			break
+		case _ATTACK_PURPOSE.area:
+			scBehaviour = sc_ai_target_group
+			break
+		}
 		last_done = false
 	} else 
 		plannedActionNum = -1
@@ -57,19 +71,20 @@ function sc_ai_new_target() {
 //	timeout = 5 + random(20)
 }
 
-
 function sc_ai_follow_target() {
 	if not sc_does_exist(target) {
+		sc_player_stop_set()
 		scBehaviour = sc_player_stop_set
 		return false
 	}
 	tgAngle = point_direction(x, y+12, target.x, target.y+12)
 	tgX = target.x
 	tgY = target.y
-//	var _target_d = point_distance(x, y+12, target.x, target.y+12)
 	// get distance btw collision areas
 	var _target_d = distance_to_point(target.x, target.y+12) - 12
 	var _neededDist = action_list[| plannedActionNum][? "distance"]
+	if plannedPurpose = _ATTACK_PURPOSE.near
+		_neededDist = 6
 	var _lunge_num = -1
 	var _lungeCount = ds_list_size(att_list[_ATTACK_PURPOSE.move])
 	if _lungeCount > 0 {  // canLunge
@@ -101,10 +116,92 @@ function sc_ai_follow_target() {
 		// get closer
 		sc_player_move()
 	}
+}
 
+function sc_ai_target_group() {
+	if not sc_does_exist(target) {
+		sc_player_stop_set()
+		scBehaviour = sc_player_stop_set
+		return false
+	}
+	
+	if counter mod 20 = 0 {
+		var _neededDist = 6
+		switch action_list[| plannedActionNum][? "type"] {
+		case _ATTACK_TYPE.aura: 
+			_neededDist = action_list[| plannedActionNum][? "distance"]
+			break
+		case _ATTACK_TYPE.pool: 
+			_neededDist = (action_list[| plannedActionNum][? "radius"] + 1) * 8
+			break
+		}
+	// update groups
+		ds_map_clear(ai_groups)
+		var _self = id
+		with ob_player
+		if id != _self.id {
+			_self.ai_groups[? id] = [id]
+			with ob_player
+			if (id != other.id) and (id != _self.id)
+			if distance_to_point(other.x, other.y) <= _neededDist * 2 
+				array_push(_self.ai_groups[? other.id], id)
+		}
+		
+		// choose biggest group
+		var _bGroup = noone // player id with biggest g
+		var _bCount = 1
+		var _id = ds_map_find_first(ai_groups)
+		while not is_undefined(_id) {
+			var _groupCount = array_length(ai_groups[? _id])
+			if _groupCount > _bCount
+				_bGroup = _id
+			_id = ds_map_find_next(ai_groups, _id)
+		}
+		if _bGroup != noone {
+			var _avgX = 0, _avgY = 0;
+			for (var i=0; i<_bCount; i++) {
+				_avgX += ai_groups[? _bGroup][i].x
+				_avgY += ai_groups[? _bGroup][i].y
+			}
+			_avgX = _avgX / _bCount
+			_avgY = _avgY / _bCount
+			with instance_create_layer(_avgX, _avgY, "Particles", ob_particle) {
+				radius = _neededDist
+				alpha = 0.25
+				d_alpha = -0.01
+			}
+			// get to the point and attack
+			tgAngle = point_direction(x, y+12, target.x, target.y+12)
+			tgX = target.x
+			tgY = target.y
+		} else {
+			// try another attack
+			sc_player_stop_set()
+			scBehaviour = sc_player_stop_set
+		}
+	}
+	
+	if sc_ai_get_to_point() {
+		sc_ai_hit_target()	
+	}
+}
+
+function sc_ai_get_to_point() {
+	var _d = distance_to_point(tgX, tgY)
+	tgAngle = point_direction(x, y+12, tgX, tgY+12)
+	sc_player_move()
+	if _d <= abs(moveSpeed)
+		return true
+	return false
 }
 
 function sc_ai_hit_target() {
+	if not sc_does_exist(target) {
+		sc_player_stop_set()
+		scBehaviour = sc_player_stop_set
+		return false
+	}
+	
 	var _done = false
 	// do multiple attacks using full power
 	doActionNum = plannedActionNum
@@ -118,6 +215,9 @@ function sc_ai_hit_target() {
 		exit
 	}
 	if attack_warmup <= 0 {
+		tgAngle = point_direction(x, y+12, target.x, target.y+12)
+		tgX = target.x
+		tgY = target.y
 		event_perform(ev_other, ev_user3) // attack
 		_done = sc_ai_wait_warmup_start()
 	}
@@ -134,7 +234,7 @@ function sc_ai_hit_target() {
 		target = noone
 	}
 		
-	last_done = _done	//	false = failed to set warmup (not enough power_cur)1
+	last_done = _done	//	false = failed to set warmup (not enough power_cur)
 	
 }
 
@@ -158,18 +258,14 @@ function sc_ai_wait_warmup_start() {
 
 function sc_ai_wait_warmup() {
 	if attack_warmup > 0.002 {
-		var _d = distance_to_point(tgX, tgY)
-		tgAngle = point_direction(x, y+12, tgX, tgY+12)
 		if moveSpeed > 0.1  // continue moving
-			sc_player_move()
-		if _d <= abs(moveSpeed) {
+		if sc_ai_get_to_point()
 			sc_ai_wait_warmup_start()
-		}
 	} else {
 		tgAngle = point_direction(x, y+12, target.x, target.y+12)
 		tgX = target.x
 		tgY = target.y
-		sc_player_move()
+		sc_player_move()  // turn to target
 		scBehaviour = sc_player_stop_set
 	}
 	

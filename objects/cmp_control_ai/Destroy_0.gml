@@ -1,4 +1,3 @@
-/// @desc Clean up
+/// @desc
 
-ds_queue_destroy(actionQueue)
-
+ds_map_destroy(ai_groups)
