@@ -7,7 +7,7 @@ function sc_player_move_path(){
 		_p1 = _p0 + 1	
 	else {
 		path_end()
-		scBehaviour = sc_player_stop_set
+		sc_set_behaviour(sc_player_stop_set)
 		sc_player_animate()
 		exit
 	}

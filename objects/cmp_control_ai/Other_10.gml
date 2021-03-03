@@ -43,8 +43,16 @@ for (var i=0; i<ds_list_size(action_list); i++) {
 			break
 		}
 	}
-	
-	
+	// lists by tgFrom (position stage)
+	var _is_air = action_list[| i][? "tgFrom"] & _ATTACK_TG.air
+	var _is_gnd = action_list[| i][? "tgFrom"] & _ATTACK_TG.ground
+	var _is_und = action_list[| i][? "tgFrom"] & _ATTACK_TG.underground
+	if _is_air > 0
+		ds_list_add(att_tgFroms[_ATTACK_TG.air], i)
+	if _is_gnd > 0
+		ds_list_add(att_tgFroms[_ATTACK_TG.ground], i)
+	if _is_und > 0
+		ds_list_add(att_tgFroms[_ATTACK_TG.underground], i)
 }
 
 target = noone

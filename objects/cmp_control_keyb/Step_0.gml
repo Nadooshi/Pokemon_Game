@@ -34,13 +34,13 @@ if not doMove {
 	if dcount > 0	{
 		direction = newangle
 		tgAngle = direction
-		scBehaviour = sc_player_move_set
+		sc_set_behaviour(sc_player_move_set)
 	}
 } else {
 	if dcount > 0
 		tgAngle = newangle
 	else
-		scBehaviour = sc_player_stop_set
+		sc_set_behaviour(sc_player_stop_set)
 }
 doMove = (dcount > 0)
 

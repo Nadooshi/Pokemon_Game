@@ -10,5 +10,5 @@ o_maxSpeed = maxSpeed
 maxSpeed *= 1.33
 frameSpeed = 0.1
 
-scBehaviour = sc_player_stop_set
+sc_set_behaviour(sc_player_stop_set)
 position_stage = _ATTACK_TG.air

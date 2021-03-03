@@ -21,7 +21,7 @@ if counter mod 100 = 0 {
 		var _sp = moveSpeed
 		moveSpeed = 0
 		path_start(path, _sp, path_action_stop, false)
-		scBehaviour = sc_player_move_path
+		sc_set_behaviour(sc_player_move_path)
 		instance_activate_object(coll_area)
 	}
 }

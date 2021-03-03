@@ -7,13 +7,20 @@ if not sc_does_exist(_a_map) {
 	exit
 }
 
-if (_a_map[? "tgFrom"] & position_stage) != 0 { 
-	if _a_map[? "ap"] <= power_cur {
+var _ok_position = ((_a_map[? "tgFrom"] & position_stage) != 0 )
+var _ok_power = (_a_map[? "ap"] <= power_cur)
+
+if _ok_position { 
+	if _ok_power {
 		power_cur -= _a_map[? "ap"]
 		attack_warmup = _a_map[? "warmup"] + 0.001
+		attack_error = _ATTACK_ERROR.nothing
 	} else 
-		doActionNum = -1
+		attack_error = _ATTACK_ERROR.no_power
 } else
+	attack_error = _ATTACK_ERROR.wrong_position
+
+if attack_error != _ATTACK_ERROR.nothing
 	doActionNum = -1
 
 sc_battle_update_actions()

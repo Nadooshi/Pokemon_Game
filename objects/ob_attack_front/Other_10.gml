@@ -4,7 +4,7 @@
 event_inherited();
 
 if sc_does_exist(pokemon_id.target) {
-	if distance_to_point(pokemon_id.target.x, pokemon_id.target.y+12) < 32
+	if distance_to_point(pokemon_id.target.x, pokemon_id.target.y+12) < 6
 	if collision_line(x, y+12, pokemon_id.target.x, pokemon_id.target.y+12, pokemon_id.target, true, true) {
 	
 		bullet = instance_create_layer(pokemon_id.target.x, pokemon_id.target.y+12, "Particles", ob_damage_area)

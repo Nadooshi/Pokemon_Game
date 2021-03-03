@@ -1,5 +1,5 @@
 function sc_player_move_set() {
 	
-	scBehaviour = sc_player_move
+	sc_set_behaviour(sc_player_move)
 }
 

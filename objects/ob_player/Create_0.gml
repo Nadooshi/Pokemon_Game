@@ -13,6 +13,16 @@ enum d {
 	Down
 }
 
+enum _ATTACK_ERROR {
+	nothing,
+	no_power,
+	warmup_not_ready,
+	wrong_position,
+	no_target
+}
+
+attack_error = _ATTACK_ERROR.nothing
+
 pokemon_map = ds_map_create()
 action_list = ds_list_create()
 
@@ -44,6 +54,7 @@ _z = 0
 attack_ob_id = noone
 scBehaviour = noone
 succeeded_behaviour = noone
+prev_behaviour = noone
 
 selected = false
 timeout = 0

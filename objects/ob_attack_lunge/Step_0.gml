@@ -19,7 +19,7 @@ timeout--
 if timeout <=0 {
 	with pokemon_id {
 		canMove = true
-		scBehaviour = sc_player_stop_set
+		sc_set_behaviour(sc_player_stop_set)
 		sc_player_stop_set()
 	}
 	instance_destroy()

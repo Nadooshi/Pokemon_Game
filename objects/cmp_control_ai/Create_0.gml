@@ -29,19 +29,24 @@ plannedActionNum = -1
 //neededDist = 32  // min dist for chosen attack
 last_done = false  // last attack was successful
 
-att_list = array_create(_ATTACK_PURPOSE.count, noone) // actionNums
+if not variable_instance_exists(id, "att_list")
+	att_list = array_create(_ATTACK_PURPOSE.count, noone) // actionNums
+if not variable_instance_exists(id, "att_tgFroms") {
+	att_tgFroms[_ATTACK_TG.air] = noone
+	att_tgFroms[_ATTACK_TG.ground] = noone
+	att_tgFroms[_ATTACK_TG.underground] = noone
+}
 
-if not ds_exists(att_list[_ATTACK_PURPOSE.near], ds_type_list)
-	att_list[_ATTACK_PURPOSE.near] = ds_list_create()
-if not ds_exists(att_list[_ATTACK_PURPOSE.far], ds_type_list)
-	att_list[_ATTACK_PURPOSE.far] = ds_list_create()
-if not ds_exists(att_list[_ATTACK_PURPOSE.area], ds_type_list)
-	att_list[_ATTACK_PURPOSE.area] = ds_list_create()
-if not ds_exists(att_list[_ATTACK_PURPOSE.move], ds_type_list)
-	att_list[_ATTACK_PURPOSE.move] = ds_list_create()
+for (var i=0; i<_ATTACK_PURPOSE.count; i++)
+if not ds_exists(att_list[i], ds_type_list)
+	att_list[i] = ds_list_create()
 
-if not ds_exists(att_list[_ATTACK_PURPOSE.barrier], ds_type_list)
-	att_list[_ATTACK_PURPOSE.barrier] = ds_list_create()
+if not ds_exists(att_tgFroms[_ATTACK_TG.air], ds_type_list)
+	att_tgFroms[_ATTACK_TG.air] = ds_list_create()
+if not ds_exists(att_tgFroms[_ATTACK_TG.ground], ds_type_list)
+	att_tgFroms[_ATTACK_TG.ground] = ds_list_create()
+if not ds_exists(att_tgFroms[_ATTACK_TG.underground], ds_type_list)
+	att_tgFroms[_ATTACK_TG.underground] = ds_list_create()
 
 //if not ds_exists(att_list[_ATTACK_PURPOSE.support], ds_type_list)
 //	att_list[_ATTACK_PURPOSE.support] = ds_list_create()

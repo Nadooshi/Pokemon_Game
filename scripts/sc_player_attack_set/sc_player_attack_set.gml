@@ -18,7 +18,7 @@ function sc_player_attack_set() {
 			attack_ob_id.timeout = 60 * 0.1 * _a_map[? "range"]
 			frameSpeed = 0
 			damage_mod = melee_damage_mod
-			scBehaviour = sc_player_attack_lunge
+			sc_set_behaviour(sc_player_attack_lunge)
 			break
 		case _ATTACK_TYPE.range:
 			attack_ob_id = instance_create_layer(x, y, "Particles", ob_attack_range)
@@ -28,7 +28,7 @@ function sc_player_attack_set() {
 			sc_player_stop_set()
 			frameSpeed = 0
 			damage_mod = range_damage_mod
-			scBehaviour = sc_player_attack_wait_anim
+			sc_set_behaviour(sc_player_attack_wait_anim)
 			// set direction image
 			sc_player_move()
 			break
@@ -40,7 +40,7 @@ function sc_player_attack_set() {
 			sc_player_stop_set()
 			frameSpeed = 0
 			damage_mod = range_damage_mod
-			scBehaviour = sc_player_attack_wait_anim
+			sc_set_behaviour(sc_player_attack_wait_anim)
 			// set direction image
 			sc_player_move()
 			break
@@ -53,7 +53,7 @@ function sc_player_attack_set() {
 			sc_player_stop_set()
 			frameSpeed = 0
 			damage_mod = melee_damage_mod
-			scBehaviour = sc_player_attack_wait_anim
+			sc_set_behaviour(sc_player_attack_wait_anim)
 			// set direction image
 			sc_player_move()
 			break		
@@ -67,7 +67,7 @@ function sc_player_attack_set() {
 			sc_player_stop_set()
 			frameSpeed = 0
 			damage_mod = melee_damage_mod
-			scBehaviour = sc_player_attack_front
+			sc_set_behaviour(sc_player_attack_front)
 			// set direction image
 			sc_player_move()
 			// little lunge
@@ -84,7 +84,7 @@ function sc_player_attack_set() {
 			sc_player_stop_set()
 			frameSpeed = 0
 			damage_mod = range_damage_mod
-			scBehaviour = sc_player_attack_wait_anim
+			sc_set_behaviour(sc_player_attack_wait_anim)
 			// set direction image
 			sc_player_move()
 			break
@@ -98,7 +98,7 @@ function sc_player_attack_set() {
 			sc_player_stop_set()
 			frameSpeed = 0
 			damage_mod = range_damage_mod
-			scBehaviour = sc_player_attack_wait_anim
+			sc_set_behaviour(sc_player_attack_wait_anim)
 			// set direction image
 			sc_player_move()
 			break
@@ -110,7 +110,7 @@ function sc_player_attack_set() {
 			canMove = false
 			sc_player_stop_set()
 			frameSpeed = 0
-			scBehaviour = sc_player_attack_wait_anim
+			sc_set_behaviour(sc_player_attack_wait_anim)
 			// set direction image
 			sc_player_move()
 			break
@@ -121,7 +121,7 @@ function sc_player_attack_set() {
 			canMove = false
 			sc_player_stop_set()
 			frameSpeed = 0
-			scBehaviour = sc_player_attack_wait_anim
+			sc_set_behaviour(sc_player_attack_wait_anim)
 			// set direction image
 			sc_player_move()
 			break
@@ -132,7 +132,7 @@ function sc_player_attack_set() {
 			canMove = false
 			sc_player_stop_set()
 			frameSpeed = 0
-			scBehaviour = sc_player_attack_wait_anim
+			sc_set_behaviour(sc_player_attack_wait_anim)
 			// set direction image
 			sc_player_move()
 			break
@@ -146,7 +146,7 @@ function sc_player_attack_set() {
 
 			event_perform(ev_other, ev_user5) // swoop
 			damage_mod = melee_damage_mod
-			scBehaviour = sc_player_attack_wait_anim
+			sc_set_behaviour(sc_player_attack_wait_anim)
 			// set direction image
 			sc_player_move()
 			break
@@ -158,7 +158,7 @@ function sc_player_attack_set() {
 			sc_player_stop_set()
 			frameSpeed = 0
 			damage_mod = range_damage_mod
-			scBehaviour = sc_player_attack_wait_anim
+			sc_set_behaviour(sc_player_attack_wait_anim)
 			// set direction image
 			sc_player_move()
 			break
