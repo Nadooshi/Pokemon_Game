@@ -1,8 +1,8 @@
 /// @desc Fly
 
 if pokemon_map[? "flyable"] != 0
-if power_cur >= power_max {
-	power_cur = 0
+if power_cur >= power_max * 0.5 {
+	power_cur -= power_max * 0.5
 	depth = -bbox_bottom * 0.5
 	instance_change(ob_player_flying, false)
 	sc_composed_remove_component(cmp_collidable_player, true)

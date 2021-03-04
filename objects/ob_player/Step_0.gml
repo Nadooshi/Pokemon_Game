@@ -46,4 +46,7 @@ if attack_warmup > 0 {
 	}
 }
 
+// courage
+//courage_cur = 50 + cos(counter*0.005) * 50;
+courage_threshold = 50 + sin(counter*0.001) * 50;
 

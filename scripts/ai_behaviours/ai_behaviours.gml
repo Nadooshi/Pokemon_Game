@@ -53,7 +53,7 @@ function sc_ai_new_target() {
 				// new attack
 				target = noone
 				plannedActionNum = -1
-		}
+			}
 			
 		}
 		if plannedActionNum < 0 {

@@ -25,8 +25,8 @@
   "gridY": 0,
   "frames": [
     {"compositeImage":{"FrameId":{"name":"546ccd24-d127-420b-a733-1f3f9a879a0d","path":"sprites/sp_for_health/sp_for_health.yy",},"LayerId":null,"resourceVersion":"1.0","name":"composite","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"546ccd24-d127-420b-a733-1f3f9a879a0d","path":"sprites/sp_for_health/sp_for_health.yy",},"LayerId":{"name":"5612b44e-4b1f-482b-911c-243fa34a8c06","path":"sprites/sp_for_health/sp_for_health.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
         {"FrameId":{"name":"546ccd24-d127-420b-a733-1f3f9a879a0d","path":"sprites/sp_for_health/sp_for_health.yy",},"LayerId":{"name":"f6173dbb-e358-4d6f-937c-d6e924049def","path":"sprites/sp_for_health/sp_for_health.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+        {"FrameId":{"name":"546ccd24-d127-420b-a733-1f3f9a879a0d","path":"sprites/sp_for_health/sp_for_health.yy",},"LayerId":{"name":"5612b44e-4b1f-482b-911c-243fa34a8c06","path":"sprites/sp_for_health/sp_for_health.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
       ],"parent":{"name":"sp_for_health","path":"sprites/sp_for_health/sp_for_health.yy",},"resourceVersion":"1.0","name":"546ccd24-d127-420b-a733-1f3f9a879a0d","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
@@ -45,7 +45,7 @@
             {"id":"06e942a0-4625-4e8c-884a-af809045f66c","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"546ccd24-d127-420b-a733-1f3f9a879a0d","path":"sprites/sp_for_health/sp_for_health.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"modifiers":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack",},
     ],
-    "visibleRange": {"x":0.0,"y":0.0,},
+    "visibleRange": null,
     "lockOrigin": false,
     "showBackdrop": true,
     "showBackdropImage": false,

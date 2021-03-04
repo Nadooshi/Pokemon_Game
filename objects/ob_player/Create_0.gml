@@ -95,5 +95,8 @@ alarm_set(0,10)
 alarm_set(1,30)
 
 in_biome = ds_list_create()
+courage_cur = 50
+courage_threshold = 50
+
 
 target = ob_cursor
