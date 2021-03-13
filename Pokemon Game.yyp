@@ -528,6 +528,7 @@
     {"id":{"name":"ob_button_action","path":"objects/ob_button_action/ob_button_action.yy",},"order":10,},
     {"id":{"name":"sp_exp_attack_11","path":"sprites/sp_exp_attack_11/sp_exp_attack_11.yy",},"order":11,},
     {"id":{"name":"ob_act_icon","path":"objects/ob_act_icon/ob_act_icon.yy",},"order":11,},
+    {"id":{"name":"ai_flee","path":"scripts/ai_flee/ai_flee.yy",},"order":2,},
     {"id":{"name":"ob_battle_action_icon","path":"objects/ob_battle_action_icon/ob_battle_action_icon.yy",},"order":12,},
     {"id":{"name":"ob_composed","path":"objects/ob_composed/ob_composed.yy",},"order":0,},
     {"id":{"name":"cmp_selectable","path":"objects/cmp_selectable/cmp_selectable.yy",},"order":1,},

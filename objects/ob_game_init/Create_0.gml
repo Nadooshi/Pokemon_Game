@@ -230,7 +230,8 @@ attack_affect_text[_ATTACK_AFFECT.itself] = "itself"
 enum _ATTACK_TG {
 	air			= 1,
 	ground		= 2,
-	underground = 4
+	underground = 4,
+	all			= 7
 }
 globalvar attack_target_text;
 attack_target_text[_ATTACK_TG.air	 	]  = "air"
