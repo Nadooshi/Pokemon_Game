@@ -18,10 +18,10 @@ function sc_logging_damage(argument0, argument1, argument2, argument3){
 	if _object.trainer != -1 {
 	
 		_log = "[" + date_time_string(date_current_datetime())+ "]: " + string(_object.trainer[? "name"]) + "`s " +
-		_object.pokemon_map[? "title"] + " is injured " + 
+		_object.pokemon_map[? "title"] + " (" + string(_object.id) + ") " + " is injured " + 
 		string(_value) + " by " +
 		_action[? "name"] + " from " + _relation + " " +
-		_subject.pokemon_map[? "title"]
+		_subject.pokemon_map[? "title"] + " (" + string(_object.id) + ") "
 		
 	} else {
 		_log = "[" + date_time_string(date_current_datetime())+ "]: " + string(_subject.trainer[? "name"]) + "`s " +
@@ -66,11 +66,11 @@ function sc_logging_action(argument0, argument1){
 			break;
 		}
 		case _ATTACK_TYPE.barrier:
-			_what_do = " install "			
+			_what_do = " install "
 	}
 	
 	_log = "[" + date_time_string(date_current_datetime())+ "]: " + string(_subject.trainer[? "name"]) + "`s " +
-	_subject.pokemon_map[? "title"] + 
+	_subject.pokemon_map[? "title"] + " (" + string(_subject.id) + ") " +
 	_what_do + " " +
 	_action[? "name"]
 
@@ -96,8 +96,8 @@ function sc_logging_miss(argument0, argument1, argument2){
 	if _object.trainer != -1 {
 
 	_log = "[" + date_time_string(date_current_datetime())+ "]: " + string(_object.trainer[? "name"]) + "`s " +
-	_object.pokemon_map[? "title"] + " dodged " +
-	_subject.pokemon_map[? "title"] + "`s " +
+	_object.pokemon_map[? "title"] +  " (" + string(_object.id) + ") " +" dodged " +
+	_subject.pokemon_map[? "title"] + " (" + string(_subject.id) + ") " + "`s " +
 	_action[? "name"]
 	
 	} else {
@@ -127,9 +127,9 @@ function sc_logging_death(argument0, argument1, argument2){
 	if _object.trainer = -1 exit;
 
 	_log = "[" + date_time_string(date_current_datetime())+ "]: " + string(_object.trainer[? "name"]) + "`s " +
-	_object.pokemon_map[? "title"] + " cannot continue the fight, as the " +
+	_object.pokemon_map[? "title"] + " (" + string(_object.id) + ") " + " cannot continue the fight, as the " +
 	_action[? "name"] + " from "+ _relation + " " +  
-	_subject.pokemon_map[? "title"] + " was the last."
+	_subject.pokemon_map[? "title"] + " (" + string(_subject.id) + ") " + " was the last."
 	
 	show_debug_message(_log)
 	
@@ -152,7 +152,7 @@ function sc_logging_state_loses(argument0, argument1, argument2, argument3, argu
 
 	var _log = ""
 	_log = "[" + date_time_string(date_current_datetime())+ "]: " + string(_object.trainer[? "name"]) + "`s " +
-	_object.pokemon_map[? "title"] + " is " +
+	_object.pokemon_map[? "title"] + " (" + string(_object.id) + ") " + " is " +
 	_what_do + " from " + 
 	_state + " and loses " + _parameter + " by " + string(_value)
 	
@@ -178,7 +178,7 @@ function sc_logging_state_rises(argument0, argument1, argument2, argument3, argu
 	
 	var _log = ""
 	_log = "[" + date_time_string(date_current_datetime())+ "]: " + string(_object.trainer[? "name"]) + "`s " +
-	_object.pokemon_map[? "title"] + " is " +
+	_object.pokemon_map[? "title"] + " (" + string(_object.id) + ") " + " is " +
 	_what_do + " from " + 
 	_state + " and rise " + _parameter + " by " + string(_value)
 	
@@ -200,7 +200,8 @@ function sc_logging_state_cursed(argument0, argument1, argument2){
 
 	var _log = ""
 	_log = "[" + date_time_string(date_current_datetime())+ "]: " + string(_object.trainer[? "name"]) + "`s " +
-	_object.pokemon_map[? "title"] + " was in a " + _state + " and " + _what_do
+	_object.pokemon_map[? "title"] + " (" + string(_object.id) + ") " +
+	" was in a " + _state + " and " + _what_do
 	
 	show_debug_message(_log)
 	
@@ -224,7 +225,7 @@ function sc_logging_state_powered(argument0, argument1, argument2, argument3, ar
 
 	var _log = ""
 	_log = "[" + date_time_string(date_current_datetime())+ "]: " + string(_object.trainer[? "name"]) + "`s " +
-	_object.pokemon_map[? "title"] + 
+	_object.pokemon_map[? "title"] + " (" + string(_object.id) + ") " + 
 	" а " + _state + " " + _what_do + " " + _parameter + ", and is now " + _value
 	
 	show_debug_message(_log)
@@ -242,7 +243,7 @@ function sc_logging_state_over(argument0, argument1){
 
 	var _log = ""
 	_log = "[" + date_time_string(date_current_datetime())+ "]: " + string(_subject.trainer[? "name"]) + "`s " +
-	_subject.pokemon_map[? "title"] + " - " + _state + " no longer effect."
+	_subject.pokemon_map[? "title"] + " (" + string(_subject.id) + ") " + " - " + _state + " no longer effect."
 	
 	show_debug_message(_log)
 	

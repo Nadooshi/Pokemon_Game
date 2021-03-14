@@ -205,6 +205,7 @@
     {"id":{"name":"sp_pr_attack_9","path":"sprites/sp_pr_attack_9/sp_pr_attack_9.yy",},"order":9,},
     {"id":{"name":"sp_pr_attack_10","path":"sprites/sp_pr_attack_10/sp_pr_attack_10.yy",},"order":10,},
     {"id":{"name":"sp_pr_attack_11","path":"sprites/sp_pr_attack_11/sp_pr_attack_11.yy",},"order":11,},
+    {"id":{"name":"is_like","path":"scripts/is_like/is_like.yy",},"order":15,},
     {"id":{"name":"sp_pr_attack_12","path":"sprites/sp_pr_attack_12/sp_pr_attack_12.yy",},"order":12,},
     {"id":{"name":"sp_pr_attack_13","path":"sprites/sp_pr_attack_13/sp_pr_attack_13.yy",},"order":13,},
     {"id":{"name":"sp_pr_attack_14","path":"sprites/sp_pr_attack_14/sp_pr_attack_14.yy",},"order":14,},

@@ -15,4 +15,5 @@ h_angle = []
 
 counter = 0
 radius = 18
+courage_addup = 10
 near_players = []

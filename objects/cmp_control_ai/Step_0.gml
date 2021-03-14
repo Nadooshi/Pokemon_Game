@@ -8,7 +8,7 @@ prev_doMove = doMove
 if script_exists(scBehaviour) or is_method(scBehaviour) {
 	if scBehaviour = sc_player_stop_set {
 		if sc_does_exist(target)
-			sc_set_behaviour(sc_ai_follow_target)
+			sc_set_behaviour(sc_ai_follow_target)  // 
 		else
 			sc_set_behaviour(sc_ai_idle)
 	}
@@ -44,8 +44,8 @@ if (counter mod 10) = 0 {
 			var _rd = min(20 / _d , 5)
 			_fr_force += (_tg.pokemon_map[? "rating"] + _tg.pokemon_map[? "level"] + _tg.health_cur) * _rd
 		}
-	var _mod_courage = (_fr_force - _en_force) / _u_force
-	courage_cur = clamp(courage_cur + _mod_courage, 0, 100)
+		var _mod_courage = (_fr_force - _en_force) / _u_force
+		_u.courage_cur = clamp(_u.courage_cur + _mod_courage, 0, 100)
 	}
 	if courage_cur < courage_threshold
 		sc_ai_set_flee()

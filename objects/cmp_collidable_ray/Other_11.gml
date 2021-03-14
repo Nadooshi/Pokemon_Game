@@ -26,7 +26,7 @@ if action[? "bullet_phys"] != _BULLET_PH.piercer {
 for (i=0; i<ds_list_size(collided_with_list); i++)
 if sc_does_exist(collided_with_list[| i]) {
 	collided_with = collided_with_list[| i];
-	if object_is_ancestor(collided_with.object_index, ob_player) or (collided_with.object_index == ob_player) {
+	if is_like(collided_with.object_index, ob_player) {
 		if (action[? "tgTo"] & collided_with.position_stage) != 0 {
 			// check accuracy
 			if sc_check_affect(pokemon_id, collided_with, action[? "affect"]) 

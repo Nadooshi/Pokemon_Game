@@ -1,6 +1,6 @@
 /// @desc
 
 // Inherit the parent event
-canMove = true
+//canMove = true
 event_inherited();
-canMove = false
+//canMove = false
