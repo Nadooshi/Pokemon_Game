@@ -8,7 +8,7 @@ prev_doMove = doMove
 if script_exists(scBehaviour) or is_method(scBehaviour) {
 	if scBehaviour = sc_player_stop_set {
 		if sc_does_exist(target)
-			sc_set_behaviour(sc_ai_follow_target)  // 
+			sc_set_behaviour(sc_ai_follow_target)
 		else
 			sc_set_behaviour(sc_ai_idle)
 	}
@@ -19,7 +19,7 @@ if not sc_does_exist(target)
 
 
 // process courage
-if (counter mod 10) = 0 {
+if (counter mod 30) = 0 {
 	//var _tg = sc_find_nearest_target(id, _ATTACK_AFFECT.enemy, 180, 7)
 	var _d = 0
 	var _tg = noone
@@ -51,3 +51,4 @@ if (counter mod 10) = 0 {
 		sc_ai_set_flee()
 	
 }
+

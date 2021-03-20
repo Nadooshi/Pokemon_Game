@@ -28,6 +28,9 @@ function sc_ai_flee() {
 		//sc_set_behaviour(sc_player_stop_set)
 		sc_ai_set_flee()
 	}
+	if courage_cur >= 99
+		// switch back to normal ai
+		scBehaviour = sc_player_stop_set
 }
 
 function sc_find_cover(_pokemon) {
