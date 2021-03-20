@@ -19,7 +19,7 @@ if not sc_does_exist(target)
 
 
 // process courage
-if (counter mod 30) = 0 {
+if (counter mod 10) = 0 {
 	//var _tg = sc_find_nearest_target(id, _ATTACK_AFFECT.enemy, 180, 7)
 	var _d = 0
 	var _tg = noone
@@ -35,16 +35,16 @@ if (counter mod 30) = 0 {
 		// enemy influence
 		if sc_check_affect(_u, _tg, _ATTACK_AFFECT.enemy) 
 		if _d<= 180 {
-			var _rd = min(90 / _d , 5)
+			var _rd = min(90 / _d , 3)
 			_en_force += (_tg.pokemon_map[? "rating"] + _tg.pokemon_map[? "level"] + _tg.health_cur) * _rd
 		}
 		//friend influence
 		if sc_check_affect(_u, _tg, _ATTACK_AFFECT.friend) 
 		if _d<= 90 {
-			var _rd = min(20 / _d , 5)
+			var _rd = min(20 / _d , 3)
 			_fr_force += (_tg.pokemon_map[? "rating"] + _tg.pokemon_map[? "level"] + _tg.health_cur) * _rd
 		}
-		var _mod_courage = (_fr_force - _en_force) / _u_force
+		var _mod_courage = (_fr_force + _u_force - _en_force) / _u_force
 		_u.courage_cur = clamp(_u.courage_cur + _mod_courage, 0, 100)
 	}
 	if courage_cur < courage_threshold
