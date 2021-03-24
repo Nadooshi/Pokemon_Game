@@ -35,6 +35,11 @@ function sc_apply_state() {
 			damage = _dmg
 			index = ds_list_size(other.states)
 			pokemon_id = other.id;
+			if is_undefined(_action[? "lastX"]) or is_undefined(_action[? "lastY"]) {
+				_action[? "lastX"] = x
+				_action[? "lastY"] = y
+			}
+			
 			pokemon_id_attack = _pokemon_id_attack; // атакующий
 			if not is_undefined(_action)
 			if ds_exists(_action, ds_type_map) {

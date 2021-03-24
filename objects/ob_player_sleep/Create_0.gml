@@ -5,7 +5,7 @@ var _sp = asset_get_index("sp_pokeworld_" + string(pokemon_map[? "face"]))
 if sprite_exists(_sp)
 	sprite_index = _sp
 
-sc_player_stop_set()
+sc_set_behaviour(sc_player_stop_set)
 
 o_maxSpeed = maxSpeed
 maxSpeed = 0
@@ -16,7 +16,6 @@ doActionNum = -1
 attack_warmup = 0
 target = noone
 plannedActionNum = -1
-scBehaviour = noone
 power_reg = 0.2
 health_reg = 0.3
 hurt_reg = 0.3

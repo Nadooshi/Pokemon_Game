@@ -7,8 +7,7 @@ hit_count = _t * 2
 
 alarm[0] = period;
 
-pokemon_id.power_cur = max(0, pokemon_id.power_cur-70)
-pokemon_id.power_reg = 0.1 // 0.3
+pokemon_id.courage_cur = max(0, pokemon_id.courage_cur-30)
 	
-sc_logging_state_cursed(pokemon_id, name, "losing power")
+sc_logging_state_cursed(pokemon_id, name, "the courage was gone.")
 

@@ -23,8 +23,8 @@ function sc_ai_flee() {
 		tgY = target.y
 		if sc_ai_get_to_point() {
 			sc_player_stop_set()
-			if (counter mod 30) = 0 
-				courage_cur += 3
+			if (counter mod t_process_courage) = 0 
+				courage_cur += courage_max_regen
 		}
 	} else {
 		target = noone

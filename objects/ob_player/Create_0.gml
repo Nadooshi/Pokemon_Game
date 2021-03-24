@@ -47,6 +47,7 @@ tgAngle = 0
 dAngle = 0
 tgX = 0
 tgY = 0 
+tgDelta = 0  // +- distance
 oX = 0
 oY = 0
 _z = 0
@@ -95,8 +96,8 @@ alarm_set(0,10)
 alarm_set(1,30)
 
 in_biome = ds_list_create()
-courage_cur = 50
-courage_threshold = 50
+courage_cur = 100
+courage_threshold = 20
 
 
 target = ob_cursor

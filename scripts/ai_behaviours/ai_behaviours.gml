@@ -1,5 +1,15 @@
 // for ob_player
 
+function sc_ai_wastetime(){
+	sc_player_stop_set()
+	timeout--
+	if timeout <= 0 {
+		timeout = 20 + random(50)
+		tgAngle = direction + (90 - random(180))
+		sc_set_behaviour(sc_ai_move_idle)
+	}
+}
+
 function sc_ai_idle(){
 	sc_player_stop_set()
 	timeout--
@@ -82,11 +92,15 @@ function sc_ai_follow_target() {
 		sc_set_behaviour(sc_player_stop_set)
 		return false
 	}
+	if plannedActionNum = -1 {
+		sc_set_behaviour(sc_ai_new_target)
+		exit
+	}
 	tgAngle = point_direction(x, y+12, target.x, target.y+12)
 	tgX = target.x
 	tgY = target.y
 	// get distance btw collision areas
-	var _target_d = distance_to_point(target.x, target.y+12) - 12
+	var _target_d = point_distance(x, y+12, target.x, target.y+12)-12 // -12 for far attack reach
 	var _neededDist = action_list[| plannedActionNum][? "distance"]
 	var _lunge_num = -1
 	var _lungeCount = ds_list_size(att_list[_ATTACK_PURPOSE.move])
@@ -101,7 +115,7 @@ function sc_ai_follow_target() {
 	   (_lunge_num >= 0) and 
 	   ((_target_d > _neededDist ) and (_target_d <= _lunge_d)) {
 		if action_list[| _lunge_num][? "ap"] <= power_cur {
-			doActionNum = _lunge_num
+			plannedActionNum = _lunge_num
 			sc_ai_hit_target()
 		} else
 			sc_player_move()
@@ -177,10 +191,12 @@ function sc_ai_target_group() {
 			tgAngle = point_direction(x, y+12, target.x, target.y+12)
 			tgX = target.x
 			tgY = target.y
+			tgDelta = 20
 		} else {
 			// try another attack
 			sc_player_stop_set()
 			sc_set_behaviour(sc_player_stop_set)
+			exit
 		}
 	}
 	
@@ -190,11 +206,13 @@ function sc_ai_target_group() {
 }
 
 function sc_ai_get_to_point() {
-	var _d = distance_to_point(tgX, tgY)
+	var _d = point_distance(x, y+12, tgX, tgY+12)
 	tgAngle = point_direction(x, y+12, tgX, tgY+12)
 	sc_player_move()
-	if _d <= abs(moveSpeed)
+	if _d <= max(abs(moveSpeed) * 0.75, tgDelta) {
+		tgDelta = 0
 		return true
+	}
 	return false
 }
 

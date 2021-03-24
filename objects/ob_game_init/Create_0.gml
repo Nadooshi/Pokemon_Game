@@ -319,11 +319,11 @@ ability_text[i++] = "speedup"       // +1 к ОД*
 ability_text[i++] = "slowdown"		//*
 ability_text[i++] = "trap"			//*
 ability_text[i++] = "random"		//*
-ability_text[i++] = "lulling"       // усыпление
+ability_text[i++] = "lulling"       // усыпление*
 ability_text[i++] = "stun"          // ошеломление*
 ability_text[i++] = "terror"        // ужас*
-ability_text[i++] = "flee"          // escape.mid
-ability_text[i++] = "wastetime"		//
+ability_text[i++] = "flee"          // escape.mid *
+ability_text[i++] = "wastetime"		// *
 ability_text[i++] = "disgust"		// отвращение*
 ability_text[i++] = "target"		//*
 ability_text[i++] = "loser"         // неуклюжесть*
@@ -388,6 +388,8 @@ state_object[_ABILITY_STATE.cure		] = ob_state_cure;
 state_object[_ABILITY_STATE.kamikaze	] = ob_state_kamikaze;
 state_object[_ABILITY_STATE.lulling		] = ob_state_lulling;
 state_object[_ABILITY_STATE.revenge		] = ob_state_revenge;
+state_object[_ABILITY_STATE.flee		] = ob_state_flee;
+state_object[_ABILITY_STATE.wastetime	] = ob_state_wastetime;
 
 
 #endregion
@@ -531,3 +533,6 @@ audio_channel_num(maxchannel)
 audio_set_master_gain(0, 0.5)
 
 #macro retreat_dist 200
+#macro t_process_courage 10
+#macro courage_max_regen 3
+

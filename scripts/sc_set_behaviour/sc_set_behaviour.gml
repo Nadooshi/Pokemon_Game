@@ -8,6 +8,7 @@ function sc_set_behaviour(script_or_function) {
 			script_get_name(scBehaviour) + "(" + string(scBehaviour) + ")"
 		)
 		prev_behaviour = scBehaviour
+		tgDelta = 0
 	}
 
 }

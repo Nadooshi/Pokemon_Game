@@ -21,7 +21,7 @@ function sc_logging_damage(argument0, argument1, argument2, argument3){
 		_object.pokemon_map[? "title"] + " (" + string(_object.id) + ") " + " is injured " + 
 		string(_value) + " by " +
 		_action[? "name"] + " from " + _relation + " " +
-		_subject.pokemon_map[? "title"] + " (" + string(_object.id) + ") "
+		_subject.pokemon_map[? "title"] + " (" + string(_subject.id) + ") "
 		
 	} else {
 		_log = "[" + date_time_string(date_current_datetime())+ "]: " + string(_subject.trainer[? "name"]) + "`s " +
@@ -122,14 +122,14 @@ function sc_logging_death(argument0, argument1, argument2){
 	var _log = ""
 	if _subject.trainer != _object.trainer
 		var _relation = "hostile"
-	else _relation = "friend"
+	else _relation = "friendly"
 	
 	if _object.trainer = -1 exit;
 
 	_log = "[" + date_time_string(date_current_datetime())+ "]: " + string(_object.trainer[? "name"]) + "`s " +
 	_object.pokemon_map[? "title"] + " (" + string(_object.id) + ") " + " cannot continue the fight, as the " +
-	_action[? "name"] + " from "+ _relation + " " +  
-	_subject.pokemon_map[? "title"] + " (" + string(_subject.id) + ") " + " was the last."
+	_action[? "name"] + " " + _relation + " of " +  
+	_subject.pokemon_map[? "title"] + " (" + string(_subject.id) + ") " + " finish him."
 	
 	show_debug_message(_log)
 	

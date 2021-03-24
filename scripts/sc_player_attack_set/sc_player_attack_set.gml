@@ -173,8 +173,8 @@ function sc_player_attack_set() {
 	for (var i=0; i<ds_list_size(states); i++)
 		ds_list_add(_st_objs, states[| i].object_index)
 	if ds_list_find_index(_st_objs, _ABILITY_STATE.revenge) != -1 {
-		action[? "dmg_material"] = (health_max - health_cur) / 2
-		action[? "dmg_element"] = (health_max - health_cur) / 2
+		_a_map[? "dmg_material"] = (health_max - health_cur) / 2
+		_a_map[? "dmg_element"] = (health_max - health_cur) / 2
 	}
 	ds_list_destroy(_st_objs)
 	
