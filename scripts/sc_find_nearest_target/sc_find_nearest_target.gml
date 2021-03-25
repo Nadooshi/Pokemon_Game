@@ -1,6 +1,6 @@
 /// @arg attacking_pokemon
 /// @arg attack_affect=enemy
-/// @arg max_distance=999
+/// @arg max_distance=9999
 /// @arg position
 /// @arg exclude_list_or_id
 function sc_find_nearest_target() {
@@ -40,6 +40,9 @@ function sc_find_nearest_target() {
 			return noone
 		}
 	}
+
+	if _affect = 0
+		return noone
 
 	var _tmp = noone
 	var _result = noone

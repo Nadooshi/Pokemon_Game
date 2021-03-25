@@ -14,6 +14,10 @@ counter = 0
 scBehaviour = sc_ai_idle
 prev_behaviour = sc_ai_idle
 
+fail_count = 0
+#macro max_fails 7
+
+
 enum _ATTACK_PURPOSE {
 	near,
 	far,

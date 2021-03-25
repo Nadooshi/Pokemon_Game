@@ -125,10 +125,10 @@ function sc_logging_death(argument0, argument1, argument2){
 	else _relation = "friendly"
 	
 	if _object.trainer = -1 exit;
-
+	var _name = is_undefined(_action[? "name"]) ? _action[? "active"][? "name"] : _action[? "name"]
 	_log = "[" + date_time_string(date_current_datetime())+ "]: " + string(_object.trainer[? "name"]) + "`s " +
 	_object.pokemon_map[? "title"] + " (" + string(_object.id) + ") " + " cannot continue the fight, as the " +
-	_action[? "name"] + " " + _relation + " of " +  
+	_name +	" " + _relation + " of " +  
 	_subject.pokemon_map[? "title"] + " (" + string(_subject.id) + ") " + " finish him."
 	
 	show_debug_message(_log)

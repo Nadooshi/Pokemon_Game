@@ -238,6 +238,11 @@ attack_target_text[_ATTACK_TG.air	 	]  = "air"
 attack_target_text[_ATTACK_TG.ground	]  = "ground"
 attack_target_text[_ATTACK_TG.underground] = "underground"
 
+enum _ATTACK_ROLE {
+	debuff = 0,
+	buff   = 1
+}
+
 enum _BULLET_PH {
 	custom,
 	soft,

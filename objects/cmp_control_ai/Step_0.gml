@@ -47,8 +47,7 @@ if (counter mod t_process_courage) = 0 {
 	}
 	var _mod_courage = (_fr_force + _u_force - _en_force) / _u_force + (0.05 * power_cur)
 	courage_cur = clamp(courage_cur + _mod_courage, 0, 100)
-	if courage_cur < courage_threshold
-		sc_ai_set_flee()
-	
 }
+if courage_cur < courage_threshold
+	sc_ai_set_flee()
 

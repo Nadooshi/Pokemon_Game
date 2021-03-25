@@ -16,7 +16,7 @@ if pokemon_id.states[| i].id != id
 	case ob_state_weak:
 	case ob_state_lulling:
 		instance_destroy(pokemon_id.states[| i])
-	pokemon_id.courage_cur = min(courage_cur + 2, 100)
 	}
+pokemon_id.courage_cur = min(pokemon_id.courage_cur + 2, 100)
 
 

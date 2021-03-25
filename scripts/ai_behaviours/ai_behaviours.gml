@@ -38,39 +38,42 @@ function sc_ai_move_idle(){
 	return false
 }
 
-
 function sc_ai_new_target() {
-	target = sc_find_nearest_target(id)
+	// plan action
+	plannedPurpose = sc_choose(
+		[_ATTACK_PURPOSE.near,
+		_ATTACK_PURPOSE.far,
+		_ATTACK_PURPOSE.area],
+		[1, 1, 1]
+	)
+	
+	var _attCount = ds_list_size(att_list[plannedPurpose])
+	if _attCount > 0 { // hasPurpose
+		var _att_num = irandom(_attCount-1)
+		plannedActionNum = att_list[plannedPurpose][| _att_num]
+		// check position stage
+		if ds_list_find_index(att_tgFroms[position_stage], plannedActionNum) = -1 {
+			// new attack
+			target = noone
+			plannedActionNum = -1
+		}
+	}
+	if plannedActionNum < 0 {
+		// new attack
+		sc_set_behaviour(sc_ai_new_target)
+		return false
+	}
+	// find target
+	var _action = action_list[| plannedActionNum]
+	var _a = [_ATTACK_AFFECT.enemy, _ATTACK_AFFECT.friend]
+	var _affect = _a[_action[? "role"]] & _action[? "affect"]
+	target = sc_find_nearest_target(id, _affect, infinity, _action[? "tgTo"])
 	
 	if sc_does_exist(target) {
+		sc_logging_state_over(id, "decided to use " + _action[? "name"] + " as " + attack_affect_text[_affect])
 		tgAngle = point_direction(x, y+12, target.x, target.y+12)
 		tgX = target.x
 		tgY = target.y
-		// plan action
-		plannedPurpose = sc_choose([
-			_ATTACK_PURPOSE.near,
-			_ATTACK_PURPOSE.far,
-			_ATTACK_PURPOSE.area],
-			[1, 1, 1]
-		)
-		
-		var _attCount = ds_list_size(att_list[plannedPurpose])
-		if _attCount > 0 { // hasPurpose
-			var _att_num = irandom(_attCount-1)
-			plannedActionNum = att_list[plannedPurpose][| _att_num]
-			// check position stage
-			if ds_list_find_index(att_tgFroms[position_stage], plannedActionNum) = -1 {
-				// new attack
-				target = noone
-				plannedActionNum = -1
-			}
-			
-		}
-		if plannedActionNum < 0 {
-			// new attack
-			sc_set_behaviour(sc_ai_new_target)
-			return false
-		}
 		sc_set_behaviour(sc_ai_follow_target)
 		switch plannedPurpose {
 		case _ATTACK_PURPOSE.near:
@@ -81,9 +84,21 @@ function sc_ai_new_target() {
 			sc_set_behaviour(sc_ai_target_group)
 			break
 		}
-	} else 
+	} else if (_action[? "role"] = _ATTACK_ROLE.buff) and (_action[? "affect"] = _ATTACK_AFFECT.itself) {
+		// buff hits itself
+		sc_logging_state_over(id, "decided to use " + _action[? "name"] + " as \"buff\" to \"itself\"" )
+		target = id
+		sc_ai_hit_target()
+	} else {
+		// no targets suitable to action
 		plannedActionNum = -1
-	
+		fail_count++
+		if fail_count>=max_fails {
+			sc_logging_state_over(id, " didn't find any useful attack " + string(max_fails) + " times and")
+			fail_count = 0
+			sc_ai_set_flee()
+		}
+	}
 }
 
 function sc_ai_follow_target() {
@@ -123,10 +138,6 @@ function sc_ai_follow_target() {
 	} else
 	if (doActionNum < 0) and
 	   (_target_d <= _neededDist) {
-		if plannedActionNum = -1 {
-			sc_set_behaviour(sc_ai_new_target)
-			exit
-		}
 		sc_ai_hit_target()
 
 	} else {

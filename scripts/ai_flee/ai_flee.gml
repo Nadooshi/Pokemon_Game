@@ -1,5 +1,6 @@
 function sc_ai_set_flee() {
 	
+	//sc_logging_state_cursed(id, "try hiding behind cover", "run away")
 	var _get_new_cover = true
 	if sc_does_exist(target)
 		_get_new_cover = (not is_like(target.object_index, ob_hiding_mark))
@@ -12,7 +13,6 @@ function sc_ai_set_flee() {
 	else {
 		target = noone
 		sc_ai_retreat_start()
-		sc_logging_state_cursed(id, "cannot find a cover", "fails to hide")
 	}
 		// dig / run/ fly
 }
