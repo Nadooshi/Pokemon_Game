@@ -84,6 +84,7 @@
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"Layer 1","resourceVersion":"1.0","name":"694542b1-7cf5-469f-92ef-9afee52375f7","tags":[],"resourceType":"GMImageLayer",},
     {"visible":false,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"Layer 2","resourceVersion":"1.0","name":"decf3106-05d4-45f5-8631-83c0cd36d19d","tags":[],"resourceType":"GMImageLayer",},
   ],
+  "nineSlice": null,
   "parent": {
     "name": "Particles",
     "path": "folders/Sprites/Battle/Particles.yy",

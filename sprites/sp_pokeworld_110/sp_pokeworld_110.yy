@@ -95,6 +95,7 @@
   "layers": [
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"df3601f3-1543-4733-9acc-230d896a87f0","tags":[],"resourceType":"GMImageLayer",},
   ],
+  "nineSlice": null,
   "parent": {
     "name": "Overworld",
     "path": "folders/Sprites/Battle/Overworld.yy",

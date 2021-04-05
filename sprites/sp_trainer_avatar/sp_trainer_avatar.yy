@@ -243,6 +243,7 @@
   "layers": [
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"9968e19d-1664-463f-996f-c7dbc14acf1f","tags":[],"resourceType":"GMImageLayer",},
   ],
+  "nineSlice": null,
   "parent": {
     "name": "Trainer",
     "path": "folders/Sprites/Trainer.yy",

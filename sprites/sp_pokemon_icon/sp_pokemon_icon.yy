@@ -663,6 +663,7 @@
   "layers": [
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"3eebae93-87ff-4ce7-903b-3bbe3fd9ad5f","tags":[],"resourceType":"GMImageLayer",},
   ],
+  "nineSlice": null,
   "parent": {
     "name": "UI",
     "path": "folders/Sprites/Battle/UI.yy",

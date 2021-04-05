@@ -137,6 +137,7 @@
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"blow","resourceVersion":"1.0","name":"6081eca7-4437-448e-85d9-124d5f9d71a4","tags":[],"resourceType":"GMImageLayer",},
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"frame","resourceVersion":"1.0","name":"0e6e2cfb-ebc8-44bb-b407-0b7ea238e17c","tags":[],"resourceType":"GMImageLayer",},
   ],
+  "nineSlice": null,
   "parent": {
     "name": "UI",
     "path": "folders/Sprites/Battle/UI.yy",

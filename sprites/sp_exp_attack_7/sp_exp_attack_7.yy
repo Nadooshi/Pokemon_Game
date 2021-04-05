@@ -91,6 +91,7 @@
   "layers": [
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"c743bb03-1993-484b-b402-363869162818","tags":[],"resourceType":"GMImageLayer",},
   ],
+  "nineSlice": null,
   "parent": {
     "name": "Explodes",
     "path": "folders/Sprites/Battle/Explodes.yy",

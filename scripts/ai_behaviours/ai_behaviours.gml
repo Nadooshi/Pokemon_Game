@@ -70,7 +70,7 @@ function sc_ai_new_target() {
 	target = sc_find_nearest_target(id, _affect, infinity, _action[? "tgTo"])
 	
 	if sc_does_exist(target) {
-		sc_logging_state_over(id, "decided to use " + _action[? "name"] + " as " + attack_affect_text[_affect])
+//		sc_logging_state_over(id, "decided to use " + _action[? "name"] + " as " + attack_affect_text[_affect])
 		tgAngle = point_direction(x, y+12, target.x, target.y+12)
 		tgX = target.x
 		tgY = target.y
@@ -86,7 +86,7 @@ function sc_ai_new_target() {
 		}
 	} else if (_action[? "role"] = _ATTACK_ROLE.buff) and (_action[? "affect"] = _ATTACK_AFFECT.itself) {
 		// buff hits itself
-		sc_logging_state_over(id, "decided to use " + _action[? "name"] + " as \"buff\" to \"itself\"" )
+//		sc_logging_state_over(id, "decided to use " + _action[? "name"] + " as \"buff\" to \"itself\"" )
 		target = id
 		sc_ai_hit_target()
 	} else {
@@ -94,7 +94,7 @@ function sc_ai_new_target() {
 		plannedActionNum = -1
 		fail_count++
 		if fail_count>=max_fails {
-			sc_logging_state_over(id, " didn't find any useful attack " + string(max_fails) + " times and")
+//			sc_logging_state_over(id, " didn't find any useful attack " + string(max_fails) + " times and")
 			fail_count = 0
 			sc_ai_set_flee()
 		}

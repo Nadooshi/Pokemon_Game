@@ -206,6 +206,7 @@
   "layers": [
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"Layer 1","resourceVersion":"1.0","name":"656b9876-6f54-472a-bd9e-11101893bc8d","tags":[],"resourceType":"GMImageLayer",},
   ],
+  "nineSlice": null,
   "parent": {
     "name": "Attacks",
     "path": "folders/Sprites/Battle/Attacks.yy",

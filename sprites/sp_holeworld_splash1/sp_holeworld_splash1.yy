@@ -158,6 +158,7 @@
   "layers": [
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"Layer 1","resourceVersion":"1.0","name":"6903474e-8948-47ae-a674-6a63cc7dcfdb","tags":[],"resourceType":"GMImageLayer",},
   ],
+  "nineSlice": null,
   "parent": {
     "name": "Battle",
     "path": "folders/Sprites/Battle.yy",

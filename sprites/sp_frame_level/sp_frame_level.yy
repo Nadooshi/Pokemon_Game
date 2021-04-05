@@ -154,6 +154,7 @@
   "layers": [
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"2fad8b71-680f-46a1-83bc-4ec2d057b6cf","tags":[],"resourceType":"GMImageLayer",},
   ],
+  "nineSlice": null,
   "parent": {
     "name": "UI",
     "path": "folders/Sprites/Battle/UI.yy",

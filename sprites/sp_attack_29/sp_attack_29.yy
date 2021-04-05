@@ -112,8 +112,8 @@
         {"FrameId":{"name":"813403d6-2394-4c99-b0c6-ae5a4c7bbe86","path":"sprites/sp_attack_29/sp_attack_29.yy",},"LayerId":{"name":"1a842a3e-8cd4-4f64-8135-aff5dd7f4344","path":"sprites/sp_attack_29/sp_attack_29.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
       ],"parent":{"name":"sp_attack_29","path":"sprites/sp_attack_29/sp_attack_29.yy",},"resourceVersion":"1.0","name":"813403d6-2394-4c99-b0c6-ae5a4c7bbe86","tags":[],"resourceType":"GMSpriteFrame",},
     {"compositeImage":{"FrameId":{"name":"78db6a65-907c-44d1-b5d6-d339adb19501","path":"sprites/sp_attack_29/sp_attack_29.yy",},"LayerId":null,"resourceVersion":"1.0","name":"composite","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"78db6a65-907c-44d1-b5d6-d339adb19501","path":"sprites/sp_attack_29/sp_attack_29.yy",},"LayerId":{"name":"1a842a3e-8cd4-4f64-8135-aff5dd7f4344","path":"sprites/sp_attack_29/sp_attack_29.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
         {"FrameId":{"name":"78db6a65-907c-44d1-b5d6-d339adb19501","path":"sprites/sp_attack_29/sp_attack_29.yy",},"LayerId":{"name":"bf72f36f-415e-4aea-9f1e-d23971613d3c","path":"sprites/sp_attack_29/sp_attack_29.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+        {"FrameId":{"name":"78db6a65-907c-44d1-b5d6-d339adb19501","path":"sprites/sp_attack_29/sp_attack_29.yy",},"LayerId":{"name":"1a842a3e-8cd4-4f64-8135-aff5dd7f4344","path":"sprites/sp_attack_29/sp_attack_29.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
       ],"parent":{"name":"sp_attack_29","path":"sprites/sp_attack_29/sp_attack_29.yy",},"resourceVersion":"1.0","name":"78db6a65-907c-44d1-b5d6-d339adb19501","tags":[],"resourceType":"GMSpriteFrame",},
     {"compositeImage":{"FrameId":{"name":"a825dab7-0df7-4d8c-9746-8871461fcbc4","path":"sprites/sp_attack_29/sp_attack_29.yy",},"LayerId":null,"resourceVersion":"1.0","name":"composite","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
         {"FrameId":{"name":"a825dab7-0df7-4d8c-9746-8871461fcbc4","path":"sprites/sp_attack_29/sp_attack_29.yy",},"LayerId":{"name":"bf72f36f-415e-4aea-9f1e-d23971613d3c","path":"sprites/sp_attack_29/sp_attack_29.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
@@ -203,6 +203,7 @@
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"Layer 1","resourceVersion":"1.0","name":"bf72f36f-415e-4aea-9f1e-d23971613d3c","tags":[],"resourceType":"GMImageLayer",},
     {"visible":false,"isLocked":true,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"1a842a3e-8cd4-4f64-8135-aff5dd7f4344","tags":[],"resourceType":"GMImageLayer",},
   ],
+  "nineSlice": null,
   "parent": {
     "name": "Attacks",
     "path": "folders/Sprites/Battle/Attacks.yy",

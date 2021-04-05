@@ -67,6 +67,7 @@
   "layers": [
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"ecddec2d-2792-4a34-877f-4e7aca3b937f","tags":[],"resourceType":"GMImageLayer",},
   ],
+  "nineSlice": null,
   "parent": {
     "name": "Slot pokebol",
     "path": "folders/Sprites/ui/Slot pokebol.yy",

@@ -231,6 +231,7 @@
   "layers": [
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"44a29d24-1d35-434b-9d38-5fd0ab6e83db","tags":[],"resourceType":"GMImageLayer",},
   ],
+  "nineSlice": null,
   "parent": {
     "name": "Rating",
     "path": "folders/Sprites/Rating.yy",

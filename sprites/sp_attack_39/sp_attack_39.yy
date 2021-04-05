@@ -223,6 +223,7 @@
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"Layer 1","resourceVersion":"1.0","name":"076f11df-3f23-4143-bac9-8d12175ef2b6","tags":[],"resourceType":"GMImageLayer",},
     {"visible":false,"isLocked":true,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"6d7817f1-c177-45f4-854d-4a4c0e8b67e7","tags":[],"resourceType":"GMImageLayer",},
   ],
+  "nineSlice": null,
   "parent": {
     "name": "Attacks",
     "path": "folders/Sprites/Battle/Attacks.yy",

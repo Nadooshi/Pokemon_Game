@@ -187,6 +187,7 @@
   "layers": [
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"b58e3084-f9d7-442e-a1b6-f036d50e3297","tags":[],"resourceType":"GMImageLayer",},
   ],
+  "nineSlice": null,
   "parent": {
     "name": "Pokemon",
     "path": "folders/Sprites/Pokemon.yy",
