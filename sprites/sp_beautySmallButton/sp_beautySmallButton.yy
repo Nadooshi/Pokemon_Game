@@ -24,9 +24,9 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"f09472b4-9759-453f-bdb5-8a04dfc2cb48","path":"sprites/sp_beautySmallButton/sp_beautySmallButton.yy",},"LayerId":null,"resourceVersion":"1.0","name":"composite","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"f09472b4-9759-453f-bdb5-8a04dfc2cb48","path":"sprites/sp_beautySmallButton/sp_beautySmallButton.yy",},"LayerId":{"name":"6099933a-5595-4a30-9725-3169c2cfddb1","path":"sprites/sp_beautySmallButton/sp_beautySmallButton.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sp_beautySmallButton","path":"sprites/sp_beautySmallButton/sp_beautySmallButton.yy",},"resourceVersion":"1.0","name":"f09472b4-9759-453f-bdb5-8a04dfc2cb48","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"ba0ca61e-951f-46e8-a84e-4ca59640688f","path":"sprites/sp_beautySmallButton/sp_beautySmallButton.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"ba0ca61e-951f-46e8-a84e-4ca59640688f","path":"sprites/sp_beautySmallButton/sp_beautySmallButton.yy",},"LayerId":{"name":"6099933a-5595-4a30-9725-3169c2cfddb1","path":"sprites/sp_beautySmallButton/sp_beautySmallButton.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"sp_beautySmallButton","path":"sprites/sp_beautySmallButton/sp_beautySmallButton.yy",},"resourceVersion":"1.0","name":"ba0ca61e-951f-46e8-a84e-4ca59640688f","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
     "spriteId": {"name":"sp_beautySmallButton","path":"sprites/sp_beautySmallButton/sp_beautySmallButton.yy",},
@@ -41,10 +41,10 @@
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
       {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"374a4cc6-f3d4-4fea-b11a-00a3eed657e1","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"f09472b4-9759-453f-bdb5-8a04dfc2cb48","path":"sprites/sp_beautySmallButton/sp_beautySmallButton.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"b8304991-16d1-4ecd-8bc7-21df014fed93","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"ba0ca61e-951f-46e8-a84e-4ca59640688f","path":"sprites/sp_beautySmallButton/sp_beautySmallButton.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"modifiers":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack",},
     ],
-    "visibleRange": {"x":0.0,"y":0.0,},
+    "visibleRange": null,
     "lockOrigin": false,
     "showBackdrop": true,
     "showBackdropImage": false,
@@ -67,7 +67,31 @@
   "layers": [
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"6099933a-5595-4a30-9725-3169c2cfddb1","tags":[],"resourceType":"GMImageLayer",},
   ],
-  "nineSlice": null,
+  "nineSlice": {
+    "left": 21,
+    "top": 21,
+    "right": 21,
+    "bottom": 21,
+    "guideColour": [
+      4294902015,
+      4294902015,
+      4294902015,
+      4294902015,
+    ],
+    "highlightColour": 1728023040,
+    "highlightStyle": 0,
+    "enabled": false,
+    "tileMode": [
+      0,
+      0,
+      0,
+      0,
+      0,
+    ],
+    "resourceVersion": "1.0",
+    "loadedVersion": null,
+    "resourceType": "GMNineSliceData",
+  },
   "parent": {
     "name": "ui",
     "path": "folders/Sprites/ui.yy",
