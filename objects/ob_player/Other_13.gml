@@ -20,7 +20,9 @@ if _ok_position {
 } else
 	attack_error = _ATTACK_ERROR.wrong_position
 
-if attack_error != _ATTACK_ERROR.nothing
+if attack_error != _ATTACK_ERROR.nothing {
 	doActionNum = -1
+	lastActionNum = -1
+}
 
 sc_battle_update_actions()

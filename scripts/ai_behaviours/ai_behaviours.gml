@@ -43,8 +43,9 @@ function sc_ai_new_target() {
 	plannedPurpose = sc_choose(
 		[_ATTACK_PURPOSE.near,
 		_ATTACK_PURPOSE.far,
-		_ATTACK_PURPOSE.area],
-		[1, 1, 1]
+		_ATTACK_PURPOSE.area,
+		_ATTACK_PURPOSE.barrier],
+		[1, 1, 1, 1]
 	)
 	
 	var _attCount = ds_list_size(att_list[plannedPurpose])
@@ -82,6 +83,9 @@ function sc_ai_new_target() {
 			break
 		case _ATTACK_PURPOSE.area:
 			sc_set_behaviour(sc_ai_target_group)
+			break
+		case _ATTACK_PURPOSE.barrier:
+			sc_set_behaviour(sc_set_barrier_target)
 			break
 		}
 	} else if (_action[? "role"] = _ATTACK_ROLE.buff) and (_action[? "affect"] = _ATTACK_AFFECT.itself) {
@@ -163,6 +167,7 @@ function sc_ai_target_group() {
 			_neededDist = (action_list[| plannedActionNum][? "radius"] + 1) * 8
 			break
 		}
+		
 	// update groups
 		ds_map_clear(ai_groups)
 		var _self = id
@@ -186,14 +191,8 @@ function sc_ai_target_group() {
 			_id = ds_map_find_next(ai_groups, _id)
 		}
 		if _bGroup != noone {
-			var _avgX = 0, _avgY = 0;
-			for (var i=0; i<_bCount; i++) {
-				_avgX += ai_groups[? _bGroup][i].x
-				_avgY += ai_groups[? _bGroup][i].y
-			}
-			_avgX = _avgX / _bCount
-			_avgY = _avgY / _bCount
-			with instance_create_layer(_avgX, _avgY, "Particles", ob_particle) {
+			var _avg = sc_average_point(ai_groups[? _bGroup])
+			with instance_create_layer(_avg[0], _avg[1], "Particles", ob_particle) {
 				radius = _neededDist
 				alpha = 0.25
 				d_alpha = -0.01
@@ -234,6 +233,14 @@ function sc_ai_hit_target() {
 		return false
 	}
 	
+	// don't repeat buff
+	if lastActionNum >= 0
+	if action_list[| lastActionNum][? "role"] = _ATTACK_ROLE.buff {
+		sc_ai_give_up()
+		lastActionNum = -1
+		return false
+	}
+	
 	var _done = false
 	// do multiple attacks using full power
 	doActionNum = plannedActionNum
@@ -246,6 +253,7 @@ function sc_ai_hit_target() {
 		sc_player_move()
 		exit
 	}
+	
 	if attack_warmup <= 0 {
 		tgAngle = point_direction(x, y+12, target.x, target.y+12)
 		tgX = target.x
@@ -256,20 +264,24 @@ function sc_ai_hit_target() {
 			sc_ai_wait_warmup_start()
 	}
 	
-	
 	if attack_error = _ATTACK_ERROR.no_power {
 		if (not last_done) and (not _done) 
 			// first attempt
 			sc_set_behaviour(sc_ai_wait_power)
 		if last_done and (not _done) {
 			// run out of power
-			sc_set_behaviour(sc_player_stop_set)
-			sc_player_stop_set()
-			target = noone
+			sc_ai_give_up()
 		}
-	}		
+	}
 	last_done = _done	//	false = failed to set warmup (not enough power_cur)
 	
+}
+
+function sc_ai_give_up() {
+	sc_set_behaviour(sc_player_stop_set)
+	sc_player_stop_set()
+	plannedActionNum = -1
+	target = noone
 }
 
 function sc_ai_wait_warmup_start() {

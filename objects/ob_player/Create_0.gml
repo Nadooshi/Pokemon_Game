@@ -31,6 +31,7 @@ canMove = true
 accel = 0
 
 doActionNum = -1
+lastActionNum = -1
 
 dirframe[d.Right] = 0
 dirframe[d.Up   ] = 2

@@ -1,7 +1,7 @@
 /// @desc
 
 wind_dir += wind_d_dir
-wind_d_dir *= 0.1//0.95
+wind_d_dir *= 0.94// 0.1//0.95
 
 with ob_bullet 
 if sc_does_exist(action) {
@@ -19,8 +19,8 @@ if position_stage = _ATTACK_TG.air {
 }
 
 with ob_weather_skycloud {
-	x += cos(other.wind_dir) * other.wind_power * 0.7
-	y += sin(other.wind_dir) * other.wind_power * 0.7
+	x += cos(other.wind_dir) * other.wind_power * 1.5// * 0.7
+	y += sin(other.wind_dir) * other.wind_power * 1.5// * 0.7
 }
 
 

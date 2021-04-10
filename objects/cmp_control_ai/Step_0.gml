@@ -28,6 +28,7 @@ if (counter mod t_process_courage) = 0 {
 	var _fr_force = 0
 	var _u_force = pokemon_map[? "rating"] + pokemon_map[? "level"] + health_cur
 	with ob_player
+	if not is_like(id.object_index, ob_barrier)
 	if id != other.id {
 		_u = other.id
 		_d = distance_to_point(_u.x, _u.y+12)

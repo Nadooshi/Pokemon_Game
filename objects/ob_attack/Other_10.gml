@@ -26,7 +26,7 @@ switch action[? "type"]{
 	case _ATTACK_TYPE.ray:
 	{
 		_d = (action[? "damage"] * 0.01)
-		if _d < 0.5 _d = 0.5	
+		_d = max(0.5,_d)
 		break
 	}
 	default: _d = 1
