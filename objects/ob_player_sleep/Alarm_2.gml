@@ -9,7 +9,6 @@ with ob_player {
 }
 
 if _to_wake > 0 {
-	show_debug_message(string(id) + " is disturbed by " +string(_to_wake) + " players")
 	for (var i=0; i<ds_list_size(states); i++)
 	if states[| i].object_index == ob_state_lulling
 		states[| i].hit_count -= _to_wake

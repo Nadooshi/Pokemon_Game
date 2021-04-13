@@ -1,12 +1,11 @@
 /// @desc Deal damage
 
-var _dmg = sc_calculate_action_damage(action, pokemon_id_attack.pokemon_map, pokemon_id)
+var _dmg = sc_calculate_action_damage(action, pokemon_id.pokemon_map, pokemon_id_attack)
 
-with pokemon_id_attack
-	if other.pokemon_id != id 
-		sc_hurt(_dmg, other.pokemon_id, other.action)
-		
 sc_logging_damage(pokemon_id, pokemon_id_attack, action, _dmg)
+with pokemon_id
+	sc_hurt(_dmg, id, other.action)
+		
 
 alarm[0] = period;
 if --hit_count < 0

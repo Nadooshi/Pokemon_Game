@@ -197,6 +197,10 @@ function sc_ai_target_group() {
 				alpha = 0.25
 				d_alpha = -0.01
 			}
+			target = instance_create_layer(_avg[0], _avg[1], "Game", ob_fake_target)
+			target.parent = id
+			target.group = ai_groups[? _bGroup]
+			
 			// get to the point and attack
 			tgAngle = point_direction(x, y+12, target.x, target.y+12)
 			tgX = target.x
