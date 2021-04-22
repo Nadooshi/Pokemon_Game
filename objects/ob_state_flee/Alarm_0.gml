@@ -1,6 +1,7 @@
 /// @desc Deal damage
 
-pokemon_id.courage_cur = pokemon_id.courage_threshold - 1
+if pokemon_id.courage_cur > pokemon_id.courage_threshold
+	pokemon_id.courage_cur = pokemon_id.courage_threshold - 1
 
 alarm[0] = period;
 if --hit_count < 0

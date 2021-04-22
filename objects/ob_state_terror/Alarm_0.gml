@@ -9,7 +9,10 @@ if --hit_count < 0
 for (var i=0; i<ds_list_size(pokemon_id.states); i++)
 if pokemon_id.states[| i].id != id
 	switch (pokemon_id.states[| i].object_index) {
-	case ob_state_lulling:
+	case ob_state_lulling:{
+		pokemon_id.courage_cur = 0
+		sc_logging_state_cursed(pokemon_id, name, "wakes up in a cold sweat.")
+	}
 	case ob_state_dextery:
 	case ob_state_meleeup:	
 	case ob_state_rangeup:	

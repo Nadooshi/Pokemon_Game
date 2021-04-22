@@ -29,7 +29,6 @@ function sc_ai_move_idle(){
 		moveSpeed = max(0.25, maxSpeed + speed_mod)
 	timeout--
 	if timeout <= 0 {
-		sc_player_stop_set()
 		sc_set_behaviour(sc_ai_idle)
 		timeout = 50 + random(200)
 		speed_mod = 0

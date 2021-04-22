@@ -33,6 +33,10 @@ if hurt_cur > 0 {
 	hurt_cur = max(0, hurt_cur - (hurt_reg + health_reg)) // recover half health after damage
 	if health_cur < health_max
 		health_cur += health_reg
+		
+	for (var i=0; i<ds_list_size(states); i++) // awake with hurt
+	if states[| i].object_index == ob_state_lulling
+		states[| i].hit_count = 0
 }
 
 if attack_warmup > 0 {
@@ -46,8 +50,4 @@ if attack_warmup > 0 {
 		doActionNum = -1
 	}
 }
-
-// courage
-//courage_cur = 50 + cos(counter*0.005) * 50;
-//courage_threshold = 50 + sin(counter*0.001) * 50;
 

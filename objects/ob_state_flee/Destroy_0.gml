@@ -5,6 +5,7 @@ event_inherited();
 
 with pokemon_id {
 	speed_mod = 0
-	canMove = true
-	sc_player_stop_set()
+	target = noone
+	sc_set_behaviour(sc_player_stop_set)
 }
+

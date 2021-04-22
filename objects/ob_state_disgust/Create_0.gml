@@ -1,4 +1,4 @@
-/// @desc Reduce_accuracy
+/// @desc onDamage - stun
 
 event_inherited()
 
