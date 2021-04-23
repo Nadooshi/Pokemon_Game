@@ -59,3 +59,6 @@ with ob_ui_pokeface
 with ob_frame_inv 
 	sc_group_ui_objects(id)
 sc_battle_update_actions()
+
+// start apply aura alarm
+alarm[0] = 60

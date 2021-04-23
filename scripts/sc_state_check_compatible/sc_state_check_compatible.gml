@@ -1,4 +1,3 @@
-
 function sc_state_check_compatible(_action) {
 	// for ob_pokemon
 	var _ins_sign  = ds_map_find_value(_action[? "active"], "in_state_sign")

@@ -191,11 +191,11 @@ function sc_ai_target_group() {
 		}
 		if _bGroup != noone {
 			var _avg = sc_average_point(ai_groups[? _bGroup])
-			with instance_create_layer(_avg[0], _avg[1], "Particles", ob_particle) {
-				radius = _neededDist
-				alpha = 0.25
-				d_alpha = -0.01
-			}
+			//with instance_create_layer(_avg[0], _avg[1], "Particles", ob_particle) {
+			//	radius = _neededDist
+			//	alpha = 0.25
+			//	d_alpha = -0.01
+			//}
 			target = instance_create_layer(_avg[0], _avg[1], "Game", ob_fake_target)
 			target.parent = id
 			target.group = ai_groups[? _bGroup]

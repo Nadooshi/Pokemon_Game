@@ -4,7 +4,7 @@
     "path": "sprites/sp_shadowworld/sp_shadowworld.yy",
   },
   "solid": false,
-  "visible": true,
+  "visible": false,
   "spriteMaskId": null,
   "persistent": false,
   "parentObjectId": null,

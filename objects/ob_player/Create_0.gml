@@ -95,7 +95,6 @@ passive_state1 = noone
 passive_state2 = noone
 alarm_set(0,10)
 alarm_set(1,30)
-alarm_set(2,60)
 
 in_biome = ds_list_create()
 courage_cur = 100

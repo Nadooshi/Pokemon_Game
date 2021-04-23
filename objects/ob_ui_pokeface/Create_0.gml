@@ -11,5 +11,8 @@ selected = false
 
 bar_count = 0
 
-_w = 0
-_y = 0
+states_w = 0
+states_y = 0
+
+biomes_w = 0
+biomes_y = 0
