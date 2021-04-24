@@ -25,6 +25,8 @@ if sc_does_exist(passive_state2)
 //	with ob_cursor
 //		alarm_set(0, 300)
 
+ds_list_clear(in_biome)
+
 show_debug_message(object_get_name(object_index) + " (" + string(id)+") deactivated" )
 instance_deactivate_object(id)
 
