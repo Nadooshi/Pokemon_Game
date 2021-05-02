@@ -2,8 +2,12 @@
 
 event_inherited()
 
+if is_undefined(caption) exit
+if caption = "" exit
+
 draw_set_font(fn_card)
-	
+
+
 _w = string_width(caption)
 _h = string_height(caption)
 draw_set_color(c_black)

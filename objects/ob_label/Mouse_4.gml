@@ -15,7 +15,7 @@ if editing {
 if not ok {
 	image_blend = c_gray
 	editing = true
-	keyboard_string = string(caption)
+	msg = get_string_async(parameter_name + ": ", "")
 }
 
 clicked = false
