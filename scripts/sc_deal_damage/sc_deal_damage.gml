@@ -19,7 +19,8 @@ function sc_deal_damage(argument0, argument1) {
 	sc_hurt(_dmg, _pokemon_id_attack, _action);
 
 	// apply state
-	if sc_does_exist(_action[? "active"]) {
+	if sc_does_exist(_action[? "active"]) 
+	if not is_like(object_index, ob_barrier) {
 		var _state = ds_map_find_value(_action[? "active"], "state");
 		var _state_obj = state_object[_state];
 		var _rate = ds_map_find_value(_action[? "active"], "state_rate");

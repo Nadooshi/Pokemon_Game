@@ -14,7 +14,7 @@ function sc_apply_state() {
 
 	if argument_count > 3
 		_action = argument[3]
-
+	
 	if ds_exists(states, ds_type_list) {
 		// check duplicate
 		var _st
