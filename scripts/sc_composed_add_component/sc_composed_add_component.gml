@@ -8,7 +8,7 @@ function sc_composed_add_component() {
 		_event = argument[1]
 
 	if not object_exists(_cmp)
-		exit
+		return false
 
 	if variable_instance_exists(id, "component_list") {
 		if not ds_exists(component_list, ds_type_list)
@@ -23,10 +23,9 @@ function sc_composed_add_component() {
 		component_count = ds_list_size(component_list)
 		if _event
 			event_perform_object(_cmp, ev_create, 0)
+		return true
 	}
-
-
-
-
+	
+	return false
 
 }

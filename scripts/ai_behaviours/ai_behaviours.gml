@@ -125,8 +125,9 @@ function sc_ai_follow_target() {
 	if _lungeCount > 0 {  // canLunge
 		var _att_num = irandom(_lungeCount-1)
 		var _lunge_num = att_list[_ATTACK_PURPOSE.move][| _att_num]
-
 		var _lunge_d =  action_list[| _lunge_num][? "distance"]
+		if ds_list_find_index(att_tgFroms[position_stage], _lunge_num) = -1
+			_lunge_num = -1
 	}
 	// do Lunge
 	if (doActionNum < 0) and
@@ -134,14 +135,14 @@ function sc_ai_follow_target() {
 	   ((_target_d > _neededDist ) and (_target_d <= _lunge_d)) {
 		if action_list[| _lunge_num][? "ap"] <= power_cur {
 			plannedActionNum = _lunge_num
-			sc_ai_hit_target()
+			sc_set_behaviour(sc_ai_hit_target)
 		} else
 			sc_player_move()
 		
 	} else
 	if (doActionNum < 0) and
 	   (_target_d <= _neededDist) {
-		sc_ai_hit_target()
+		sc_set_behaviour(sc_ai_hit_target)
 
 	} else {
 		// get closer
@@ -214,7 +215,7 @@ function sc_ai_target_group() {
 	}
 	
 	if sc_ai_get_to_point() {
-		sc_ai_hit_target()	
+		sc_set_behaviour(sc_ai_hit_target)
 	}
 }
 
@@ -334,6 +335,6 @@ function sc_ai_wait_power() {
 		sc_set_behaviour(sc_ai_follow_target)
 		exit
 	}
-	sc_ai_hit_target() 
+	sc_set_behaviour(sc_ai_hit_target)
 	
 }

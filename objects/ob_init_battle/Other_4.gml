@@ -61,4 +61,4 @@ with ob_frame_inv
 sc_battle_update_actions()
 
 // start apply aura alarm
-alarm[0] = 60
+alarm[1] = 60
