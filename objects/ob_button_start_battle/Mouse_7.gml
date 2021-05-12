@@ -18,6 +18,6 @@ sc_load_trainer(ob_frame_trainer_2.name, player2_trainer)
 
 if ds_list_size(player1_trainer[? "active_pokemon_list"]) > 0 and
 	ds_list_size(player2_trainer[? "active_pokemon_list"]) > 0
-	room_goto(rm_battle_1)
+	room_goto(rm_battle)
 else
 	show_message("Cannot start battle! Either of trainers have no any active pokemon!")

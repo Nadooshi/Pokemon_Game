@@ -16,11 +16,13 @@ if sc_does_exist(list[| index]) {
 		if selected {
 			selected_id = id
 			sc_composed_remove_component(cmp_control_ai)
-			sc_composed_add_component(cmp_control_keyb, true)
+//			sc_composed_add_component(cmp_control_keyb, true)
+			sc_composed_add_component(cmp_control_touch, true)
 			doActionNum = -1
 			target = noone
 		} else {
-			sc_composed_remove_component(cmp_control_keyb)
+//			sc_composed_remove_component(cmp_control_keyb)
+			sc_composed_remove_component(cmp_control_touch)
 			if sc_composed_add_component(cmp_control_ai) {
 				doActionNum = -1
 				target = noone
