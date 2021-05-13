@@ -5,6 +5,7 @@ event_inherited()
 image_index = _ABILITY_STATE.barrier;
 period = 30;
 hit_count = 1;
+val = 0
 
 // State events
 onDamage = function (_dmg, _damaged_player_id, _action, _pokemon_id_attack) {

@@ -12,3 +12,4 @@ draw_circle(
 	_sz2, false
 )
 
+draw_set_alpha(1)

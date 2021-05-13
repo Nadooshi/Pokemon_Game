@@ -91,7 +91,7 @@ function sc_ai_new_target() {
 		// buff hits itself
 //		sc_logging_state_over(id, "decided to use " + _action[? "name"] + " as \"buff\" to \"itself\"" )
 		target = id
-		sc_ai_hit_target()
+		sc_set_behaviour(sc_ai_hit_target)
 	} else {
 		// no targets suitable to action
 		plannedActionNum = -1
@@ -99,7 +99,7 @@ function sc_ai_new_target() {
 		if fail_count>=max_fails {
 //			sc_logging_state_over(id, " didn't find any useful attack " + string(max_fails) + " times and")
 			fail_count = 0
-			sc_ai_set_flee()
+			sc_set_behaviour(sc_ai_set_flee)
 		}
 	}
 }

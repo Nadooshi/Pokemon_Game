@@ -58,7 +58,12 @@ scBehaviour = noone
 succeeded_behaviour = noone
 prev_behaviour = noone
 
+control_component = cmp_control_ai
+prev_control_component = cmp_control_ai
+
 selected = false
+unselectables = 0
+
 timeout = 0
 hurt_timeout = 0  // timeout after taking damage (sec)
 counter = 0

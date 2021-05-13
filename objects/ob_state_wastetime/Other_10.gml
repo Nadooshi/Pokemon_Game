@@ -11,3 +11,11 @@ sc_logging_state_cursed(pokemon_id, name, "does not understand what is happening
 doActionNum = -1
 canMove = true
 attack_warmup = 0
+
+with pokemon_id {
+	unselectables++
+	sc_composed_remove_component(control_component)
+	prev_control_component = control_component
+	control_component = cmp_control_ai
+	sc_composed_add_component(control_component)
+}
