@@ -6,6 +6,6 @@ case 1:
 		room_goto_previous()
 	break
 case 2: 
-	event_perform_object(ob_backpack, ev_mouse, ev_left_release)	
+	event_perform_object(ob_backpack, ev_gesture, ev_gesture_tap)
 }
 

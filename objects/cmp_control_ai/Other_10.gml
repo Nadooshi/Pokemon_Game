@@ -1,8 +1,9 @@
 /// @desc Init (Sort attacks)
 
-for (var i=0; i<ds_list_size(action_list); i++) {
-	switch action_list[|i ][? "type"] {
-		case _ATTACK_TYPE.front:	
+for (var i=0; i<ds_list_size(action_list); i++)
+if not is_undefined(action_list[| i]) {
+	switch action_list[| i][? "type"] {
+		case _ATTACK_TYPE.front:
 		case _ATTACK_TYPE.cloud:
 		case _ATTACK_TYPE.melee: {
 			ds_list_add(att_list[_ATTACK_PURPOSE.near], i)

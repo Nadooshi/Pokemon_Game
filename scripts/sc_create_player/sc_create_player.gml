@@ -30,20 +30,23 @@ function sc_create_player(argument0, argument1) {
 		// create action list
 		ds_list_clear(action_list)
 		var a_list = pokemon_map[? "active_actions"]
-		var a_map = noone
+		var a_map;
 		ini_open(pokemon_path)
 		for (var i=0; i<ds_list_size(a_list); i++) {
-			a_map = ds_map_create()
-			ds_map_read(a_map, ini_read_string("actions", a_list[| i], ""))
-			// load ability for action
-			if not is_undefined(a_map[? "active"]) {
-				var _map_abil = ds_map_create()
-				ds_map_read(_map_abil, ini_read_string("abilities", a_map[? "active"], ""))
-				if sc_does_exist(_map_abil)
-					a_map[? "active"] = _map_abil
+			a_map = undefined
+			if not is_undefined(a_list[| i]) {
+				a_map = ds_map_create()
+				ds_map_read(a_map, ini_read_string("actions", a_list[| i], ""))
+				// load ability for action
+				if not is_undefined(a_map[? "active"]) {
+					var _map_abil = ds_map_create()
+					ds_map_read(_map_abil, ini_read_string("abilities", a_map[? "active"], ""))
+					if sc_does_exist(_map_abil)
+						a_map[? "active"] = _map_abil
+				}
+				if not sc_precalc_action_values(a_map, id)
+					show_message("NO distance calculated")
 			}
-			if not sc_precalc_action_values(a_map, id)
-				show_message("NO distance calculated")
 			ds_list_add(action_list, a_map)
 		}
 		// load passives

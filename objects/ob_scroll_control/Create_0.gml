@@ -6,4 +6,4 @@ camY = 0
 
 //dragX = 0
 dragY = 0
-
+is_drag = false

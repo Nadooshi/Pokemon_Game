@@ -50,9 +50,13 @@ function sc_refresh_actions() {
 
 	// create list of active actions
 	var _ratio = 1
-	for (var i=0; i<ds_list_size(current_pokemon[? "active_actions"]); i++) {
-		_name = ds_list_find_value(current_pokemon[? "active_actions"], i)
-		with sc_add_slot_composed(80, 525+92*i, _name, action_slot, ob_frame_action_active) {
+	
+	var i = 0
+	with ob_frame1 {
+		i = index
+		_name = ds_list_find_value(current_pokemon[? "active_actions"], index)
+		if not is_undefined(_name)
+		with sc_add_slot_composed(x, y, _name, action_slot, ob_frame_action_active) {
 			map = ds_map_create()
 			ds_map_read(map, ini_read_string("actions", _name, ""))
 			_ratio = map[? "dmg_element"] / map[? "damage"]
@@ -68,7 +72,7 @@ function sc_refresh_actions() {
 			index = i
 		}
 	}
-	
+		
 	ini_close()
 
 	with ob_normal_frame_action
