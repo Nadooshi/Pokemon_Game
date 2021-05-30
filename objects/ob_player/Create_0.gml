@@ -65,7 +65,6 @@ selected = false
 unselectables = 0
 
 timeout = 0
-hurt_timeout = 0  // timeout after taking damage (sec)
 counter = 0
 
 power_max = 100
@@ -75,6 +74,8 @@ power_reg = 0.2
 health_cur = 0
 health_max = 0
 health_reg = 0.3
+
+hurt_timeout = 0  // timeout after taking damage (sec)
 hurt_cur = 0
 hurt_reg = 0.3
 

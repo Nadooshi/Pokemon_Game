@@ -6,7 +6,7 @@ event_inherited();
 var _snd = choose(snd_attack_front_0, snd_attack_front_1, snd_attack_front_2)
 sc_play_sound(_snd, false)
 if sc_does_exist(pokemon_id.target) {
-	if (point_distance(pokemon_id.x, pokemon_id.y+12, pokemon_id.target.x, pokemon_id.target.y+12)-12) < 6 +  pokemon_id.pokemon_map[? "size"] * 3
+	if (point_distance(pokemon_id.x, pokemon_id.y+12, pokemon_id.target.x, pokemon_id.target.y+12)-12) < 8 +  pokemon_id.pokemon_map[? "size"] * 3
 	if collision_line(x, y+12, pokemon_id.target.x, pokemon_id.target.y+12, pokemon_id.target, true, true) {
 	
 		bullet = instance_create_layer(pokemon_id.target.x, pokemon_id.target.y+12, "Particles", ob_damage_area)

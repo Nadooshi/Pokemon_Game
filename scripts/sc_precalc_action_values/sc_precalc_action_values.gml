@@ -13,6 +13,8 @@ function sc_precalc_action_values(a_map, pokemon_id){
 		a_map[? "distance"] = 6 * a_map[? "range"] * pokemon_id.maxSpeed * 1.5
 	break
 	case _ATTACK_TYPE.front:
+		a_map[? "distance"] = 8 + pokemon_id.pokemon_map[? "size"] * 2
+		break;
 	case _ATTACK_TYPE.melee:
 		a_map[? "distance"] = 6
 	break

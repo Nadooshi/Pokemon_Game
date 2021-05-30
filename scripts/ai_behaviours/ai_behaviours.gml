@@ -172,6 +172,7 @@ function sc_ai_target_group() {
 		ds_map_clear(ai_groups)
 		var _self = id
 		with ob_player
+		if not is_like(id, ob_barrier)
 		if id != _self.id {
 			_self.ai_groups[? id] = [id]
 			with ob_player
@@ -238,12 +239,19 @@ function sc_ai_hit_target() {
 	}
 	
 	// don't repeat buff
-	if lastActionNum >= 0
-	if action_list[| lastActionNum][? "role"] = _ATTACK_ROLE.buff {
-		sc_ai_give_up()
-		lastActionNum = -1
-		return false
+	if lastActionNum >= 0 {
+		if action_list[| lastActionNum][? "role"] = _ATTACK_ROLE.buff {
+			sc_ai_give_up()
+			lastActionNum = -1
+			return false
+		}
+		if action_list[| lastActionNum][? "damage"] = 0 {
+			sc_ai_give_up()
+			lastActionNum = -1
+			return false
+		}
 	}
+	
 	
 	var _done = false
 	// do multiple attacks using full power

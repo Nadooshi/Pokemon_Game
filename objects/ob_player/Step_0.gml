@@ -33,7 +33,9 @@ if hurt_cur > 0 {
 	hurt_cur = max(0, hurt_cur - (hurt_reg + health_reg)) // recover half health after damage
 	if health_cur < health_max
 		health_cur += health_reg
-		
+}
+
+if hurt_timeout > 0 {		
 	for (var i=0; i<ds_list_size(states); i++) // awake with hurt
 	if states[| i].object_index == ob_state_lulling
 		states[| i].hit_count = 0
