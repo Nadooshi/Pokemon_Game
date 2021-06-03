@@ -176,6 +176,7 @@ function sc_ai_target_group() {
 		if id != _self.id {
 			_self.ai_groups[? id] = [id]
 			with ob_player
+			if not is_like(id, ob_barrier)
 			if (id != other.id) and (id != _self.id)
 			if distance_to_point(other.x, other.y) <= _neededDist * 2 
 				array_push(_self.ai_groups[? other.id], id)
@@ -235,6 +236,7 @@ function sc_ai_hit_target() {
 	if not sc_does_exist(target) {
 		sc_player_stop_set()
 		sc_set_behaviour(sc_player_stop_set)
+		sc_set_move_component(cmp_moving)
 		return false
 	}
 	
@@ -256,21 +258,27 @@ function sc_ai_hit_target() {
 	var _done = false
 	// do multiple attacks using full power
 	doActionNum = plannedActionNum
-	if plannedPurpose = _ATTACK_PURPOSE.far
-	if collision_line(x, y+12, target.x, target.y+12, ob_hazard, false, false) {
-		plannedActionNum = doActionNum
-		doActionNum = -1
-		// get closer
-		// sc_ai_reach
-		sc_player_move()
-		exit
+	if plannedPurpose = _ATTACK_PURPOSE.far {
+		if collision_line(x, y+12, target.x, target.y+12, ob_hazard, false, false) {
+
+			plannedActionNum = doActionNum
+			doActionNum = -1
+			// get closer
+			// sc_ai_reach
+			sc_set_move_component(cmp_moving_path)
+			sc_player_move()
+			exit
+		}
+		sc_set_move_component(cmp_moving)
 	}
+
+	
 	
 	if attack_warmup <= 0 {
 		tgAngle = point_direction(x, y+12, target.x, target.y+12)
 		tgX = target.x
 		tgY = target.y
-		event_perform(ev_other, ev_user3) // attack
+		event_perform(ev_other, ev_user3) // attack (start warmup)
 		_done = (attack_error = _ATTACK_ERROR.nothing)
 		if _done
 			sc_ai_wait_warmup_start()
@@ -293,6 +301,7 @@ function sc_ai_give_up() {
 	sc_set_behaviour(sc_player_stop_set)
 	sc_player_stop_set()
 	plannedActionNum = -1
+	doActionNum = -1
 	target = noone
 }
 

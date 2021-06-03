@@ -14,8 +14,10 @@ if script_exists(scBehaviour) or is_method(scBehaviour) {
 	}
 }
 
-if not sc_does_exist(target)
+if not sc_does_exist(target) {
 	plannedActionNum = -1
+	sc_set_move_component(cmp_moving)
+}
 
 
 // process courage

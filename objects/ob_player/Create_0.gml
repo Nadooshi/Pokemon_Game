@@ -1,6 +1,6 @@
 /// @desc
 
-sc_composed_add_component(cmp_moving)
+move_component_index = sc_composed_add_component(cmp_moving)
 //sc_composed_add_component(cmp_control_keyb)
 sc_composed_add_component(cmp_collidable_player)
 
@@ -61,6 +61,8 @@ prev_behaviour = noone
 control_component = cmp_control_ai
 prev_control_component = cmp_control_ai
 
+move_component_index = 0
+
 selected = false
 unselectables = 0
 
@@ -90,6 +92,9 @@ speed_mod = 0 // прибавление в sc_player_move_set
 accuracy_mod = 0 //прибавление в sc_check_accuracy
 dodge_mod = 0 //прибавление в sc_check_accuracy
 parry_mod = 1
+
+moveSpeed = 0
+maxSpeed = 0
 
 trainer = noone
 position_stage = _ATTACK_TG.ground

@@ -11,7 +11,7 @@ function sc_player_stop_set() {
 		frame = 0
 	}
 	doMove = false
-
+	sc_set_move_component(cmp_moving)
 
 	image_index = dirframe[dir] + floor(frame)
 

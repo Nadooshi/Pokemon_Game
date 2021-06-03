@@ -22,12 +22,8 @@ function sc_set_selected(_id, _selected) {
 			selected_id = noone
 			sc_composed_remove_component(control_component)
 			control_component = cmp_control_ai
-			if sc_composed_add_component(control_component) {
-				doActionNum = -1
-				target = noone
-				sc_player_stop_set()
-				sc_set_behaviour(sc_player_stop_set)
-			}
+			if sc_composed_add_component(control_component) != -1
+				sc_ai_give_up()
 		}
 	}
 }

@@ -33,21 +33,21 @@ if not doMove {
 }
 doMove = (ob_control_touch_stick.dir_is_set > 0)
 
-// do attacks
-var ok = false
-for (i=0; i<6; i++)
-if keys[i+k.action1] {
-	if doActionNum = -1 {
-		var _a_map = action_list[| i]
-		if not is_undefined(_a_map) {
-			target = ob_cursor
-			ok = true
-			doActionNum = i
-			event_perform(ev_other, ev_user3)
-		}
-	}
-	break;
-}
+//// do attacks
+//var ok = false
+//for (i=0; i<6; i++)
+//if keys[i+k.action1] {
+//	if doActionNum = -1 {
+//		var _a_map = action_list[| i]
+//		if not is_undefined(_a_map) {
+//			target = ob_cursor
+//			ok = true
+//			doActionNum = i
+//			event_perform(ev_other, ev_user3)
+//		}
+//	}
+//	break;
+//}
 
 // bury
 if canMove {
