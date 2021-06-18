@@ -1,23 +1,25 @@
 /// @desc create path
 
-path = path_add()
+path_target = instance_create_layer(x, y, "Game", ob_hiding_mark)
+path_target.path = path_add()
 
 instance_deactivate_object(coll_area)
+if sc_does_exist(target) {
+	tgX = target.x
+	tgY = target.y
+} else {
+	// reset move_component
+	sc_set_move_component(cmp_moving)
+}
 
-var _oIndex = image_index
-image_index = pokemon_map[? "size"]
-
-mp_potential_settings(30, 10, 0, false)
-mp_potential_path_object(path, tgX, tgY, maxSpeed*10, 1.25, ob_collision_area)
-path_number = path_get_number(path)
-path_length = path_get_length(path)
-
-image_index = _oIndex
+mp_potential_settings(30, 10, 0, true)
+mp_potential_path_object(path_target.path, tgX, tgY, maxSpeed*10, 1.25, ob_collision_area)
 
 instance_activate_object(coll_area)
 
-//var _sp = moveSpeed
-//moveSpeed = 0
-path_start(path, 0, path_action_stop, false)
-path_position = 0
+with path_target {
+	path_start(path, other.maxSpeed, path_action_stop, true);
+}
+
+
 

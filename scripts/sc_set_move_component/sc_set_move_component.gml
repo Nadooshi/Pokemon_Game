@@ -4,5 +4,7 @@ function sc_set_move_component(_cmp) {
 		event_perform_object(_prevcmp, ev_cleanup, 0)
 		component_list[| move_component_index] = _cmp
 		event_perform_object(_cmp, ev_create, 0)
+//		show_message("New move component: " + object_get_name(_cmp))
+		
 	}
 }

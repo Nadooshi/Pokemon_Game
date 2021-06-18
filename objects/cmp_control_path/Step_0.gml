@@ -9,6 +9,7 @@ counter++
 if counter mod 100 = 0 {
 //	target = sc_find_nearest_target(id)
 	target = instance_find(ob_cursor, 0)
+
 	if sc_does_exist(target) {
 		tgX = target.x
 		tgY = target.y
