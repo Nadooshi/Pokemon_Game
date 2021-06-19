@@ -114,7 +114,7 @@ function sc_ai_follow_target() {
 		sc_set_behaviour(sc_ai_new_target)
 		exit
 	}
-	tgAngle = point_direction(x, y+12, target.x, target.y+12)
+//	tgAngle = point_direction(x, y+12, target.x, target.y+12)
 	tgX = target.x
 	tgY = target.y
 	// get distance btw collision areas
@@ -136,8 +136,10 @@ function sc_ai_follow_target() {
 		if action_list[| _lunge_num][? "ap"] <= power_cur {
 			plannedActionNum = _lunge_num
 			sc_set_behaviour(sc_ai_hit_target)
-		} else
+		} else {
+			sc_check_reaching_target()
 			sc_player_move()
+		}
 		
 	} else
 	if (doActionNum < 0) and
@@ -146,6 +148,7 @@ function sc_ai_follow_target() {
 
 	} else {
 		// get closer
+		sc_check_reaching_target()
 		sc_player_move()
 	}
 }
@@ -223,7 +226,8 @@ function sc_ai_target_group() {
 
 function sc_ai_get_to_point() {
 	var _d = point_distance(x, y+12, tgX, tgY+12)
-	tgAngle = point_direction(x, y+12, tgX, tgY+12)
+//	tgAngle = point_direction(x, y+12, tgX, tgY+12)
+	sc_check_reaching_target()	
 	sc_player_move()
 	if _d <= max(abs(moveSpeed) * 0.75, tgDelta) {
 		tgDelta = 0
@@ -259,17 +263,15 @@ function sc_ai_hit_target() {
 	// do multiple attacks using full power
 	doActionNum = plannedActionNum
 	if plannedPurpose = _ATTACK_PURPOSE.far {
-		if collision_line(x, y+12, target.x, target.y+12, ob_hazard, false, false) {
-
+		if sc_check_reaching_target() == false {
 			plannedActionNum = doActionNum
 			doActionNum = -1
-			// get closer
-			// sc_ai_reach
-			sc_set_move_component(cmp_moving_path)
 			sc_player_move()
 			exit
 		}
-		sc_set_move_component(cmp_moving)
+		tgAngle = point_direction(x, y+12, target.x, target.y+12)
+		tgX = target.x
+		tgY = target.y
 	}
 
 	

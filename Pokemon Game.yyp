@@ -144,6 +144,7 @@
     {"id":{"name":"sp_pokeworld_60","path":"sprites/sp_pokeworld_60/sp_pokeworld_60.yy",},"order":62,},
     {"id":{"name":"sp_pokeworld_61","path":"sprites/sp_pokeworld_61/sp_pokeworld_61.yy",},"order":63,},
     {"id":{"name":"ob_ui_affect","path":"objects/ob_ui_affect/ob_ui_affect.yy",},"order":14,},
+    {"id":{"name":"sc_check_reaching_target","path":"scripts/sc_check_reaching_target/sc_check_reaching_target.yy",},"order":5,},
     {"id":{"name":"sp_pokeworld_62","path":"sprites/sp_pokeworld_62/sp_pokeworld_62.yy",},"order":64,},
     {"id":{"name":"sp_pokeworld_109","path":"sprites/sp_pokeworld_109/sp_pokeworld_109.yy",},"order":111,},
     {"id":{"name":"sp_pokeworld_63","path":"sprites/sp_pokeworld_63/sp_pokeworld_63.yy",},"order":65,},

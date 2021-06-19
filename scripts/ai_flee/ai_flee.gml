@@ -75,7 +75,7 @@ function sc_ai_retreat_start() {
 
 
 function sc_ai_retreat() {
-	if sc_ai_get_to_point()
+	if sc_ai_get_to_point() 
 		sc_ai_retreat_start()
 	
 	if courage_cur >= 99 {
