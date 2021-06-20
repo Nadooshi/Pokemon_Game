@@ -314,9 +314,16 @@ function sc_ai_wait_warmup_start() {
 	if attack_warmup > 0.002 {
 		var _neededDist = action_list[| doActionNum][? "distance"]
 		var _dirtotg = point_direction(target.x, target.y+12, x, y+12)
-		var _newdir = _dirtotg+random(90)-45
-		tgX = target.x + cos(_newdir)*_neededDist
-		tgY = target.y + sin(_newdir)*_neededDist
+		var _ok = false
+		repeat (10) {
+			var _newdir = _dirtotg+(random(90)-45)
+			tgX = target.x + cos(degtorad(_newdir))*_neededDist
+			tgY = target.y + sin(degtorad(_newdir))*_neededDist
+			_ok = not position_meeting(tgX, tgY, ob_collision_area)
+			if _ok break
+		}
+		if not _ok	
+			show_message("Failed to find a place for sc_ai_wait_warmup")
 		sc_set_behaviour(sc_ai_wait_warmup)
 	}
 	if attack_warmup < 0
@@ -325,7 +332,7 @@ function sc_ai_wait_warmup_start() {
 
 
 function sc_ai_wait_warmup() {
-	if attack_warmup > 0.002 {
+	if attack_warmup > dTime {
 		if moveSpeed > 0.1  { // continue moving
 			if sc_ai_get_to_point()
 				sc_ai_wait_warmup_start()
