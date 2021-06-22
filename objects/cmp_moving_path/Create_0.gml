@@ -13,7 +13,7 @@ if sc_does_exist(target) {
 }
 
 mp_potential_settings(90, 20, 0, true)
-mp_potential_path_object(path_target.path, tgX, tgY, maxSpeed*10, 2.5, ob_collision_area)
+mp_potential_path_object(path_target.path, tgX, tgY, maxSpeed*10, 1.5, ob_collision_area)
 
 instance_activate_object(coll_area)
 

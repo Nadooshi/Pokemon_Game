@@ -21,6 +21,7 @@ function sc_ai_flee() {
 	if sc_does_exist(target) {
 		tgX = target.x
 		tgY = target.y
+		tgAngle = point_direction(x, y+12, target.x, target.y+12)
 		if sc_ai_get_to_point() {
 			sc_player_stop_set()
 			if (counter mod t_process_courage) = 0 
