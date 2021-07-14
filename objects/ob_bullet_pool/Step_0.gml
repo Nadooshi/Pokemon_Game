@@ -1,9 +1,9 @@
 /// @desc
 
-#macro DROP_APPEAR_PERIOD 25
+var _drop_appear_period = 864 / radius
 
 // new drop
-if (timeout mod DROP_APPEAR_PERIOD) = 0 {
+if (timeout mod _drop_appear_period) = 0 {
 	var _drop = ds_map_create()
 	var _r = random(radius-4)
 	var _a = random(360)
