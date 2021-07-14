@@ -4,7 +4,7 @@
 #macro AUTOTARGET_MAX_DISTANCE 100
 
 var _adiff = 0
-var _min_adiff = 45
+var _min_adiff = 90
 var _closest_id = noone
 
 with ob_player 

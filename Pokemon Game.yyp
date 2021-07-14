@@ -183,6 +183,7 @@
     {"id":{"name":"sp_exp_attack_28","path":"sprites/sp_exp_attack_28/sp_exp_attack_28.yy",},"order":29,},
     {"id":{"name":"sp_icon_force","path":"sprites/sp_icon_force/sp_icon_force.yy",},"order":0,},
     {"id":{"name":"sp_pokemon_icon","path":"sprites/sp_pokemon_icon/sp_pokemon_icon.yy",},"order":1,},
+    {"id":{"name":"cmp_moving_path_step","path":"objects/cmp_moving_path_step/cmp_moving_path_step.yy",},"order":12,},
     {"id":{"name":"sp_frame_level","path":"sprites/sp_frame_level/sp_frame_level.yy",},"order":2,},
     {"id":{"name":"sp_exp_attack_16","path":"sprites/sp_exp_attack_16/sp_exp_attack_16.yy",},"order":16,},
     {"id":{"name":"sp_frame_exp","path":"sprites/sp_frame_exp/sp_frame_exp.yy",},"order":3,},

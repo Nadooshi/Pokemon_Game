@@ -114,7 +114,7 @@ function sc_ai_follow_target() {
 		sc_set_behaviour(sc_ai_new_target)
 		exit
 	}
-	tgAngle = point_direction(x, y+12, target.x, target.y+12)
+	tgAngle = point_direction(x, y, target.x, target.y)
 	tgX = target.x
 	tgY = target.y
 	// get distance btw collision areas
