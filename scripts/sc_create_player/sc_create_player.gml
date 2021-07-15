@@ -47,6 +47,7 @@ function sc_create_player(argument0, argument1) {
 				if not sc_precalc_action_values(a_map, id)
 					show_message("NO distance calculated")
 			}
+			a_map[? "battle_exp"] = 0
 			ds_list_add(action_list, a_map)
 		}
 		// load passives

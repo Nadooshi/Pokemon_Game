@@ -323,7 +323,7 @@ function sc_ai_wait_warmup_start() {
 			if _ok break
 		}
 		if not _ok	
-			show_message("Failed to find a place for sc_ai_wait_warmup")
+//			show_message("Failed to find a place for sc_ai_wait_warmup")
 		sc_set_behaviour(sc_ai_wait_warmup)
 	}
 	if attack_warmup < 0

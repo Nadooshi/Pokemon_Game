@@ -5,7 +5,7 @@ function sc_new_inv_item() {
 	result[? "sprite"]	= noone
 	result[? "count"]	= 0
 	result[? "name"]	= ""
-	result[? "durability"]	= 100
+	result[? "durability"]	= 0
 	result[? "price"]	= 0
 
 	return result

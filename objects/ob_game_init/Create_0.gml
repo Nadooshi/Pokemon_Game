@@ -543,3 +543,10 @@ audio_set_master_gain(0, 0.5)
 #macro t_process_courage 10
 #macro courage_max_regen 3
 
+#macro poke_damage_exp 1
+#macro poke_dodge_exp 0.5
+#macro poke_kill_exp 50
+#macro poke_win_exp 75
+
+#macro act_use_exp 1
+#macro act_usedone_exp 5

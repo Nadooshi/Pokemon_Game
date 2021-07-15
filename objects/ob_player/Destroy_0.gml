@@ -21,9 +21,10 @@ if sc_does_exist(passive_state1)
 	ds_map_destroy(passive_state1)
 if sc_does_exist(passive_state2)
 	ds_map_destroy(passive_state2)
-//if ds_list_size(trainer[? "pokemon_ids"]) = 0
-//	with ob_cursor
-//		alarm_set(0, 300)
+	
+if ds_list_size(trainer[? "pokemon_ids"]) = 0
+with ob_init_battle
+	alarm_set(0, 300)
 
 ds_list_clear(in_biome)
 

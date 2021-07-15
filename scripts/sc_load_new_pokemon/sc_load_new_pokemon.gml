@@ -7,6 +7,7 @@ function sc_load_new_pokemon(argument0) {
 	sc_load_pokemon_dex(_name, _pokemon)
 
 		_pokemon[? "exp"] = 0
+		_pokemon[? "battle_exp"] = 0
 		_pokemon[? "level"] = 1 // 1 lvl in start
 		_pokemon[? "loses"] = 0
 		_pokemon[? "wins"] = 0
