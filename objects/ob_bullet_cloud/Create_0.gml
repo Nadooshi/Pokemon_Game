@@ -2,7 +2,7 @@
 
 event_inherited()
 
-damage_period = 15
+damage_period = 5
 radius = 0
 c_radius = 0
 d_radius = 0.5

@@ -38,6 +38,7 @@ function sc_create_player(argument0, argument1) {
 				a_map = ds_map_create()
 				ds_map_read(a_map, ini_read_string("actions", a_list[| i], ""))
 				// load ability for action
+				a_map[? "battle_exp"] = 0
 				if not is_undefined(a_map[? "active"]) {
 					var _map_abil = ds_map_create()
 					ds_map_read(_map_abil, ini_read_string("abilities", a_map[? "active"], ""))
@@ -47,7 +48,6 @@ function sc_create_player(argument0, argument1) {
 				if not sc_precalc_action_values(a_map, id)
 					show_message("NO distance calculated")
 			}
-			a_map[? "battle_exp"] = 0
 			ds_list_add(action_list, a_map)
 		}
 		// load passives

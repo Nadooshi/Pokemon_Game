@@ -14,12 +14,15 @@ if not instance_exists(bullet) {
 	exit
 }
 
-x  = bullet.x
-y  = bullet.y
-_z = bullet._z
-pokemon_id.x  = bullet.x
-pokemon_id.y  = bullet.y
-pokemon_id._z = bullet._z
 
-if not instance_exists(pokemon_id)
+if not instance_exists(pokemon_id) {
 	instance_destroy()
+} else {
+	x  = bullet.x
+	y  = bullet.y
+	_z = bullet._z
+	pokemon_id.x  = bullet.x
+	pokemon_id.y  = bullet.y
+	pokemon_id._z = bullet._z
+}
+

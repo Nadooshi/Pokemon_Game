@@ -168,7 +168,7 @@ function sc_player_attack_set() {
 
 	}
 	sc_logging_action(id, _a_map)
-	// STAT
+	// STAT Revenge
 	var _st_objs = ds_list_create()
 	for (var i=0; i<ds_list_size(states); i++)
 		ds_list_add(_st_objs, states[| i].object_index)

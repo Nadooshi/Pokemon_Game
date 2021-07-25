@@ -19,7 +19,7 @@ function sc_precalc_action_values(a_map, pokemon_id){
 		a_map[? "distance"] = 6
 	break
 	case _ATTACK_TYPE.pool:
-		a_map[? "distance"] = (a_map[? "radius"] + 1) * 8
+		a_map[? "distance"] = (a_map[? "radius"] + 1) * 8 + pokemon_id.pokemon_map[? "size"] * 2
 	break;
 	case _ATTACK_TYPE.aura:
 	case _ATTACK_TYPE.barrier:

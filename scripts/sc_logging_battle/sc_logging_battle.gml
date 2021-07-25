@@ -73,7 +73,7 @@ function sc_logging_action(argument0, argument1){
 	}
 	
 	_log = "[" + date_time_string(date_current_datetime())+ "]: " + string(_subject.trainer[? "name"]) + "`s " +
-	_subject.pokemon_map[? "title"] + " (" + string(_subject.id) + ")" + _what_do + " " + _action[? "name"] + " ...... action exp gained:" + string(_exp_value) + "!"
+	_subject.pokemon_map[? "title"] + " (" + string(_subject.id) + ")" + _what_do + " " + _action[? "name"] + " ...... action exp gained: " + string(_exp_value) + "!"
 
 //	var _a = ds_list_find_index(_subject.action_list, _action)
 	_action[? "battle_exp"]+= _exp_value
@@ -90,7 +90,7 @@ function sc_logging_miss(argument0, argument1, argument2){
 	var _subject	= argument0
 	var _object		= argument1
 	var _action		= argument2
-	var _exp_value = (_action[? "damage"] * poke_dodge_exp)
+	var _exp_value = string(_action[? "damage"] * poke_dodge_exp)
 	
 	var _log = ""
 	if _subject.trainer != _object.trainer

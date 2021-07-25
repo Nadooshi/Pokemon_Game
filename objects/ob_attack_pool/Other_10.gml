@@ -3,7 +3,10 @@
 // Inherit the parent event
 event_inherited();
 
-with instance_create_layer(x, y, "Particles", ob_bullet_pool) {
+var _dx = x + lengthdir_x(8 + pokemon_id.pokemon_map[? "size"] * 3, direction) 
+var _dy = y + lengthdir_y(8 + pokemon_id.pokemon_map[? "size"] * 2, direction)
+
+with instance_create_layer(_dx, _dy, "Particles", ob_bullet_pool) {
 	ds_map_copy(action, other.action)
 	radius = (action[? "radius"] + 1) * 8
 	pokemon_id = other.pokemon_id

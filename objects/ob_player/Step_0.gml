@@ -53,3 +53,6 @@ if attack_warmup > 0 {
 	}
 }
 
+// process courage
+if (counter mod t_process_courage) = 0 
+	sc_process_courage()
