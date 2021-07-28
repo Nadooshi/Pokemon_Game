@@ -16,3 +16,6 @@ states_y = 0
 
 biomes_w = 0
 biomes_y = 0
+
+sparkle_objs = ds_map_create()
+sparkle_active = ds_map_create()
