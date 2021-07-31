@@ -168,6 +168,7 @@
     {"id":{"name":"sp_pokeworld_72","path":"sprites/sp_pokeworld_72/sp_pokeworld_72.yy",},"order":74,},
     {"id":{"name":"sp_pokeworld_73","path":"sprites/sp_pokeworld_73/sp_pokeworld_73.yy",},"order":75,},
     {"id":{"name":"sp_pokeworld_134","path":"sprites/sp_pokeworld_134/sp_pokeworld_134.yy",},"order":136,},
+    {"id":{"name":"ob_state_teleport","path":"objects/ob_state_teleport/ob_state_teleport.yy",},"order":38,},
     {"id":{"name":"sp_exp_attack_7","path":"sprites/sp_exp_attack_7/sp_exp_attack_7.yy",},"order":23,},
     {"id":{"name":"sp_pokeworld_74","path":"sprites/sp_pokeworld_74/sp_pokeworld_74.yy",},"order":76,},
     {"id":{"name":"sp_pokeworld_75","path":"sprites/sp_pokeworld_75/sp_pokeworld_75.yy",},"order":77,},
@@ -200,6 +201,7 @@
     {"id":{"name":"sc_average_point","path":"scripts/sc_average_point/sc_average_point.yy",},"order":16,},
     {"id":{"name":"sp_pokeworld_139","path":"sprites/sp_pokeworld_139/sp_pokeworld_139.yy",},"order":141,},
     {"id":{"name":"sp_hazard","path":"sprites/sp_hazard/sp_hazard.yy",},"order":3,},
+    {"id":{"name":"ob_player_teleport","path":"objects/ob_player_teleport/ob_player_teleport.yy",},"order":28,},
     {"id":{"name":"sp_start_area","path":"sprites/sp_start_area/sp_start_area.yy",},"order":4,},
     {"id":{"name":"sp_pokeworld_176","path":"sprites/sp_pokeworld_176/sp_pokeworld_176.yy",},"order":178,},
     {"id":{"name":"sp_shadowworld","path":"sprites/sp_shadowworld/sp_shadowworld.yy",},"order":5,},
@@ -444,6 +446,7 @@
     {"id":{"name":"sc_switch_view_actions","path":"scripts/sc_switch_view_actions/sc_switch_view_actions.yy",},"order":1,},
     {"id":{"name":"sc_refresh_actions","path":"scripts/sc_refresh_actions/sc_refresh_actions.yy",},"order":2,},
     {"id":{"name":"sc_create_trainer_slots","path":"scripts/sc_create_trainer_slots/sc_create_trainer_slots.yy",},"order":3,},
+    {"id":{"name":"ob_player_teleport_end","path":"objects/ob_player_teleport_end/ob_player_teleport_end.yy",},"order":29,},
     {"id":{"name":"sc_load_trainer_fnames","path":"scripts/sc_load_trainer_fnames/sc_load_trainer_fnames.yy",},"order":4,},
     {"id":{"name":"sc_calculate_formula","path":"scripts/sc_calculate_formula/sc_calculate_formula.yy",},"order":5,},
     {"id":{"name":"sp_attack_32","path":"sprites/sp_attack_32/sp_attack_32.yy",},"order":31,},
@@ -466,6 +469,7 @@
     {"id":{"name":"sc_deal_damage","path":"scripts/sc_deal_damage/sc_deal_damage.yy",},"order":6,},
     {"id":{"name":"sp_pokeworld_121","path":"sprites/sp_pokeworld_121/sp_pokeworld_121.yy",},"order":123,},
     {"id":{"name":"snd_pokedie","path":"sounds/snd_pokedie/snd_pokedie.yy",},"order":0,},
+    {"id":{"name":"ob_player_teleport_start","path":"objects/ob_player_teleport_start/ob_player_teleport_start.yy",},"order":27,},
     {"id":{"name":"sc_hurt","path":"scripts/sc_hurt/sc_hurt.yy",},"order":7,},
     {"id":{"name":"sp_attack_35","path":"sprites/sp_attack_35/sp_attack_35.yy",},"order":35,},
     {"id":{"name":"sc_check_affect","path":"scripts/sc_check_affect/sc_check_affect.yy",},"order":8,},
@@ -707,12 +711,12 @@
   },
   "RoomOrderNodes": [
     {"roomId":{"name":"rm_init","path":"rooms/rm_init/rm_init.yy",},},
+    {"groupName":"Battle_rooms","children":[
+        {"roomId":{"name":"rm_battle","path":"rooms/rm_battle/rm_battle.yy",},},
+        {"roomId":{"name":"rm_battle_ui","path":"rooms/rm_battle_ui/rm_battle_ui.yy",},},
+      ],},
     {"roomId":{"name":"rm_select_trainer","path":"rooms/rm_select_trainer/rm_select_trainer.yy",},},
     {"roomId":{"name":"rm_trainer_setup","path":"rooms/rm_trainer_setup/rm_trainer_setup.yy",},},
-    {"groupName":"Battle_rooms","children":[
-        {"roomId":{"name":"rm_battle_ui","path":"rooms/rm_battle_ui/rm_battle_ui.yy",},},
-        {"roomId":{"name":"rm_battle","path":"rooms/rm_battle/rm_battle.yy",},},
-      ],},
     {"roomId":{"name":"rm_endbattle","path":"rooms/rm_endbattle/rm_endbattle.yy",},},
   ],
   "Folders": [

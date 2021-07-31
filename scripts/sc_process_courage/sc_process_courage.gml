@@ -1,4 +1,4 @@
-function sc_process_courage() {
+function sc_process_courage(mod_boost) {
 // for ob_player
 
 	var _d = 0
@@ -15,18 +15,19 @@ function sc_process_courage() {
 		_tg = id
 		// enemy influence
 		if sc_check_affect(_u, _tg, _ATTACK_AFFECT.enemy) 
-		if _d<= 180 {
+		if _d<= max_distance_attack {
 			var _rd = min(60 / _d , courage_max_regen)
 			_en_force += (_tg.pokemon_map[? "rating"] + _tg.pokemon_map[? "level"] + _tg.health_cur) * _rd
 		}
 		//friend influence
 		if sc_check_affect(_u, _tg, _ATTACK_AFFECT.friend) 
-		if _d<= 180 {
+		if _d<= max_distance_attack {
 			var _rd = min(90 / _d , courage_max_regen)
 			_fr_force += (_tg.pokemon_map[? "rating"] + _tg.pokemon_map[? "level"] + _tg.health_cur) * _rd
 		}
 	}
-	var _mod_courage = (_fr_force + _u_force - _en_force) / _u_force + (0.05 * power_cur)
+	var _mod_courage = (_fr_force + _u_force - _en_force) / _u_force + (0.06 * power_cur)
+	_mod_courage *= mod_boost
 	courage_cur = clamp(courage_cur + _mod_courage, 0, 100)
 	
 

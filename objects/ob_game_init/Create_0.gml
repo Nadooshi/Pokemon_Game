@@ -395,6 +395,7 @@ state_object[_ABILITY_STATE.lulling		] = ob_state_lulling;
 state_object[_ABILITY_STATE.revenge		] = ob_state_revenge;
 state_object[_ABILITY_STATE.flee		] = ob_state_flee;
 state_object[_ABILITY_STATE.wastetime	] = ob_state_wastetime;
+state_object[_ABILITY_STATE.teleport	] = ob_state_teleport;
 
 
 #endregion
@@ -541,7 +542,8 @@ audio_set_master_gain(0, 0.5)
 
 #macro retreat_dist 200
 #macro t_process_courage 10
-#macro courage_max_regen 3
+#macro courage_max_regen 2
+#macro max_distance_attack 180
 
 #macro poke_damage_exp 1
 #macro poke_dodge_exp 0.5

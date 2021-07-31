@@ -7,7 +7,7 @@ draw_self()
 
 if hurt_timeout > 0 {
 	var _col = c_white
-	if (counter mod 3)
+	if (counter div 3) mod 2
 		_col = c_fuchsia
 	else
 		_col = c_aqua

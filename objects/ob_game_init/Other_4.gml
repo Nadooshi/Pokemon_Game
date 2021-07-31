@@ -1,4 +1,4 @@
 /// @desc 
 
 if room = rm_init
-	room_goto_next()
+	room_goto(rm_select_trainer)

@@ -11,9 +11,17 @@ if script_exists(scBehaviour) or is_method(scBehaviour)
 	if script_execute(scBehaviour)
 		succeeded_behaviour = scBehaviour
 
-//else
-//	sc_player_stop_set()
-
+var mod_reg = 1
+if ds_exists(in_biome, ds_type_list)
+for (var i=0; i<ds_list_size(in_biome); i++) {
+	var _coeff = 1
+	_coeff *= sc_element_coeff(in_biome[| i], pokemon_map[? "elemental_type"])
+	_coeff *= sc_element_coeff(in_biome[| i], pokemon_map[? "material_type"])
+	if _coeff > 1
+		mod_reg *= 0.5
+	if _coeff < 1
+		mod_reg *= 1.5
+}
 
 if hurt_timeout > 0 { 
 	hurt_timeout -= dTime
@@ -22,17 +30,13 @@ if hurt_timeout > 0 {
 if canMove
 if attack_warmup <= 0
 if floor(power_cur) < power_max {	// recover power
-	power_cur += power_reg
-}/* else {
-	power_cur = power_max
-	if health_cur < health_max		// slow recover health from full power
-		health_cur += (health_reg/10)
+	power_cur += power_reg * mod_reg
 }
-*/
+
 if hurt_cur > 0 {
 	hurt_cur = max(0, hurt_cur - (hurt_reg + health_reg)) // recover half health after damage
 	if health_cur < health_max
-		health_cur += health_reg
+		health_cur += health_reg * mod_reg
 }
 
 if hurt_timeout > 0 {		
@@ -54,5 +58,5 @@ if attack_warmup > 0 {
 }
 
 // process courage
-if (counter mod t_process_courage) = 0 
-	sc_process_courage()
+if (counter mod t_process_courage) = 0
+	sc_process_courage(mod_reg)
