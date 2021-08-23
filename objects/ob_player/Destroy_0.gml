@@ -14,13 +14,19 @@ with instance_create_depth(x, y, depth, ob_explosion) {
 }
 
 for (var i=0; i<ds_list_size(states); i++)
-if instance_exists(states[| i])
+if instance_exists(states[| i]) {
 	instance_destroy(states[| i])
+	states[| i] = noone
+}
 
-if sc_does_exist(passive_state1)
+if sc_does_exist(passive_state1) {
 	ds_map_destroy(passive_state1)
-if sc_does_exist(passive_state2)
+	passive_state1 = noone
+}
+if sc_does_exist(passive_state2) {
 	ds_map_destroy(passive_state2)
+	passive_state2 = noone
+}
 	
 //if ds_list_size(trainer[? "pokemon_ids"]) = 0
 //with ob_init_battle

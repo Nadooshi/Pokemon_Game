@@ -5,6 +5,11 @@ if not init
 
 event_perform_object(ob_composed, ev_step, ev_step_normal)
 
+if not instance_exists(pokemon_id) or anim_ended {
+	instance_destroy()
+	exit
+}
+
 if not shot_done {
 	shot_done = true
 	// create bullet
@@ -24,6 +29,3 @@ if not shot_done {
 	sc_play_sound_element("element")
 	sc_play_sound_element("material")
 }
-
-if not instance_exists(pokemon_id) or anim_ended
-	instance_destroy()

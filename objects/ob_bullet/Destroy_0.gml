@@ -1,6 +1,5 @@
 /// @desc 
 
-event_inherited()
 if sc_does_exist(action)
 if not is_undefined(action[? "active"])
 // STAT
@@ -40,3 +39,4 @@ with instance_create_layer(x, y, "Particles", ob_damage_area) {
 }
 
 
+event_inherited()

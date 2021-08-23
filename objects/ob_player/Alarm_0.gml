@@ -27,6 +27,7 @@ if sc_does_exist(passive_state1) {
 			p_action[? "active"] = passive_state1
 			sc_apply_state(_state_obj, 0, id, p_action)
 			ds_map_destroy(p_action)
+			p_action = noone
 		}
 		
 		alarm_set(0, (passive_state1[? "state_time"] + passive_state1[? "state_cooldown"]) * 60)

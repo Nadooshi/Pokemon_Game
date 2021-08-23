@@ -1,7 +1,7 @@
 /// @desc Update target
 
 //sc_find_nearest_target(id, _ATTACK_AFFECT.enemy | _ATTACK_AFFECT.friend)
-#macro AUTOTARGET_MAX_DISTANCE 100
+#macro AUTOTARGET_MAX_DISTANCE 180
 
 var _adiff = 0
 var _min_adiff = 90

@@ -26,6 +26,7 @@ onDamage = function (_dmg, _damaged_player_id, _action, _pokemon_id_attack, _sta
 		with _pokemon_id_attack
 			sc_apply_state(ob_state_stun, 0, _pokemon_id_attack, stun_action);
 		ds_map_destroy(stun_action)
+		stun_action = noone
 	}	
 	return _dmg	
 }
