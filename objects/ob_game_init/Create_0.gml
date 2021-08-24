@@ -220,7 +220,7 @@ attack_type_text[i++] = "swoop"
 enum _ATTACK_AFFECT {
 	friend = 1,
 	enemy  = 2,
-	itself = 4
+	itself = 4,
 }
 globalvar attack_affect_text;
 attack_affect_text[_ATTACK_AFFECT.friend] = "friend"
@@ -228,11 +228,13 @@ attack_affect_text[_ATTACK_AFFECT.enemy ] = "enemy"
 attack_affect_text[_ATTACK_AFFECT.itself] = "itself"
 
 enum _ATTACK_TG {
+	teleport    = 0,
 	air			= 1,
 	ground		= 2,
 	underground = 4,
 	all			= 7
 }
+
 globalvar attack_target_text;
 attack_target_text[_ATTACK_TG.air	 	]  = "air"
 attack_target_text[_ATTACK_TG.ground	]  = "ground"

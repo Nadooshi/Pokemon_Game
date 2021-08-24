@@ -11,9 +11,12 @@ with instance_create_layer(x, y, "Game", ob_player_teleport_start) {
 	ai_control = other.control_component
 	tg_x = other.tgX
 	tg_y = other.tgY
+	o_position_stage = other.position_stage
 }
-x = -20000000
-y = -20000000
+
+sc_composed_remove_component(cmp_collidable_player, true)
+position_stage = _ATTACK_TG.teleport
+image_alpha = 0
 timeout = 0 //на всякий случай
 alarm_set(0, -1)
 alarm_set(1, -1)
