@@ -40,3 +40,5 @@ dirangle[d.Left ] = 180
 dirangle[d.Right] = 0
 dirangle[d.Up   ] = 90
 dirangle[d.Down ] = 270
+
+ob_cursor.visible = true

@@ -1,5 +1,6 @@
 /// @desc Move camera
 
+var _ok = false
 var _x, _y;
 var _cx, _cy;
 var _tx, _ty;
@@ -7,24 +8,28 @@ var _avX = 0
 var _avY = 0
 _cx = camera_get_view_x(view_camera[0])
 _cy = camera_get_view_y(view_camera[0])
-var _watching = noone
+ds_list_clear(watching)
 
-//var _watching = selected_id
+if not is_undefined(selected_id) and instance_exists(selected_id) {
+	ds_list_add(watching, selected_id)
+} else
 with ob_player
-	if trainer = player1_trainer
-		_watching = id // selected_id
+if trainer = player1_trainer
+	ds_list_add(other.watching, id)
 
 
-if instance_exists(_watching) {
-	var _count = instance_number(_watching)
-	for (var i = 0; i < _count; i++) 
-		with instance_find(_watching, i) {
-			_avX += x
-			_avY += y
-		}
+var _count = ds_list_size(watching)
+for (var i = 0; i < _count; i++) 
+with watching[| i] {
+	_avX += x
+	_avY += y
+	_ok = true
+}
+
+
+if _ok {
 	_avX /= _count
 	_avY /= _count
-
 	_tx =  _avX - camera_get_view_width (view_camera[0]) * 0.5
 	_ty =  _avY - camera_get_view_height(view_camera[0]) * 0.5
 	_tx = clamp(_tx, 0, room_width -camera_get_view_width (view_camera[0]))

@@ -59,4 +59,5 @@ scBehaviour = sc_player_stop_set
 
 ai_groups = ds_map_create()
 
+ob_cursor.visible = true
 

@@ -10,7 +10,10 @@ timeout = 0
 state_time = 0
 tg_x = 0
 tg_y = 0
+oX = 0
+oY = 0
 o_position_stage = 0
+t_dist = 0
 
 image_speed = 0
 image_alpha = 0

@@ -26,6 +26,9 @@ if keys[k.Up   ] { newangle += dirangle[d.Up   ]; dcount++ }
 if keys[k.Down ] { newangle += dirangle[d.Down ]; dcount++ }
 if dcount>0	newangle = newangle / dcount
 
+ob_cursor.x = mouse_x
+ob_cursor.y = mouse_y
+
 tgX = ob_cursor.x
 tgY = ob_cursor.y
 

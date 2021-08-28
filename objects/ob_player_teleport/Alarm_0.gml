@@ -4,6 +4,7 @@ if collision_line(x, y+_z, tg_x, tg_y, ob_hazard, false, true) {
 	
 	var _dirtotg = point_direction(tg_x, tg_y, x, y+_z)
 	var _d = point_distance(tg_x, tg_y, x, y+_z)
+	if _d > t_dist _d = t_dist // ограничение дистанции
 	var _ok = false
 	repeat (10) {
 		var _newdir = _dirtotg+(random(90)-45)

@@ -20,6 +20,8 @@ colors = [ $88AAFF, $FFAA88 ]
 dragX = 0
 dragY = 0
 is_drag = false
+cl_line = [c_red, c_blue]
+success = true
 
 text = instance_create_layer(x, y-12, "Particles", ob_particle_text)
 with text {
