@@ -398,6 +398,8 @@ state_object[_ABILITY_STATE.revenge		] = ob_state_revenge;
 state_object[_ABILITY_STATE.flee		] = ob_state_flee;
 state_object[_ABILITY_STATE.wastetime	] = ob_state_wastetime;
 state_object[_ABILITY_STATE.teleport	] = ob_state_teleport;
+state_object[_ABILITY_STATE.telekinesis	] = ob_state_telekinesis
+;
 
 
 #endregion
@@ -554,3 +556,4 @@ audio_set_master_gain(0, 0.5)
 
 #macro act_use_exp 1
 #macro act_usedone_exp 5
+#macro frames_rate 60

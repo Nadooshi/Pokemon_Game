@@ -29,4 +29,5 @@ if not success {
 }
 
 y += _z
+sc_logging_state_cursed(pokemon_id, pokemon_id.pokemon_map[? "title"], "exit teleport" + " x" + string(ceil(pokemon_id.x)) + ", y" + string(ceil(pokemon_id.y)))
 instance_change(ob_player_teleport_end, true)

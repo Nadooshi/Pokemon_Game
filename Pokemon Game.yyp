@@ -500,6 +500,7 @@
     {"id":{"name":"ob_ui_object","path":"objects/ob_ui_object/ob_ui_object.yy",},"order":0,},
     {"id":{"name":"sp_pokeworld_124","path":"sprites/sp_pokeworld_124/sp_pokeworld_124.yy",},"order":126,},
     {"id":{"name":"ob_frame","path":"objects/ob_frame/ob_frame.yy",},"order":1,},
+    {"id":{"name":"ob_state_telekinesis","path":"objects/ob_state_telekinesis/ob_state_telekinesis.yy",},"order":39,},
     {"id":{"name":"ob_frame1","path":"objects/ob_frame1/ob_frame1.yy",},"order":2,},
     {"id":{"name":"sp_pokeworld_114","path":"sprites/sp_pokeworld_114/sp_pokeworld_114.yy",},"order":116,},
     {"id":{"name":"ob_label","path":"objects/ob_label/ob_label.yy",},"order":3,},
