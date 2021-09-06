@@ -28,7 +28,7 @@ function sc_logging_damage(argument0, argument1, argument2, argument3){
 		_action[? "name"] + " impact at barrier."
 	}
 	
-	show_debug_message(_log)
+//	show_debug_message(_log)
 	ds_list_add(log_battle, _log)
 }
 
@@ -74,7 +74,7 @@ function sc_logging_action(argument0, argument1){
 
 //	var _a = ds_list_find_index(_subject.action_list, _action)
 //	_action[? "battle_exp"]+= _exp_value
-	show_debug_message(_log)
+//	show_debug_message(_log)
 	
 	ds_list_add(log_battle, _log)
 }
@@ -105,7 +105,7 @@ function sc_logging_miss(argument0, argument1, argument2){
 		_action[? "name"] + " overpassed barrier."
 	}
 	
-	show_debug_message(_log)
+//	show_debug_message(_log)
 	
 	ds_list_add(log_battle, _log)
 		
@@ -124,14 +124,13 @@ function sc_logging_death(argument0, argument1, argument2){
 		var _relation = "hostile"
 	else _relation = "friendly"
 	
-	if _object.trainer = -1 exit;
 	var _name = is_undefined(_action[? "name"]) ? _action[? "active"][? "name"] : _action[? "name"]
 	_log = "[" + date_time_string(date_current_datetime())+ "]: " + string(_object.trainer[? "name"]) + "`s " +
 	_object.pokemon_map[? "title"] + " (" + string(_object.id) + ") " + " cannot continue the fight, as the " +
 	_name +	" " + _relation + " of " +  
 	_subject.pokemon_map[? "title"] + " (" + string(_subject.id) + ") " + " finish him."
 	
-	show_debug_message(_log)
+//	show_debug_message(_log)
 	
 	ds_list_add(log_battle, _log)
 }
@@ -156,7 +155,7 @@ function sc_logging_state_loses(argument0, argument1, argument2, argument3, argu
 	_what_do + " from " + 
 	_state + " and loses " + _parameter + " by " + string(_value)
 	
-	show_debug_message(_log)
+//	show_debug_message(_log)
 	
 	ds_list_add(log_battle, _log)
 
@@ -182,7 +181,7 @@ function sc_logging_state_rises(argument0, argument1, argument2, argument3, argu
 	_what_do + " from " + 
 	_state + " and rise " + _parameter + " by " + string(_value)
 	
-	show_debug_message(_log)
+//	show_debug_message(_log)
 	
 	ds_list_add(log_battle, _log)
 
@@ -203,7 +202,7 @@ function sc_logging_state_cursed(argument0, argument1, argument2){
 	_object.pokemon_map[? "title"] + " (" + string(_object.id) + ") " +
 	" was in a " + _state + " and " + _what_do
 	
-	show_debug_message(_log)
+//	show_debug_message(_log)
 	
 	ds_list_add(log_battle, _log)
 
@@ -228,7 +227,7 @@ function sc_logging_state_powered(argument0, argument1, argument2, argument3, ar
 	_object.pokemon_map[? "title"] + " (" + string(_object.id) + ") " + 
 	" а " + _state + " " + _what_do + " " + _parameter + ", and is now " + _value
 	
-	show_debug_message(_log)
+//	show_debug_message(_log)
 	
 	ds_list_add(log_battle, _log)
 }
@@ -245,10 +244,57 @@ function sc_logging_state_over(argument0, argument1){
 	_log = "[" + date_time_string(date_current_datetime())+ "]: " + string(_subject.trainer[? "name"]) + "`s " +
 	_subject.pokemon_map[? "title"] + " (" + string(_subject.id) + ") " + " - " + _state + " no longer effect."
 	
-	show_debug_message(_log)
+//	show_debug_message(_log)
 	
 	ds_list_add(log_battle, _log)
 }
 
+function sc_logging_experience (_object, _value, _event) {
+	var _log = ""
+	if is_undefined(_value)
+		_value = 0
+	var _ev = "accident"	
+	var _pokemon = _object
+	var _action = _object
+	var _mod = undefined
+	
+	switch _event {
+	case poke_exp.damage:
+		_ev = "deal damage"
+		_mod = false
+		break;
+	case poke_exp.dodge:
+		_ev = "dodge"
+		_mod = false
+		break;
+	case poke_exp.kill:
+		_ev = "frag"
+		_mod = false
+		break;
+	case poke_exp.win:
+		_ev = "victory"
+		_mod = false
+		break;
+	case act_exp.use:
+		_ev = "training skill"
+		_mod = true
+		break;
+	case act_exp.success:
+		_ev = "successfully applying skill"
+		_mod = true
+		break;
+	}
+	if is_undefined(_mod) exit;
+	
+	if ! _mod
+		_log = "!___________________" + _pokemon.pokemon_map[? "title"] + " gained exp. +" + string(_value) + "! for event " + _ev + "."
+	if _mod
+		_log = "!___________________" + _action[? "name"] + " gained exp. +" + string(_value) + "! for event " + _ev + "."
 
+	ds_list_add(log_battle, _log)
+}
 
+function sc_logging_info (_text) {
+	var _log = _text
+	ds_list_add(log_battle, _log)
+}

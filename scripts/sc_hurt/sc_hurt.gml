@@ -12,13 +12,16 @@ function sc_hurt(argument0, argument1, argument2) {
 
 	health_cur = max(0, health_cur - _dmg)
 	hurt_cur += _dmg
-
 	// death
 	if health_cur = 0 {
-		if not is_undefined(_action)
-			sc_logging_death(_p_attack, id, _action)
-		sc_gain_exp(_p_attack, poke_exp.kill)
-		_p_attack.frags++
+		if trainer < -1 {
+			if not is_undefined(_action)
+				sc_logging_death(_p_attack, id, _action)
+			if trainer != _p_attack.trainer {
+				_p_attack.frags++
+				sc_gain_exp(_p_attack, poke_exp.kill, pokemon_map[? "level"], string(_p_attack.pokemon_map[?"title"]) + " made " + string(_p_attack.frags) + " frags!")
+			}
+		}
 		event_perform(ev_destroy, 0)
 	}
 	

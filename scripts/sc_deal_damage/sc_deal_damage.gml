@@ -5,18 +5,18 @@ function sc_deal_damage(argument0, argument1) {
 	/// for damaged pokemon
 
 	var _action = argument0
-	var _pokemon_id_attack = argument1
-	var _dmg = sc_calculate_action_damage(_action, pokemon_map, _pokemon_id_attack)
+	var _pokemon_attack = argument1
+	var _dmg = sc_calculate_action_damage(_action, pokemon_map, _pokemon_attack)
 
 	//STAT pokemon states react on damage
 	if ds_exists(states, ds_type_list)
 	if not ds_list_empty(states) {
 		for (var i=0; i<ds_list_size(states); i++)
 		if is_method(states[| i].onDamage)
-			_dmg = states[| i].onDamage(_dmg, id, _action, _pokemon_id_attack, states[| i])
+			_dmg = states[| i].onDamage(_dmg, id, _action, _pokemon_attack, states[| i])
 
 	}
-	sc_hurt(_dmg, _pokemon_id_attack, _action);
+	sc_hurt(_dmg, _pokemon_attack, _action);
 
 	// apply state
 	if sc_does_exist(_action[? "active"]) 
@@ -29,11 +29,11 @@ function sc_deal_damage(argument0, argument1) {
 		if object_exists(_state_obj)
 			// check apply state rate
 		if _r_ <= _rate
-			sc_apply_state(_state_obj, _dmg, _pokemon_id_attack, _action);
+			sc_apply_state(_state_obj, _dmg, _pokemon_attack, _action);
 	}
 	
-	sc_gain_exp(_pokemon_id_attack, poke_exp.damage, _dmg)
+	sc_gain_exp(_pokemon_attack, poke_exp.damage, _dmg)
 	sc_gain_exp(_action, act_exp.success, _dmg)
-	sc_logging_damage(_pokemon_id_attack, id, _action, _dmg)
+	sc_logging_damage(_pokemon_attack, id, _action, _dmg)
 
 }
