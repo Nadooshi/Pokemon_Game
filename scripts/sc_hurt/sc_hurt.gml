@@ -17,6 +17,8 @@ function sc_hurt(argument0, argument1, argument2) {
 	if health_cur = 0 {
 		if not is_undefined(_action)
 			sc_logging_death(_p_attack, id, _action)
+		sc_gain_exp(_p_attack, poke_exp.kill)
+		_p_attack.frags++
 		event_perform(ev_destroy, 0)
 	}
 	

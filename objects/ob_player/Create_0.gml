@@ -93,6 +93,9 @@ accuracy_mod = 0 //прибавление в sc_check_accuracy
 dodge_mod = 0 //прибавление в sc_check_accuracy
 parry_mod = 1
 
+cur_exp = 0
+frags = 0
+
 moveSpeed = 0
 maxSpeed = 0
 

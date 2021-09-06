@@ -2,7 +2,6 @@
 /// @arg target_pokemon_id
 /// @arg action
 function sc_check_accuracy(argument0, argument1, argument2) {
-
 	var _obj = argument0
 	var _tg_p = argument1
 	var _action = argument2
@@ -33,6 +32,8 @@ function sc_check_accuracy(argument0, argument1, argument2) {
 //			caption = "MISS!"
 		ds_list_add(_obj.list_missed, _tg_p)	
 		sc_logging_miss(_obj.pokemon_id, _tg_p, _action)
+		var _dmg = sc_calculate_action_damage(_action, _tg_p.pokemon_map, _obj)
+		sc_gain_exp(_tg_p, poke_exp.dodge, _dmg)
 	}
 
 	return false

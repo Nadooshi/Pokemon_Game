@@ -167,6 +167,7 @@ function sc_player_attack_set() {
 			attack_ob_id = instance_create_layer(x, y, "Particles", ob_attack)
 
 	}
+	sc_gain_exp(_a_map, act_exp.use)
 	sc_logging_action(id, _a_map)
 	// STAT Revenge
 	var _st_objs = ds_list_create()

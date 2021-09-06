@@ -554,11 +554,4 @@ application_surface_enable(false)
 #macro courage_max_regen 2
 #macro max_distance_attack 180
 
-#macro poke_damage_exp 1
-#macro poke_dodge_exp 0.5
-#macro poke_kill_exp 50
-#macro poke_win_exp 75
-
-#macro act_use_exp 1
-#macro act_usedone_exp 5
 #macro frames_rate 60

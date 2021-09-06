@@ -21,10 +21,8 @@ function sc_logging_damage(argument0, argument1, argument2, argument3){
 		_object.pokemon_map[? "title"] + " (" + string(_object.id) + ") " + "is injured " + 
 		string(_value) + " by " +
 		_action[? "name"] + " from " + _relation + " " +
-		_subject.pokemon_map[? "title"] + " (" + string(_subject.id) + ") "+ "...... " + _subject.pokemon_map[? "title"] + " exp gained: " + string(_value * poke_damage_exp) + "!"
-		
-		_subject.pokemon_map[? "battle_exp"] += (_value * poke_damage_exp)
-		
+		_subject.pokemon_map[? "title"] + " (" + string(_subject.id) + ") "
+				
 	} else {
 		_log = "[" + date_time_string(date_current_datetime())+ "]: " + string(_subject.trainer[? "name"]) + "`s " +
 		_action[? "name"] + " impact at barrier."
@@ -41,7 +39,6 @@ function sc_logging_action(argument0, argument1){
 	var _subject	= argument0
 	var _action		= argument1
 	var _what_do	= ""
-	var _exp_value = 1 * act_use_exp
 
 	var _log = ""
 	switch _action[? "type"] {
@@ -73,10 +70,10 @@ function sc_logging_action(argument0, argument1){
 	}
 	
 	_log = "[" + date_time_string(date_current_datetime())+ "]: " + string(_subject.trainer[? "name"]) + "`s " +
-	_subject.pokemon_map[? "title"] + " (" + string(_subject.id) + ")" + _what_do + " " + _action[? "name"] + " ...... action exp gained: " + string(_exp_value) + "!"
+	_subject.pokemon_map[? "title"] + " (" + string(_subject.id) + ")" + _what_do + " " + _action[? "name"]
 
 //	var _a = ds_list_find_index(_subject.action_list, _action)
-	_action[? "battle_exp"]+= _exp_value
+//	_action[? "battle_exp"]+= _exp_value
 	show_debug_message(_log)
 	
 	ds_list_add(log_battle, _log)
@@ -90,7 +87,6 @@ function sc_logging_miss(argument0, argument1, argument2){
 	var _subject	= argument0
 	var _object		= argument1
 	var _action		= argument2
-	var _exp_value = string(_action[? "damage"] * poke_dodge_exp)
 	
 	var _log = ""
 	if _subject.trainer != _object.trainer
@@ -102,7 +98,7 @@ function sc_logging_miss(argument0, argument1, argument2){
 	_log = "[" + date_time_string(date_current_datetime())+ "]: " + string(_object.trainer[? "name"]) + "`s " +
 	_object.pokemon_map[? "title"] +  " (" + string(_object.id) + ") " +" dodged " +
 	_subject.pokemon_map[? "title"] + " (" + string(_subject.id) + ") " + "`s " +
-	_action[? "name"] + " ..... " + _object.pokemon_map[? "title"] + "exp gained: " + _exp_value + "!"
+	_action[? "name"]
 	
 	} else {
 		_log = "[" + date_time_string(date_current_datetime())+ "]: " + string(_subject.trainer[? "name"]) + "`s " +
