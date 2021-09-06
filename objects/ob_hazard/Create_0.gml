@@ -10,7 +10,6 @@ tiles_count = 0
 var tiles_id = layer_tilemap_get_id("Tiles_Debris")
 tileset = tilemap_get_tileset(tiles_id)
 
-
 var tile_w = tilemap_get_tile_width (tiles_id)
 var tile_h = tilemap_get_tile_height(tiles_id)
 var tiles_w_count = round((bbox_right -bbox_left) / tile_w) + 1
@@ -26,11 +25,12 @@ for (var j=0; j<tiles_h_count; j++) {
 	var _y = _sy + tile_h*j
 	if rectangle_in_rectangle(_x, _y, _x+tile_w, _y+tile_h, bbox_left, bbox_top, bbox_right, bbox_bottom)>0 {
 		_data = tilemap_get_at_pixel(tiles_id, _x, _y)
-		tiles[tiles_count, 0] = _data
-		tiles[tiles_count, 1] = _x
-		tiles[tiles_count, 2] = _y
-		tilemap_set_at_pixel(tiles_id, tile_set_empty(_data), _x, _y)
-		tiles_count++
+		if _data != -1 {
+			tiles[tiles_count, 0] = tile_get_index(_data)
+			tiles[tiles_count, 1] = _x
+			tiles[tiles_count, 2] = _y
+			tilemap_set_at_pixel(tiles_id, tile_set_empty(_data), _x, _y)
+			tiles_count++
+		}
 	}
 }
-

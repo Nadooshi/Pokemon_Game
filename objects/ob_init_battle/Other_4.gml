@@ -38,6 +38,8 @@ with sc_create_player(_list[| i], player2_trainer) {
 	sc_composed_add_component(cmp_control_ai, true) // AI control
 //=================================================================	
 
+neutral_trainer[? "pokemon_ids"] = ds_list_create()
+
 	// set pokemon id for ob_pokeface
 	with ob_ui_pokeface_2
 	if index = i {

@@ -225,6 +225,7 @@
     {"id":{"name":"sp_pr_attack_10","path":"sprites/sp_pr_attack_10/sp_pr_attack_10.yy",},"order":10,},
     {"id":{"name":"sp_pr_attack_11","path":"sprites/sp_pr_attack_11/sp_pr_attack_11.yy",},"order":11,},
     {"id":{"name":"is_like","path":"scripts/is_like/is_like.yy",},"order":15,},
+    {"id":{"name":"ob_state_mindcontrol","path":"objects/ob_state_mindcontrol/ob_state_mindcontrol.yy",},"order":40,},
     {"id":{"name":"sp_pokeworld_153","path":"sprites/sp_pokeworld_153/sp_pokeworld_153.yy",},"order":155,},
     {"id":{"name":"sp_pr_attack_12","path":"sprites/sp_pr_attack_12/sp_pr_attack_12.yy",},"order":12,},
     {"id":{"name":"sc_set_selected","path":"scripts/sc_set_selected/sc_set_selected.yy",},"order":17,},

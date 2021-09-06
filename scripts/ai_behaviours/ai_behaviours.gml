@@ -87,7 +87,7 @@ function sc_ai_new_target() {
 			sc_set_behaviour(sc_set_barrier_target)
 			break
 		}
-	} else if (_action[? "role"] = _ATTACK_ROLE.buff) and (_action[? "affect"] = _ATTACK_AFFECT.itself) {
+	} else if (_action[? "role"] = _ATTACK_ROLE.buff) and ((_action[? "affect"] & _ATTACK_AFFECT.itself) = _ATTACK_AFFECT.itself) {
 		// buff hits itself
 //		sc_logging_state_over(id, "decided to use " + _action[? "name"] + " as \"buff\" to \"itself\"" )
 		target = id
@@ -96,7 +96,7 @@ function sc_ai_new_target() {
 		// no targets suitable to action
 		plannedActionNum = -1
 		fail_count++
-		if fail_count>=max_fails {
+		if fail_count >= max_fails {
 //			sc_logging_state_over(id, " didn't find any useful attack " + string(max_fails) + " times and")
 			fail_count = 0
 			sc_set_behaviour(sc_ai_set_flee)

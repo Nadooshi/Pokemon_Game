@@ -12,16 +12,17 @@ with ob_player {
 	}
 }
 
-
 var _trainers = []
 _trainers[0] = player1_trainer
 _trainers[1] = player2_trainer
+
 var p_list_friendly
 var p_list_enemy
 	
 for (var t=0; t<2; t++) {
 	p_list_friendly = _trainers[t][? "pokemon_ids"]
 	p_list_enemy = _trainers[(t+1) mod 2][? "pokemon_ids"]
+
 	if (ds_list_size(p_list_friendly) = 0) or
 		(ds_list_size(p_list_enemy) = 0)
 		break

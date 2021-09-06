@@ -218,10 +218,11 @@ attack_type_text[i++] = "ray"
 attack_type_text[i++] = "swoop"
 
 enum _ATTACK_AFFECT {
-	friend = 1,
-	enemy  = 2,
-	itself = 4,
+	friend	= 1,
+	enemy	= 2,
+	itself	= 4,
 }
+
 globalvar attack_affect_text;
 attack_affect_text[_ATTACK_AFFECT.friend] = "friend"
 attack_affect_text[_ATTACK_AFFECT.enemy ] = "enemy"
@@ -340,8 +341,8 @@ ability_text[i++] = "revenge"		//*
 ability_text[i++] = "kamikaze"		//*
 ability_text[i++] = "mindcontrol"   // гипноз
 ability_text[i++] = "confusion"     // смущение*
-ability_text[i++] = "telekinesis"	
-ability_text[i++] = "teleport"		
+ability_text[i++] = "telekinesis"	//*
+ability_text[i++] = "teleport"		//*
 ability_text[i++] = "meleeup"		//*
 ability_text[i++] = "rangeup"		//*
 ability_text[i++] = "heal"			//*
@@ -398,8 +399,8 @@ state_object[_ABILITY_STATE.revenge		] = ob_state_revenge;
 state_object[_ABILITY_STATE.flee		] = ob_state_flee;
 state_object[_ABILITY_STATE.wastetime	] = ob_state_wastetime;
 state_object[_ABILITY_STATE.teleport	] = ob_state_teleport;
-state_object[_ABILITY_STATE.telekinesis	] = ob_state_telekinesis
-;
+state_object[_ABILITY_STATE.telekinesis	] = ob_state_telekinesis;
+state_object[_ABILITY_STATE.mindcontrol	] = ob_state_mindcontrol;
 
 
 #endregion
@@ -531,8 +532,11 @@ globalvar trainer_slot;
 
 globalvar player1_trainer;
 globalvar player2_trainer;
+globalvar neutral_trainer;
 player1_trainer = noone; //sc_new_trainer()
 player2_trainer = noone; //sc_new_trainer()
+neutral_trainer = sc_new_trainer()
+neutral_trainer[? "name"] = "Mad pokemon"
 
 globalvar log_battle; log_battle = ds_list_create()
 
@@ -541,6 +545,7 @@ maxchannel = 5
 
 audio_channel_num(maxchannel)
 audio_set_master_gain(0, 0.5)
+application_surface_enable(false)
 //gesture_drag_time(0.075)
 //gesture_drag_distance()
 

@@ -10,3 +10,4 @@ sc_clear_pokemon(current_pokemon)
 
 sc_clear_trainer(player1_trainer)
 sc_clear_trainer(player2_trainer)
+sc_clear_trainer(neutral_trainer)
