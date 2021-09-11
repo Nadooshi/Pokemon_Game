@@ -455,6 +455,7 @@ coef_level[_FORCE.selective	] = 0.038
 coef_level[_FORCE.elite		] = 0.0368
 coef_level[_FORCE.legendary	] = 0.0343
 coef_level[_FORCE.incredible] = 0.032
+
 enum custom {
 	_health = 150, //custom 1st healt proferred force
 	_dmg = 100,
@@ -475,14 +476,18 @@ size_text[_SIZE.normal	] = "normal"
 size_text[_SIZE.big		] = "big"
 size_text[_SIZE.giant	] = "giant"
 size_text[_SIZE.immobile] = "immobile"
-
 //////////////////////////////////
 enum _POSITION {
 	underground,
 	ground,
 	fly
 }
-
+//////////////////////////////////
+enum _HABITAT{
+	_all,
+	_ground,
+	_water
+}
 //////////////////////////////////
 globalvar trainer_inv_size; trainer_inv_size = 16;
 
