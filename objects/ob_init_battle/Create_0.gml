@@ -31,3 +31,4 @@ exps[poke_exp.win	] = 75
 exps[act_exp.use	] = 1
 exps[act_exp.success] = 5
 
+
