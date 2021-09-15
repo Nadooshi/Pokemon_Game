@@ -4,7 +4,7 @@
     "path": "sprites/sp_upgrade/sp_upgrade.yy",
   },
   "solid": false,
-  "visible": true,
+  "visible": false,
   "spriteMaskId": null,
   "persistent": false,
   "parentObjectId": null,

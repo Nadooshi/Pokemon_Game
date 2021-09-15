@@ -8,8 +8,8 @@
   "spriteMaskId": null,
   "persistent": false,
   "parentObjectId": {
-    "name": "ob_endbattle_slot_face",
-    "path": "objects/ob_endbattle_slot_face/ob_endbattle_slot_face.yy",
+    "name": "ob_slot_icon",
+    "path": "objects/ob_slot_icon/ob_slot_icon.yy",
   },
   "physicsObject": false,
   "physicsSensor": false,
@@ -25,15 +25,16 @@
   "physicsShapePoints": [],
   "eventList": [
     {"isDnD":false,"eventNum":0,"eventType":13,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"isDnD":false,"eventNum":10,"eventType":7,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
   ],
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Slot pokebol",
-    "path": "folders/Objects/Trainer_setup/Slot pokebol.yy",
+    "name": "End_Battle",
+    "path": "folders/Objects/End_Battle.yy",
   },
   "resourceVersion": "1.0",
-  "name": "ob_slot_face",
+  "name": "ob_endbattle_slot_face",
   "tags": [],
   "resourceType": "GMObject",
 }
