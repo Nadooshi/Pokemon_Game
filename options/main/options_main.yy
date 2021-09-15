@@ -1,5 +1,6 @@
 {
   "option_gameguid": "7d90411b-bb39-4ad7-8219-be017f2a57dc",
+  "option_gameid": "0",
   "option_game_speed": 60,
   "option_mips_for_3d_textures": false,
   "option_draw_colour": 4294967295,
@@ -8,7 +9,7 @@
   "option_sci_usesci": false,
   "option_author": "",
   "option_lastchanged": "25 October 2020 20:36:41",
-  "option_spine_licence": false,
+  "option_spine_licence": true,
   "resourceVersion": "1.2",
   "name": "Main",
   "tags": [],
