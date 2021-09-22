@@ -2,10 +2,9 @@
 
 
 // save dynamic parameters (exp ...)
-globalvar endbattle_stats;
-endbattle_stats = {
-	
-}
+
+sc_save_battle_result()
+
 
 room_goto(rm_endbattle)
 
