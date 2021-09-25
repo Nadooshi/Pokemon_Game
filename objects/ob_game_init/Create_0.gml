@@ -549,7 +549,14 @@ globalvar maxchannel;
 maxchannel = 5
 
 audio_channel_num(maxchannel)
-audio_set_master_gain(0, 0.5)
+var _n = audio_get_listener_count()
+var _info
+for (var i=0; i<_n; i++) {
+	_info = audio_get_listener_info(i)
+	audio_set_master_gain(_info[? "index"], 0.2)
+	ds_map_destroy(_info)
+}
+
 application_surface_enable(false)
 //gesture_drag_time(0.075)
 //gesture_drag_distance()

@@ -9,15 +9,15 @@ if is_undefined(trainer_preset[? "name"]) or trainer_preset[? "name"] = ""
 ds_map_copy(current_trainer, trainer_preset)
 
 
-#region // add random pokemons
-//var _count = irandom(12)+3  // 3..15
 var _name	 = ds_map_find_first(pokemon_list)
 for (var n=0; n<pokemon_list_count; n++) {
 	ds_list_add(current_trainer[? "caught_pokemon_list"], sc_load_new_pokemon(_name))
 	_name = ds_map_find_next(pokemon_list, _name)
 }
 ds_list_shuffle(current_trainer[? "caught_pokemon_list"])
-#endregion
+
+for (var n=0; n<ds_list_size(current_trainer[? "caught_pokemon_list"]); n++)
+	ds_list_mark_as_map(current_trainer[? "caught_pokemon_list"], n)
 
 sc_save_trainer()
 

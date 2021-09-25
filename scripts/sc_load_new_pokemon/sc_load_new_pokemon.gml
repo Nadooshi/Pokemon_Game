@@ -13,8 +13,7 @@ function sc_load_new_pokemon(argument0) {
 		_pokemon[? "artefact"] = noone
 		_pokemon[? "berry"] = noone
 		_pokemon[? "potion"] = noone
-		_pokemon[? "active_actions"] = ds_list_create()	
-		ds_list_clear(_pokemon[? "active_actions"])
+		ds_map_add_list(_pokemon, "active_actions", ds_list_create())
 
 	return _pokemon
 

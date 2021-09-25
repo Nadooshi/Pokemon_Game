@@ -29,8 +29,4 @@ function sc_save_trainer_old() {
 	
 	ini_close()
 
-
-
-
-
 }
