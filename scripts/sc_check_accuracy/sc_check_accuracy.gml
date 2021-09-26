@@ -34,7 +34,7 @@ function sc_check_accuracy(argument0, argument1, argument2) {
 		sc_logging_miss(_obj.pokemon_id, _tg_p, _action)
 		var _dmg = sc_calculate_action_damage(_action, _tg_p.pokemon_map, _obj)
 		if _tg_p.trainer != -1
-			sc_gain_exp(_tg_p, poke_exp.dodge, _dmg, undefined)
+			sc_gain_exp(_tg_p, poke_exp.dodge, _dmg)
 	}
 
 	return false

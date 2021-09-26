@@ -1,4 +1,7 @@
 /// @desc 
 
-game_end()
+//game_end()
+
+event_perform(ev_alarm, 0)
+
 

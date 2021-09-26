@@ -33,7 +33,7 @@ function sc_deal_damage(argument0, argument1) {
 	}
 	
 	sc_gain_exp(_pokemon_attack, poke_exp.damage, _dmg)
-	sc_gain_exp(_action, act_exp.success, _dmg)
+	sc_gain_exp(_action, act_exp.success, _dmg, _pokemon_attack)
 	sc_logging_damage(_pokemon_attack, id, _action, _dmg)
 
 }

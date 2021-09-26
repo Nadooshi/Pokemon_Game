@@ -4,6 +4,7 @@ function sc_player_attack_set() {
 	if doActionNum < 0 exit
 
 	var _a_map = action_list[| doActionNum]
+	_a_map[? "num"] = doActionNum
 
 	if not ds_exists(_a_map, ds_type_map) exit
 
@@ -167,8 +168,6 @@ function sc_player_attack_set() {
 			attack_ob_id = instance_create_layer(x, y, "Particles", ob_attack)
 
 	}
-	sc_gain_exp(_a_map, act_exp.use)
-	sc_logging_action(id, _a_map)
 	// STAT Revenge
 	var _st_objs = ds_list_create()
 	for (var i=0; i<ds_list_size(states); i++)
@@ -181,7 +180,6 @@ function sc_player_attack_set() {
 	
 	with attack_ob_id {
 		ds_map_copy(action, _a_map)
-		action[? "num"] = other.doActionNum;
 		pokemon_id = other.id
 		damage_mod = other.damage_mod
 		accuracy_mod = other.accuracy_mod
@@ -189,7 +187,8 @@ function sc_player_attack_set() {
 		sprite_index = asset_get_index(_a_map[? "anim"])
 		image_blend = sc_make_attack_colour(_a_map)
 	}
-	
+	sc_gain_exp(_a_map, act_exp.use, 0, id)
+	sc_logging_action(id, _a_map)
 }
 
 

@@ -1,10 +1,5 @@
 /// @desc
 
-sc_clear_pokemon(pokemon_map)
-ds_map_destroy(pokemon_map)
-pokemon_map = noone
-show_debug_message(object_get_name(object_index) + " (" + string(id)+")'s pokemon map cleared (" + string(real(pokemon_map)) + ")")
-
 var a_map = noone
 for(var i=0; i< ds_list_size(action_list); i++) {
 	a_map = action_list[| i]
