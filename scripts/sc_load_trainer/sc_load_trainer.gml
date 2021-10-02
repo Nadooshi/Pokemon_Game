@@ -59,13 +59,20 @@ function sc_load_trainer_old(argument0, argument1) {
 
 
 function sc_load_trainer(_fname) {
+	
 	_fname = string_lettersdigits(_fname)+".txt"
-	var _s  = ""
 	
 	if file_exists("trainer_saves/" + _fname) {
 		var f = file_text_open_read("trainer_saves/" + _fname)
-		_s = file_text_read_string(f)
+		var _s = file_text_read_string(f)
 		file_text_close(f)
-		return json_decode(_s)
+		var _trainer = json_decode(_s)
+		// list indexes from caught_pokemon_list to actual maps from there
+		var _list = _trainer[? "active_pokemon_list"]
+		for (var i=0; i<ds_list_size(_list); i++)
+			_list[| i] = _trainer[? "caught_pokemon_list"][| _list[| i]]
+	
+		return _trainer
 	}
+
 }

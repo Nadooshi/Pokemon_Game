@@ -19,6 +19,7 @@ function sc_create_player(argument0, argument1) {
 		health_cur = health_max
 		maxSpeed =  pokemon_map[? "ap"] * 0.25
 		accel = _acc[size]
+		cur_exp = pokemon_map[? "exp"]
 		_sp = asset_get_index("sp_pokeworld_" + string(pokemon_map[? "face"]))
 		if sprite_exists(_sp)
 			sprite_index = _sp
@@ -38,7 +39,7 @@ function sc_create_player(argument0, argument1) {
 				a_map = ds_map_create()
 				ds_map_read(a_map, ini_read_string("actions", a_list[| i], ""))
 				// load ability for action
-				a_map[? "battle_exp"] = 0
+				a_map[? "battle_exp"] = pokemon_map[? "actions"][? a_list[| i]]
 				if not is_undefined(a_map[? "active"]) {
 					var _map_abil = ds_map_create()
 					ds_map_read(_map_abil, ini_read_string("abilities", a_map[? "active"], ""))
