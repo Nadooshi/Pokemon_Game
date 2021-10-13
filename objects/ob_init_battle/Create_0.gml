@@ -1,5 +1,7 @@
 /// @desc 
 
+trainer_loser = -1
+
 globalvar selected_id;
 selected_id = noone
 
@@ -27,7 +29,7 @@ globalvar exps;
 exps[poke_exp.damage] = 2
 exps[poke_exp.dodge	] = 1
 exps[poke_exp.kill	] = 50 // based on level difference between attacking and killed
-exps[poke_exp.win	] = 75
+exps[poke_exp.win	] = 1.5// multiply for accumulated exp. per battle
 exps[act_exp.use	] = 1
 exps[act_exp.success] = 5
 

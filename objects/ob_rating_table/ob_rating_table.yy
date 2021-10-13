@@ -4,7 +4,7 @@
     "path": "sprites/sp_rating_app/sp_rating_app.yy",
   },
   "solid": false,
-  "visible": true,
+  "visible": false,
   "spriteMaskId": null,
   "persistent": false,
   "parentObjectId": null,
@@ -28,7 +28,7 @@
     "path": "folders/Objects/ui.yy",
   },
   "resourceVersion": "1.0",
-  "name": "ob_ratind_table",
+  "name": "ob_rating_table",
   "tags": [],
   "resourceType": "GMObject",
 }

@@ -13,8 +13,9 @@ if async_load[? "status"] {
 			map[? parameter_name] = value_int
 		
 		event_perform(ev_other, ev_user0)
-	}	
-	editing = false
-	msg = -1
+	}
 }
+
+msg = -1
+editing = false
 

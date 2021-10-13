@@ -7,4 +7,7 @@ with ob_endbattle_slot_face
 with ob_trainer_avatar
 	map = current_trainer
 
+sc_group_ui_objects(ob_frame_pokemon)
+
+
 sc_refresh_ui()

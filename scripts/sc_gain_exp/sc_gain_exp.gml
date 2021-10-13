@@ -18,7 +18,7 @@ function sc_gain_exp(_object, _event, _value, _context) {
 		break;
 	case poke_exp.kill:
 		_val = round(exps[_event] * (_value / _pokemon.pokemon_map[? "level"]))
-		_pokemon.cur_exp +=  _val
+		_pokemon.cur_exp += _val
 		if _val > 0
 			sc_logging_experience(_pokemon, _val, _event)
 		break
@@ -26,8 +26,8 @@ function sc_gain_exp(_object, _event, _value, _context) {
 		_pokemon = _context
 		if ds_map_exists(_action, "num")
 			_action = _pokemon.action_list[| _action[? "num"]]
-		_val = round(_action[? "battle_exp"] + _action[? "ap"] * exps[act_exp.use])
-		_action[? "battle_exp"] = _val
+		_val = round(_action[? "ap"] * exps[act_exp.use])
+		_action[? "battle_exp"] += _val
 		if _val > 0
 			sc_logging_experience(_action, _val, _event)
 		break

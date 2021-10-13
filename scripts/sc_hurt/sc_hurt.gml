@@ -14,7 +14,7 @@ function sc_hurt(argument0, argument1, argument2) {
 	hurt_cur += _dmg
 	// death
 	if health_cur = 0 {
-		if trainer < -1 {
+		if trainer > -1 {
 			if not is_undefined(_action)
 				sc_logging_death(_p_attack, id, _action)
 			if trainer != _p_attack.trainer {

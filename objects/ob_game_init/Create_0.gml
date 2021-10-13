@@ -456,6 +456,18 @@ coef_level[_FORCE.elite		] = 0.0368
 coef_level[_FORCE.legendary	] = 0.0343
 coef_level[_FORCE.incredible] = 0.032
 
+globalvar coef_lvlup;
+coef_lvlup[_FORCE.paltry	] = 0.80
+coef_lvlup[_FORCE.frail		] = 0.85 
+coef_lvlup[_FORCE.helpless	] = 0.97 
+coef_lvlup[_FORCE.preferred	] = 1	
+coef_lvlup[_FORCE.reliable	] = 1.05 
+coef_lvlup[_FORCE.strong	] = 1.12 
+coef_lvlup[_FORCE.selective	] = 1.23 
+coef_lvlup[_FORCE.elite		] = 1.46 
+coef_lvlup[_FORCE.legendary	] = 1.68
+coef_lvlup[_FORCE.incredible] = 1.86
+
 enum custom {
 	_health = 150, //custom 1st healt proferred force
 	_dmg = 100,
@@ -537,11 +549,11 @@ globalvar trainer_slot;
 
 globalvar player1_trainer;
 globalvar player2_trainer;
-globalvar neutral_trainer;
+//globalvar neutral_trainer;
 player1_trainer = noone; //sc_new_trainer()
 player2_trainer = noone; //sc_new_trainer()
-neutral_trainer = sc_new_trainer()
-neutral_trainer[? "name"] = "Mad pokemon"
+//neutral_trainer = sc_new_trainer()
+//neutral_trainer[? "name"] = "Mad pokemon"
 
 globalvar log_battle; log_battle = ds_list_create()
 

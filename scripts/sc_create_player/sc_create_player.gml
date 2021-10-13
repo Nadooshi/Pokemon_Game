@@ -19,7 +19,7 @@ function sc_create_player(argument0, argument1) {
 		health_cur = health_max
 		maxSpeed =  pokemon_map[? "ap"] * 0.25
 		accel = _acc[size]
-		cur_exp = pokemon_map[? "exp"]
+//		cur_exp = pokemon_map[? "exp"]
 		_sp = asset_get_index("sp_pokeworld_" + string(pokemon_map[? "face"]))
 		if sprite_exists(_sp)
 			sprite_index = _sp

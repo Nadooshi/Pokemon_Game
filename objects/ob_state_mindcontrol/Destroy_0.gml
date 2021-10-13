@@ -15,4 +15,3 @@ with pokemon_id {
 	
 }
 
-ds_list_delete(neutral_trainer[? "pokemon_ids"], ds_list_find_index(neutral_trainer[? "pokemon_ids"], pokemon_id))

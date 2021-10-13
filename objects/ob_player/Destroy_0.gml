@@ -27,12 +27,23 @@ if sc_does_exist(passive_state2) {
 	ds_map_destroy(passive_state2)
 	passive_state2 = noone
 }
-	
-//if ds_list_size(trainer[? "pokemon_ids"]) = 0
-//with ob_init_battle
-//	alarm_set(0, 300)
-
 ds_list_clear(in_biome)
+
+//==========================================================
+// End battle & Lose
+var d_poke = 0
+for (var i=0; i<ds_list_size(trainer[? "pokemon_ids"]); i++) {
+	var p = trainer[? "pokemon_ids"][| i]
+	if p.health_cur <= 0
+		d_poke++
+}
+
+if d_poke = ds_list_size(trainer[? "pokemon_ids"])
+with ob_init_battle{
+	alarm_set(0, 300)
+	trainer_loser = other.trainer
+}
+//==========================================================
 
 show_debug_message(object_get_name(object_index) + " (" + string(id)+") deactivated" )
 instance_deactivate_object(id)

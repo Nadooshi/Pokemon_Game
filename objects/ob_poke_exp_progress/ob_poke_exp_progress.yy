@@ -1,16 +1,13 @@
 {
   "spriteId": {
-    "name": "sp_slot_icon",
-    "path": "sprites/sp_slot_icon/sp_slot_icon.yy",
+    "name": "sp_for_damage",
+    "path": "sprites/sp_for_damage/sp_for_damage.yy",
   },
   "solid": false,
-  "visible": false,
+  "visible": true,
   "spriteMaskId": null,
   "persistent": false,
-  "parentObjectId": {
-    "name": "ob_slot_icon",
-    "path": "objects/ob_slot_icon/ob_slot_icon.yy",
-  },
+  "parentObjectId": null,
   "physicsObject": false,
   "physicsSensor": false,
   "physicsShape": 1,
@@ -23,10 +20,7 @@
   "physicsStartAwake": true,
   "physicsKinematic": false,
   "physicsShapePoints": [],
-  "eventList": [
-    {"isDnD":false,"eventNum":0,"eventType":13,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
-    {"isDnD":false,"eventNum":10,"eventType":7,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
-  ],
+  "eventList": [],
   "properties": [],
   "overriddenProperties": [],
   "parent": {
@@ -34,7 +28,7 @@
     "path": "folders/Objects/End_Battle.yy",
   },
   "resourceVersion": "1.0",
-  "name": "ob_endbattle_slot_face",
+  "name": "ob_poke_exp_progress",
   "tags": [],
   "resourceType": "GMObject",
 }

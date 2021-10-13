@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "sp_for_expbar",
-    "path": "sprites/sp_for_expbar/sp_for_expbar.yy",
+    "name": "sp_for_empty",
+    "path": "sprites/sp_for_empty/sp_for_empty.yy",
   },
   "solid": false,
   "visible": true,
@@ -23,7 +23,9 @@
   "physicsStartAwake": true,
   "physicsKinematic": false,
   "physicsShapePoints": [],
-  "eventList": [],
+  "eventList": [
+    {"isDnD":false,"eventNum":10,"eventType":7,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+  ],
   "properties": [],
   "overriddenProperties": [],
   "parent": {

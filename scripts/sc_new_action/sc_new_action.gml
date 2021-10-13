@@ -15,7 +15,7 @@ function sc_new_action() {
 	result[? "radius"		] = 0
 	result[? "warmup"		] = 0
 	result[? "delay"		] =	0
-	result[? "accuracy"		] = 0.0
+	result[? "accuracy"		] = 0
 	result[? "ap"			] = 0
 	result[? "damage"		] = 0
 	result[? "dmg_element"	] = 0
