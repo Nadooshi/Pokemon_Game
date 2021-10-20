@@ -570,6 +570,8 @@ for (var i=0; i<_n; i++) {
 }
 
 application_surface_enable(false)
+gpu_set_texrepeat(true)
+
 //gesture_drag_time(0.075)
 //gesture_drag_distance()
 

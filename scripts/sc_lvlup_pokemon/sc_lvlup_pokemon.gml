@@ -8,7 +8,11 @@ var lvlup_max_exp = base_lvlup_value * lvl * coef_lvlup[power]
 //if cur_exp >= lvlup_max_exp
 _result = cur_exp - lvlup_max_exp
 
-return _result
+return {
+	lvlup: _result > 0,
+	exceeding_exp: _result,
+	nextlvl_exp: lvlup_max_exp
+}
 
 }
 

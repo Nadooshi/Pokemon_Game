@@ -2,6 +2,7 @@
 
 if newexp > 0 {
 	map[? "exp"] = newexp
+	map[? "prev_exp"] = newexp
 	map[? "level"]++
 	map[? "health"] = sc_calculate_formula(2, map[? "force"], map[? "level"])
 	with ob_frame_pokemon
