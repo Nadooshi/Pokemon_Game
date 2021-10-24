@@ -1,13 +1,13 @@
 {
-  "spriteId": {
-    "name": "sp_for_damage",
-    "path": "sprites/sp_for_damage/sp_for_damage.yy",
-  },
+  "spriteId": null,
   "solid": false,
   "visible": true,
   "spriteMaskId": null,
   "persistent": false,
-  "parentObjectId": null,
+  "parentObjectId": {
+    "name": "ob_frame_action_active",
+    "path": "objects/ob_frame_action_active/ob_frame_action_active.yy",
+  },
   "physicsObject": false,
   "physicsSensor": false,
   "physicsShape": 1,
@@ -20,7 +20,10 @@
   "physicsStartAwake": true,
   "physicsKinematic": false,
   "physicsShapePoints": [],
-  "eventList": [],
+  "eventList": [
+    {"isDnD":false,"eventNum":8,"eventType":6,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"isDnD":false,"eventNum":0,"eventType":13,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+  ],
   "properties": [],
   "overriddenProperties": [],
   "parent": {
@@ -28,7 +31,7 @@
     "path": "folders/Objects/End_Battle.yy",
   },
   "resourceVersion": "1.0",
-  "name": "ob_poke_exp_progress",
+  "name": "ob_endbattle_frame_action",
   "tags": [],
   "resourceType": "GMObject",
 }

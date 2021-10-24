@@ -3,7 +3,10 @@
 if not is_undefined(map)
 if ds_exists(map, ds_type_map) {
 	max_value = map[? "nextlvl_exp"]
-	value = min(map[? "exp"], max_value)
+//	value = min(map[? "exp"], max_value)
+	value = min(map[? parameter_name], max_value)
+	if is_undefined(map[? "prev_exp"])
+		map[? "prev_exp"] = value
 	prev_exp = min(map[? "prev_exp"], max_value)
 	hint = string(value) + "\n" + string(value - prev_exp)
 	

@@ -63,6 +63,8 @@ function sc_refresh_actions() {
 			map[? "damage"] = sc_calculate_formula(5, map[? "act_force"], current_pokemon[? "level"], map[? "ap"], map[? "damage" ], map[? "level"])
 			map[? "dmg_element" ] = map[? "damage"] * _ratio
 			map[? "dmg_material"] = map[? "damage"] - map[? "dmg_element"]
+			map[? "nextlvl_exp"] = 99999
+			map[? "battle_exp"] = current_pokemon[? "actions"][? _name]
 			if not is_undefined(map[? "active"]) {
 				var _map_abil = ds_map_create()
 				ds_map_read(_map_abil, ini_read_string("abilities", map[? "active"], ""))

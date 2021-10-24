@@ -11,3 +11,5 @@ with ob_frame_pokemon {
 	event_perform(ev_other, ev_user0)
 }
 
+sc_endbattle_refresh_actions()
+

@@ -39,7 +39,7 @@ for (var i=0; i<ds_list_size(trainer[? "pokemon_ids"]); i++) {
 }
 
 if d_poke = ds_list_size(trainer[? "pokemon_ids"])
-with ob_init_battle{
+with ob_init_battle {
 	alarm_set(0, 300)
 	trainer_loser = other.trainer
 }
