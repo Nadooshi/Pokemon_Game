@@ -13,6 +13,7 @@ var _name	 = ds_map_find_first(pokemon_list)
 for (var n=0; n<pokemon_list_count; n++) {
 	ds_list_add(current_trainer[? "caught_pokemon_list"], sc_load_new_pokemon(_name))
 	_name = ds_map_find_next(pokemon_list, _name)
+	
 }
 ds_list_shuffle(current_trainer[? "caught_pokemon_list"])
 

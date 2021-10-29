@@ -13,7 +13,20 @@ function sc_load_pokemon_dex(argument0, argument1) {
 			var _map = ds_map_create()
 			ds_map_read(_map, ini_read_string("binded_actions", _name , ""))
 			ds_map_delete(_ds, "actions")
-			ds_map_add_map(_ds, "actions", _map)
+			ds_map_add_map(_ds, "actions", ds_map_create())
+			var _action = ds_map_create()
+			var _a_name = ds_map_find_first(_map)
+			while not is_undefined(_a_name) {
+				ds_map_read(_action, ini_read_string("actions", _a_name, ""))
+				//ds_map_delete(_ds[? "actions"], _a_name)
+				ds_map_add_map(_ds[? "actions"], _a_name, ds_map_create())
+				_ds[? "actions"][? _a_name][? "pa_exp"] = 0
+				_ds[? "actions"][? _a_name][? "pa_lvl"] = _action[? "level"]
+				_a_name = ds_map_find_next(_map, _a_name)
+			}
+			ds_map_destroy(_action)
+			ds_map_destroy(_map)
+			
 		ini_close()
 	}
 

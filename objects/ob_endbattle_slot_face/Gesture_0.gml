@@ -1,5 +1,5 @@
 /// @desc  Edit
-// map = triner
+// map = trainer
 
 current_pokemon = ds_list_find_value(map[? parameter_name], index)
 if not sc_does_exist(current_pokemon)

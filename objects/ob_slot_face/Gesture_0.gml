@@ -1,5 +1,5 @@
 /// @desc  Edit
-// map = triner
+// map = trainer
 
 event_inherited()
 
