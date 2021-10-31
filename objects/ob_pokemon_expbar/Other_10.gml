@@ -8,7 +8,9 @@ if ds_exists(map, ds_type_map) {
 	if is_undefined(map[? "prev_exp"])
 		map[? "prev_exp"] = value
 	prev_exp = min(map[? "prev_exp"], max_value)
-	hint = string(value) + "\n" + string(value - prev_exp)
+	hint = "exp: "	  + string(value) + 
+		"\n earned: " +	string(value - prev_exp) +
+		"\n max: "	  + string(max_value)
 	
 	// update draw values
 	var _x = x + lengthdir_x(sprite_width * (prev_exp / max_value), image_angle)

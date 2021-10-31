@@ -48,29 +48,14 @@ function sc_refresh_actions() {
 	}
 	ds_list_destroy(_all_actions)
 
-	// create list of active actions
-	var _ratio = 1
-	
+	// create list of active actions=	
 	var i = 0
 	with ob_frame1 {
 		i = index
 		_name = ds_list_find_value(current_pokemon[? "active_actions"], index)
 		if not is_undefined(_name)
 		with sc_add_slot_composed(x, y, _name, action_slot, ob_frame_action_active) {
-			map = ds_map_create()
-			ds_map_read(map, ini_read_string("actions", _name, ""))
-			_ratio = map[? "dmg_element"] / map[? "damage"]
-			map[? "damage"] = sc_calculate_formula(5, map[? "act_force"], current_pokemon[? "level"], map[? "ap"], map[? "damage" ], map[? "level"])
-			map[? "dmg_element" ] = map[? "damage"] * _ratio
-			map[? "dmg_material"] = map[? "damage"] - map[? "dmg_element"]
-			map[? "nextlvl_exp"] = 99999
-			map[? "battle_exp"] = current_pokemon[? "actions"][? _name]
-			if not is_undefined(map[? "active"]) {
-				var _map_abil = ds_map_create()
-				ds_map_read(_map_abil, ini_read_string("abilities", map[? "active"], ""))
-				if sc_does_exist(_map_abil)
-					map[? "active"] = _map_abil
-			}
+			map = sc_load_action(_name, current_pokemon)
 			index = i
 		}
 	}

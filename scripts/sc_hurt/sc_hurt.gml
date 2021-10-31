@@ -25,11 +25,11 @@ function sc_hurt(argument0, argument1, argument2) {
 		event_perform(ev_destroy, 0)
 	}
 	
-/*	with instance_create_layer(x + random(20)-10, y + random(20)-10, "Particles", ob_particle_text) {
+	with instance_create_layer(x + random(20)-10, y + random(20)-10, "Particles", ob_particle_text) {
 		caption = "-" + string(_dmg)
 		image_blend = c_red
 	}
-*/
+
 
 
 }

@@ -36,19 +36,7 @@ function sc_create_player(argument0, argument1) {
 		for (var i=0; i<ds_list_size(a_list); i++) {
 			a_map = undefined
 			if not is_undefined(a_list[| i]) {
-				a_map = ds_map_create()
-				ds_map_read(a_map, ini_read_string("actions", a_list[| i], ""))
-				var _p_action = pokemon_map[? "actions"][? a_list[| i]]
-				a_map[? "battle_exp"] = _p_action[? "pa_exp"]
-				a_map[? "cur_lvl"	] = _p_action[? "pa_lvl"]
-				//a_map[? "cur_lvl"] = max(a_map[? "cur_lvl"], a_map[? "level"])
-				// load ability for action
-				if not is_undefined(a_map[? "active"]) {
-					var _map_abil = ds_map_create()
-					ds_map_read(_map_abil, ini_read_string("abilities", a_map[? "active"], ""))
-					if sc_does_exist(_map_abil)
-						a_map[? "active"] = _map_abil
-				}
+				a_map = sc_load_action(a_list[| i], pokemon_map)
 				if not sc_precalc_action_values(a_map, id)
 					show_message("NO distance calculated")
 			}

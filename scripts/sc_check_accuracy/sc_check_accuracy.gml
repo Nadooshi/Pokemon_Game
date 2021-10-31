@@ -28,8 +28,9 @@ function sc_check_accuracy(argument0, argument1, argument2) {
 		if _random <= _hit_rate
 			return true
 	
-//		with instance_create_layer(x, y, "Particles", ob_particle_text)
-//			caption = "MISS!"
+		with instance_create_layer(x, y, "Particles", ob_particle_text)
+			caption = "MISS!"
+			
 		ds_list_add(_obj.list_missed, _tg_p)	
 		sc_logging_miss(_obj.pokemon_id, _tg_p, _action)
 		var _dmg = sc_calculate_action_damage(_action, _tg_p.pokemon_map, _obj)
