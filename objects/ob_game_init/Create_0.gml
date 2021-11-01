@@ -421,13 +421,13 @@ enum _FORCE {
 }
 
 globalvar force_text;
-force_text[_FORCE.paltry	] = "Paltry"
-force_text[_FORCE.frail		] = "Frail"
-force_text[_FORCE.helpless	] = "Helpless"
-force_text[_FORCE.preferred	] = "Preferred"
-force_text[_FORCE.reliable	] = "Reliable"
+force_text[_FORCE.paltry	] = "Feeble"
+force_text[_FORCE.frail		] = "Poor"
+force_text[_FORCE.helpless	] = "Fragile"
+force_text[_FORCE.preferred	] = "Wrothy"
+force_text[_FORCE.reliable	] = "Stocky"
 force_text[_FORCE.strong	] = "Strong"
-force_text[_FORCE.selective	] = "Selective"
+force_text[_FORCE.selective	] = "Campion"
 force_text[_FORCE.elite		] = "Elite"
 force_text[_FORCE.legendary	] = "Legendary"
 force_text[_FORCE.incredible] = "Incredible"

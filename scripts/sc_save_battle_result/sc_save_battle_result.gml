@@ -18,10 +18,10 @@ function sc_save_battle_result() {
 				var _p_action = _id.pokemon_map[? "actions"][? _a_map[? "name"]] 
 				// lvlup action
 				var _result = sc_lvlup_action(_a_map[? "level"], _a_map[? "act_force"], _a_map[? "battle_exp"])
+				_a_map[? "prev_exp"] = _a_map[? "battle_exp"]
 				if _result.lvlup {
 					if _a_map[? "level"] < _id.pokemon_map[? "level"] {
 						_a_map[? "battle_exp"] = _result.exceeding_exp
-						_a_map[? "prev_exp"] = _a_map[? "battle_exp"]
 						_a_map[? "level"]++
 					} else {
 						// ограничить макс exp with nextlvl_exp
