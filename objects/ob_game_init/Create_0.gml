@@ -452,15 +452,15 @@ coef_level[_FORCE.preferred	] = 0.041
 coef_level[_FORCE.reliable	] = 0.04
 coef_level[_FORCE.strong	] = 0.039
 coef_level[_FORCE.selective	] = 0.038	
-coef_level[_FORCE.elite		] = 0.0368
+coef_level[_FORCE.elite		] = 0.0358
 coef_level[_FORCE.legendary	] = 0.0343
 coef_level[_FORCE.incredible] = 0.032
 
 globalvar coef_lvlup;
 coef_lvlup[_FORCE.paltry	] = 0.80
 coef_lvlup[_FORCE.frail		] = 0.85 
-coef_lvlup[_FORCE.helpless	] = 0.97 
-coef_lvlup[_FORCE.preferred	] = 1	
+coef_lvlup[_FORCE.helpless	] = 0.98 
+coef_lvlup[_FORCE.preferred	] = 1.01
 coef_lvlup[_FORCE.reliable	] = 1.05 
 coef_lvlup[_FORCE.strong	] = 1.12 
 coef_lvlup[_FORCE.selective	] = 1.23 

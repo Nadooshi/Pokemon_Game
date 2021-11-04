@@ -7,6 +7,10 @@ counter++
 
 event_inherited()
 
+mark_hostile.visible = (trainer == player2_trainer)
+mark_hostile.x = x
+mark_hostile.y = y
+
 if script_exists(scBehaviour) or is_method(scBehaviour)
 	if script_execute(scBehaviour)
 		succeeded_behaviour = scBehaviour

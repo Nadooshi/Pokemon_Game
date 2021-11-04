@@ -20,8 +20,8 @@ function sc_new_action() {
 	result[? "damage"		] = 0
 	result[? "dmg_element"	] = 0
 	result[? "dmg_material"	] = 0
-	result[? "element"		] = _ELEMENTAL.white
-	result[? "material"		] = _MATERIAL.white
+	result[? "element"		] = _ELEMENTAL.none
+	result[? "material"		] = _MATERIAL.none
 	result[? "repeatable"	] = true
 	result[? "tgFrom"		] = _ATTACK_TG.ground   // combination of _ATTACK_TG 
 	result[? "tgTo"			] = _ATTACK_TG.ground   // combination of _ATTACK_TG 
@@ -30,6 +30,9 @@ function sc_new_action() {
 	result[? "ex_anim"		] = ""    // name of sprite asset ("sp_..")
 
 	result[? "active"		] = ""    // map of ability
+	
+	result[? "rating"		] = 0	// rating action 0-5. Over 5 not recommend
+	result[? "role"			] = _ATTACK_ROLE.debuff
 
 	return result
 
