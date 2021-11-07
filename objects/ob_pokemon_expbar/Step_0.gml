@@ -1,14 +1,11 @@
 /// @desc 
 
-//frame = (frame + 1 / (60/8)) mod 4
-//tx = sprite_get_texture(sp_for_damage, frame)
-
 _du = (_du - 0.02) mod 1
 
 switch anim {
 case 0:  // with earned
 	value += actual_value * 0.1
-	if value > actual_value  {
+	if (value >= actual_value) {
 		anim_coeff = 0
 		anim = 1
 		value = actual_value

@@ -18,6 +18,9 @@ function sc_load_action(_name, _pokemon_map){
 	map[? "battle_exp" ] = _pokemon_map[? "actions"][? _name][? "pa_exp"]
 	map[? "level"	   ] = _pokemon_map[? "actions"][? _name][? "pa_lvl"]
 	map[? "nextlvl_exp"] = _pokemon_map[? "actions"][? _name][? "pa_nextlvl_exp"]
+	map[? "levelup"] = _pokemon_map[? "actions"][? _name][? "pa_levelup"]
+	_pokemon_map[? "actions"][? _name][? "pa_levelup"] = false
+	
 	if not is_undefined(map[? "active"]) {
 		var _map_abil = ds_map_create()
 		ds_map_read(_map_abil, ini_read_string("abilities", map[? "active"], ""))

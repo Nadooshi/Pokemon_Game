@@ -39,6 +39,7 @@ function sc_save_battle_result() {
 				_p_action[? "pa_prevexp"] = _a_map[? "prev_exp"]
 				_p_action[? "pa_exp"] = _a_map[? "battle_exp"]
 				_p_action[? "pa_lvl"] = _a_map[? "level"]
+				_p_action[? "pa_levelup"] = _a_map[? "levelup"]
 			}
 		}
 		//show_message(_s)

@@ -22,6 +22,10 @@ function sc_load_pokemon_dex(argument0, argument1) {
 				ds_map_add_map(_ds[? "actions"], _a_name, ds_map_create())
 				_ds[? "actions"][? _a_name][? "pa_exp"] = 0
 				_ds[? "actions"][? _a_name][? "pa_lvl"] = _action[? "level"]
+				_ds[? "actions"][? _a_name][? "pa_levelup"] = false
+				_ds[? "actions"][? _a_name][? "pa_prevexp"] = 0
+				var _result = sc_lvlup_action(_action[? "level"], _action[? "act_force"], 0)
+				_ds[? "actions"][? _a_name][? "pa_nextlvl_exp"] = _result.nextlvl_exp
 				_a_name = ds_map_find_next(_map, _a_name)
 			}
 			ds_map_destroy(_action)
