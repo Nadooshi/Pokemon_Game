@@ -44,7 +44,7 @@ with ob_init_battle {
 	trainer_loser = other.trainer
 }
 //==========================================================
-
-show_debug_message(object_get_name(object_index) + " (" + string(id)+") deactivated" )
+instance_destroy(mark_hostile)
+//show_debug_message(object_get_name(object_index) + " (" + string(id)+") deactivated" )
 instance_deactivate_object(id)
 

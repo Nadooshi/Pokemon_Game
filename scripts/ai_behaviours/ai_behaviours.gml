@@ -99,7 +99,7 @@ function sc_ai_new_target() {
 		if fail_count >= max_fails {
 //			sc_logging_state_over(id, " didn't find any useful attack " + string(max_fails) + " times and")
 			fail_count = 0
-			sc_set_behaviour(sc_ai_set_flee)
+			courage_cur = max(courage_threshold-1, courage_cur)
 		}
 	}
 }
@@ -134,8 +134,12 @@ function sc_ai_follow_target() {
 	   (_lunge_num >= 0) and 
 	   ((_target_d > _neededDist ) and (_target_d <= _lunge_d)) {
 		if action_list[| _lunge_num][? "ap"] <= power_cur {
+			var _planned = plannedActionNum
 			plannedActionNum = _lunge_num
-			sc_set_behaviour(sc_ai_hit_target)
+			//sc_set_behaviour(sc_ai_hit_target)
+			sc_ai_hit_target()
+			plannedActionNum = _planned
+			
 		} else {
 			sc_check_reaching_target()
 			sc_player_move()
@@ -317,7 +321,7 @@ function sc_ai_wait_warmup_start() {
 			_ok = not position_meeting(tgX, tgY, ob_collision_area)
 			if _ok break
 		}
-		if not _ok	
+//		if not _ok	
 //			show_message("Failed to find a place for sc_ai_wait_warmup")
 		sc_set_behaviour(sc_ai_wait_warmup)
 	}

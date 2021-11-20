@@ -2,7 +2,7 @@
 if ai_control = cmp_control_ai
 	exit
 
-var _a = point_direction(oX, oY, x, y)
+//var _a = point_direction(oX, oY, x, y)
 //var _d = point_distance(oX, oY, x, y)
 
 x += event_data[? "posX" ] - dragX

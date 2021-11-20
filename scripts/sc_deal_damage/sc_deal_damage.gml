@@ -32,7 +32,7 @@ function sc_deal_damage(argument0, argument1) {
 			sc_apply_state(_state_obj, _dmg, _pokemon_attack, _action);
 	}
 
-	sc_gain_exp(_pokemon_attack, poke_exp.damage, _dmg)
+	sc_gain_exp(_pokemon_attack, poke_exp.damage, _dmg, undefined)
 	if _dmg > 0
 		sc_gain_exp(_action, act_exp.success, _dmg, _pokemon_attack)
 	else
