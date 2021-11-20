@@ -11,6 +11,8 @@ dirangle[d.Right] = 0
 dirangle[d.Up   ] = 90
 dirangle[d.Down ] = 270
 
+autotarget_found = false
+
 ob_cursor.visible = false
 alarm_set(2, AUTOTARGET_PERIOD)
 
