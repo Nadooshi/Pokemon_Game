@@ -9,7 +9,7 @@ modify = 1
 image_index = _ABILITY_STATE.block
 
 // State events
-onDamage = function (_dmg, _damaged_player_id, _action, _state_id) {
+onDamage = function (_dmg, _damaged_player_id, _action, _att_player, _state_id) {
 	// returns modified damage value
 
 	if _damaged_player_id.parry_mod > _state_id.modify
