@@ -5,9 +5,8 @@ if not sc_does_exist(parent) or not sc_does_exist(other.parent) {
 	exit
 }
 
-if (parent.depth > other.parent.depth+6) or
-   (parent.depth < other.parent.depth-6) 
-   exit
+//if abs(parent.depth - other.parent.depth) > 6
+   //exit
 
 other.parent.collided_with = parent
 with other.parent

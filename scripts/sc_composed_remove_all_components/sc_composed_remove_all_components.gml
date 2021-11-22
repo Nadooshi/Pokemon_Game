@@ -10,6 +10,4 @@ function sc_composed_remove_all_components() {
 	component_list = noone
 	component_count = 0
 
-
-
 }

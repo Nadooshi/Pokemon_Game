@@ -1,15 +1,15 @@
 {
   "spriteId": {
-    "name": "sp_hazard",
-    "path": "sprites/sp_hazard/sp_hazard.yy",
+    "name": "sp_hazard2",
+    "path": "sprites/sp_hazard2/sp_hazard2.yy",
   },
-  "solid": false,
-  "visible": false,
+  "solid": true,
+  "visible": true,
   "spriteMaskId": null,
   "persistent": false,
   "parentObjectId": {
-    "name": "cmp_collidable_player",
-    "path": "objects/cmp_collidable_player/cmp_collidable_player.yy",
+    "name": "ob_hazard",
+    "path": "objects/ob_hazard/ob_hazard.yy",
   },
   "physicsObject": false,
   "physicsSensor": false,
@@ -25,17 +25,15 @@
   "physicsShapePoints": [],
   "eventList": [
     {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
-    {"isDnD":false,"eventNum":1,"eventType":3,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
-    {"isDnD":false,"eventNum":11,"eventType":7,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
   ],
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "components",
-    "path": "folders/Objects/Battle/components.yy",
+    "name": "Battle",
+    "path": "folders/Objects/Battle.yy",
   },
   "resourceVersion": "1.0",
-  "name": "cmp_collidable_hazard",
+  "name": "ob_hazard_square",
   "tags": [],
   "resourceType": "GMObject",
 }
