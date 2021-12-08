@@ -3,8 +3,8 @@
 
 if is_like(collided_with.object_index, ob_player) 
 with collided_with.coll_area {
-	speed = parent.speed
-	direction = parent.direction
+	speed = 1 //parent.speed
+	direction = point_direction(xprevious, yprevious, x, y) //parent.direction
 	move_bounce_solid(false)
 	x += hspeed
 	y += vspeed
