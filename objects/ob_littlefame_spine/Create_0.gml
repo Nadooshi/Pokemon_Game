@@ -1,3 +1,3 @@
 /// @desc
-event_inherited()
+event_inherited();
 skeleton_animation_set("Rotate")

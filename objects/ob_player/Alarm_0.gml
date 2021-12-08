@@ -25,6 +25,7 @@ if sc_does_exist(passive_state1) {
 		if _r_ <= _rate {
 			var p_action = ds_map_create()
 			p_action[? "active"] = passive_state1
+			p_action[? "lvlup_mod"] = 0
 			sc_apply_state(_state_obj, 0, id, p_action)
 			ds_map_destroy(p_action)
 			p_action = noone

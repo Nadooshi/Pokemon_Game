@@ -20,6 +20,7 @@ function sc_load_action(_name, _pokemon_map){
 	map[? "nextlvl_exp"] = _pokemon_map[? "actions"][? _name][? "pa_nextlvl_exp"]
 	map[? "levelup"] = _pokemon_map[? "actions"][? _name][? "pa_levelup"]
 	_pokemon_map[? "actions"][? _name][? "pa_levelup"] = false
+	map[? "lvlup_mod" ] = ((_pokemon_map[? "actions"][? _name][? "pa_lvlup_mod"]) ?? 0)
 	
 	if not is_undefined(map[? "active"]) {
 		var _map_abil = ds_map_create()

@@ -2,8 +2,8 @@
   "isDnD": false,
   "isCompatibility": false,
   "parent": {
-    "name": "player",
-    "path": "folders/Scripts/battle/player.yy",
+    "name": "battle",
+    "path": "folders/Scripts/battle.yy",
   },
   "resourceVersion": "1.0",
   "name": "sc_gain_exp",

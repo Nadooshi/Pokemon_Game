@@ -26,23 +26,26 @@ function sc_save_battle_result() {
 							_a_map[? "battle_exp"] = _result.exceeding_exp
 							_a_map[? "level"]++
 							_a_map[? "levelup"] = true
+							if is_undefined(_p_action[? "pa_lvlup_mod"]) _p_action[? "pa_lvlup_mod"] = 0
+							_p_action[? "pa_lvlup_mod"] += 0.01 // modificator in % for any stats and buffes
 						} else {
-							// ограничить макс exp with nextlvl_exp
+							// border max exp with nextlvl_exp 
 							_a_map[? "battle_exp"] = _result.nextlvl_exp
 							_result.lvlup = false
+							// choose evolve pokemon or not
 						}
 					}
 				} until _result.lvlup = false
 				//
-//				var _result = sc_lvlup_action(_a_map[? "level"], _a_map[? "act_force"], _a_map[? "battle_exp"])
 				_p_action[? "pa_nextlvl_exp"] = _result.nextlvl_exp
 				_p_action[? "pa_prevexp"] = _a_map[? "prev_exp"]
 				_p_action[? "pa_exp"] = _a_map[? "battle_exp"]
 				_p_action[? "pa_lvl"] = _a_map[? "level"]
 				_p_action[? "pa_levelup"] = _a_map[? "levelup"]
+				_p_action[? "pa_lvlup_mod"] = _a_map[? "lvlup_mod"]
 			}
 		}
-		//show_message(_s)
+//		show_message(_s)
 	}
 }
 

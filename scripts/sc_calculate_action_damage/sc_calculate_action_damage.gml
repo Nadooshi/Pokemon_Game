@@ -17,7 +17,7 @@ function sc_calculate_action_damage(argument0, argument1, argument2) {
 	_dmg[1, _e.element ] = _action[? "dmg_element"]
 	_dmg[0, _e.material] = _action[? "dmg_material"]
 	_dmg[1, _e.material] = _action[? "dmg_material"]
-
+		
 	var _elem_action = 0
 	_elem_action[_e.element ] = _action[? "element" ] 
 	_elem_action[_e.material] = _action[? "material"]
@@ -25,10 +25,6 @@ function sc_calculate_action_damage(argument0, argument1, argument2) {
 	var _p_target_elem = 0
 	_p_target_elem[_e.element ] = (_p_target[? "elemental_type"] != _ELEMENTAL.none) ? element_table[_p_target[? "elemental_type"]] : -1 
 	_p_target_elem[_e.material] = (_p_target[? "material_type" ] != _ELEMENTAL.none) ? element_table[_p_target[? "material_type" ]] : -1 
-
-	//var _p_base_elem = 0
-	//_p_base_elem[_e.element ] = _p_target[? "elemental_type"]
-	//_p_base_elem[_e.material] = _p_target[? "material_type" ]
 
 	for (var _pe = 0; _pe < 2; _pe++) 
 	if is_array(_p_target_elem[_pe]) {

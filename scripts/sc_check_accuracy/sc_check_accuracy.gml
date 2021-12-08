@@ -23,7 +23,8 @@ function sc_check_accuracy(argument0, argument1, argument2) {
 			break
 		}
 		_rate_coeff += _tg_p.dodge_mod // !!! dodge_mod reduce dodge 
-		var _hit_rate = _action[? "accuracy"] * (_rate_coeff + _obj.accuracy_mod)
+		var _real_accur = _action[? "accuracy"] + (_action[? "lvlup_mod"])
+		var _hit_rate = _real_accur * (_rate_coeff + _obj.accuracy_mod)
 		var _random = random(1.0)
 		if _random <= _hit_rate
 			return true
