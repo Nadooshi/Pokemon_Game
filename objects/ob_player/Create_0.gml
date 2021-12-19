@@ -109,6 +109,7 @@ passive_state1 = noone
 passive_state2 = noone
 alarm_set(0,10)
 alarm_set(1,30)
+alarm_set(3, frames_rate) // 60
 
 in_biome = ds_list_create()
 prev_in_biome = ds_list_create()

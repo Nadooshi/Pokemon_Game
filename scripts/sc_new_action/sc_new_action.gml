@@ -10,7 +10,7 @@ function sc_new_action() {
 	result[? "range"		] =	0
 	result[? "level"		] =	0
 	result[? "exp"			] = 0 // global experience
-	result[? "battle_exp"	] = 0 // in battle exp
+//	result[? "battle_exp"	] = 0 // in battle exp
 	result[? "act_force"	] =	_FORCE.preferred
 	result[? "radius"		] = 0
 	result[? "warmup"		] = 0

@@ -22,6 +22,11 @@ function sc_load_action(_name, _pokemon_map){
 	_pokemon_map[? "actions"][? _name][? "pa_levelup"] = false
 	map[? "lvlup_mod" ] = ((_pokemon_map[? "actions"][? _name][? "pa_lvlup_mod"]) ?? 0)
 	
+	var _cd = 0
+	if _pokemon_map[? "actions"][? _name][? "repeatable"] = true // перепутаны значения true => не повторяется
+		_cd = disposable_action_cooldown
+	map[? "cooldown"] = _cd
+	
 	if not is_undefined(map[? "active"]) {
 		var _map_abil = ds_map_create()
 		ds_map_read(_map_abil, ini_read_string("abilities", map[? "active"], ""))

@@ -50,7 +50,11 @@ function sc_ai_new_target() {
 	var _attCount = ds_list_size(att_list[plannedPurpose])
 	if _attCount > 0 { // hasPurpose
 		var _att_num = irandom(_attCount-1)
-		plannedActionNum = att_list[plannedPurpose][| _att_num]
+		if action_list[| att_list[plannedPurpose][| _att_num]][? "cooldown"] <= 0 {
+			plannedActionNum = att_list[plannedPurpose][| _att_num]
+		} else {
+			plannedActionNum = -1
+		}
 		// check position stage
 		if ds_list_find_index(att_tgFroms[position_stage], plannedActionNum) = -1 {
 			// new attack

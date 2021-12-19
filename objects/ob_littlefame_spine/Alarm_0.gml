@@ -3,6 +3,10 @@ alarm_set(0, 30)
 var _tg_pokemon = sc_find_pokemon_to_target()
 if is_undefined(_tg_pokemon)
 	exit
+if selected_id = _tg_pokemon {
+	skeleton_animation_set("Rotate")
+	exit
+}
 	
 var _p_target_elem = 0
 _p_target_elem[_e.element] = (_tg_pokemon.pokemon_map[? "elemental_type"] != _ELEMENTAL.none) ? element_table[_tg_pokemon.pokemon_map[? "elemental_type"]] : -1  // _e - enum in sc_calculate_action_damage

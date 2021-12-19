@@ -187,6 +187,9 @@ function sc_player_attack_set() {
 		sprite_index = asset_get_index(_a_map[? "anim"])
 		image_blend = sc_make_attack_colour(_a_map)
 	}
+	if _a_map[? "repeatable"] = true
+		_a_map [? "cooldown"] = disposable_action_cooldown
+		
 	sc_gain_exp(_a_map, act_exp.use, 0, id)
 	sc_logging_action(id, _a_map)
 }

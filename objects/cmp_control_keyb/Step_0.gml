@@ -53,7 +53,8 @@ for (i=0; i<6; i++)
 if keys[i+k.action1] {
 	if doActionNum = -1 {
 		var _a_map = action_list[| i]
-		if not is_undefined(_a_map) {
+		if not is_undefined(_a_map)
+		if _a_map[? "cooldown"] <= 0 {
 			target = ob_cursor
 			ok = true
 			doActionNum = i
