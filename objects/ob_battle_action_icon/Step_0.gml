@@ -15,9 +15,11 @@ if selected_id.doActionNum = parent.index {
 power_ready = false
 var _ls = ds_list_size(selected_id.action_list) -1
 if _ls >= index
+	if not is_undefined(selected_id.action_list[| index])
 	if ds_map_find_value(selected_id.action_list[| index], "ap") <= selected_id.power_cur
 		power_ready = true		
 on_lock = false
-if ds_map_find_value(selected_id.action_list[| index], "cooldown") > 0
-	on_lock = true
+if not is_undefined(selected_id.action_list[| index])
+	if ds_map_find_value(selected_id.action_list[| index], "cooldown") > 0
+		on_lock = true
 
