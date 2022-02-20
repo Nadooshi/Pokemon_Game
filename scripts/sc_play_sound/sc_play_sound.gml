@@ -1,12 +1,8 @@
 ///@desc sc_play_sound(sound, loop)
-///@arg sound to play
-///@arg loop=false
-function sc_play_sound() {
+function sc_play_sound(_snd, _loop) {
 
-	var _snd  = argument[0]
-	var _loop = false
-	if argument_count>1
-		 _loop = argument[1]
+	if is_undefined(_loop)
+		_loop = false
 
 	if audio_exists(_snd) {
 	    if audio_is_playing(_snd) audio_stop_sound(_snd)

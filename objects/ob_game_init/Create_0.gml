@@ -527,6 +527,11 @@ globalvar element_table;
 element_table = array_create(_ELEMENTAL.count-1)
 for (var i=0; i<array_length_1d(element_table); i++)
 	element_table[i] = array_create(3, _ELEMENTAL.none)
+_arr = 0
+globalvar aura_table;
+aura_table = array_create(_ELEMENTAL.count-1)
+for (var i=0; i<array_length_1d(aura_table); i++)
+	aura_table[i] = array_create(3, _ELEMENTAL.none)
 
 ini_open(pokemon_path)
 	ds_map_read(pokemon_list, ini_read_string("pokemons", "pokemon_list", ""))
@@ -535,6 +540,10 @@ ini_open(pokemon_path)
 	for (var i=0; i<array_length_1d(element_table); i++) {
 		_arr = array_from_string( ini_read_string("element_table", string(i), "0"))
 		element_table[i] = _arr
+	}
+	for (var i=0; i<array_length_1d(aura_table); i++) {
+		_arr = array_from_string( ini_read_string("aura_table", string(i), "0"))
+		aura_table[i] = _arr
 	}
 	//=============================================================================
 ini_close()

@@ -22,9 +22,9 @@ for (var i=0; i<ds_list_size(in_biome); i++) {
 	_coeff *= sc_element_coeff(in_biome[| i], pokemon_map[? "elemental_type"])
 	_coeff *= sc_element_coeff(in_biome[| i], pokemon_map[? "material_type"])
 	if _coeff > 1
-		mod_reg *= 0.5
-	if _coeff < 1
 		mod_reg *= 1.5
+	if _coeff < 1
+		mod_reg *= 0.5
 }
 
 if hurt_timeout > 0 { 
@@ -38,7 +38,7 @@ if floor(power_cur) < power_max {	// recover power
 }
 
 if hurt_cur > 0 {
-	hurt_cur = max(0, hurt_cur - (hurt_reg + health_reg)) // recover half health after damage
+	hurt_cur = max(0, hurt_cur - (hurt_reg * mod_reg + health_reg)) // recover half health after damage
 	if health_cur < health_max
 		health_cur += health_reg * mod_reg
 }

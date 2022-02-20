@@ -117,5 +117,7 @@ courage_cur = 100
 courage_threshold = random(80)+10
 
 mark_hostile = instance_create_layer(x,y, "Game", ob_mark_hostile)
+effect_bullet = instance_create_layer(x, y, "Particles", ob_effect_damage)
+effect_bullet.p_parent = id
 
 target = ob_cursor

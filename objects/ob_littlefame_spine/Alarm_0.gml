@@ -15,10 +15,10 @@ _p_target_elem[_e.material] = (_tg_pokemon.pokemon_map[? "material_type"] != _MA
 var _elem_action = map[? parameter_name]
 
 
+var _dmg_coeff = 1
 for (var _pe = 0; _pe < 2; _pe++) 
 if is_array(_p_target_elem[_pe]) {
 	var _table_entry = _p_target_elem[_pe]
-	var _dmg_coeff = 1
 	if array_length(_table_entry)=3 {
 		_dmg_coeff *= (_table_entry[0] == _elem_action) ? 0.5 : 1
 		_dmg_coeff *= (_table_entry[1] == _elem_action) ? 2 : 1

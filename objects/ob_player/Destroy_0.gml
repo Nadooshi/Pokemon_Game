@@ -45,6 +45,7 @@ with ob_init_battle {
 }
 //==========================================================
 instance_destroy(mark_hostile)
+instance_destroy(effect_bullet)
 //show_debug_message(object_get_name(object_index) + " (" + string(id)+") deactivated" )
 instance_deactivate_object(id)
 

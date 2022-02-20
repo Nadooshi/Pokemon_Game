@@ -1,17 +1,14 @@
-/// @arg action_map
-/// @arg target_pokemon_map
-/// @arg pokemon_attacker
-function sc_calculate_action_damage(argument0, argument1, argument2) {
+function sc_calculate_action_damage(_action, p_id_target, _p_attack) {
 
 	enum _e {
 		element  = 0,
 		material = 1
 	}
+	var _slot = ["elemental_type", "material_type"]
 
-	var _action = argument0
-	var	_p_target = argument1
-	var _p_attack = argument2
-
+	var	_p_target = p_id_target.pokemon_map
+	var _a_obj = p_id_target.effect_bullet
+	
 	var _dmg
 	_dmg[0, _e.element ] = _action[? "dmg_element"]
 	_dmg[1, _e.element ] = _action[? "dmg_element"]
@@ -26,15 +23,28 @@ function sc_calculate_action_damage(argument0, argument1, argument2) {
 	_p_target_elem[_e.element ] = (_p_target[? "elemental_type"] != _ELEMENTAL.none) ? element_table[_p_target[? "elemental_type"]] : -1 
 	_p_target_elem[_e.material] = (_p_target[? "material_type" ] != _ELEMENTAL.none) ? element_table[_p_target[? "material_type" ]] : -1 
 
+
 	for (var _pe = 0; _pe < 2; _pe++) 
 	if is_array(_p_target_elem[_pe]) {
 		var _table_entry = _p_target_elem[_pe]
 		for (var _ae = 0; _ae < 2; _ae++) {
 			var _dmg_coeff = 1
 			if array_length(_table_entry)=3 {
-				_dmg_coeff *= (_table_entry[0] == _elem_action[_ae]) ? 0.5 : 1
-				_dmg_coeff *= (_table_entry[1] == _elem_action[_ae]) ? 2 : 1
-				_dmg_coeff *= (_table_entry[2] == _elem_action[_ae]) ? 2 : 1
+				if _elem_action[_ae] = _table_entry[0]{
+					_dmg_coeff *= 0.5
+					sc_anim_effect_damage(_elem_action[_ae], _p_target[? _slot[_pe]], "weak", _a_obj)
+				}
+				if _elem_action[_ae] = _table_entry[1]{
+					_dmg_coeff *= 2
+					sc_anim_effect_damage(_elem_action[_ae], _p_target[? _slot[_pe]], "break", _a_obj)
+				}
+				if _elem_action[_ae] = _table_entry[2]{
+					_dmg_coeff *= 2
+					sc_anim_effect_damage(_elem_action[_ae], _p_target[? _slot[_pe]], "break", _a_obj)
+				}
+			//	_dmg_coeff *= (_table_entry[0] == _elem_action[_ae]) ? 0.5 : 1
+			//	_dmg_coeff *= (_table_entry[1] == _elem_action[_ae]) ? 2 : 1
+			//	_dmg_coeff *= (_table_entry[2] == _elem_action[_ae]) ? 2 : 1
 			}
 			_dmg[_pe, _ae] = _dmg[_pe, _ae] * _dmg_coeff
 		}
@@ -133,7 +143,16 @@ function sc_calculate_action_damage(argument0, argument1, argument2) {
 	//show_debug_message(_info + "\n" + string(result))
 
 	return result
+}
 
+//================================================================================
 
+function sc_anim_effect_damage(el_attack, el_def, animation, obj) {
+	
+	obj.param.el_attack = el_attack
+	obj.param.el_def = el_def
+	obj.param.animation = animation
+	if ds_list_size(obj.que_cur) < 2
+		ds_list_add(obj.que_cur, obj.param)
 
 }

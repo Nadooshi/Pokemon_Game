@@ -28,11 +28,11 @@ for (var i=0; i<ds_list_size(pokemon_id.in_biome); i++) {
 		sparkle_objs[? pokemon_id.in_biome[| i]].x = _x
 		sparkle_objs[? pokemon_id.in_biome[| i]].y = biomes_y
 		sparkle_active[? pokemon_id.in_biome[| i]] = true
-		if _coeff < 1 {
+		if _coeff > 1 {
 			sparkle_objs[? pokemon_id.in_biome[| i]].sparkcolor = c_yellow
 			sparkle_objs[? pokemon_id.in_biome[| i]].speedY = 0.25
 		}
-		if _coeff > 1 {
+		if _coeff < 1 {
 			sparkle_objs[? pokemon_id.in_biome[| i]].sparkcolor = c_maroon
 			sparkle_objs[? pokemon_id.in_biome[| i]].speedX = random(0.5)-0.25
 			sparkle_objs[? pokemon_id.in_biome[| i]].speedY = -0.25
@@ -60,9 +60,3 @@ if ds_list_find_index(component_list, cmp_control_ai) {
 
 caption = _c
 
-	//var i = ds_map_find_first(sparkle_objs) 
-	//while not is_undefined(i) {
-	//	with sparkle_objs[? i]
-	//		active = false
-	//	i = ds_map_find_next(sparkle_objs, i)
-	//}

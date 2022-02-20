@@ -1,12 +1,7 @@
-/// @arg action
-/// @arg attacking_pokemon
-function sc_deal_damage(argument0, argument1) {
-
+function sc_deal_damage(_action, _pokemon_attack) {
 	/// for damaged pokemon
-
-	var _action = argument0
-	var _pokemon_attack = argument1
-	var _dmg = sc_calculate_action_damage(_action, pokemon_map, _pokemon_attack)
+	
+	var _dmg = sc_calculate_action_damage(_action, id, _pokemon_attack)
 
 	//STAT pokemon states react on damage
 	if ds_exists(states, ds_type_list)
