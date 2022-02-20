@@ -152,6 +152,8 @@ function sc_anim_effect_damage(el_attack, el_def, animation, obj) {
 	obj.param.el_attack = el_attack
 	obj.param.el_def = el_def
 	obj.param.animation = animation
+	
+	if ds_list_find_index(obj.que_cur, obj.param) = -1
 	if ds_list_size(obj.que_cur) < 2
 		ds_list_add(obj.que_cur, obj.param)
 

@@ -14,10 +14,8 @@ function sc_battle_update_actions() {
 				_ok = true
 			}
 		}
+		
 		if not _ok visible = false
 		event_perform(ev_other, ev_user0)
 	} 
-
-
-
 }

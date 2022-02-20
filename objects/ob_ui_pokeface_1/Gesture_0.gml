@@ -24,4 +24,7 @@ if sc_does_exist(list[| index]) {
 }
 
 sc_battle_update_actions()
- 
+with ob_ui_passiv
+	event_perform(ev_other, ev_user0)
+	
+	
