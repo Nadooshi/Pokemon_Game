@@ -107,8 +107,8 @@ states = ds_list_create()
 
 passive_state1 = noone
 passive_state2 = noone
-alarm_set(0,10)
-alarm_set(1,30)
+alarm_set(0,0)
+alarm_set(1,0)
 alarm_set(3, frames_rate) // 60
 
 in_biome = ds_list_create()
@@ -119,5 +119,22 @@ courage_threshold = random(80)+10
 mark_hostile = instance_create_layer(x,y, "Game", ob_mark_hostile)
 effect_bullet = instance_create_layer(x, y, "Particles", ob_effect_damage)
 effect_bullet.p_parent = id
+
+animation_set = array_create(2, 0)
+animation_set[0] = {
+	anim : "",
+	main_stat : -1,
+	stat_term : -1,
+	bio_term : -1,
+	time : -1
+}
+animation_set[1] = {
+	anim : "",
+	main_stat : -1,
+	stat_term : -1,
+	bio_term : -1,
+	time : -1
+}
+
 
 target = ob_cursor

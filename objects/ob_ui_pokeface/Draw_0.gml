@@ -29,12 +29,6 @@ for (var i=0; i<ds_list_size(pokemon_id.in_biome); i++) {
 	var _x = _xx - sprite_get_width(sp_elemental) * 0.1
 	draw_sprite_ext(sp_elemental, pokemon_id.in_biome[| i], _x, biomes_y, 0.15, 0.15, 0, c_white, 1)
 }
-	
-	
-var _x = x - (sprite_width * 0.5)
-draw_set_color(0)
-	draw_text_transformed(_x, y, caption, 0.2, 0.2, 0)
-draw_set_color(c_white)
-	draw_text_transformed(_x-2, y-2, caption, 0.2, 0.2, 0)
 
+sc_draw_caption(caption)
 

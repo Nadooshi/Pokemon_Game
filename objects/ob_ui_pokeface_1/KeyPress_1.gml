@@ -20,22 +20,18 @@ if sc_does_exist(list[| _i]) {
 				sc_composed_remove_component(cmp_control_keyb)
 				sc_composed_add_component(cmp_control_ai)
 				control_component = cmp_control_ai
-				//attack_timeout = random_range(0.3, 1)
-				//show_debug_message(pokemon_map[? "title"] + ": " + string(array_from_component_list(component_list)) )
 			}
 			selected_id = id
 			
 			sc_battle_update_actions()
 			with ob_ui_passiv
 				event_perform(ev_other, ev_user0)
-				
 			// switch cmp_control
 			sc_composed_remove_component(cmp_control_ai)
 			sc_composed_add_component(cmp_control_keyb, true)
 			control_component = cmp_control_keyb
 
 			doActionNum = -1
-			//show_debug_message(pokemon_map[? "title"] + ": " + string(array_from_component_list(component_list)))
 		}
 	}	
 }

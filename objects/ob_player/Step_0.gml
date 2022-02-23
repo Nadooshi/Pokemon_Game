@@ -10,6 +10,19 @@ event_inherited()
 mark_hostile.visible = (trainer == player2_trainer)
 mark_hostile.x = x
 mark_hostile.y = y
+// refresh animation passive
+if selected {
+if sc_does_exist(passive_state1)
+	if alarm_get(0) < (passive_state1[? "state_cooldown"] * frames_rate)
+		with ob_ui_passiv
+			if parameter_name = "passive_1"
+				next_animation = "cooldown"
+if sc_does_exist(passive_state2)
+	if alarm_get(1) < (passive_state2[? "state_cooldown"] * frames_rate)
+		with ob_ui_passiv
+			if parameter_name = "passive_2"
+				next_animation = "cooldown"
+}
 
 if script_exists(scBehaviour) or is_method(scBehaviour)
 	if script_execute(scBehaviour)
