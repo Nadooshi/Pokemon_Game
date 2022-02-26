@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"sp_ts_world1","path":"sprites/sp_ts_world1/sp_ts_world1.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "sp_ts_world1",
     "tags": [],
     "resourceType": "GMSequence",

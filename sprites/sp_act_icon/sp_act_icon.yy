@@ -127,7 +127,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"sp_act_icon","path":"sprites/sp_act_icon/sp_act_icon.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "sp_act_icon",
     "tags": [],
     "resourceType": "GMSequence",

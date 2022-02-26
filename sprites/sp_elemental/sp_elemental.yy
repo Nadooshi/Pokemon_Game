@@ -179,7 +179,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"sp_elemental","path":"sprites/sp_elemental/sp_elemental.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "",
     "tags": [],
     "resourceType": "GMSequence",

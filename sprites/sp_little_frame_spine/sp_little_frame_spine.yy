@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"sp_little_frame_spine","path":"sprites/sp_little_frame_spine/sp_little_frame_spine.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "sp_little_frame_spine",
     "tags": [],
     "resourceType": "GMSequence",

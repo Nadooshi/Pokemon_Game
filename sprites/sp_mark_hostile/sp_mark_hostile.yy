@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"sp_mark_hostile","path":"sprites/sp_mark_hostile/sp_mark_hostile.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "sp_mark_hostile",
     "tags": [],
     "resourceType": "GMSequence",

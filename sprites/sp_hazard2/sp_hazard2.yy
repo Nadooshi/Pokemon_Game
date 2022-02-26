@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"sp_hazard2","path":"sprites/sp_hazard2/sp_hazard2.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "sp_hazard2",
     "tags": [],
     "resourceType": "GMSequence",

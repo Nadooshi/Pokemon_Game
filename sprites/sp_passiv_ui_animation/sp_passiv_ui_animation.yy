@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"sp_passiv_ui_animation","path":"sprites/sp_passiv_ui_animation/sp_passiv_ui_animation.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "sp_passiv_ui_animation",
     "tags": [],
     "resourceType": "GMSequence",

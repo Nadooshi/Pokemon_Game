@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"sp_versus","path":"sprites/sp_versus/sp_versus.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "sp_versus",
     "tags": [],
     "resourceType": "GMSequence",

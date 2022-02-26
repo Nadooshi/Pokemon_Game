@@ -60,7 +60,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"sp_act_locked","path":"sprites/sp_act_locked/sp_act_locked.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "sp_act_locked",
     "tags": [],
     "resourceType": "GMSequence",
