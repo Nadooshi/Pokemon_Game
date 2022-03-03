@@ -16,7 +16,8 @@ if sc_does_exist(passive_state1) {
 
 		// check apply state rate
 	var _ok = false
-	animation_set[0].main_stat = passive_state1[? "state"]
+	animation_set[? "main_stat"][? "first"] = passive_state1[? "state"]
+	animation_set[? "stat_name"][? "first"] = passive_state1[? "name"]
 
 	if passive_state1[? "in_health_sign"] = 0 // below
 		if (health_cur / health_max * 100) < passive_state1[? "marker_health"] 
@@ -25,10 +26,10 @@ if sc_does_exist(passive_state1) {
 		if (health_cur / health_max * 100) > passive_state1[? "marker_health"] 
 			_ok = true
 	if not _ok
-		animation_set[0].anim = "other_lock"
+	animation_set[? "anim"][? "first"] = "other_lock"
 		
-	var _cs = false
-	var _cb = false
+	var _cs = true
+	var _cb = true
 	if _ok {
 		_ok = false
 		if _r_ <= _rate {
@@ -37,25 +38,25 @@ if sc_does_exist(passive_state1) {
 			p_action[? "lvlup_mod"] = 0
 			sc_apply_state(_state_obj, 0, id, p_action)
 			alarm_set(0, (passive_state1[? "state_time"] + passive_state1[? "state_cooldown"]) * frames_rate)
-			animation_set[0].anim = "apply"
-			animation_set[0].time = (passive_state1[? "state_time"] * frames_rate)
+			animation_set[? "anim"][? "first"] = "apply"
+			animation_set[? "time"][? "first"] = (passive_state1[? "state_time"] * frames_rate)
 			if not sc_state_check_compatible(p_action) {
-				_cs = true
-				animation_set[0].anim = "state_lock"
-				animation_set[0].stat_term = p_action[? "active"][? "in_state"]
+				_cs = false
+				animation_set[? "anim"][? "first"] = "state_lock"
+				animation_set[? "stat_term"][? "first"] = p_action[? "active"][? "in_state"]
 			}
 			if not sc_state_check_compatible_biome(p_action) {
-				_cb = true
-				animation_set[0].anim = "biome_lock"
-				animation_set[0].bio_term = p_action[? "active"][? "biome"]
+				_cb = false
+				animation_set[? "anim"][? "first"] = "biome_lock"
+				animation_set[? "biome_term"][? "first"] = p_action[? "active"][? "biome"]
 			}
-			if (_cs && _cb)
-				animation_set[0].anim = "all_lock"
+			if not _cs and not _cb
+				animation_set[? "anim"][? "first"] = "all_lock"
 			
 			ds_map_destroy(p_action)
 			p_action = noone
 		} else 
-			animation_set[0].anim = "rate_lock"
+			animation_set[? "anim"][? "first"] = "rate_lock"
 	}
 }
 

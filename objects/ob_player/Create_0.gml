@@ -107,8 +107,8 @@ states = ds_list_create()
 
 passive_state1 = noone
 passive_state2 = noone
-alarm_set(0,0)
-alarm_set(1,0)
+alarm_set(0,1)
+alarm_set(1,1)
 alarm_set(3, frames_rate) // 60
 
 in_biome = ds_list_create()
@@ -120,21 +120,25 @@ mark_hostile = instance_create_layer(x,y, "Game", ob_mark_hostile)
 effect_bullet = instance_create_layer(x, y, "Particles", ob_effect_damage)
 effect_bullet.p_parent = id
 
-animation_set = array_create(2, 0)
-animation_set[0] = {
-	anim : "",
-	main_stat : -1,
-	stat_term : -1,
-	bio_term : -1,
-	time : -1
-}
-animation_set[1] = {
-	anim : "",
-	main_stat : -1,
-	stat_term : -1,
-	bio_term : -1,
-	time : -1
-}
+animation_set = ds_map_create()
+animation_set [? "anim"] = ds_map_create()
+animation_set [? "anim"][? "first"] = ""
+animation_set [? "anim"][? "second"] = ""
+animation_set [? "main_stat"] = ds_map_create()
+animation_set [? "main_stat"][? "first"] = -1
+animation_set [? "main_stat"][? "second"] = -1
+animation_set [? "stat_term"] = ds_map_create()
+animation_set [? "stat_term"][? "first"] = -1
+animation_set [? "stat_term"][? "second"] = -1
+animation_set [? "biome_term"] = ds_map_create()
+animation_set [? "biome_term"][? "first"] = -1
+animation_set [? "biome_term"][? "second"] = -1
+animation_set [? "time"] = ds_map_create()
+animation_set [? "time"][? "first"] = -1
+animation_set [? "time"][? "second"] = -1
+animation_set [? "stat_name"] = ds_map_create()
+animation_set [? "stat_name"][? "first"] = ""
+animation_set [? "stat_name"][? "second"] = ""
 
 
 target = ob_cursor

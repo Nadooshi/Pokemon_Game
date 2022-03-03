@@ -14,14 +14,10 @@ mark_hostile.y = y
 if selected {
 if sc_does_exist(passive_state1)
 	if alarm_get(0) < (passive_state1[? "state_cooldown"] * frames_rate)
-		with ob_ui_passiv
-			if parameter_name = "passive_1"
-				next_animation = "cooldown"
+		animation_set[? "anim"][? "first"] = "cooldown"
 if sc_does_exist(passive_state2)
 	if alarm_get(1) < (passive_state2[? "state_cooldown"] * frames_rate)
-		with ob_ui_passiv
-			if parameter_name = "passive_2"
-				next_animation = "cooldown"
+		animation_set[? "anim"][? "second"] = "cooldown"
 }
 
 if script_exists(scBehaviour) or is_method(scBehaviour)

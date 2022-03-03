@@ -24,8 +24,6 @@ if sc_does_exist(list[| _i]) {
 			selected_id = id
 			
 			sc_battle_update_actions()
-			with ob_ui_passiv
-				event_perform(ev_other, ev_user0)
 			// switch cmp_control
 			sc_composed_remove_component(cmp_control_ai)
 			sc_composed_add_component(cmp_control_keyb, true)

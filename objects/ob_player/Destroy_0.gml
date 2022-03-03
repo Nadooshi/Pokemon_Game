@@ -2,7 +2,7 @@
 
 event_inherited()
 
-//ds_list_delete(trainer[? "pokemon_ids"], ds_list_find_index(trainer[? "pokemon_ids"], id))
+ds_map_destroy(animation_set)
 
 with instance_create_depth(x, y, depth, ob_explosion) {
 	sprite_index = other.sprite_index

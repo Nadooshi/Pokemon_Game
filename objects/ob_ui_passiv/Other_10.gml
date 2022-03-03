@@ -5,30 +5,28 @@ event_inherited();
 visible = false
 if instance_exists(selected_id) {
 	with selected_id {
-		animation_set[0].time = alarm_get(0)
-		animation_set[1].time = alarm_get(1)
+		animation_set[? "time"][? "first"] = alarm_get(0)
+		animation_set[? "time"][? "second"] = alarm_get(1)
 	}
+	if selected_id.animation_set[? "main_stat"][? "first"] != -1
 	if parameter_name = "passive_1" {
-		next_animation.canvas = selected_id.animation_set[0].anim
-		next_animation.state_main = selected_id.animation_set[0].main_stat
-		next_animation.state_term = selected_id.animation_set[0].stat_term
-		next_animation.biome_term = selected_id.animation_set[0].bio_term
-		next_animation.time = selected_id.animation_set[0].time
+		next_animation[? "canvas"] = selected_id.animation_set[? "anim"][? "first"]
+		next_animation[? "state_main"] = selected_id.animation_set[? "main_stat"][? "first"]
+		next_animation[? "state_term"] = selected_id.animation_set[? "stat_term"][? "first"]
+		next_animation[? "biome_term"] = selected_id.animation_set[? "biome_term"][? "first"]
+		next_animation[? "time"] = selected_id.animation_set[? "time"][? "first"]
+		visible = true
 	}
+	if selected_id.animation_set[? "main_stat"][? "second"] != -1
 	if parameter_name = "passive_2" {
-		next_animation.canvas = selected_id.animation_set[1].anim
-		next_animation.state_main = selected_id.animation_set[1].main_stat
-		next_animation.state_term = selected_id.animation_set[1].stat_term
-		next_animation.biome_term = selected_id.animation_set[1].bio_term
-		next_animation.time = selected_id.animation_set[1].time
+		next_animation[? "canvas"] = selected_id.animation_set[? "anim"][? "second"]
+		next_animation[? "state_main"] = selected_id.animation_set[? "main_stat"][? "second"]
+		next_animation[? "state_term"] = selected_id.animation_set[? "stat_term"][? "second"]
+		next_animation[? "biome_term"] = selected_id.animation_set[? "biome_term"][? "second"]
+		next_animation[? "time"] = selected_id.animation_set[? "time"][? "second"]
+		visible = true
 	}
 	
-	visible = true
-	if animation.canvas = ""
-		animation = next_animation
-		
-	if animation.state_main = _ABILITY_STATE.none
+	if animation[? "state_main"] = _ABILITY_STATE.none
 		visible = false
-
-	sc_passiv_animation_set(animation.canvas, animation.state_main, animation.state_term, animation.biome_term)
 }
