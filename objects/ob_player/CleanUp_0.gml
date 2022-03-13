@@ -21,3 +21,5 @@ ds_list_destroy(in_biome)
 in_biome = noone
 ds_list_destroy(prev_in_biome)
 prev_in_biome = noone
+
+ds_map_destroy(animation_set)

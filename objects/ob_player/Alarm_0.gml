@@ -28,35 +28,41 @@ if sc_does_exist(passive_state1) {
 	if not _ok
 	animation_set[? "anim"][? "first"] = "other_lock"
 		
-	var _cs = true
-	var _cb = true
+	var p_action = ds_map_create()
+	p_action[? "active"] = passive_state1
+	p_action[? "lvlup_mod"] = 0
+	animation_set[? "check_state"][? "first"] = ds_map_find_value(p_action[? "active"], "in_state_sign")
+	if not sc_state_check_compatible(p_action) {
+		animation_set[? "state_anim"][? "first"] = "state_lock"
+		animation_set[? "stat_term"][? "first"] = p_action[? "active"][? "in_state"]
+	} else {
+		animation_set[? "state_anim"][? "first"] = "state_ok"
+		animation_set[? "stat_term"][? "first"] = p_action[? "active"][? "in_state"]				
+	}
+	animation_set[? "check_bio"][? "first"] = ds_map_find_value(p_action[? "active"], "biome_sign")
+	if not sc_state_check_compatible_biome(p_action) {
+		animation_set[? "bio_anim"][? "first"] = "biome_lock"
+		animation_set[? "biome_term"][? "first"] = p_action[? "active"][? "biome"]
+	} else {
+		animation_set[? "bio_anim"][? "first"] = "biome_ok"
+		animation_set[? "biome_term"][? "first"] = p_action[? "active"][? "biome"]				
+	}
+
 	if _ok {
 		_ok = false
 		if _r_ <= _rate {
-			var p_action = ds_map_create()
-			p_action[? "active"] = passive_state1
-			p_action[? "lvlup_mod"] = 0
+			//var p_action = ds_map_create()
+			//p_action[? "active"] = passive_state1
+			//p_action[? "lvlup_mod"] = 0
 			sc_apply_state(_state_obj, 0, id, p_action)
 			alarm_set(0, (passive_state1[? "state_time"] + passive_state1[? "state_cooldown"]) * frames_rate)
 			animation_set[? "anim"][? "first"] = "apply"
 			animation_set[? "time"][? "first"] = (passive_state1[? "state_time"] * frames_rate)
-			if not sc_state_check_compatible(p_action) {
-				_cs = false
-				animation_set[? "anim"][? "first"] = "state_lock"
-				animation_set[? "stat_term"][? "first"] = p_action[? "active"][? "in_state"]
-			}
-			if not sc_state_check_compatible_biome(p_action) {
-				_cb = false
-				animation_set[? "anim"][? "first"] = "biome_lock"
-				animation_set[? "biome_term"][? "first"] = p_action[? "active"][? "biome"]
-			}
-			if not _cs and not _cb
-				animation_set[? "anim"][? "first"] = "all_lock"
-			
-			ds_map_destroy(p_action)
-			p_action = noone
 		} else 
 			animation_set[? "anim"][? "first"] = "rate_lock"
 	}
+	ds_map_destroy(p_action)
+	p_action = noone
+
 }
 

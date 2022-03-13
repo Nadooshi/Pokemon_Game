@@ -120,10 +120,17 @@ mark_hostile = instance_create_layer(x,y, "Game", ob_mark_hostile)
 effect_bullet = instance_create_layer(x, y, "Particles", ob_effect_damage)
 effect_bullet.p_parent = id
 
+#region // animation_set
 animation_set = ds_map_create()
 animation_set [? "anim"] = ds_map_create()
 animation_set [? "anim"][? "first"] = ""
 animation_set [? "anim"][? "second"] = ""
+animation_set [? "state_anim"] = ds_map_create()
+animation_set [? "state_anim"][? "first"] = ""
+animation_set [? "state_anim"][? "second"] = ""
+animation_set [? "bio_anim"] = ds_map_create()
+animation_set [? "bio_anim"][? "first"] = ""
+animation_set [? "bio_anim"][? "second"] = ""
 animation_set [? "main_stat"] = ds_map_create()
 animation_set [? "main_stat"][? "first"] = -1
 animation_set [? "main_stat"][? "second"] = -1
@@ -139,6 +146,12 @@ animation_set [? "time"][? "second"] = -1
 animation_set [? "stat_name"] = ds_map_create()
 animation_set [? "stat_name"][? "first"] = ""
 animation_set [? "stat_name"][? "second"] = ""
-
+animation_set [? "check_state"] = ds_map_create()
+animation_set [? "check_state"][? "first"] = -1
+animation_set [? "check_state"][? "second"] = -1
+animation_set [? "check_bio"] = ds_map_create()
+animation_set [? "check_bio"][? "first"] = -1
+animation_set [? "check_bio"][? "second"] = -1
+#endregion
 
 target = ob_cursor

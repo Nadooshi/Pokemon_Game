@@ -17,7 +17,7 @@ if sc_does_exist(passive_state2) {
 		// check apply state rate
 	var _ok = false
 	animation_set[? "main_stat"][? "second"] = passive_state2[? "state"]
-	animation_set[? "stat_name"][? "second"] = passive_state1[? "name"]
+	animation_set[? "stat_name"][? "second"] = passive_state2[? "name"]
 	
 	if passive_state2[? "in_health_sign"] = 0 // below
 		if (health_cur / health_max * 100) < passive_state2[? "marker_health"]
@@ -27,38 +27,39 @@ if sc_does_exist(passive_state2) {
 			_ok = true
 	if not _ok		
 		animation_set[? "anim"][? "second"] = "other_lock"
-	
-	var _cs = true
-	var _cb = true
+
+	var p_action = ds_map_create()
+	p_action[? "active"] = passive_state2
+	p_action[? "lvlup_mod"] = 0
+	animation_set[? "check_state"][? "second"] = ds_map_find_value(p_action[? "active"], "in_state_sign")
+	if not sc_state_check_compatible(p_action) {
+		animation_set[? "state_anim"][? "second"] = "state_lock"
+		animation_set[? "stat_term"][? "second"] = p_action[? "active"][? "in_state"]
+	} else {
+		animation_set[? "state_anim"][? "second"] = "state_ok"
+		animation_set[? "stat_term"][? "second"] = p_action[? "active"][? "in_state"]
+	}
+	animation_set[? "check_bio"][? "second"] = ds_map_find_value(p_action[? "active"], "biome_sign")
+	if not sc_state_check_compatible_biome(p_action) {
+		animation_set[? "bio_anim"][? "second"] = "biome_lock"
+		animation_set[? "biome_term"][? "second"] = p_action[? "active"][? "biome"]
+	} else {
+		animation_set[? "bio_anim"][? "second"] = "biome_ok"
+		animation_set[? "biome_term"][? "second"] = p_action[? "active"][? "biome"]
+	}
+
 	if _ok {
 		_ok = false
 		if _r_ <= _rate {
-			var p_action = ds_map_create()
-			p_action[? "active"] = passive_state2
-			p_action[? "lvlup_mod"] = 0
 			sc_apply_state(_state_obj, 0, id, p_action)
 			alarm_set(1, (passive_state2[? "state_time"] + passive_state2[? "state_cooldown"]) * frames_rate)
 			animation_set[? "anim"][? "second"] = "apply"
 			animation_set[? "time"][? "second"] = (passive_state2[? "state_time"] * frames_rate)
-			if not sc_state_check_compatible(p_action) {
-				_cs = false
-				animation_set[? "anim"][? "second"] = "state_lock"
-				animation_set[? "stat_term"][? "second"] = p_action[? "active"][? "in_state"]
-			}
-			if not sc_state_check_compatible_biome(p_action) {
-				_cb = false
-				animation_set[? "anim"][? "second"] = "biome_lock"
-				animation_set[? "biome_term"][? "second"] = p_action[? "active"][? "biome"]
-			}
-			if not _cs and not _cb
-				animation_set[? "anim"][? "second"] = "all_lock"
-
-			ds_map_destroy(p_action)
-			p_action = noone
 		} else 
 			animation_set[? "anim"][? "second"] = "rate_lock"
 	}
-	
+	ds_map_destroy(p_action)
+	p_action = noone
 }
 
 
