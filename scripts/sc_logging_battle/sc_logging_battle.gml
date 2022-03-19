@@ -295,6 +295,6 @@ function sc_logging_experience (_object, _value, _event) {
 }
 
 function sc_logging_info (_text) {
-	var _log = _text
+	var _log = "[" + date_time_string(date_current_datetime())+ "]: " + _text
 	ds_list_add(log_battle, _log)
 }

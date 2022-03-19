@@ -21,7 +21,7 @@ if _ok_position {
 	attack_error = _ATTACK_ERROR.wrong_position
 
 if attack_error != _ATTACK_ERROR.nothing {
-	doActionNum = -1
+//	doActionNum = -1
 	lastActionNum = -1
 }
 

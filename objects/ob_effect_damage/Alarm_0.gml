@@ -1,5 +1,4 @@
 /// @desc
-ds_list_delete(que_cur, 0)
 var _cur_par = 0
 var _t = -1
 var cur_snd
@@ -26,4 +25,5 @@ var cur_snd
 		}
 		sc_play_sound(cur_snd, false)
 	}
+ds_list_delete(que_cur, 0)
 

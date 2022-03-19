@@ -1,6 +1,6 @@
 function sc_ai_set_flee() {
 	
-	//sc_logging_state_cursed(id, "try hiding behind cover", "run away")
+	//sc_logging_info(trainer[? "name"] +"'s "+ pokemon_map[? "title"] + " (" + string(id) + ") try hiding behind cover. Run away")
 	var _get_new_cover = true
 	if sc_does_exist(target)
 		_get_new_cover = (not is_like(target.object_index, ob_hiding_mark))
@@ -14,7 +14,11 @@ function sc_ai_set_flee() {
 		target = noone
 		sc_ai_retreat_start()
 	}
-		// dig / run/ fly
+		// dig // fly
+	if object_index = ob_player {
+		var c= choose(ev_user2, ev_user4)
+		event_perform(ev_other, c)
+	}
 }
 
 function sc_ai_flee() {

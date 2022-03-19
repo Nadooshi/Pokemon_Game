@@ -69,7 +69,6 @@ if attack_warmup > 0 {
 		doActionNum = -1
 	}
 }
-
 // process courage
 if (counter mod t_process_courage) = 0
 	sc_process_courage(mod_reg)

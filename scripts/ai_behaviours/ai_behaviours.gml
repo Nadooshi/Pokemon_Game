@@ -57,9 +57,21 @@ function sc_ai_new_target() {
 		}
 		// check position stage
 		if ds_list_find_index(att_tgFroms[position_stage], plannedActionNum) = -1 {
-			// new attack
-			target = noone
-			plannedActionNum = -1
+			switch att_tgFroms[position_stage][? "tgFrom"] {
+				case _ATTACK_TG.air:
+					event_perform(ev_other, ev_user4)
+				break;
+				case _ATTACK_TG.ground:
+					event_perform(ev_other, ev_user2)
+				break;
+				case _ATTACK_TG.underground:
+					event_perform(ev_other, ev_user2)
+				break;
+			}
+			if attack_error = _ATTACK_ERROR.no_power {
+				plannedActionNum = -1
+				target = noone
+			}
 		}
 	}
 	if plannedActionNum < 0 {

@@ -11,4 +11,6 @@ if power_cur >= power_max * 0.5 {
 	if init
 		with instance_create_depth(x, y + 12, depth - 1, ob_particle)
 			sprite_index = sp_holeworld_splash1
+} else {
+	attack_error = _ATTACK_ERROR.no_power
 }
