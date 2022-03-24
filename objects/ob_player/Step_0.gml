@@ -68,6 +68,9 @@ if attack_warmup > 0 {
 		lastActionNum = doActionNum
 		doActionNum = -1
 	}
+} else {
+	if doActionNum != -1
+		sc_ai_give_up()
 }
 // process courage
 if (counter mod t_process_courage) = 0

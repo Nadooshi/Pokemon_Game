@@ -1,7 +1,6 @@
 /// @desc Attack
 
 var _a_map = action_list[| doActionNum]
-
 if not sc_does_exist(_a_map) {
 	doActionNum = -1
 	exit
