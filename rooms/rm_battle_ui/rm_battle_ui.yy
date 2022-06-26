@@ -164,7 +164,7 @@
     {"instances":[],"visible":true,"depth":-4600,"userdefinedDepth":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"gridX":8,"gridY":8,"layers":[],"hierarchyFrozen":false,"effectEnabled":true,"effectType":null,"properties":[],"resourceVersion":"1.0","name":"Elements","tags":[],"resourceType":"GMRInstanceLayer",},
     {"instances":[],"visible":true,"depth":-4500,"userdefinedDepth":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"gridX":8,"gridY":8,"layers":[],"hierarchyFrozen":false,"effectEnabled":true,"effectType":null,"properties":[],"resourceVersion":"1.0","name":"Particles","tags":[],"resourceType":"GMRInstanceLayer",},
     {"instances":[],"visible":true,"depth":-4400,"userdefinedDepth":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"gridX":16,"gridY":16,"layers":[],"hierarchyFrozen":false,"effectEnabled":true,"effectType":null,"properties":[],"resourceVersion":"1.0","name":"Game","tags":[],"resourceType":"GMRInstanceLayer",},
-    {"tilesetId":{"name":"ts_world","path":"tilesets/ts_world/ts_world.yy",},"x":0,"y":0,"tiles":{"SerialiseWidth":40,"SerialiseHeight":23,"TileSerialiseData":[
+    {"tilesetId":null,"x":0,"y":0,"tiles":{"SerialiseWidth":40,"SerialiseHeight":23,"TileSerialiseData":[
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
@@ -189,7 +189,7 @@
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 ],},"visible":true,"depth":0,"userdefinedDepth":true,"inheritLayerDepth":false,"inheritLayerSettings":false,"gridX":16,"gridY":16,"layers":[],"hierarchyFrozen":false,"effectEnabled":true,"effectType":null,"properties":[],"resourceVersion":"1.0","name":"Tiles_Debris","tags":[],"resourceType":"GMRTileLayer",},
-    {"tilesetId":{"name":"ts_world","path":"tilesets/ts_world/ts_world.yy",},"x":0,"y":0,"tiles":{"SerialiseWidth":40,"SerialiseHeight":23,"TileSerialiseData":[
+    {"tilesetId":null,"x":0,"y":0,"tiles":{"SerialiseWidth":40,"SerialiseHeight":23,"TileSerialiseData":[
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2147483648,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
@@ -214,7 +214,7 @@
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2147483648,
 0,0,0,2147483648,2147483648,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,2147483648,
 ],},"visible":true,"depth":1999,"userdefinedDepth":true,"inheritLayerDepth":false,"inheritLayerSettings":false,"gridX":32,"gridY":32,"layers":[],"hierarchyFrozen":false,"effectEnabled":true,"effectType":null,"properties":[],"resourceVersion":"1.0","name":"Tiles_Surfaces","tags":[],"resourceType":"GMRTileLayer",},
-    {"tilesetId":{"name":"ts_world","path":"tilesets/ts_world/ts_world.yy",},"x":0,"y":0,"tiles":{"SerialiseWidth":40,"SerialiseHeight":23,"TileSerialiseData":[
+    {"tilesetId":null,"x":0,"y":0,"tiles":{"SerialiseWidth":40,"SerialiseHeight":23,"TileSerialiseData":[
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,

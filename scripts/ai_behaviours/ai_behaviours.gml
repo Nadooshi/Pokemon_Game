@@ -44,7 +44,7 @@ function sc_ai_new_target() {
 		_ATTACK_PURPOSE.far,
 		_ATTACK_PURPOSE.area,
 		_ATTACK_PURPOSE.barrier],
-		[1, 1, 1, 1]
+		[1, 1, 1, 0.8]
 	)
 	
 	var _attCount = ds_list_size(att_list[plannedPurpose])

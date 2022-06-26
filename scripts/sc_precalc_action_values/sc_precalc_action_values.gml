@@ -3,7 +3,7 @@ function sc_precalc_action_values(a_map, pokemon_id){
 		return false
 		
 	// _ATTACK_TYPE.range
-	a_map[? "distance"] = max(6, (a_map[? "range"] * 18) - 12)  // 60 * 0.1 * moveSpeed (3)
+	a_map[? "distance"] = max(6, (a_map[? "range"] * PixPerDist) - 12)  // 60 * 0.1 * moveSpeed (3)
 
 	switch a_map[? "type"] {
 	case _ATTACK_TYPE.lunge:

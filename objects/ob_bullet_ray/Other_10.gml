@@ -1,7 +1,4 @@
 /// @desc Init
-
-
-length = action[? "range"] * 18
 x1 = x
 y1 = y
 x2 = x1 + lengthdir_x(length, direction)

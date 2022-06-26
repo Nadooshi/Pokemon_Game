@@ -589,5 +589,6 @@ gpu_set_texrepeat(true)
 #macro courage_max_regen 2
 #macro max_distance_attack 180
 #macro disposable_action_cooldown 60
+#macro PixPerDist 18 // distance // 60 * 0.1 * 3
 
 #macro frames_rate 60

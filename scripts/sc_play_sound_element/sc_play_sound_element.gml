@@ -10,7 +10,5 @@ function sc_play_sound_element(argument0) {
 		sc_play_sound(_snd, false)
 	} else
 		show_message("Error in array! Not found '"+ string(type) + "' in action")
-
-
-
 }
+
