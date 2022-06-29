@@ -1,9 +1,16 @@
 /// @desc  Edit
 // map = trainer
 
-event_inherited()
-
 current_pokemon = ds_list_find_value(map[? parameter_name], index)
+
+with ob_frame_pokemon {
+	map = current_pokemon
+	visible = true
+	event_perform(ev_other, ev_user0)
+}
+
+//sc_endbattle_refresh_actions()
+
 if sc_does_exist(current_pokemon) {
 	sc_refresh_actions()
 

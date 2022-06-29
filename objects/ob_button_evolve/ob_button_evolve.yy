@@ -1,11 +1,17 @@
 {
-  "spriteId": null,
+  "spriteId": {
+    "name": "sp_beautySmallButton",
+    "path": "sprites/sp_beautySmallButton/sp_beautySmallButton.yy",
+  },
   "solid": false,
   "visible": true,
   "managed": true,
   "spriteMaskId": null,
   "persistent": false,
-  "parentObjectId": null,
+  "parentObjectId": {
+    "name": "ob_button",
+    "path": "objects/ob_button/ob_button.yy",
+  },
   "physicsObject": false,
   "physicsSensor": false,
   "physicsShape": 1,
@@ -19,8 +25,7 @@
   "physicsKinematic": false,
   "physicsShapePoints": [],
   "eventList": [
-    {"isDnD":false,"eventNum":4,"eventType":7,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
-    {"isDnD":false,"eventNum":27,"eventType":10,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"isDnD":false,"eventNum":0,"eventType":13,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
   ],
   "properties": [],
   "overriddenProperties": [],
@@ -29,7 +34,7 @@
     "path": "folders/Objects/End_Battle.yy",
   },
   "resourceVersion": "1.0",
-  "name": "ob_endbattle_init",
+  "name": "ob_button_evolve",
   "tags": [],
   "resourceType": "GMObject",
 }

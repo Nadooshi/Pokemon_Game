@@ -1,5 +1,8 @@
 {
-  "spriteId": null,
+  "spriteId": {
+    "name": "sp_yesno",
+    "path": "sprites/sp_yesno/sp_yesno.yy",
+  },
   "solid": false,
   "visible": true,
   "managed": true,
@@ -18,18 +21,15 @@
   "physicsStartAwake": true,
   "physicsKinematic": false,
   "physicsShapePoints": [],
-  "eventList": [
-    {"isDnD":false,"eventNum":4,"eventType":7,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
-    {"isDnD":false,"eventNum":27,"eventType":10,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
-  ],
+  "eventList": [],
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "End_Battle",
-    "path": "folders/Objects/End_Battle.yy",
+    "name": "Evolve",
+    "path": "folders/Objects/Evolve.yy",
   },
   "resourceVersion": "1.0",
-  "name": "ob_endbattle_init",
+  "name": "ob_yesno",
   "tags": [],
   "resourceType": "GMObject",
 }

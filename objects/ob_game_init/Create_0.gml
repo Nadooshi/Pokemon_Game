@@ -521,6 +521,7 @@ sc_load_trainer_fnames()
 globalvar pokemon_path;		pokemon_path = "pokedex.ini"
 globalvar pokemon_list;		pokemon_list = ds_map_create()
 globalvar pokemon_list_count
+globalvar evolution_tree;	evolution_tree = ds_map_create()
 
 var _arr = 0
 globalvar element_table;
@@ -546,6 +547,23 @@ ini_open(pokemon_path)
 		aura_table[i] = _arr
 	}
 	//=============================================================================
+	
+	var _n = ds_map_find_first(pokemon_list)
+	var _s = ""
+	while not is_undefined(_n) {
+		_s = ini_read_string("evolution_tree", _n, "")
+		if _s = "" 
+			show_message(_n + " has no evolution info!")
+		else {
+			try {
+				evolution_tree[? _n] = json_parse(_s)
+			} catch(e) {
+				show_message("Evolution info is corrupted for "+_n)
+				//evolution_tree[? _n] = {children: []}
+			} 
+		}
+		_n = ds_map_find_next(pokemon_list, _n);
+	}
 ini_close()
 
 globalvar current_pokemon;	current_pokemon = ds_map_create()
@@ -563,6 +581,7 @@ player1_trainer = noone; //sc_new_trainer()
 player2_trainer = noone; //sc_new_trainer()
 //neutral_trainer = sc_new_trainer()
 //neutral_trainer[? "name"] = "Mad pokemon"
+
 
 globalvar log_battle; log_battle = ds_list_create()
 
