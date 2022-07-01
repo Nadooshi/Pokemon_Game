@@ -22,11 +22,15 @@ while not is_undefined(_a) {
 }
 
 for (var i = 0; i < ds_list_size(current_pokemon[? "active_actions"]); i++){
+	
 	var _a = ds_map_find_first(temp_pokemon[? "actions"])
 	while not is_undefined(_a){
 		if _a = current_pokemon[? "active_actions"][| i]{
 			ds_list_set(temp_pokemon[? "active_actions"], i, _a)
 			break;
+		}
+		else {
+			ds_list_set(temp_pokemon[? "active_actions"], i, undefined)
 		}
 		_a = ds_map_find_next(temp_pokemon[? "actions"], _a)
 	}
