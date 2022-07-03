@@ -320,6 +320,7 @@ function sc_ai_give_up() {
 	plannedActionNum = -1
 	doActionNum = -1
 	target = noone
+	attack_warmup = 0
 }
 
 function sc_ai_wait_warmup_start() {

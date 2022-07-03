@@ -9,7 +9,11 @@ alarm[0] = period;
 
 sc_logging_state_cursed(pokemon_id, name, "treacherously run away.")
 
+old_threshold = pokemon_id.courage_threshold
+pokemon_id.courage_threshold = 100.1
+
 with pokemon_id {
+	sc_ai_give_up()
 	unselectables++
 	sc_composed_remove_component(control_component)
 	prev_control_component = control_component

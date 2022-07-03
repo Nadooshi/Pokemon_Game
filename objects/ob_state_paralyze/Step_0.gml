@@ -5,6 +5,6 @@ event_inherited();
 
 with pokemon_id {
 	canMove = false
-	doActionNum = -1
+	sc_ai_give_up()
 	speed = 0
 }

@@ -5,7 +5,6 @@ event_inherited();
 
 with pokemon_id {
 	speed_mod = 0
-	canMove = true
 	sc_player_stop_set()
 	unselectables--
 	if unselectables = 0 {
@@ -13,5 +12,5 @@ with pokemon_id {
 		sc_composed_add_component(prev_control_component)
 		control_component = prev_control_component
 	}
-	
+	canMove = true
 }

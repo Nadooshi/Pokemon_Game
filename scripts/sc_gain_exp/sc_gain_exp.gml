@@ -20,7 +20,7 @@ function sc_gain_exp(_object, _event, _value, _context) {
 		_pokemon.cur_exp += _val
 		if _val > 0
 			sc_logging_experience(_pokemon, _val, _event)
-		break
+		break;
 	case act_exp.use: 
 		_pokemon = _context
 		if ds_map_exists(_action, "num") {
@@ -30,18 +30,19 @@ function sc_gain_exp(_object, _event, _value, _context) {
 		_action[? "battle_exp"] += _val
 		if _val > 0
 			sc_logging_experience(_action, _val, _event)
-		break
+		break;
 	case act_exp.success:
 		// value as dmg
-		_pokemon = _context
-		if ds_map_exists(_action, "num") {
-			_action = _pokemon.action_list[| _action[? "num"]]
-			_val = round(_value * exps[act_exp.success])
-		}
-		_action[? "battle_exp"] = _action[? "battle_exp"] + _val
-		if _val > 0
-			sc_logging_experience(_action, _val, _event)
-		break
+			_pokemon = _context
+			if ds_map_exists(_action, "num") {
+				if not is_undefined(_pokemon.action_list[| _action[? "num"]])
+				_action = _pokemon.action_list[| _action[? "num"]]
+				_val = round(_value * exps[act_exp.success])
+			}
+			_action[? "battle_exp"] = _action[? "battle_exp"] + _val
+			if _val > 0
+				sc_logging_experience(_action, _val, _event)
+		break;
 	}
 
 }
