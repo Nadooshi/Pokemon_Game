@@ -21,10 +21,11 @@ onDamage = function (_dmg, _damaged_player_id, _action, _pokemon_id_attack, _sta
 		stun_active[? "name"] = "stun"
 		stun_active[? "state"] = _ABILITY_STATE.stun
 		stun_active[? "in_state"] = _ABILITY_STATE.none
-		stun_active[? "state_time"] = /* self ? */_state_id.hit_count / 2
+		stun_active[? "biome"] = _ELEMENTAL.none
+		stun_active[? "state_time"] = _state_id.hit_count / 2
 		stun_action[? "active"] = stun_active
 		with _pokemon_id_attack
-			sc_apply_state(ob_state_stun, 0, _pokemon_id_attack, stun_action);
+			sc_apply_state(ob_state_stun, 0, _damaged_player_id, stun_action);
 		ds_map_destroy(stun_action)
 		stun_action = noone
 	}	

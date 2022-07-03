@@ -54,10 +54,6 @@ if _action[? "bullet_phys"] = _BULLET_PH.chain {
 			hurt_time = other.hurt_time
 			timeout = 1
 		}
-	//	show_message(
-	//		pokemon_id.pokemon_map[? "title"] + " does chain damage to " +
-	//		chain_dmg_target.pokemon_map[? "title"]
-	//	)
 	}
 }
 
@@ -66,7 +62,6 @@ for (var i=0; i<ds_list_size(just_damaged); i++)
 with just_damaged[| i] {
 	if _action[? "delay"] = 0 {
 		// deal damage
-		//if hurt_timeout <= 0 {
 		hurt_timeout = other.hurt_time
 		sc_deal_damage(_action, other.pokemon_id)
 		

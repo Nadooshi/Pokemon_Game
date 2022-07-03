@@ -4,7 +4,7 @@ if show_hint
 if hint != "" {
 	draw_set_font(fn_card)
 	draw_set_color(c_black)
-	draw_text(mouse_x + 16, mouse_y - 24, hint)
+	draw_text(mouse_x, mouse_y - 54, hint)
 	draw_set_color(c_white)
-	draw_text(mouse_x + 14, mouse_y - 26, hint)
+	draw_text(mouse_x, mouse_y - 56, hint)
 }

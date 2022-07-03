@@ -10,7 +10,7 @@ with pokemon_id {
 		dodge_mod = 0.5
 	if accuracy_mod > -0.5
 		accuracy_mod = -0.5
-	power_reg = min(power_reg, 0.1) // 0.3
+	power_reg = min(power_reg, 0.1) // 0.2
 }
 
 alarm[0] = period;

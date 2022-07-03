@@ -15,9 +15,11 @@ if --hit_count < 0
 for (var i=0; i<ds_list_size(pokemon_id.states); i++)
 if pokemon_id.states[| i].id != id
 	switch (pokemon_id.states[| i].object_index) {
+	case ob_state_incineration:
 	case ob_state_bleeding:
 	case ob_state_infestation:
 	case ob_state_leech:
 	case ob_state_burn:
+	case ob_state_paralyze:
 		instance_destroy(pokemon_id.states[| i])
 	}

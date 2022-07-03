@@ -14,11 +14,53 @@ function sc_deal_damage(_action, _pokemon_attack) {
 	sc_hurt(_dmg, _pokemon_attack, _action);
 
 	// apply state
-	if sc_does_exist(_action[? "active"]) 
-	if not is_like(object_index, ob_barrier) {
-		var _state = ds_map_find_value(_action[? "active"], "state");
+	if sc_does_exist(_action[? "active"]) {
+		var _state = ds_map_find_value(_action[? "active"], "state")
 		var _state_obj = state_object[_state];
-		var _rate = ds_map_find_value(_action[? "active"], "state_rate");
+		var _rate = ds_map_find_value(_action[? "active"], "state_rate")
+	}
+	var ok = false
+	
+	if not is_like(object_index, ob_barrier)
+	if shield <= 0 {
+		ok = true
+	} else {
+	if _action[? "role"] = _ATTACK_ROLE.buff
+		ok = true
+	}
+
+		if sc_does_exist(_action[? "active"]) 
+		if state_object[_state] = _ABILITY_STATE.wreck
+			ok = true	
+	if _action[? "role"] = _ATTACK_ROLE.debuff
+	if _pokemon_attack != id
+		ok = true
+	
+	if _pokemon_attack != id {
+		var _s = ds_list_size(states)
+		for (var i = 0; i < _s ; i++) {
+			ok = true
+			if states[| i] > 0 // перед смертью тут -4
+			if states[| i].object_index = ob_state_reflect {
+				ok = false
+				if sc_does_exist(_action[? "active"]) 
+				if state_object[_state] = _ABILITY_STATE.wreck{
+					ok = true
+					break;
+				}
+				switch _action[? "type"] {
+					case _ATTACK_TYPE.front:
+					case _ATTACK_TYPE.lunge:
+					case _ATTACK_TYPE.melee:
+						ok = true
+				}
+				if ok break;
+			}
+		}
+	} else ok = true;
+	
+	if sc_does_exist(_action[? "active"]) 
+	if ok {
 		_rate = 25*(_rate + 1)
 		var _r_ = random_range(0, 100)
 		if object_exists(_state_obj)

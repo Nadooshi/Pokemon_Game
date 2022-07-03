@@ -604,8 +604,8 @@ gpu_set_texrepeat(true)
 //gesture_drag_distance()
 
 #macro retreat_dist 200
-#macro t_process_courage 10
-#macro courage_max_regen 2
+#macro t_process_courage 10 // frames
+#macro courage_max_regen 2 // 12 in 60 framerate
 #macro max_distance_attack 180
 #macro disposable_action_cooldown 60
 #macro PixPerDist 18 // distance // 60 * 0.1 * 3

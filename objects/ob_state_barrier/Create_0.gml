@@ -13,9 +13,9 @@ onDamage = function (_dmg, _damaged_player_id, _action, _pokemon_id_attack) {
 	with _damaged_player_id {
 		with instance_create_layer(x, y, "Particles", ob_particle_text)
 			caption = "Shield!"
-		// sc_shield_damage
 		shield -= _dmg
-		_dmg = max(0, _dmg-shield)		
+		_dmg = max(0, _dmg-shield)
+		sc_logging_info(_pokemon_id_attack.pokemon_map[? "title"]+ "`s attack blocked defens orb. Now defens orb value is: " + string(shield))
 	}
 	sc_logging_damage(_pokemon_id_attack, _damaged_player_id, _action, _dmg)
 	return _dmg	

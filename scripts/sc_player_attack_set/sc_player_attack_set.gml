@@ -172,9 +172,10 @@ function sc_player_attack_set() {
 	var _st_objs = ds_list_create()
 	for (var i=0; i<ds_list_size(states); i++)
 		ds_list_add(_st_objs, states[| i].object_index)
-	if ds_list_find_index(_st_objs, _ABILITY_STATE.revenge) != -1 {
-		_a_map[? "dmg_material"] = (health_max - health_cur) / 2
-		_a_map[? "dmg_element"] = (health_max - health_cur) / 2
+	if ds_list_find_index(_st_objs, _ABILITY_STATE.revenge) != -1
+	if _a_map [? "damage"] > 0 {
+		_a_map[? "dmg_material"] = (health_max - health_cur)
+		_a_map[? "dmg_element"] = (health_max - health_cur)
 	}
 	ds_list_destroy(_st_objs)
 	
@@ -187,7 +188,7 @@ function sc_player_attack_set() {
 		sprite_index = asset_get_index(_a_map[? "anim"])
 		image_blend = sc_make_attack_colour(_a_map)
 	}
-	if _a_map[? "repeatable"] = true
+	if _a_map[? "repeatable"] = true //true = no repeat
 		_a_map [? "cooldown"] = disposable_action_cooldown
 		
 	sc_gain_exp(_a_map, act_exp.use, 0, id)

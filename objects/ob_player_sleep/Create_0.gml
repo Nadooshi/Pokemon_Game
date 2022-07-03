@@ -16,9 +16,9 @@ doActionNum = -1
 attack_warmup = 0
 target = noone
 plannedActionNum = -1
-power_reg = 0.2
-health_reg = 0.3
-hurt_reg = 0.3
+power_reg = power_regeneration
+health_reg = health_regeneration
+hurt_reg = hurt_degeneration
 
 image_index = 2
 image_angle = choose(-90, 90)

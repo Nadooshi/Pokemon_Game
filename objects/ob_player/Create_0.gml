@@ -71,15 +71,19 @@ counter = 0
 
 power_max = 100
 power_cur = 100
-power_reg = 0.2
+#macro power_regeneration 0.2
+power_reg = power_regeneration
+mod_max_power = 1
 
 health_cur = 0
 health_max = 0
-health_reg = 0.3
+#macro health_regeneration 0.3
+health_reg = health_regeneration
 
 hurt_timeout = 0  // timeout after taking damage (sec)
 hurt_cur = 0
-hurt_reg = 0.3
+#macro hurt_degeneration 0.3
+hurt_reg = hurt_degeneration
 
 
 shield = 0 // for barrier state
@@ -115,6 +119,7 @@ in_biome = ds_list_create()
 prev_in_biome = ds_list_create()
 courage_cur = 100
 courage_threshold = random(80)+10
+fear_cur = 0
 
 mark_hostile = instance_create_layer(x,y, "Game", ob_mark_hostile)
 effect_bullet = instance_create_layer(x, y, "Particles", ob_effect_damage)

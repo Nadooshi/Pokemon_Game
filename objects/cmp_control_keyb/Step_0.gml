@@ -76,4 +76,7 @@ if canMove {
 if keys[k.Suicide]
 	sc_hurt(health_cur + 1, id, undefined)
 
-
+// escape trap
+if keys[k.breakfree]
+	sc_break_state_trap()
+	

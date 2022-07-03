@@ -1,7 +1,8 @@
 /// @desc Deal damage
 
-
 alarm[0] = period;
+power_reg = 0.3
+
 if --hit_count < 0
 	instance_destroy()
 

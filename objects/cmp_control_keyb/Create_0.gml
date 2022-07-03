@@ -14,6 +14,7 @@ enum k {
 	Bury,
 	Fly,
 	Suicide,
+	breakfree,
 	_count,
 }
 
@@ -33,6 +34,7 @@ keyCodes[k.action6, 0] = ord("F");	keyCodes[k.action6, 1] = 0
 keyCodes[k.Bury,  0] = ord("C");	keyCodes[k.Bury,  1] = 0
 keyCodes[k.Fly,   0] = ord("Z");	keyCodes[k.Fly,   1] = 0
 keyCodes[k.Suicide, 0] = vk_delete;	keyCodes[k.Suicide,   1] = 0
+keyCodes[k.breakfree, 0] = ord("X");	keyCodes[k.breakfree,   1] = 0
 
 
 

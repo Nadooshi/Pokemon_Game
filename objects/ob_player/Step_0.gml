@@ -42,9 +42,8 @@ if hurt_timeout > 0 {
 
 if canMove
 if attack_warmup <= 0
-if floor(power_cur) < power_max {	// recover power
+if floor(power_cur) < power_max // recover power
 	power_cur += power_reg * mod_reg
-}
 
 if hurt_cur > 0 {
 	hurt_cur = max(0, hurt_cur - (hurt_reg * mod_reg + health_reg)) // recover half health after damage
@@ -73,5 +72,8 @@ if attack_warmup > 0 {
 		sc_ai_give_up()
 }
 // process courage
-if (counter mod t_process_courage) = 0
-	sc_process_courage(mod_reg)
+if (counter mod t_process_courage) = 0 {
+	courage_cur = clamp(courage_cur + sc_process_courage(mod_reg), 0, 100)
+	fear_cur *= 0.1
+}
+

@@ -7,6 +7,8 @@ function sc_process_courage(mod_boost) {
 	var _en_force = 0
 	var _fr_force = 0
 	var _u_force = pokemon_map[? "rating"] + pokemon_map[? "level"] + health_cur
+	var _fear = 1 + fear_cur * 0.01 // over 100% for boost _en_force
+	var _result = 0
 	with ob_player
 	if not is_like(id.object_index, ob_barrier)
 	if id != other.id {
@@ -18,6 +20,7 @@ function sc_process_courage(mod_boost) {
 		if _d<= max_distance_attack {
 			var _rd = min(60 / _d , courage_max_regen)
 			_en_force += (_tg.pokemon_map[? "rating"] + _tg.pokemon_map[? "level"] + _tg.health_cur) * _rd
+			_en_force *= _fear
 		}
 		//friend influence
 		if sc_check_affect(_u, _tg, _ATTACK_AFFECT.friend) 
@@ -28,7 +31,8 @@ function sc_process_courage(mod_boost) {
 	}
 	var _mod_courage = (_fr_force + _u_force - _en_force) / _u_force + (0.06 * power_cur)
 	_mod_courage *= mod_boost
-	courage_cur = clamp(courage_cur + _mod_courage, 0, 100)
+	_result = _mod_courage
 	
+	return _result
 
 }
