@@ -14,6 +14,5 @@ onDamage = function (_dmg, _damaged_player_id, _action, _pokemon_id_attack, _sta
 	}
 	_dmg = sc_calculate_action_damage(_action, _damaged_player_id, _pokemon_id_attack)
 	
-	
 	return _dmg
 }

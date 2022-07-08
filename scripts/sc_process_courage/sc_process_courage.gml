@@ -7,7 +7,7 @@ function sc_process_courage(mod_boost) {
 	var _en_force = 0
 	var _fr_force = 0
 	var _u_force = pokemon_map[? "rating"] + pokemon_map[? "level"] + health_cur
-	var _fear = 1 + fear_cur * 0.01 // over 100% for boost _en_force
+	var _fear = 1 + fear_cur * 0.01 //0.01 // over 100% for boost _en_force
 	var _result = 0
 	with ob_player
 	if not is_like(id.object_index, ob_barrier)

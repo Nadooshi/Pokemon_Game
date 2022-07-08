@@ -22,8 +22,57 @@ function sc_apply_state() {
 		for (var i=0; i<ds_list_size(states); i++) {
 			_st = ds_list_find_value(states, i)
 			if instance_exists(_st) 
-			if _st.name = _name
-				return false
+			if _st.name = _name {
+				//return false
+				var _t = _action[? "active"][? "state_time"]
+				switch _action[? "active"][? "state"] {
+					case _ABILITY_STATE.barrier:
+					case _ABILITY_STATE.bleed:
+					case _ABILITY_STATE.block:
+					case _ABILITY_STATE.burn:
+					case _ABILITY_STATE.clear:
+					case _ABILITY_STATE.confidence:
+					case _ABILITY_STATE.confusion:
+					case _ABILITY_STATE.cure:
+					case _ABILITY_STATE.dextery:
+					case _ABILITY_STATE.disgust:
+					case _ABILITY_STATE.heal:
+					case _ABILITY_STATE.incineration:
+					case _ABILITY_STATE.leech:
+					case _ABILITY_STATE.loser:
+					case _ABILITY_STATE.medicine:
+					case _ABILITY_STATE.meleeup:
+					case _ABILITY_STATE.poison:
+					case _ABILITY_STATE.powerup:
+					case _ABILITY_STATE.rangeup:
+					case _ABILITY_STATE.reflect:
+					case _ABILITY_STATE.slowdown:
+					case _ABILITY_STATE.speedup:
+					case _ABILITY_STATE.stun:
+					case _ABILITY_STATE.target:
+					case _ABILITY_STATE.terror:
+					case _ABILITY_STATE.weak:{
+						_st.hit_count = min(_st.hit_count + _t, _t * 2)
+						return false
+					}
+					case _ABILITY_STATE.blast:
+					case _ABILITY_STATE.flee:
+					case _ABILITY_STATE.kamikaze:
+					case _ABILITY_STATE.knockdown:
+					case _ABILITY_STATE.lulling:
+					case _ABILITY_STATE.mindcontrol:
+					case _ABILITY_STATE.mutual:
+					case _ABILITY_STATE.paralyze:
+					case _ABILITY_STATE.random_x:
+					case _ABILITY_STATE.revenge:
+					case _ABILITY_STATE.telekinesis:
+					case _ABILITY_STATE.teleport:
+					case _ABILITY_STATE.trap:
+					case _ABILITY_STATE.wastetime:
+					case _ABILITY_STATE.wreck:
+						return false
+				}
+			}
 		}
 
 		if not sc_state_check_compatible_biome(_action) {

@@ -168,17 +168,6 @@ function sc_player_attack_set() {
 			attack_ob_id = instance_create_layer(x, y, "Particles", ob_attack)
 
 	}
-	// STAT Revenge
-/*	var _st_objs = ds_list_create()
-	for (var i=0; i<ds_list_size(states); i++)
-		ds_list_add(_st_objs, states[| i].object_index)
-	if ds_list_find_index(_st_objs, _ABILITY_STATE.revenge) != -1
-	if _a_map [? "damage"] > 0 {
-		_a_map[? "dmg_material"] = (health_max - health_cur)
-		_a_map[? "dmg_element"] = (health_max - health_cur)
-	}
-	ds_list_destroy(_st_objs)
-*/	
 	with attack_ob_id {
 		ds_map_copy(action, _a_map)
 		pokemon_id = other.id

@@ -4,3 +4,4 @@
 event_inherited();
 
 pokemon_id.moveSpeed = 0;
+

@@ -1,7 +1,7 @@
 /// @desc 
 
 var _s = 0.5 // chance use stat
-var sz_dif = pokemon_id_attack.pokemon_map[? "size"] - pokemon_id.pokemon_map[? "size"]
+var sz_dif = pokemon_id_attack.size - pokemon_id.size
 //if sz_dif > 0 _s = 1
 
 if sz_dif < 0 {

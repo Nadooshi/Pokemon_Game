@@ -78,6 +78,6 @@ if attack_warmup > 0 {
 // process courage
 if (counter mod t_process_courage) = 0 {
 	courage_cur = clamp(courage_cur + sc_process_courage(mod_reg), 0, 100)
-	fear_cur *= 0.1
+	fear_cur *= 0.98
 }
 
