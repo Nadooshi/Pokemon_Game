@@ -4,7 +4,8 @@ if not instance_exists(pokemon_id)
 	exit
 
 var _d = 0
-pokemon_id.canMove = false
+with pokemon_id
+	sc_canMove(false)
 dir = pokemon_id.dir
 
 // init hurt_time

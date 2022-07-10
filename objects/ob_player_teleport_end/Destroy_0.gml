@@ -3,7 +3,7 @@
 with pokemon_id {
 	x = other.x
 	y = other.y
-	canMove = true
+	sc_canMove(true)
 	sc_composed_add_component(cmp_collidable_player, true)
 	position_stage = other.o_position_stage
 	image_alpha = 1

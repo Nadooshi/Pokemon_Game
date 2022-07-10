@@ -1,7 +1,7 @@
 /// @desc
 
 with pokemon_id 
-	canMove = true
+	sc_canMove(true)
 
 
 event_inherited();

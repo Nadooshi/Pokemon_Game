@@ -39,10 +39,6 @@ for (var i=0; i<ds_list_size(in_biome); i++) {
 if hurt_timeout > 0 { 
 	hurt_timeout -= dTime
 }
-if power_reg <=0
-	show_message("...is wrong! Power not regen!")
-if mod_reg <=0
-	show_message("...is wrong! Power mod broke regen!")
 	
 if canMove
 if attack_warmup <= 0

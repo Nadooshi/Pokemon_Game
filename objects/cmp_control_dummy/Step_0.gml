@@ -18,17 +18,6 @@ if sc_does_exist(target) {
 	tgX = target.x
 	tgY = target.y
 }
-//scBehaviour = sc_player_stop_set()
-
-//// bury
-//if canMove {
-//	if pokemon_map[?"digable"] > 0
-//	if position_stage != _ATTACK_TG.underground
-//		event_perform(ev_other, ev_user2)
-		
-//	if _target_d > 5
-//		event_perform(ev_other, ev_user4)
-//}
 
 if attack_timeout > 0 {
 	attack_timeout -= dTime

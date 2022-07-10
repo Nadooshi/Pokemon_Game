@@ -13,6 +13,6 @@ with pokemon_id {
 		control_component = prev_control_component
 		sc_composed_add_component(control_component)
 	}
-	canMove = true
+	sc_canMove(true)
 }
 

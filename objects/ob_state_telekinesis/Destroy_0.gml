@@ -1,7 +1,8 @@
 /// @desc
 event_inherited();
 
-pokemon_id_attack.canMove = true
+with pokemon_id_attack
+	sc_canMove(true)
 
 with pokemon_id {
 	instance_change(ob_player, false)
@@ -23,5 +24,5 @@ with pokemon_id {
 		event_perform_object(ob_player, ev_destroy, 0)
 		
 	sc_composed_add_component(cmp_collidable_player, true)
-	canMove = true
+	sc_canMove(true)
 }

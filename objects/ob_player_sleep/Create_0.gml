@@ -10,7 +10,7 @@ sc_set_behaviour(sc_player_stop_set)
 o_maxSpeed = maxSpeed
 maxSpeed = 0
 moveSpeed = 0
-canMove = false
+sc_canMove(false)
 position_stage = _ATTACK_TG.ground
 doActionNum = -1
 attack_warmup = 0

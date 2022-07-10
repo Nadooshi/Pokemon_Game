@@ -9,7 +9,7 @@ alarm[0] = period;
 	
 sc_logging_state_cursed(pokemon_id, name, "does not understand what is happening.")
 doActionNum = -1
-canMove = true
+sc_canMove(true)
 attack_warmup = 0
 
 with pokemon_id {

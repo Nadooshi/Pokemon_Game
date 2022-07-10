@@ -27,7 +27,7 @@ pokemon_map = ds_map_create()
 action_list = ds_list_create()
 
 doMove = false
-canMove = true
+sc_canMove(true)
 accel = 0
 
 doActionNum = -1

@@ -9,7 +9,7 @@ if timeout<=0 {
 
 with pokemon_id_attack {
 	sc_player_stop_set()
-	canMove = false
+	sc_canMove(false)
 	speed = 0
 }
 
@@ -17,7 +17,7 @@ phi = pi * (1 - timeout/init_timeout)
 _z = 12 + sin(phi) * upgea
 
 with pokemon_id {
-	canMove = false
+	sc_canMove(false)
 	tgAngle = -other.attract_dir
 	speed = 0
 	

@@ -7,7 +7,7 @@ event_perform_object(ob_composed, ev_step, ev_step_normal)
 
 if not instance_exists(bullet) {
 	with pokemon_id {
-		canMove = true
+		sc_canMove(true)
 		sc_set_behaviour(sc_player_stop_set)
 	}
 	instance_destroy()

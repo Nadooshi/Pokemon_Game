@@ -10,7 +10,7 @@ function sc_player_attack_swoop() {
 
 	// attack end
 	if timeout<=0 {
-		canMove = true
+		sc_canMove(true)
 		sc_set_behaviour(sc_player_stop_set)
 		x = oX
 		y = oY

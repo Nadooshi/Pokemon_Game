@@ -30,4 +30,4 @@ for (var i = 0; i < ds_list_size(states); i++)
 	instance_destroy(ds_list_find_value(states, i))
 ds_list_clear(states)
 
-canMove = false
+sc_canMove(false)

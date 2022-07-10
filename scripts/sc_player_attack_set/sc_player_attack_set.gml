@@ -7,10 +7,10 @@ function sc_player_attack_set() {
 	_a_map[? "num"] = doActionNum
 
 	if not ds_exists(_a_map, ds_type_map) exit
+	sc_canMove(false)
 
 	switch (_a_map[? "type"]) {
 		case _ATTACK_TYPE.lunge:
-			canMove = false
 			sc_player_stop_set()
 			attack_ob_id = instance_create_layer(x, y, "Particles", ob_attack_lunge)
 			direction = point_direction(x, y+12, tgX, tgY+12)
@@ -25,7 +25,6 @@ function sc_player_attack_set() {
 			attack_ob_id = instance_create_layer(x, y, "Particles", ob_attack_range)
 			direction = point_direction(x, y+12, tgX, tgY+12)
 			tgAngle = direction
-			canMove = false
 			sc_player_stop_set()
 			frameSpeed = 0
 			damage_mod = range_damage_mod
@@ -37,7 +36,6 @@ function sc_player_attack_set() {
 			attack_ob_id = instance_create_layer(x, y, "Particles", ob_attack_wave)
 			direction = point_direction(x, y+12, tgX, tgY+12)
 			tgAngle = direction
-			canMove = false
 			sc_player_stop_set()
 			frameSpeed = 0
 			damage_mod = range_damage_mod
@@ -50,7 +48,6 @@ function sc_player_attack_set() {
 			attack_ob_id = instance_create_layer(x, y, "Particles", ob_attack_melee)
 			attack_ob_id.direction = direction
 			tgAngle = direction
-			canMove = false
 			sc_player_stop_set()
 			frameSpeed = 0
 			damage_mod = melee_damage_mod
@@ -64,7 +61,6 @@ function sc_player_attack_set() {
 			attack_ob_id.direction = direction
 			tgAngle = direction
 			timeout = 10
-			canMove = false
 			sc_player_stop_set()
 			frameSpeed = 0
 			damage_mod = melee_damage_mod
@@ -81,7 +77,6 @@ function sc_player_attack_set() {
 			attack_ob_id = instance_create_layer(x, y, "Particles", ob_attack_mortar)
 			direction = point_direction(x, y+12, tgX, tgY+12)
 			tgAngle = direction
-			canMove = false
 			sc_player_stop_set()
 			frameSpeed = 0
 			damage_mod = range_damage_mod
@@ -95,7 +90,6 @@ function sc_player_attack_set() {
 			attack_ob_id.direction = 0
 			tgAngle = direction
 	//		timeout = 10
-			canMove = false
 			sc_player_stop_set()
 			frameSpeed = 0
 			damage_mod = range_damage_mod
@@ -108,7 +102,6 @@ function sc_player_attack_set() {
 			attack_ob_id = instance_create_layer(x, y, "Particles", ob_attack_pool)
 			attack_ob_id.direction = 0
 			tgAngle = direction
-			canMove = false
 			sc_player_stop_set()
 			frameSpeed = 0
 			sc_set_behaviour(sc_player_attack_wait_anim)
@@ -119,7 +112,6 @@ function sc_player_attack_set() {
 			attack_ob_id = instance_create_layer(x, y, "Particles", ob_attack_cloud)
 			direction = point_direction(x, y+12, tgX, tgY+12)
 			tgAngle = direction
-			canMove = false
 			sc_player_stop_set()
 			frameSpeed = 0
 			sc_set_behaviour(sc_player_attack_wait_anim)
@@ -130,7 +122,6 @@ function sc_player_attack_set() {
 			attack_ob_id = instance_create_layer(x, y, "Particles", ob_attack_barrier)
 			direction = point_direction(x, y+12, tgX, tgY+12)
 			tgAngle = direction
-			canMove = false
 			sc_player_stop_set()
 			frameSpeed = 0
 			sc_set_behaviour(sc_player_attack_wait_anim)
@@ -138,7 +129,6 @@ function sc_player_attack_set() {
 			sc_player_move()
 			break
 		case _ATTACK_TYPE.swoop:
-			canMove = false
 			sc_player_stop_set()
 			attack_ob_id = instance_create_layer(x, y, "Particles", ob_attack_swoop)
 			direction = point_direction(x, y+12, tgX, tgY+12)
@@ -155,7 +145,6 @@ function sc_player_attack_set() {
 			attack_ob_id = instance_create_layer(x, y, "Particles", ob_attack_ray)
 			direction = point_direction(x, y+12, tgX, tgY+12)
 			tgAngle = direction
-			canMove = false
 			sc_player_stop_set()
 			frameSpeed = 0
 			damage_mod = range_damage_mod
