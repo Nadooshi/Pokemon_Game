@@ -11,6 +11,6 @@ h_marks[? player2_trainer] = ds_map_create()
 
 
 counter = 0
-radius = 18
+radius = PixPerDist
 //courage_addup = 10
 near_players = []

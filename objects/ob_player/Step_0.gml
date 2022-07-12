@@ -24,6 +24,11 @@ if script_exists(scBehaviour) or is_method(scBehaviour)
 	if script_execute(scBehaviour)
 		succeeded_behaviour = scBehaviour
 
+// Habitat
+if not place_meeting(x,y, ob_habitat)
+	on_surface_type = _SURF_TYPE.surf_solid
+sc_habitat_influence(pokemon_map[? "habitat"], on_surface_type)
+
 var mod_reg = 1
 if ds_exists(in_biome, ds_type_list)
 for (var i=0; i<ds_list_size(in_biome); i++) {
@@ -61,9 +66,9 @@ if attack_warmup > 0 {
 	attack_warmup -= dTime
 	// charge is over
 	if attack_warmup <= 0 {
+		sc_player_attack_set()
 		if object_index = ob_player_buried
 			event_perform(ev_other, ev_user2)
-		sc_player_attack_set()
 		lastActionNum = doActionNum
 		doActionNum = -1
 	}

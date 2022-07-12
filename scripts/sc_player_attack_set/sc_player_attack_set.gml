@@ -16,7 +16,7 @@ function sc_player_attack_set() {
 			direction = point_direction(x, y+12, tgX, tgY+12)
 			tgAngle = direction
 			moveSpeed = pokemon_map[? "ap"] * 0.66
-			attack_ob_id.timeout = 60 * 0.1 * _a_map[? "range"]
+			attack_ob_id.timeout = frames_rate * 0.1 * _a_map[? "range"]
 			frameSpeed = 0
 			damage_mod = melee_damage_mod
 			sc_set_behaviour(sc_player_attack_lunge)

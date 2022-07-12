@@ -32,8 +32,8 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Battle",
-    "path": "folders/Objects/Battle.yy",
+    "name": "landscape",
+    "path": "folders/Objects/Battle/landscape.yy",
   },
   "resourceVersion": "1.0",
   "name": "ob_cover",

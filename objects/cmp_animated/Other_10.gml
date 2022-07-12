@@ -8,7 +8,7 @@ if sprite_exists(sprite_index) {
 	p_stable = string_pos("stab", _tags) > 0
 	p_ray	 = string_pos("ray", _tags) > 0
 	
-	sprite_speed = 1 / (60 / sprite_get_speed(sprite_index)) // 1frame / (60 gamefps / sprite_fps)
+	sprite_speed = 1 / (frames_rate / sprite_get_speed(sprite_index))
 }
 
 // normal anim

@@ -1,10 +1,12 @@
-function sc_apply_aura(element_1, element_2){
+function sc_apply_aura(element_1, element_2, _radius){
 	// for ob_pokemon
 if is_undefined(element_1) or is_undefined(element_2)
 	exit;
 
+if is_undefined(_radius)
+	_radius = PixPerDist
 var _poke_in_aura = ds_list_create();
-var _sz = collision_circle_list(x, y, 45, ob_player, false, true, _poke_in_aura, false);
+var _sz = collision_circle_list(x, y, _radius, ob_player, false, true, _poke_in_aura, false);
 
 for (var i=0; i<_sz; i++) 
 with _poke_in_aura[| i] {

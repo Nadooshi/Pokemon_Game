@@ -5,5 +5,8 @@ if not init
 
 event_inherited()
 
-if not instance_exists(pokemon_id) or anim_ended
+if not instance_exists(pokemon_id) or anim_ended {
+	with pokemon_id
+		sc_canMove(true)
 	instance_destroy()
+}

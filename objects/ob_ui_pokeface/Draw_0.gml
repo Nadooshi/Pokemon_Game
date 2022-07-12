@@ -30,5 +30,5 @@ for (var i=0; i<ds_list_size(pokemon_id.in_biome); i++) {
 	draw_sprite_ext(sp_elemental, pokemon_id.in_biome[| i], _x, biomes_y, 0.15, 0.15, 0, c_white, 1)
 }
 
-sc_draw_caption(caption + "/n can move" + string(pokemon_id.canMove), undefined, undefined, undefined)
+//sc_draw_caption(caption, undefined, undefined, undefined)
 

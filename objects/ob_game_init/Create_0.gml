@@ -496,9 +496,15 @@ enum _POSITION {
 }
 //////////////////////////////////
 enum _HABITAT{
-	_all,
-	_ground,
-	_water
+	amphibian,
+	ground,
+	water
+}
+enum _SURF_TYPE{
+	surf_solid, // for ground
+	surf_liquid, // for simple water
+	surf_deepLiquid, // for ocean
+	surf_abbyss // for hole
 }
 //////////////////////////////////
 globalvar trainer_inv_size; trainer_inv_size = 16;

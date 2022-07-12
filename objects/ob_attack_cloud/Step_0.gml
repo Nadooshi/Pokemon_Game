@@ -12,8 +12,8 @@ if not shot_done {
 	ds_map_copy(bullet.action, action)
 	bullet.pokemon_id = pokemon_id
 	bullet.hurt_time = hurt_time
-	bullet.timeout = 60 * action[? "range"]
-	bullet.radius = (action[? "radius"] + 2) * 8 // + 1) * 8
+	bullet.timeout = frames_rate * action[? "range"]
+	bullet.radius = (action[? "radius"] + 2) * (PixPerDist / 2)
 	bullet.damage_mod = damage_mod
 	bullet.accuracy_mod = accuracy_mod
 	bullet.direction = pokemon_id.direction
@@ -28,5 +28,8 @@ if not shot_done {
 
 }
 
-if not instance_exists(pokemon_id) or anim_ended
+if not instance_exists(pokemon_id) or anim_ended {
+	with pokemon_id
+		sc_canMove(true)
 	instance_destroy()
+}

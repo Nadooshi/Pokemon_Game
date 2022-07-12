@@ -5,6 +5,7 @@
   },
   "solid": false,
   "visible": true,
+  "managed": true,
   "spriteMaskId": null,
   "persistent": false,
   "parentObjectId": null,
@@ -31,7 +32,7 @@
     "path": "folders/Objects/Battle/Weather.yy",
   },
   "resourceVersion": "1.0",
-  "name": "ob_weather_skycloud",
+  "name": "ob_weather_skycloud_deprecated",
   "tags": [],
   "resourceType": "GMObject",
 }

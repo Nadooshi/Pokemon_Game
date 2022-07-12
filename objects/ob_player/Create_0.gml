@@ -103,6 +103,9 @@ frags = 0
 moveSpeed = 0
 maxSpeed = 0
 
+on_surface_type = _SURF_TYPE.surf_solid
+hab_maxSpeed_mod = 1 // множитель изменяет maxSpeed в sc_player_move_set
+
 trainer = noone
 position_stage = _ATTACK_TG.ground
 
@@ -115,6 +118,7 @@ alarm_set(0,1)
 alarm_set(1,1)
 alarm_set(3, frames_rate) // 60
 
+clear_sky = true
 in_biome = ds_list_create()
 prev_in_biome = ds_list_create()
 courage_cur = 100

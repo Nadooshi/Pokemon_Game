@@ -8,9 +8,11 @@ function sc_player_move() {
 		moveSpeed = 0
 		direction = tgAngle
 	}
-	
-	if canMove
-		moveSpeed = max(0, min(moveSpeed + accel, maxSpeed + speed_mod))
+	// move
+	if canMove {
+		var _final_mxSpeed = (maxSpeed + speed_mod) * hab_maxSpeed_mod
+		moveSpeed = max(0, min(moveSpeed + accel, _final_mxSpeed))
+	}
 
 	if (abs(aDiff) < dAngle)
 		direction = tgAngle
