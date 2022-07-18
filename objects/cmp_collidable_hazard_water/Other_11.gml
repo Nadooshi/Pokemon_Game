@@ -1,7 +1,9 @@
-/// @desc After collision (EMPTY)
-if is_like(collided_with.object_index, ob_hab_water)
-with coll_area {
-	speed = 1.5 //parent.speed
+/// @desc Atfer collision
+
+
+if is_like(collided_with.object_index, ob_player_buried) 
+with collided_with.coll_area {
+	speed = 1 //parent.speed
 	direction = point_direction(xprevious, yprevious, x, y) //parent.direction
 	move_bounce_solid(false)
 	x += hspeed

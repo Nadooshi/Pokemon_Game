@@ -3,8 +3,8 @@
 // Inherit the parent event
 event_inherited();
 
-var _dx = x + lengthdir_x(8 + pokemon_id.pokemon_map[? "size"] * 3, direction) 
-var _dy = y + lengthdir_y(8 + pokemon_id.pokemon_map[? "size"] * 2, direction)
+var _dx = x + cos(degtorad(-direction)) * (pokemon_id.pokemon_map[? "size"] * 3 + PixPerDist)
+var _dy = y + sin(degtorad(-direction)) * (pokemon_id.pokemon_map[? "size"] * 2 + PixPerDist)
 
 with instance_create_layer(_dx, _dy, "Particles", ob_bullet_pool) {
 	ds_map_copy(action, other.action)

@@ -100,7 +100,7 @@ function sc_player_attack_set() {
 		case _ATTACK_TYPE.pool:
 			direction = point_direction(x, y+12, tgX, tgY+12)
 			attack_ob_id = instance_create_layer(x, y, "Particles", ob_attack_pool)
-			attack_ob_id.direction = 0
+			attack_ob_id.direction = direction
 			tgAngle = direction
 			sc_player_stop_set()
 			frameSpeed = 0

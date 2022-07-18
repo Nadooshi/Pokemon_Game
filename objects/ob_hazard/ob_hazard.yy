@@ -33,7 +33,7 @@
   ],
   "properties": [
     {"varType":0,"value":"0","rangeEnabled":false,"rangeMin":0.0,"rangeMax":10.0,"listItems":[],"multiselect":false,"filters":[],"resourceVersion":"1.0","name":"r_close_air","tags":[],"resourceType":"GMObjectProperty",},
-    {"varType":6,"value":"0","rangeEnabled":false,"rangeMin":0.0,"rangeMax":10.0,"listItems":[
+    {"varType":6,"value":"_ELEMENTAL.none","rangeEnabled":false,"rangeMin":0.0,"rangeMax":10.0,"listItems":[
         "_ELEMENTAL.white",
         "_ELEMENTAL.dark",
         "_ELEMENTAL.flame",

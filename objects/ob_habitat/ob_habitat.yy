@@ -5,7 +5,10 @@
   "managed": true,
   "spriteMaskId": null,
   "persistent": false,
-  "parentObjectId": null,
+  "parentObjectId": {
+    "name": "ob_composed",
+    "path": "objects/ob_composed/ob_composed.yy",
+  },
   "physicsObject": false,
   "physicsSensor": false,
   "physicsShape": 1,

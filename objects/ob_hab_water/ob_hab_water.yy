@@ -3,7 +3,7 @@
     "name": "sp_habitat_water",
     "path": "sprites/sp_habitat_water/sp_habitat_water.yy",
   },
-  "solid": false,
+  "solid": true,
   "visible": true,
   "managed": true,
   "spriteMaskId": null,

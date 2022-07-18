@@ -1,10 +1,10 @@
 {
   "spriteId": {
-    "name": "sp_shadowworld",
-    "path": "sprites/sp_shadowworld/sp_shadowworld.yy",
+    "name": "sp_hazard",
+    "path": "sprites/sp_hazard/sp_hazard.yy",
   },
   "solid": false,
-  "visible": true,
+  "visible": false,
   "managed": true,
   "spriteMaskId": null,
   "persistent": false,
@@ -25,7 +25,10 @@
   "physicsKinematic": false,
   "physicsShapePoints": [],
   "eventList": [
+    {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"isDnD":false,"eventNum":1,"eventType":3,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
     {"isDnD":false,"eventNum":11,"eventType":7,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"isDnD":false,"eventNum":10,"eventType":7,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
   ],
   "properties": [],
   "overriddenProperties": [],
@@ -34,7 +37,7 @@
     "path": "folders/Objects/Battle/components.yy",
   },
   "resourceVersion": "1.0",
-  "name": "cmp_collidable_player_air_buried",
+  "name": "cmp_collidable_hazard_water",
   "tags": [],
   "resourceType": "GMObject",
 }
