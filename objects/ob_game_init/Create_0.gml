@@ -482,7 +482,7 @@ enum _SIZE {
 	giant,
 	immobile
 }
-globalvar size_text var;
+globalvar size_text;
 size_text[_SIZE.tiny	] = "tiny"
 size_text[_SIZE.normal	] = "normal"
 size_text[_SIZE.big		] = "big"
@@ -506,6 +506,25 @@ enum _SURF_TYPE{
 	surf_deepLiquid, // for ocean
 	surf_abbyss // for hole
 }
+//////////////////////////////////
+enum _WEATHER{
+	none,
+	clear,
+	foggy,
+	cloudy,
+	rainy,
+	stormy
+}
+enum _FALLOUT_TYPE { //вид осадков: дождь снег ...
+	rain,
+	snow,
+	ember
+}
+globalvar weather, fallout;
+weather = _WEATHER.rainy
+fallout = _FALLOUT_TYPE.ember
+//weather = irandom_range(_WEATHER.none, _WEATHER.stormy)
+
 //////////////////////////////////
 globalvar trainer_inv_size; trainer_inv_size = 16;
 
@@ -555,7 +574,7 @@ ini_open(pokemon_path)
 	//=============================================================================
 	
 	var _n = ds_map_find_first(pokemon_list)
-	var _s = ""
+	var _s = "", e
 	while not is_undefined(_n) {
 		_s = ini_read_string("evolution_tree", _n, "")
 		if _s = "" 

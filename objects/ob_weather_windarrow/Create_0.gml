@@ -1,7 +1,6 @@
 /// @desc
 
-wind_power = 0
-wind_dir = 0   // radians
+wind_dir = 0
 
 oX = x
 oY = y

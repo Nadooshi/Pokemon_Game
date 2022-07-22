@@ -1,7 +1,7 @@
 /// @desc
 
 wind_d_dir = random(5)-10
-wind_power = random(0.5)
+wind_power = random(max_wind_power)
 caption = string(wind_power * 6) + " - m/s"
 
 

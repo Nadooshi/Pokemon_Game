@@ -1,5 +1,3 @@
-// Script assets have changed for v2.3.0 see
-// https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function sc_choose(variant_arr, rates_arr) {
 	var _vcount = array_length(variant_arr)
 	if _vcount != array_length(rates_arr)
