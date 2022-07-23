@@ -16,7 +16,7 @@ switch _surfase_type {
 		if _habitat = _HABITAT.ground
 			hab_maxSpeed_mod = 0.3
 		if _habitat = _HABITAT.amphibian
-			hab_maxSpeed_mod = 1
+			hab_maxSpeed_mod = 0.75
 	}
 	break;
 	case _SURF_TYPE.surf_deepLiquid: { // нет объекта

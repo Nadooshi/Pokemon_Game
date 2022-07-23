@@ -515,16 +515,18 @@ enum _WEATHER{
 	rainy,
 	stormy
 }
+//weather = irandom_range(_WEATHER.none, _WEATHER.stormy)
 enum _FALLOUT_TYPE { //вид осадков: дождь снег ...
+	none,
 	rain,
 	snow,
 	ember
 }
 globalvar weather, fallout;
-weather = _WEATHER.rainy
-fallout = _FALLOUT_TYPE.ember
-//weather = irandom_range(_WEATHER.none, _WEATHER.stormy)
-
+weather = _WEATHER.cloudy
+fallout = _FALLOUT_TYPE.none
+globalvar is_pmTime;
+is_pmTime = true
 //////////////////////////////////
 globalvar trainer_inv_size; trainer_inv_size = 16;
 
@@ -622,7 +624,7 @@ for (var i=0; i<_n; i++) {
 	ds_map_destroy(_info)
 }
 
-application_surface_enable(false)
+application_surface_enable(true)
 gpu_set_texrepeat(true)
 
 //gesture_drag_time(0.075)
