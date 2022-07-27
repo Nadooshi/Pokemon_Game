@@ -4,23 +4,23 @@ layer_set_visible("Effect_daytime", is_pmTime)
 // set param filter cloud
 switch weather {
 	case _WEATHER.clear: {
-		c_color_tint = [1, 1, 1, 0]
+		c_color_tint = [1, 1, 1]
 		break;
 	}
 	case _WEATHER.cloudy: {
-		c_color_tint = [1, 1, 1, 0]
+		c_color_tint = [1, 1, 1]
 		break;
 	}
 	case _WEATHER.foggy: {
-		c_color_tint = [0.8, 0.8, 0.8, 0]
+		c_color_tint = [0.8, 0.8, 0.8]
 		break;
 	}
 	case _WEATHER.rainy: {
-		c_color_tint = [0.799, 0.784, 0.717, 0]
+		c_color_tint = [0.799, 0.784, 0.717]
 		break;
 	}
 	case _WEATHER.stormy: {
-		c_color_tint = [0.55, 0.55, 0.48, 0]
+		c_color_tint = [0.55, 0.55, 0.48]
 		break;
 	}
 }
@@ -60,6 +60,7 @@ switch weather {
 switch fallout {
 	case _FALLOUT_TYPE.rain :{
 		p_type = part_rain
+		sc_play_sound(snd_rain, true, 1, 0.75)
 		break;
 	}
 	case _FALLOUT_TYPE.snow :{

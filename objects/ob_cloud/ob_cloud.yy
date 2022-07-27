@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "sp_cloud",
-    "path": "sprites/sp_cloud/sp_cloud.yy",
+    "name": "sp_weather_cloud",
+    "path": "sprites/sp_weather_cloud/sp_weather_cloud.yy",
   },
   "solid": false,
   "visible": true,

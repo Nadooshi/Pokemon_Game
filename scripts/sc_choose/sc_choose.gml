@@ -1,4 +1,5 @@
 function sc_choose(variant_arr, rates_arr) {
+	// to do иногда ничего не выбирает, выдаёт undefined
 	var _vcount = array_length(variant_arr)
 	if _vcount != array_length(rates_arr)
 		return false
@@ -15,4 +16,5 @@ function sc_choose(variant_arr, rates_arr) {
 			return variant_arr[i]
 		_range+=rates_arr[i]
 	}
+	return false
 }

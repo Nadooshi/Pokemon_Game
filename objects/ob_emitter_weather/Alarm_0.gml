@@ -2,7 +2,7 @@
 if weather = _WEATHER.cloudy
 switch mode {
 	case  0 :{// cloud
-		tg_color_tint = [0.699, 0.684, 0.617]
+		tg_color_tint = [0.599, 0.584, 0.517]
 		mode = 1
 		break;
 	}

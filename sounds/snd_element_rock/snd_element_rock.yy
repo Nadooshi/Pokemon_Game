@@ -1,4 +1,5 @@
 {
+  "conversionMode": 0,
   "compression": 0,
   "volume": 1.0,
   "preload": false,
@@ -10,8 +11,8 @@
     "name": "audiogroup_default",
     "path": "audiogroups/audiogroup_default",
   },
-  "soundFile": "snd_element_rock",
-  "duration": 1.443503,
+  "soundFile": "snd_element_rock.mp3",
+  "duration": 1.56725,
   "parent": {
     "name": "Attack_Elements",
     "path": "folders/Sounds/Attack_Elements.yy",

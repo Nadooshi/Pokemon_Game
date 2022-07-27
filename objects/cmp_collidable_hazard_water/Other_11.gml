@@ -1,7 +1,8 @@
 /// @desc Atfer collision
 
 
-if is_like(collided_with.object_index, ob_player_buried) 
+if is_like(collided_with.object_index, ob_player)
+if collided_with.position_stage = _ATTACK_TG.underground
 with collided_with.coll_area {
 	speed = 1 //parent.speed
 	direction = point_direction(xprevious, yprevious, x, y) //parent.direction

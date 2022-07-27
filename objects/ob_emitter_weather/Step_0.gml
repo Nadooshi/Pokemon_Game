@@ -1,13 +1,17 @@
 /// @desc 
 // process particle effect
-if fallout != _FALLOUT_TYPE.none {
-	var _x, _y, _h, _w
-	_x = camera_get_view_x(view_camera[0])
-	_y = camera_get_view_y(view_camera[0])
-	_h = camera_get_view_height(view_camera[0])
-	_w = camera_get_view_width(view_camera[0])
-	part_emitter_region(part_sys_weather, emi_weather, _x, _x+_w, _y, _y, ps_shape_line, ps_distr_linear)
-}
+var _x, _y, _h, _w
+_x = camera_get_view_x(view_camera[0])
+_y = camera_get_view_y(view_camera[0])
+_h = camera_get_view_height(view_camera[0])
+_w = camera_get_view_width(view_camera[0])
+part_system_position(part_sys_weather, _x, _y)
+
+if fallout != _FALLOUT_TYPE.none 
+	part_emitter_region(part_sys_weather, emi_weather, -100, _w + 100, 0, 0, ps_shape_line, ps_distr_linear)
+
+
+
 
 //process cloud
 if weather = _WEATHER.cloudy{
@@ -41,4 +45,12 @@ if weather = _WEATHER.cloudy{
 		clear_sky = false
 
 }
+
+if weather = _WEATHER.stormy
+if fallout = _FALLOUT_TYPE.rain
+	timeline_index = tl_process_weather_thunder
+
+if alarm[1] < 0
+	alarm_set(1, frames_rate * (10 + random(60)))
+	
 

@@ -15,7 +15,7 @@
   "VTile": false,
   "For3D": false,
   "width": 280,
-  "height": 372,
+  "height": 370,
   "textureGroupId": {
     "name": "Default",
     "path": "texturegroups/Default",
@@ -24,25 +24,25 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"d9bf55c5-34c1-4790-97ee-34d279901388","path":"sprites/sp_little_frame_spine/sp_little_frame_spine.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"d9bf55c5-34c1-4790-97ee-34d279901388","path":"sprites/sp_little_frame_spine/sp_little_frame_spine.yy",},"LayerId":{"name":"07e7a51c-100e-47f9-ab1f-e10d31c197e7","path":"sprites/sp_little_frame_spine/sp_little_frame_spine.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sp_little_frame_spine","path":"sprites/sp_little_frame_spine/sp_little_frame_spine.yy",},"resourceVersion":"1.0","name":"d9bf55c5-34c1-4790-97ee-34d279901388","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"88e9bfe4-55fc-423a-8b2c-049f94134d41","path":"sprites/sp_little_frame_spine/sp_little_frame_spine.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"88e9bfe4-55fc-423a-8b2c-049f94134d41","path":"sprites/sp_little_frame_spine/sp_little_frame_spine.yy",},"LayerId":{"name":"791c3dd6-fbcd-41f1-a5cd-39a4cc162ef2","path":"sprites/sp_little_frame_spine/sp_little_frame_spine.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"sp_little_frame_spine","path":"sprites/sp_little_frame_spine/sp_little_frame_spine.yy",},"resourceVersion":"1.0","name":"88e9bfe4-55fc-423a-8b2c-049f94134d41","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
     "spriteId": {"name":"sp_little_frame_spine","path":"sprites/sp_little_frame_spine/sp_little_frame_spine.yy",},
     "timeUnits": 1,
     "playback": 1,
-    "playbackSpeed": 30.0,
+    "playbackSpeed": 15.0,
     "playbackSpeedType": 0,
     "autoRecord": true,
     "volume": 1.0,
     "length": 1.0,
-    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
-    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
+    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MessageEventKeyframe",},
+    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MomentsEventKeyframe",},
     "tracks": [
       {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"8836d01d-6a54-4d61-9b2d-f46dcd0139e2","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"d9bf55c5-34c1-4790-97ee-34d279901388","path":"sprites/sp_little_frame_spine/sp_little_frame_spine.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+            {"id":"2b77ec68-5a2f-4f41-8e04-5d0a9dd31847","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"88e9bfe4-55fc-423a-8b2c-049f94134d41","path":"sprites/sp_little_frame_spine/sp_little_frame_spine.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"SpriteFrameKeyframe",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": false,
@@ -55,7 +55,7 @@
     "backdropXOffset": 0.0,
     "backdropYOffset": 0.0,
     "xorigin": 140,
-    "yorigin": 216,
+    "yorigin": 214,
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"sp_little_frame_spine","path":"sprites/sp_little_frame_spine/sp_little_frame_spine.yy",},
@@ -65,7 +65,7 @@
     "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"07e7a51c-100e-47f9-ab1f-e10d31c197e7","tags":[],"resourceType":"GMImageLayer",},
+    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"791c3dd6-fbcd-41f1-a5cd-39a4cc162ef2","tags":[],"resourceType":"GMImageLayer",},
   ],
   "nineSlice": null,
   "parent": {

@@ -1,5 +1,4 @@
 /// @desc
-
 c_c_t = [1, 1, 1] // constant_color_tint
 if is_pmTime {
 	var _ef = layer_get_fx("Effect_daytime")

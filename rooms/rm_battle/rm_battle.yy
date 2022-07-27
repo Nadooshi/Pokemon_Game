@@ -192,7 +192,7 @@
       ],"hierarchyFrozen":true,"effectEnabled":true,"effectType":null,"properties":[],"resourceVersion":"1.0","name":"UI","tags":[],"resourceType":"GMRInstanceLayer",},
     {"instances":[],"visible":true,"depth":-4700,"userdefinedDepth":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"gridX":8,"gridY":8,"layers":[],"hierarchyFrozen":true,"effectEnabled":true,"effectType":null,"properties":[],"resourceVersion":"1.0","name":"UI_bar","tags":[],"resourceType":"GMRInstanceLayer",},
     {"visible":true,"depth":-4600,"userdefinedDepth":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"gridX":32,"gridY":32,"layers":[],"hierarchyFrozen":false,"effectEnabled":true,"effectType":"_filter_tintfilter","properties":[
-        {"type":1,"name":"g_TintCol","value":"#FF7F6458",},
+        {"type":1,"name":"g_TintCol","value":"#FFB2816B",},
       ],"resourceVersion":"1.0","name":"Effect_daytime","tags":[],"resourceType":"GMREffectLayer",},
     {"visible":true,"depth":-4500,"userdefinedDepth":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"gridX":32,"gridY":32,"layers":[],"hierarchyFrozen":false,"effectEnabled":true,"effectType":null,"properties":[],"resourceVersion":"1.0","name":"Effect_cloud","tags":[],"resourceType":"GMREffectLayer",},
     {"visible":true,"depth":-4400,"userdefinedDepth":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"gridX":32,"gridY":32,"layers":[],"hierarchyFrozen":false,"effectEnabled":true,"effectType":null,"properties":[],"resourceVersion":"1.0","name":"Effect_weather","tags":[],"resourceType":"GMREffectLayer",},

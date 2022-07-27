@@ -507,6 +507,7 @@ enum _SURF_TYPE{
 	surf_abbyss // for hole
 }
 //////////////////////////////////
+#region WEATHER
 enum _WEATHER{
 	none,
 	clear,
@@ -519,14 +520,17 @@ enum _WEATHER{
 enum _FALLOUT_TYPE { //вид осадков: дождь снег ...
 	none,
 	rain,
-	snow,
+	snow, // запрограммировано, но негде использовать
 	ember
 }
-globalvar weather, fallout;
-weather = _WEATHER.cloudy
-fallout = _FALLOUT_TYPE.none
-globalvar is_pmTime;
-is_pmTime = true
+globalvar weather, fallout, is_pmTime;;
+weather = irandom_range(1,5)
+fallout = irandom(1)
+is_pmTime = irandom(1)
+
+globalvar part_system_wind;
+part_system_wind = part_system_create()
+#endregion
 //////////////////////////////////
 globalvar trainer_inv_size; trainer_inv_size = 16;
 
