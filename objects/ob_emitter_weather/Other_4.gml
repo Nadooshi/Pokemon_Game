@@ -24,7 +24,7 @@ switch weather {
 		break;
 	}
 }
-fn_refresh_screen_filter(c_color_tint)
+sc_refresh_screen_filter(c_color_tint, c_c_t)
 //=========================
 alarm_set(0,1)
 
@@ -52,11 +52,14 @@ switch weather {
 		p_count = 1
 		break;
 	}
-	case _WEATHER.stormy: {
+	case _WEATHER.stormy: { // create related fallout
 		p_count = 2
+		alarm_set(1, frames_rate * random_range(2, 15))
 		break;
 	}
 }
+
+
 switch fallout {
 	case _FALLOUT_TYPE.rain :{
 		p_type = part_rain

@@ -524,9 +524,9 @@ enum _FALLOUT_TYPE { //вид осадков: дождь снег ...
 	ember
 }
 globalvar weather, fallout, is_pmTime;;
-weather = irandom_range(1,5)
-fallout = irandom(1)
-is_pmTime = irandom(1)
+weather = _WEATHER.stormy //irandom_range(1,5)
+fallout = _FALLOUT_TYPE.rain //irandom(1)
+is_pmTime = false//irandom(1)
 
 globalvar part_system_wind;
 part_system_wind = part_system_create()

@@ -1,6 +1,6 @@
 /// @desc spawn wind_emitters
 var a = instance_number(ob_wind_emitter)
-if not spawn_emi or a > 5 {
+if not spawn_emi or a > 7 {
 		alarm_set(1, -1)
 		exit;
 }
@@ -11,3 +11,4 @@ instance_create_layer(_x, _y, "Game", ob_wind_emitter, {
 	wind_power	: other.wind_power,
 	wind_dir	: other.wind_dir
 })
+

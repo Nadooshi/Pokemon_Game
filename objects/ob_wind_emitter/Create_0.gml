@@ -15,3 +15,9 @@ part_emitter_stream(part_system_wind, part_wind_emitter, part_leaf_blow, -5)
 
 alarm_set(1, frames_rate * (3 + random(5)))
 
+snd_g = wind_power - 1
+if snd_g < 0.5
+	snd_g = 0.5
+snd = choose(snd_wind_1, snd_wind_2, snd_wind_3, snd_wind_4, snd_wind_5, snd_wind_6, snd_wind_7, snd_wind_8)
+sc_play_sound(snd, false, undefined, snd_g)
+

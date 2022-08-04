@@ -1,12 +1,12 @@
 /// @desc Blowing off
 
+if spawn_emi
+	alarm_set(1, frames_rate * random(2))
+
 wind_dir += wind_d_dir
 wind_d_dir *= 0.94
 var mx_l = lengthdir_x(max_wind_power, 0)
 var mod_dir = 45 * (lengthdir_x(wind_power, wind_dir) / mx_l)
-
-if spawn_emi
-	alarm_set(1, 1)
 	
 // blowing off
 with ob_emitter_weather {

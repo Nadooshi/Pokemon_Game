@@ -11,8 +11,8 @@
     "name": "audiogroup_default",
     "path": "audiogroups/audiogroup_default",
   },
-  "soundFile": "snd_thunderstorm_1",
-  "duration": 0.0,
+  "soundFile": "snd_thunderstorm_1.mp3",
+  "duration": 22.334667,
   "parent": {
     "name": "Weather",
     "path": "folders/Sounds/Weather.yy",

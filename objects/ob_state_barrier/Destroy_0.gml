@@ -2,6 +2,8 @@
 
 // Inherit the parent event
 event_inherited();
+if instance_exists(pokemon_id)
+	exit;
 
 for (var i=0; i<ds_list_size(pokemon_id.states); i++)
 if pokemon_id.states[| i].id = id 

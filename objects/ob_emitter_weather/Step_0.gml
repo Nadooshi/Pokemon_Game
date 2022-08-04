@@ -33,7 +33,7 @@ if weather = _WEATHER.cloudy{
 				d_color_tint[i] = 0
 			}
 		}
-		fn_refresh_screen_filter(c_color_tint)
+		sc_refresh_screen_filter(c_color_tint, c_c_t)
 	} else {
 		proc_cnt = frames_rate
 		d_color_tint = [0,0,0]
@@ -46,11 +46,13 @@ if weather = _WEATHER.cloudy{
 
 }
 
-if weather = _WEATHER.stormy
-if fallout = _FALLOUT_TYPE.rain
-	timeline_index = tl_process_weather_thunder
 
-if alarm[1] < 0
-	alarm_set(1, frames_rate * (10 + random(60)))
-	
+
+if timeline_position > timeline_max_moment(timeline_index) {
+	with obj_rel_fallout
+		instance_destroy()
+	timeline_running = false
+}
+
+
 

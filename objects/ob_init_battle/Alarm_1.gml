@@ -25,6 +25,23 @@ with ob_player {
 		case _WEATHER.stormy:
 			clear_sky = false
 	}
+	switch fallout {
+		case _FALLOUT_TYPE.rain :{
+			if ds_list_find_index(in_biome, _MATERIAL.water) = -1
+				ds_list_add(in_biome, _MATERIAL.water)
+			break;
+		}
+		case _FALLOUT_TYPE.snow :{
+			if ds_list_find_index(in_biome, _MATERIAL.frozen) = -1
+				ds_list_add(in_biome, _MATERIAL.frozen)
+			break;
+		}
+		case _FALLOUT_TYPE.ember :{
+			if ds_list_find_index(in_biome, _MATERIAL.flame) = -1
+				ds_list_add(in_biome, _MATERIAL.flame)
+			break;
+		}
+	}
 	
 	if ds_list_find_index(in_biome, _MATERIAL.plant) = -1
 		ds_list_add(in_biome, _MATERIAL.plant)
