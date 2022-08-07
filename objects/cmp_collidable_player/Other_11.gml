@@ -16,5 +16,3 @@ if is_like(collided_with.object_index, ob_player) {
 		}
 	}
 }
-x = coll_area.x
-y = coll_area.y - 12

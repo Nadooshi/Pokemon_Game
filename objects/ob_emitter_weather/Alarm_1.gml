@@ -1,6 +1,6 @@
 /// @desc create related fallouts
-var _x = 500//200 + (random(room_width) - 200)
-var _y = 500//200 + (random(room_height) - 200)
+var _x = 200 + (random(room_width) - 200)
+var _y = 200 + (random(room_height) - 200)
 
 switch fallout {
 	case _FALLOUT_TYPE.rain: {

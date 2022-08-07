@@ -1,11 +1,7 @@
 /// @desc
 
-sc_composed_add_component(cmp_collidable_hazard_round)
-
 alarm_set(1, 30)
 alarm_set(2, 30)
-
-event_inherited();
 
 depth = (room_height - bbox_top) * 0.5
 tiles = []

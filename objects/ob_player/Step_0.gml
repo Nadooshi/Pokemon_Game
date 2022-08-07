@@ -25,9 +25,11 @@ if script_exists(scBehaviour) or is_method(scBehaviour)
 		succeeded_behaviour = scBehaviour
 
 // Habitat
-if not place_meeting(x,y, ob_habitat)
-	on_surface_type = _SURF_TYPE.surf_solid
-sc_habitat_influence(pokemon_map[? "habitat"], on_surface_type)
+if position_stage != _ATTACK_TG.air {
+	if not place_meeting(x,y, ob_habitat)
+		on_surface_type = _SURF_TYPE.surf_solid
+	sc_habitat_influence(pokemon_map[? "habitat"], on_surface_type)
+}
 
 var mod_reg = 1
 if ds_exists(in_biome, ds_type_list)

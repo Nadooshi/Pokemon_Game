@@ -524,15 +524,16 @@ enum _FALLOUT_TYPE { //вид осадков: дождь снег ...
 	ember
 }
 globalvar weather, fallout, is_pmTime;;
-weather = _WEATHER.stormy //irandom_range(1,5)
-fallout = _FALLOUT_TYPE.rain //irandom(1)
-is_pmTime = false//irandom(1)
+weather = irandom_range(1,5)
+fallout = irandom(1)
+is_pmTime = irandom(1)
 
 globalvar part_system_wind;
 part_system_wind = part_system_create()
 #endregion
 //////////////////////////////////
 globalvar trainer_inv_size; trainer_inv_size = 16;
+globalvar previous_room;
 
 globalvar popup_appeared; popup_appeared = false
 
@@ -543,7 +544,7 @@ trainer_preset[? "avatar"]	= irandom(sprite_get_number(sp_trainer_avatar))   // 
 
 globalvar current_trainer;	current_trainer = ds_map_create()
 
-globalvar trainer_fnames;	trainer_fnames = [] 
+globalvar trainer_fnames;	trainer_fnames = []
 globalvar trainer_count;	trainer_count = 0
 
 
