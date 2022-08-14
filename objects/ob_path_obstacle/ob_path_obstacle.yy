@@ -1,17 +1,11 @@
 {
-  "spriteId": {
-    "name": "sp_habitat_water",
-    "path": "sprites/sp_habitat_water/sp_habitat_water.yy",
-  },
-  "solid": false,
+  "spriteId": null,
+  "solid": true,
   "visible": true,
   "managed": true,
   "spriteMaskId": null,
   "persistent": false,
-  "parentObjectId": {
-    "name": "ob_habitat",
-    "path": "objects/ob_habitat/ob_habitat.yy",
-  },
+  "parentObjectId": null,
   "physicsObject": false,
   "physicsSensor": false,
   "physicsShape": 1,
@@ -24,10 +18,7 @@
   "physicsStartAwake": true,
   "physicsKinematic": false,
   "physicsShapePoints": [],
-  "eventList": [
-    {"isDnD":false,"eventNum":0,"eventType":2,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
-    {"isDnD":false,"eventNum":11,"eventType":7,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
-  ],
+  "eventList": [],
   "properties": [],
   "overriddenProperties": [],
   "parent": {
@@ -35,7 +26,7 @@
     "path": "folders/Objects/Battle/landscape.yy",
   },
   "resourceVersion": "1.0",
-  "name": "ob_hab_water",
+  "name": "ob_path_obstacle",
   "tags": [],
   "resourceType": "GMObject",
 }

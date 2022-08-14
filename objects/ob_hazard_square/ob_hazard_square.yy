@@ -3,7 +3,7 @@
     "name": "sp_hazard2",
     "path": "sprites/sp_hazard2/sp_hazard2.yy",
   },
-  "solid": true,
+  "solid": false,
   "visible": true,
   "managed": true,
   "spriteMaskId": null,

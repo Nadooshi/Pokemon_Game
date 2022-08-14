@@ -14,7 +14,7 @@ if sc_does_exist(target) {
 
 with path_target {
 	mp_potential_settings(120, 10, 15, true)
-	mp_potential_path_object(path, other.tgX, other.tgY, other.maxSpeed*10, 1.75, ob_collision_area)
+	mp_potential_path_object(path, other.tgX, other.tgY, other.maxSpeed*10, 1.75, ob_path_obstacle)
 }
 
 instance_activate_object(coll_area)
@@ -23,8 +23,9 @@ if path_get_length(path_target.path) = 0 {
 	sc_set_move_component(cmp_moving)
 }
 
+var _final_mxSpeed = (maxSpeed + speed_mod) * hab_maxSpeed_mod
 with path_target 
-	path_start(path, other.maxSpeed, path_action_stop, true);
+	path_start(path, _final_mxSpeed, path_action_stop, true);
 
 
 

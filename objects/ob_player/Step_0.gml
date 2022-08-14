@@ -38,9 +38,9 @@ for (var i=0; i<ds_list_size(in_biome); i++) {
 	_coeff *= sc_element_coeff(in_biome[| i], pokemon_map[? "elemental_type"])
 	_coeff *= sc_element_coeff(in_biome[| i], pokemon_map[? "material_type"])
 	if _coeff > 1
-		mod_reg *= 1.5
+		mod_reg *= 1.25
 	if _coeff < 1
-		mod_reg *= 0.5
+		mod_reg *= 0.75
 }
 
 if hurt_timeout > 0 { 
@@ -69,8 +69,6 @@ if attack_warmup > 0 {
 	// charge is over
 	if attack_warmup <= 0 {
 		sc_player_attack_set()
-		if object_index = ob_player_buried
-			event_perform(ev_other, ev_user2)
 		lastActionNum = doActionNum
 		doActionNum = -1
 	}

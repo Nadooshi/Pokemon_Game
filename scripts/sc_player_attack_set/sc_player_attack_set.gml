@@ -1,5 +1,5 @@
 function sc_player_attack_set() {
-
+// id = ob_player
 
 	if doActionNum < 0 exit
 
@@ -19,6 +19,9 @@ function sc_player_attack_set() {
 			attack_ob_id.timeout = frames_rate * 0.1 * _a_map[? "range"]
 			frameSpeed = 0
 			damage_mod = melee_damage_mod
+			if object_index = ob_player_buried
+				event_perform(ev_other, ev_user2)
+
 			sc_set_behaviour(sc_player_attack_lunge)
 			break
 		case _ATTACK_TYPE.range:
@@ -28,6 +31,8 @@ function sc_player_attack_set() {
 			sc_player_stop_set()
 			frameSpeed = 0
 			damage_mod = range_damage_mod
+			if object_index = ob_player_buried
+				event_perform(ev_other, ev_user2)
 			sc_set_behaviour(sc_player_attack_wait_anim)
 			// set direction image
 			sc_player_move()
@@ -39,6 +44,8 @@ function sc_player_attack_set() {
 			sc_player_stop_set()
 			frameSpeed = 0
 			damage_mod = range_damage_mod
+			if object_index = ob_player_buried
+				event_perform(ev_other, ev_user2)
 			sc_set_behaviour(sc_player_attack_wait_anim)
 			// set direction image
 			sc_player_move()
@@ -50,6 +57,8 @@ function sc_player_attack_set() {
 			tgAngle = direction
 			sc_player_stop_set()
 			frameSpeed = 0
+			if object_index = ob_player_buried
+				event_perform(ev_other, ev_user2)
 			damage_mod = melee_damage_mod
 			sc_set_behaviour(sc_player_attack_wait_anim)
 			// set direction image
@@ -64,6 +73,8 @@ function sc_player_attack_set() {
 			sc_player_stop_set()
 			frameSpeed = 0
 			damage_mod = melee_damage_mod
+			if object_index = ob_player_buried
+				event_perform(ev_other, ev_user2)
 			sc_set_behaviour(sc_player_attack_front)
 			// set direction image
 			sc_player_move()
@@ -114,6 +125,8 @@ function sc_player_attack_set() {
 			tgAngle = direction
 			sc_player_stop_set()
 			frameSpeed = 0
+			if object_index = ob_player_buried
+				event_perform(ev_other, ev_user2)
 			sc_set_behaviour(sc_player_attack_wait_anim)
 			// set direction image
 			sc_player_move()
@@ -134,6 +147,8 @@ function sc_player_attack_set() {
 			direction = point_direction(x, y+12, tgX, tgY+12)
 			tgAngle = direction
 			moveSpeed = pokemon_map[? "ap"] * 0.66
+			if object_index = ob_player_buried
+				event_perform(ev_other, ev_user2)
 
 			event_perform(ev_other, ev_user5) // swoop
 			damage_mod = melee_damage_mod
@@ -148,6 +163,8 @@ function sc_player_attack_set() {
 			sc_player_stop_set()
 			frameSpeed = 0
 			damage_mod = range_damage_mod
+			if object_index = ob_player_buried
+				event_perform(ev_other, ev_user2)
 			sc_set_behaviour(sc_player_attack_wait_anim)
 			// set direction image
 			sc_player_move()

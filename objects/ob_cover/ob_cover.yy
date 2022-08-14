@@ -3,7 +3,7 @@
     "name": "sp_cover",
     "path": "sprites/sp_cover/sp_cover.yy",
   },
-  "solid": true,
+  "solid": false,
   "visible": true,
   "managed": true,
   "spriteMaskId": null,

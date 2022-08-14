@@ -6,7 +6,7 @@ event_inherited()
 
 sc_composed_remove_component(cmp_moving)
 sc_composed_remove_component(cmp_collidable_player, true)
-sc_composed_add_component(cmp_collidable_hazard_round, true)
+//sc_composed_add_component(cmp_collidable_hazard_round, true)
 
 depth = (room_height - bbox_top) * 0.5
 

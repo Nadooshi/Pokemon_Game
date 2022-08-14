@@ -7,7 +7,6 @@ counter++
 
 // find target
 if counter mod 100 = 0 {
-//	target = sc_find_nearest_target(id)
 	target = instance_find(ob_cursor, 0)
 
 	if sc_does_exist(target) {
@@ -27,32 +26,6 @@ if counter mod 100 = 0 {
 	}
 }
 
-
-//scBehaviour = sc_player_stop_set()
-
-//// bury
-//if canMove {
-//	if pokemon_map[?"digable"] > 0
-//	if position_stage != _ATTACK_TG.underground
-//		event_perform(ev_other, ev_user2)
-		
-//	if _target_d > 5
-//		event_perform(ev_other, ev_user4)
-//}
-
-//if attack_timeout > 0 {
-//	attack_timeout -= dTime
-//	if instance_exists(target)
-//	if attack_timeout <= 0 {
-//		if doActionNum = -1 {
-//			doActionNum = irandom(ds_list_size(action_list)-1)
-//			// do attack
-//			event_perform(ev_other, ev_user3)
-//		}		
-//		attack_timeout = random_range(0.3, 1)
-//	}
-
-//}
 
 // for barrier
 if not instance_exists(target) exit
