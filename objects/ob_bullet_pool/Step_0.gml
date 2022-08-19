@@ -5,12 +5,12 @@ var _drop_appear_period = 864 / radius
 // new drop
 if (timeout mod _drop_appear_period) = 0 {
 	var _drop = ds_map_create()
-	var _r = random(radius-4)
+	var _r = random(radius) - radius * 0.5
 	var _a = random(360)
 	_drop = {
 		x: lengthdir_x(_r, _a),
 		y: lengthdir_y(_r, _a),
-		frame: 0,
+		frame: 0
 	}
 	
 	_drop.x += x

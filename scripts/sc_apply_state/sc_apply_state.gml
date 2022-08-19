@@ -76,13 +76,15 @@ function sc_apply_state() {
 		}
 
 		if not sc_state_check_compatible_biome(_action) {
-			with instance_create_layer(x, y, "Particles", ob_particle_text)
-				caption = "X "+_action[? "active"][? "name"] + " X (!BIOME)"
+			instance_create_layer(x, y, "Particles", ob_particle_text, {
+				caption : "X "+_action[? "active"][? "name"] + " X (!BIOME)"
+			})
 			return false
 		}
 		if not sc_state_check_compatible(_action) {
-			with instance_create_layer(x, y, "Particles", ob_particle_text)
-				caption = "X "+_action[? "active"][? "name"] + " X (!STATE)"
+			instance_create_layer(x, y, "Particles", ob_particle_text, {
+				caption : "X "+_action[? "active"][? "name"] + " X (!STATE)"
+			})
 			return false
 		}
 	

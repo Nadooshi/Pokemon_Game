@@ -8,3 +8,4 @@ c_radius = 0
 d_radius = 0.5
 
 moveSpeed = 1.25
+alarm_set(1, frames_rate * 0.3)

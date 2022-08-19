@@ -96,7 +96,7 @@ with just_damaged[| i] {
 	}
 }
 
-	
+
 if timeout>0 {
 	timeout--
 	if timeout<=0 

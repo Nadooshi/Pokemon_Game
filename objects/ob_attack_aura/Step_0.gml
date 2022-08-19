@@ -10,6 +10,14 @@ if not instance_exists(bullet)
 	
 bullet.radius += d_radius
 
+if ds_exists(action, ds_type_map) {
+	var sprites = array_create(2)
+	sprites[0] = asset_get_index("sp_particle_elemental" + string(action[? "element"]))
+	sprites[1] = asset_get_index("sp_particle_elemental" + string(action[? "material"]))
+
+	sc_particle_fx_pool(x, y, sprites, 1, 1, 0.5, 1, bullet.radius)
+}
+
 part_step = bullet.radius div 24
 if o_part_step < part_step {
 	o_part_step = part_step

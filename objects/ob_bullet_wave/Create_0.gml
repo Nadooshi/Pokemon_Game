@@ -10,4 +10,4 @@ dot_count = 5
 dot = 0
 
 init =false
-
+alarm_set(0, 5)

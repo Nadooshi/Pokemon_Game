@@ -11,6 +11,8 @@ dTime = 0
 minFPS = 30
 
 watching = ds_list_create()
+globalvar fx_system_damage;
+fx_system_damage = part_system_create_layer("Effect_damage", false)
 
 enum poke_exp {
 	damage,

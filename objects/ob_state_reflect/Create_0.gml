@@ -12,8 +12,9 @@ knock_dir = 0
 onDamage = function (_dmg, _damaged_player_id, _action) {
 	// returns modified damage value
 	with _damaged_player_id {
-		with instance_create_layer(x, y, "Particles", ob_particle_text)
-			caption = "Reflect!"
+		instance_create_layer(x, y, "Particles", ob_particle_text, {
+			caption : "Reflect!"
+		})
 		// every ob_bullet type should have its own code for this
 		switch _action[? "type"]{
 			case _ATTACK_TYPE.range:{

@@ -11,8 +11,8 @@ bullet.hurt_time = hurt_time
 bullet.damage_mod = damage_mod
 bullet.accuracy_mod = accuracy_mod
 
-max_radius =  60 * 0.1 * 3 * action[? "range"]
-d_radius = max_radius / frame_count / (60 / sprite_get_speed(sprite_index))
+max_radius =  PixPerDist * action[? "range"]
+d_radius = max_radius / frame_count / (frames_rate / sprite_get_speed(sprite_index))
 
 var _snd = choose(snd_attack_aura_0, snd_attack_aura_1, snd_attack_aura_2)
 sc_play_sound(_snd, false)

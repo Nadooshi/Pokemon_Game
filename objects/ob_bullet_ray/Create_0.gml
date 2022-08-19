@@ -15,3 +15,6 @@ y1:=0;
 x2:=0;
 y2:=0;
 damage_done:=false;
+count = 0
+_x = 0
+_y = 0

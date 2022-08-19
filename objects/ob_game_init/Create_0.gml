@@ -616,9 +616,9 @@ player2_trainer = noone; //sc_new_trainer()
 
 
 globalvar log_battle; log_battle = ds_list_create()
-
+globalvar showing_particle_text; showing_particle_text = true
 globalvar maxchannel;
-maxchannel = 5
+maxchannel = 7
 
 audio_channel_num(maxchannel)
 var _n = audio_get_listener_count()

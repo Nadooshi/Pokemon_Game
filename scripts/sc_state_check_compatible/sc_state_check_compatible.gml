@@ -27,8 +27,9 @@ function sc_state_check_compatible(_action) {
 				_ok = false
 		}
 		if not _ok {
-			with instance_create_layer(x, y, "Particles", ob_particle_text)
-				caption = _action[? "active"][? "name"] + " failed!"
+			instance_create_layer(x, y, "Particles", ob_particle_text, {
+				caption : _action[? "active"][? "name"] + " failed!"
+			})
 			return false
 		}
 	}
