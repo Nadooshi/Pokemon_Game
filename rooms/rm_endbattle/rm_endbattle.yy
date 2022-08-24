@@ -113,6 +113,11 @@
         {"properties":[
             {"propertyId":{"name":"caption","path":"objects/ob_button/ob_button.yy",},"objectId":{"name":"ob_button","path":"objects/ob_button/ob_button.yy",},"value":"Evolve!","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
           ],"isDnd":false,"objectId":{"name":"ob_button_evolve","path":"objects/ob_button_evolve/ob_button_evolve.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":3.0,"scaleY":0.6666667,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":816.0,"y":816.0,"resourceVersion":"1.0","name":"inst_6123B6E2","tags":[],"resourceType":"GMRInstance",},
+        {"properties":[],"isDnd":false,"objectId":{"name":"ob_glass_pokemon_level","path":"objects/ob_glass_pokemon_level/ob_glass_pokemon_level.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":0.8518519,"scaleY":0.81395346,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":720.0,"y":816.0,"resourceVersion":"1.0","name":"inst_20938F02","tags":[],"resourceType":"GMRInstance",},
+        {"properties":[],"isDnd":false,"objectId":{"name":"ob_frame_pokemon_level","path":"objects/ob_frame_pokemon_level/ob_frame_pokemon_level.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":0.8518519,"scaleY":0.81395346,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":720.0,"y":816.0,"resourceVersion":"1.0","name":"inst_57E22592","tags":[],"resourceType":"GMRInstance",},
+        {"properties":[
+            {"propertyId":{"name":"parameter_name","path":"objects/ob_ui_object/ob_ui_object.yy",},"objectId":{"name":"ob_ui_object","path":"objects/ob_ui_object/ob_ui_object.yy",},"value":"level","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
+          ],"isDnd":false,"objectId":{"name":"ob_num_label_level","path":"objects/ob_num_label_level/ob_num_label_level.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":4.2000003,"scaleY":3.133333,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":736.0,"y":832.0,"resourceVersion":"1.0","name":"inst_1065E3CB","tags":[],"resourceType":"GMRInstance",},
       ],"visible":true,"depth":0,"userdefinedDepth":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"gridX":16,"gridY":16,"layers":[],"hierarchyFrozen":false,"effectEnabled":true,"effectType":null,"properties":[],"resourceVersion":"1.0","name":"Buttons","tags":[],"resourceType":"GMRInstanceLayer",},
     {"instances":[
         {"properties":[
@@ -247,6 +252,9 @@
     {"name":"inst_68F79623","path":"rooms/rm_endbattle/rm_endbattle.yy",},
     {"name":"inst_23DDF5B7","path":"rooms/rm_endbattle/rm_endbattle.yy",},
     {"name":"inst_6123B6E2","path":"rooms/rm_endbattle/rm_endbattle.yy",},
+    {"name":"inst_57E22592","path":"rooms/rm_endbattle/rm_endbattle.yy",},
+    {"name":"inst_20938F02","path":"rooms/rm_endbattle/rm_endbattle.yy",},
+    {"name":"inst_1065E3CB","path":"rooms/rm_endbattle/rm_endbattle.yy",},
   ],
   "inheritCreationOrder": false,
   "sequenceId": null,

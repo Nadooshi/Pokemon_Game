@@ -1,4 +1,8 @@
 /// @desc 
+if not instance_exists(pokemon_id){
+	instance_destroy()
+	exit;
+}
 
 var _s = 0.5 // chance use stat
 var sz_dif = pokemon_id_attack.size - pokemon_id.size

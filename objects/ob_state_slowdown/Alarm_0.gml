@@ -1,5 +1,5 @@
 /// @desc Deal damage
-
+event_inherited()
 if pokemon_id.speed_mod > modify
 	pokemon_id.speed_mod = modify
 

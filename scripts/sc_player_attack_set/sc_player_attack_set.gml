@@ -174,6 +174,13 @@ function sc_player_attack_set() {
 			attack_ob_id = instance_create_layer(x, y, "Particles", ob_attack)
 
 	}
+	for (var i=0; i<ds_list_size(states); i++) // apple state revenge for master pokemon
+		if states[| i].object_index = ob_state_revenge {
+			var _coef = _a_map[? "dmg_material"] / _a_map[? "dmg_element"]
+			_a_map[? "damage"] = (health_max - health_cur)
+			_a_map[? "dmg_material"] = _a_map[? "damage"] * _coef
+			_a_map[? "dmg_element"] = _a_map[? "damage"] - _a_map[? "dmg_material"]
+		}
 	with attack_ob_id {
 		ds_map_copy(action, _a_map)
 		pokemon_id = other.id
@@ -182,6 +189,7 @@ function sc_player_attack_set() {
 		_z = other._z
 		sprite_index = asset_get_index(_a_map[? "anim"])
 		image_blend = sc_make_attack_colour(_a_map)
+		
 	}
 	if _a_map[? "repeatable"] = true //true = no repeat
 		_a_map [? "cooldown"] = disposable_action_cooldown

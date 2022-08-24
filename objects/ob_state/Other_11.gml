@@ -1,3 +1,0 @@
-/// @desc Mog damage empty
-
-

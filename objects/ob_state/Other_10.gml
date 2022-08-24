@@ -1,2 +1,2 @@
-/// @desc Init EMPTY
+/// @desc empty
 

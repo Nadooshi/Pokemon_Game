@@ -1,5 +1,5 @@
 /// @desc Deal damage
-
+event_inherited()
 alarm[0] = period;
 power_reg = 0.3
 

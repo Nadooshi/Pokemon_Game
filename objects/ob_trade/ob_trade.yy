@@ -4,7 +4,8 @@
     "path": "sprites/sp_trainer_trade/sp_trainer_trade.yy",
   },
   "solid": false,
-  "visible": true,
+  "visible": false,
+  "managed": true,
   "spriteMaskId": null,
   "persistent": false,
   "parentObjectId": {

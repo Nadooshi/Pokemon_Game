@@ -7,7 +7,7 @@ var temp_pokemon = ds_map_create()
 temp_pokemon = sc_load_new_pokemon(evolution_tree[? current_pokemon[? "title"]].children[index])
 
 temp_pokemon[? "exp"] = 0// current_pokemon[? "exp"]
-temp_pokemon[? "level"] = current_pokemon[? "level"]
+temp_pokemon[? "level"] = current_pokemon[? "level"]+1
 temp_pokemon[? "loses"] = current_pokemon[? "loses"]
 temp_pokemon[? "wins"] = current_pokemon[? "wins"]
 //temp_pokemon[? "artefact"] = noone

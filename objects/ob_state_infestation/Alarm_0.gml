@@ -1,5 +1,5 @@
 /// @desc Deal damage
-
+event_inherited()
 with pokemon_id {
 	var _dmg = sc_calculate_numeric_damage(other.damage, id, other.action[? "element"],-1)
 	health_cur = max(0, health_cur - _dmg)

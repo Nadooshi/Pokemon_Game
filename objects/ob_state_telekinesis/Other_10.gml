@@ -1,4 +1,9 @@
 /// @desc 
+if not instance_exists(pokemon_id){
+	instance_destroy()
+	exit;
+}
+
 
 if pokemon_id = pokemon_id_attack
 	instance_destroy()

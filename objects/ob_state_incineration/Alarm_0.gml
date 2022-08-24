@@ -1,4 +1,5 @@
 /// @desc Deal damage
+event_inherited()
 
 with pokemon_id {
 	var _dmg = sc_calculate_numeric_damage(other.damage, id, other.action[? "element"], -1)

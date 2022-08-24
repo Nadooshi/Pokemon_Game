@@ -1,4 +1,4 @@
-/// @desc Reduce_accuracy
+/// @desc
 
 event_inherited()
 

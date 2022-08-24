@@ -1,7 +1,9 @@
 /// @desc 
 
-// Inherit the parent event
-event_inherited();
+if not instance_exists(pokemon_id){
+	instance_destroy()
+	exit;
+}
 
 alarm[0] = period;
 pokemon_id.shield = 0

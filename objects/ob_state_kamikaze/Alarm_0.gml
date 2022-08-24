@@ -1,5 +1,5 @@
 /// @desc Deal damage
-
+event_inherited()
 var _dmg = sc_calculate_action_damage(action, pokemon_id, pokemon_id_attack)
 
 sc_logging_damage(pokemon_id, pokemon_id_attack, action, _dmg)

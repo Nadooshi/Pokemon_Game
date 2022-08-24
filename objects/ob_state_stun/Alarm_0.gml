@@ -1,4 +1,5 @@
 /// @desc Deal damage
+event_inherited()
 
 with pokemon_id {
 	if damage_mod > 0.5

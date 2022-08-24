@@ -8,3 +8,7 @@ if sprite_exists(_sp)
 spr_drawn = [sprite_id, noone]
 
 init = true
+
+for (var i=0; i<ds_list_size(pokemon_id.states); i++)
+	instance_destroy(pokemon_id.states[| i])
+

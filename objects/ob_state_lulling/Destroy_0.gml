@@ -1,4 +1,5 @@
 /// @desc
+event_inherited()
 
 with pokemon_id {
 	if object_index = ob_player_sleep
@@ -6,5 +7,4 @@ with pokemon_id {
 	sc_canMove(true)
 }
 
-event_inherited();
 

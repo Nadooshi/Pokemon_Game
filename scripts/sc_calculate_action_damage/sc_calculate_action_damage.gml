@@ -1,8 +1,8 @@
 function sc_calculate_action_damage(_action, p_id_target, _p_attack) {
 
 	enum _e {
-		element  = 0,
-		material = 1
+		element,
+		material
 	}
 	var _slot = ["elemental_type", "material_type"]
 
@@ -42,9 +42,6 @@ function sc_calculate_action_damage(_action, p_id_target, _p_attack) {
 					_dmg_coeff *= 2
 					sc_anim_effect_damage(_elem_action[_ae], _p_target[? _slot[_pe]], "break", _a_obj)
 				}
-			//	_dmg_coeff *= (_table_entry[0] == _elem_action[_ae]) ? 0.5 : 1
-			//	_dmg_coeff *= (_table_entry[1] == _elem_action[_ae]) ? 2 : 1
-			//	_dmg_coeff *= (_table_entry[2] == _elem_action[_ae]) ? 2 : 1
 			}
 			_dmg[_pe, _ae] = _dmg[_pe, _ae] * _dmg_coeff
 		}
@@ -129,7 +126,7 @@ function sc_calculate_action_damage(_action, p_id_target, _p_attack) {
 				}
 			}
 		}
-		// apply state 'revenge'
+		// apply state 'revenge' for action
 		if _abil[? "state"] = _ABILITY_STATE.revenge {
 			potential_damage = _p_attack.health_max - _p_attack.health_cur
 			var _val_txt = "looking forward to vengeance by " + string(potential_damage) +"."

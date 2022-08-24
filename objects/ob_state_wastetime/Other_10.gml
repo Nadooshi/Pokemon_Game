@@ -1,7 +1,9 @@
 /// @desc 
+if not instance_exists(pokemon_id){
+	instance_destroy()
+	exit;
+}
 
-// Inherit the parent event
-event_inherited();
 var _t = ds_map_find_value(action[? "active"], "state_time");
 hit_count = _t * 2
 

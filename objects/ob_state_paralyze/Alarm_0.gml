@@ -1,4 +1,5 @@
 /// @desc Deal damage
+event_inherited()
 with pokemon_id {
 	if object_index = ob_player_flying
 		event_perform(ev_destroy, 0)

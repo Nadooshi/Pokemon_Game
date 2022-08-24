@@ -1,7 +1,10 @@
 /// @desc Init
 
-// Inherit the parent event
-event_inherited();
+if not instance_exists(pokemon_id){
+	instance_destroy()
+	exit;
+}
+
 var _mod = 0.5
 if (action[? "element"] != _ELEMENTAL.none) or (action[? "material"] != _MATERIAL.none)
 	_mod = 1

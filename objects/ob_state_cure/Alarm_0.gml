@@ -1,5 +1,5 @@
 /// @desc Deal damage
-
+event_inherited()
 with pokemon_id 
 	if (health_cur + other.damage) > health_max
 		health_cur = health_max

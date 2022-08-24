@@ -4,7 +4,8 @@
     "path": "sprites/sp_trainer_coin/sp_trainer_coin.yy",
   },
   "solid": false,
-  "visible": true,
+  "visible": false,
+  "managed": true,
   "spriteMaskId": null,
   "persistent": false,
   "parentObjectId": {

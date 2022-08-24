@@ -1,6 +1,9 @@
 /// @desc
 
-// Inherit the parent event
+if not instance_exists(pokemon_id){
+	instance_destroy()
+	exit;
+}
 
 alarm[0] = period;
 modify = ds_map_find_value(action[? "active"], "state_value") * 0.01
