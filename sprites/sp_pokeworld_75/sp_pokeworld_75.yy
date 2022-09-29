@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "sp_pokeworld_75",
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
@@ -24,33 +27,19 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"c3d4e192-fdbd-44c0-95fe-dd29ff0c6417","path":"sprites/sp_pokeworld_75/sp_pokeworld_75.yy",},"LayerId":null,"resourceVersion":"1.0","name":"composite","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"c3d4e192-fdbd-44c0-95fe-dd29ff0c6417","path":"sprites/sp_pokeworld_75/sp_pokeworld_75.yy",},"LayerId":{"name":"60f1730c-3d9c-4c23-be4a-47314ace6e6a","path":"sprites/sp_pokeworld_75/sp_pokeworld_75.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sp_pokeworld_75","path":"sprites/sp_pokeworld_75/sp_pokeworld_75.yy",},"resourceVersion":"1.0","name":"c3d4e192-fdbd-44c0-95fe-dd29ff0c6417","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"500406c5-fe48-45b0-aeb3-539fb879d07e","path":"sprites/sp_pokeworld_75/sp_pokeworld_75.yy",},"LayerId":null,"resourceVersion":"1.0","name":"composite","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"500406c5-fe48-45b0-aeb3-539fb879d07e","path":"sprites/sp_pokeworld_75/sp_pokeworld_75.yy",},"LayerId":{"name":"60f1730c-3d9c-4c23-be4a-47314ace6e6a","path":"sprites/sp_pokeworld_75/sp_pokeworld_75.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sp_pokeworld_75","path":"sprites/sp_pokeworld_75/sp_pokeworld_75.yy",},"resourceVersion":"1.0","name":"500406c5-fe48-45b0-aeb3-539fb879d07e","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"2fddc8f9-1f69-4488-a03b-af955ada0763","path":"sprites/sp_pokeworld_75/sp_pokeworld_75.yy",},"LayerId":null,"resourceVersion":"1.0","name":"composite","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"2fddc8f9-1f69-4488-a03b-af955ada0763","path":"sprites/sp_pokeworld_75/sp_pokeworld_75.yy",},"LayerId":{"name":"60f1730c-3d9c-4c23-be4a-47314ace6e6a","path":"sprites/sp_pokeworld_75/sp_pokeworld_75.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sp_pokeworld_75","path":"sprites/sp_pokeworld_75/sp_pokeworld_75.yy",},"resourceVersion":"1.0","name":"2fddc8f9-1f69-4488-a03b-af955ada0763","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"13ee9725-341f-43b7-a285-572537ad785e","path":"sprites/sp_pokeworld_75/sp_pokeworld_75.yy",},"LayerId":null,"resourceVersion":"1.0","name":"composite","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"13ee9725-341f-43b7-a285-572537ad785e","path":"sprites/sp_pokeworld_75/sp_pokeworld_75.yy",},"LayerId":{"name":"60f1730c-3d9c-4c23-be4a-47314ace6e6a","path":"sprites/sp_pokeworld_75/sp_pokeworld_75.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sp_pokeworld_75","path":"sprites/sp_pokeworld_75/sp_pokeworld_75.yy",},"resourceVersion":"1.0","name":"13ee9725-341f-43b7-a285-572537ad785e","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"927d655c-ee14-427d-826b-90859a14b097","path":"sprites/sp_pokeworld_75/sp_pokeworld_75.yy",},"LayerId":null,"resourceVersion":"1.0","name":"composite","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"927d655c-ee14-427d-826b-90859a14b097","path":"sprites/sp_pokeworld_75/sp_pokeworld_75.yy",},"LayerId":{"name":"60f1730c-3d9c-4c23-be4a-47314ace6e6a","path":"sprites/sp_pokeworld_75/sp_pokeworld_75.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sp_pokeworld_75","path":"sprites/sp_pokeworld_75/sp_pokeworld_75.yy",},"resourceVersion":"1.0","name":"927d655c-ee14-427d-826b-90859a14b097","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"adfc2b9c-e0f7-4899-80e6-5736315d7b1c","path":"sprites/sp_pokeworld_75/sp_pokeworld_75.yy",},"LayerId":null,"resourceVersion":"1.0","name":"composite","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"adfc2b9c-e0f7-4899-80e6-5736315d7b1c","path":"sprites/sp_pokeworld_75/sp_pokeworld_75.yy",},"LayerId":{"name":"60f1730c-3d9c-4c23-be4a-47314ace6e6a","path":"sprites/sp_pokeworld_75/sp_pokeworld_75.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sp_pokeworld_75","path":"sprites/sp_pokeworld_75/sp_pokeworld_75.yy",},"resourceVersion":"1.0","name":"adfc2b9c-e0f7-4899-80e6-5736315d7b1c","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"d0f16a04-f27e-4411-8781-6f5ee84bc6f0","path":"sprites/sp_pokeworld_75/sp_pokeworld_75.yy",},"LayerId":null,"resourceVersion":"1.0","name":"composite","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"d0f16a04-f27e-4411-8781-6f5ee84bc6f0","path":"sprites/sp_pokeworld_75/sp_pokeworld_75.yy",},"LayerId":{"name":"60f1730c-3d9c-4c23-be4a-47314ace6e6a","path":"sprites/sp_pokeworld_75/sp_pokeworld_75.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sp_pokeworld_75","path":"sprites/sp_pokeworld_75/sp_pokeworld_75.yy",},"resourceVersion":"1.0","name":"d0f16a04-f27e-4411-8781-6f5ee84bc6f0","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"58ba3a82-664e-4309-9a85-50cdd4140231","path":"sprites/sp_pokeworld_75/sp_pokeworld_75.yy",},"LayerId":null,"resourceVersion":"1.0","name":"composite","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"58ba3a82-664e-4309-9a85-50cdd4140231","path":"sprites/sp_pokeworld_75/sp_pokeworld_75.yy",},"LayerId":{"name":"60f1730c-3d9c-4c23-be4a-47314ace6e6a","path":"sprites/sp_pokeworld_75/sp_pokeworld_75.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sp_pokeworld_75","path":"sprites/sp_pokeworld_75/sp_pokeworld_75.yy",},"resourceVersion":"1.0","name":"58ba3a82-664e-4309-9a85-50cdd4140231","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"c3d4e192-fdbd-44c0-95fe-dd29ff0c6417",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"500406c5-fe48-45b0-aeb3-539fb879d07e",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"2fddc8f9-1f69-4488-a03b-af955ada0763",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"13ee9725-341f-43b7-a285-572537ad785e",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"927d655c-ee14-427d-826b-90859a14b097",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"adfc2b9c-e0f7-4899-80e6-5736315d7b1c",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"d0f16a04-f27e-4411-8781-6f5ee84bc6f0",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"58ba3a82-664e-4309-9a85-50cdd4140231",},
   ],
   "sequence": {
-    "spriteId": {"name":"sp_pokeworld_75","path":"sprites/sp_pokeworld_75/sp_pokeworld_75.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 0.0,
@@ -61,7 +50,7 @@
     "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
             {"id":"7c8c6c22-13b2-455c-ae74-86b7fcd50f24","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"c3d4e192-fdbd-44c0-95fe-dd29ff0c6417","path":"sprites/sp_pokeworld_75/sp_pokeworld_75.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"4910c2f9-5f92-46f4-a81d-31aaeb33b7f6","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"500406c5-fe48-45b0-aeb3-539fb879d07e","path":"sprites/sp_pokeworld_75/sp_pokeworld_75.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"58e7028f-085b-42b8-8260-fe6867709b17","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"2fddc8f9-1f69-4488-a03b-af955ada0763","path":"sprites/sp_pokeworld_75/sp_pokeworld_75.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
@@ -70,7 +59,7 @@
             {"id":"456087ff-f1b1-481f-8a96-f422a805d2d6","Key":5.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"adfc2b9c-e0f7-4899-80e6-5736315d7b1c","path":"sprites/sp_pokeworld_75/sp_pokeworld_75.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"86464993-b8f6-4238-8ac0-f4fa978b0797","Key":6.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"d0f16a04-f27e-4411-8781-6f5ee84bc6f0","path":"sprites/sp_pokeworld_75/sp_pokeworld_75.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"42aca7b1-4671-4086-b942-6d284104f9fe","Key":7.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"58ba3a82-664e-4309-9a85-50cdd4140231","path":"sprites/sp_pokeworld_75/sp_pokeworld_75.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": {"x":0.0,"y":0.0,},
     "lockOrigin": false,
@@ -86,22 +75,13 @@
     "yorigin": 16,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"sp_pokeworld_75","path":"sprites/sp_pokeworld_75/sp_pokeworld_75.yy",},
-    "resourceVersion": "1.4",
-    "name": "",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"60f1730c-3d9c-4c23-be4a-47314ace6e6a","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"60f1730c-3d9c-4c23-be4a-47314ace6e6a","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "Overworld",
     "path": "folders/Sprites/Battle/Overworld.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "sp_pokeworld_75",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

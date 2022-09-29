@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "sp_weather_ember_smoke",
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
@@ -24,12 +27,12 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"fa5dbf69-2907-4a6c-8d68-c9a0b2e4c0a7","path":"sprites/sp_weather_ember_smoke/sp_weather_ember_smoke.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"fa5dbf69-2907-4a6c-8d68-c9a0b2e4c0a7","path":"sprites/sp_weather_ember_smoke/sp_weather_ember_smoke.yy",},"LayerId":{"name":"47344b32-fb5b-48c7-8029-2afc8263b800","path":"sprites/sp_weather_ember_smoke/sp_weather_ember_smoke.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sp_weather_ember_smoke","path":"sprites/sp_weather_ember_smoke/sp_weather_ember_smoke.yy",},"resourceVersion":"1.0","name":"fa5dbf69-2907-4a6c-8d68-c9a0b2e4c0a7","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"fa5dbf69-2907-4a6c-8d68-c9a0b2e4c0a7",},
   ],
   "sequence": {
-    "spriteId": {"name":"sp_weather_ember_smoke","path":"sprites/sp_weather_ember_smoke/sp_weather_ember_smoke.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "sp_weather_ember_smoke",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 30.0,
@@ -37,12 +40,12 @@
     "autoRecord": true,
     "volume": 1.0,
     "length": 1.0,
-    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MessageEventKeyframe",},
-    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MomentsEventKeyframe",},
+    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
+    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"f0c2b254-2be0-4d9c-8232-8fb967fc1309","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"fa5dbf69-2907-4a6c-8d68-c9a0b2e4c0a7","path":"sprites/sp_weather_ember_smoke/sp_weather_ember_smoke.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"SpriteFrameKeyframe",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+            {"id":"f0c2b254-2be0-4d9c-8232-8fb967fc1309","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"fa5dbf69-2907-4a6c-8d68-c9a0b2e4c0a7","path":"sprites/sp_weather_ember_smoke/sp_weather_ember_smoke.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": false,
@@ -58,22 +61,13 @@
     "yorigin": 8,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"sp_weather_ember_smoke","path":"sprites/sp_weather_ember_smoke/sp_weather_ember_smoke.yy",},
-    "resourceVersion": "1.4",
-    "name": "sp_weather_ember_smoke",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"47344b32-fb5b-48c7-8029-2afc8263b800","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"47344b32-fb5b-48c7-8029-2afc8263b800","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "Weather",
     "path": "folders/Sprites/Weather.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "sp_weather_ember_smoke",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

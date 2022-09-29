@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "sp_frame_pokemoninventory",
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
@@ -24,21 +27,15 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"875bbd6b-357e-42f8-aced-a063cd04af11","path":"sprites/sp_frame_pokemoninventory/sp_frame_pokemoninventory.yy",},"LayerId":null,"resourceVersion":"1.0","name":"composite","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"875bbd6b-357e-42f8-aced-a063cd04af11","path":"sprites/sp_frame_pokemoninventory/sp_frame_pokemoninventory.yy",},"LayerId":{"name":"f16e99b3-302f-43a0-8e95-53828d1a1008","path":"sprites/sp_frame_pokemoninventory/sp_frame_pokemoninventory.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sp_frame_pokemoninventory","path":"sprites/sp_frame_pokemoninventory/sp_frame_pokemoninventory.yy",},"resourceVersion":"1.0","name":"875bbd6b-357e-42f8-aced-a063cd04af11","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"adceceeb-acd2-452b-9912-f4dd536235d2","path":"sprites/sp_frame_pokemoninventory/sp_frame_pokemoninventory.yy",},"LayerId":null,"resourceVersion":"1.0","name":"composite","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"adceceeb-acd2-452b-9912-f4dd536235d2","path":"sprites/sp_frame_pokemoninventory/sp_frame_pokemoninventory.yy",},"LayerId":{"name":"f16e99b3-302f-43a0-8e95-53828d1a1008","path":"sprites/sp_frame_pokemoninventory/sp_frame_pokemoninventory.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sp_frame_pokemoninventory","path":"sprites/sp_frame_pokemoninventory/sp_frame_pokemoninventory.yy",},"resourceVersion":"1.0","name":"adceceeb-acd2-452b-9912-f4dd536235d2","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"e5a82051-b3ea-4a2b-82c6-96ee05cce888","path":"sprites/sp_frame_pokemoninventory/sp_frame_pokemoninventory.yy",},"LayerId":null,"resourceVersion":"1.0","name":"composite","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"e5a82051-b3ea-4a2b-82c6-96ee05cce888","path":"sprites/sp_frame_pokemoninventory/sp_frame_pokemoninventory.yy",},"LayerId":{"name":"f16e99b3-302f-43a0-8e95-53828d1a1008","path":"sprites/sp_frame_pokemoninventory/sp_frame_pokemoninventory.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sp_frame_pokemoninventory","path":"sprites/sp_frame_pokemoninventory/sp_frame_pokemoninventory.yy",},"resourceVersion":"1.0","name":"e5a82051-b3ea-4a2b-82c6-96ee05cce888","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"350e976b-54ea-4d31-9cdd-ae1db7acb555","path":"sprites/sp_frame_pokemoninventory/sp_frame_pokemoninventory.yy",},"LayerId":null,"resourceVersion":"1.0","name":"composite","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"350e976b-54ea-4d31-9cdd-ae1db7acb555","path":"sprites/sp_frame_pokemoninventory/sp_frame_pokemoninventory.yy",},"LayerId":{"name":"f16e99b3-302f-43a0-8e95-53828d1a1008","path":"sprites/sp_frame_pokemoninventory/sp_frame_pokemoninventory.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sp_frame_pokemoninventory","path":"sprites/sp_frame_pokemoninventory/sp_frame_pokemoninventory.yy",},"resourceVersion":"1.0","name":"350e976b-54ea-4d31-9cdd-ae1db7acb555","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"875bbd6b-357e-42f8-aced-a063cd04af11",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"adceceeb-acd2-452b-9912-f4dd536235d2",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"e5a82051-b3ea-4a2b-82c6-96ee05cce888",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"350e976b-54ea-4d31-9cdd-ae1db7acb555",},
   ],
   "sequence": {
-    "spriteId": {"name":"sp_frame_pokemoninventory","path":"sprites/sp_frame_pokemoninventory/sp_frame_pokemoninventory.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 0.0,
@@ -49,12 +46,12 @@
     "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
             {"id":"f7b1d178-8466-488e-a2d4-f48060a086a4","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"875bbd6b-357e-42f8-aced-a063cd04af11","path":"sprites/sp_frame_pokemoninventory/sp_frame_pokemoninventory.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"2931e8cc-7b24-4687-8027-9a52c302ca22","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"adceceeb-acd2-452b-9912-f4dd536235d2","path":"sprites/sp_frame_pokemoninventory/sp_frame_pokemoninventory.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"594a8f88-3dcf-4825-bf93-343f4f164ba3","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"e5a82051-b3ea-4a2b-82c6-96ee05cce888","path":"sprites/sp_frame_pokemoninventory/sp_frame_pokemoninventory.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"46e8bbef-827b-4f98-b7f4-65e3dce3f382","Key":3.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"350e976b-54ea-4d31-9cdd-ae1db7acb555","path":"sprites/sp_frame_pokemoninventory/sp_frame_pokemoninventory.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": {"x":0.0,"y":0.0,},
     "lockOrigin": false,
@@ -70,22 +67,13 @@
     "yorigin": 0,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"sp_frame_pokemoninventory","path":"sprites/sp_frame_pokemoninventory/sp_frame_pokemoninventory.yy",},
-    "resourceVersion": "1.4",
-    "name": "",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"f16e99b3-302f-43a0-8e95-53828d1a1008","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"f16e99b3-302f-43a0-8e95-53828d1a1008","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "ui",
     "path": "folders/Sprites/ui.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "sp_frame_pokemoninventory",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

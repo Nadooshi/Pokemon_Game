@@ -3,6 +3,10 @@ if not instance_exists(pokemon_id){
 	instance_destroy()
 	exit;
 }
+if pokemon_id.trainer = -1 {
+	instance_destroy()
+	exit;	
+}
 
 var _t = ds_map_find_value(action[? "active"], "state_time");
 hit_count = _t * 2

@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "sp_passiv_ui_animation",
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 2,
@@ -24,12 +27,12 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"ad6d0f87-094c-43f3-8f84-d7ae37eb7dee","path":"sprites/sp_passiv_ui_animation/sp_passiv_ui_animation.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"ad6d0f87-094c-43f3-8f84-d7ae37eb7dee","path":"sprites/sp_passiv_ui_animation/sp_passiv_ui_animation.yy",},"LayerId":{"name":"8b167657-bbf4-417e-a222-04abfe46e79e","path":"sprites/sp_passiv_ui_animation/sp_passiv_ui_animation.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sp_passiv_ui_animation","path":"sprites/sp_passiv_ui_animation/sp_passiv_ui_animation.yy",},"resourceVersion":"1.0","name":"ad6d0f87-094c-43f3-8f84-d7ae37eb7dee","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"ad6d0f87-094c-43f3-8f84-d7ae37eb7dee",},
   ],
   "sequence": {
-    "spriteId": {"name":"sp_passiv_ui_animation","path":"sprites/sp_passiv_ui_animation/sp_passiv_ui_animation.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "sp_passiv_ui_animation",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 30.0,
@@ -40,9 +43,9 @@
     "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
             {"id":"ad9308b6-ec78-44ee-91c6-91dbbd2b9089","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"ad6d0f87-094c-43f3-8f84-d7ae37eb7dee","path":"sprites/sp_passiv_ui_animation/sp_passiv_ui_animation.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": false,
@@ -58,22 +61,13 @@
     "yorigin": 273,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"sp_passiv_ui_animation","path":"sprites/sp_passiv_ui_animation/sp_passiv_ui_animation.yy",},
-    "resourceVersion": "1.4",
-    "name": "sp_passiv_ui_animation",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"8b167657-bbf4-417e-a222-04abfe46e79e","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"8b167657-bbf4-417e-a222-04abfe46e79e","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "Pokemon",
     "path": "folders/Sprites/Pokemon.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "sp_passiv_ui_animation",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

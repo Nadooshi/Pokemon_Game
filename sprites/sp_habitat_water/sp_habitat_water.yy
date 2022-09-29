@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "sp_habitat_water",
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
@@ -24,12 +27,12 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"b513a924-3b5f-4790-896b-d61db5ade5c3","path":"sprites/sp_habitat_water/sp_habitat_water.yy",},"LayerId":null,"resourceVersion":"1.0","name":"composite","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"b513a924-3b5f-4790-896b-d61db5ade5c3","path":"sprites/sp_habitat_water/sp_habitat_water.yy",},"LayerId":{"name":"465514da-8661-4ec8-955a-cd5373180e5f","path":"sprites/sp_habitat_water/sp_habitat_water.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sp_habitat_water","path":"sprites/sp_habitat_water/sp_habitat_water.yy",},"resourceVersion":"1.0","name":"b513a924-3b5f-4790-896b-d61db5ade5c3","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"b513a924-3b5f-4790-896b-d61db5ade5c3",},
   ],
   "sequence": {
-    "spriteId": {"name":"sp_habitat_water","path":"sprites/sp_habitat_water/sp_habitat_water.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "sp_habitat_water",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 0.0,
@@ -37,12 +40,12 @@
     "autoRecord": true,
     "volume": 1.0,
     "length": 1.0,
-    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MessageEventKeyframe",},
-    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MomentsEventKeyframe",},
+    "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
+    "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"a432ca10-1de3-4987-b4ee-6530f5961b7c","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"b513a924-3b5f-4790-896b-d61db5ade5c3","path":"sprites/sp_habitat_water/sp_habitat_water.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"SpriteFrameKeyframe",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+            {"id":"a432ca10-1de3-4987-b4ee-6530f5961b7c","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"b513a924-3b5f-4790-896b-d61db5ade5c3","path":"sprites/sp_habitat_water/sp_habitat_water.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": false,
@@ -58,14 +61,9 @@
     "yorigin": 8,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"sp_habitat_water","path":"sprites/sp_habitat_water/sp_habitat_water.yy",},
-    "resourceVersion": "1.4",
-    "name": "sp_habitat_water",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":36.0,"displayName":"default","resourceVersion":"1.0","name":"465514da-8661-4ec8-955a-cd5373180e5f","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"465514da-8661-4ec8-955a-cd5373180e5f","visible":true,"isLocked":false,"blendMode":0,"opacity":36.0,"displayName":"default",},
   ],
   "nineSlice": {
     "left": 2,
@@ -96,8 +94,4 @@
     "name": "Landscape",
     "path": "folders/Sprites/Battle/Landscape.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "sp_habitat_water",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

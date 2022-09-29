@@ -1,8 +1,28 @@
 function sc_state_check_compatible(_action) {
 	// for ob_pokemon
+	
 	var _ins_sign  = ds_map_find_value(_action[? "active"], "in_state_sign")
 	var _ins_state = ds_map_find_value(_action[? "active"], "in_state")
 	var _ok = undefined
+
+	if object_index = ob_barrier 
+	switch _action[? "active"][? "state"] {
+		case _ABILITY_STATE.kamikaze:
+		case _ABILITY_STATE.flee:
+		case _ABILITY_STATE.lulling:
+		case _ABILITY_STATE.mindcontrol:
+		case _ABILITY_STATE.teleport:
+		case _ABILITY_STATE.wastetime:
+			return false;
+	}
+	if object_index = ob_player_sleep
+	switch _action[? "active"][? "state"] {
+		case _ABILITY_STATE.flee:
+		case _ABILITY_STATE.mindcontrol:
+		case _ABILITY_STATE.teleport:
+		case _ABILITY_STATE.wastetime:
+			return false;
+	}
 	
 	var _st 
 	if _ins_state != _ABILITY_STATE.none {

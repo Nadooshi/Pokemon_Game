@@ -4,7 +4,7 @@
     "path": "sprites/sp_frame_pokemoninventory/sp_frame_pokemoninventory.yy",
   },
   "solid": false,
-  "visible": false,
+  "visible": true,
   "managed": true,
   "spriteMaskId": null,
   "persistent": false,

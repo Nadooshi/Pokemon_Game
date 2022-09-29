@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMSprite",
+  "resourceVersion": "1.0",
+  "name": "sp_poke_teleport_away",
   "bboxMode": 0,
   "collisionKind": 1,
   "type": 0,
@@ -24,45 +27,23 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"68e76201-cfd9-4c6d-8c75-18c1df02716f","path":"sprites/sp_poke_teleport_away/sp_poke_teleport_away.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"68e76201-cfd9-4c6d-8c75-18c1df02716f","path":"sprites/sp_poke_teleport_away/sp_poke_teleport_away.yy",},"LayerId":{"name":"a39730d4-f22e-4d90-8c9b-0a53568d470b","path":"sprites/sp_poke_teleport_away/sp_poke_teleport_away.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sp_poke_teleport_away","path":"sprites/sp_poke_teleport_away/sp_poke_teleport_away.yy",},"resourceVersion":"1.0","name":"68e76201-cfd9-4c6d-8c75-18c1df02716f","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"f2f86d00-be2b-4c37-a6e7-fcff80b74b59","path":"sprites/sp_poke_teleport_away/sp_poke_teleport_away.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"f2f86d00-be2b-4c37-a6e7-fcff80b74b59","path":"sprites/sp_poke_teleport_away/sp_poke_teleport_away.yy",},"LayerId":{"name":"a39730d4-f22e-4d90-8c9b-0a53568d470b","path":"sprites/sp_poke_teleport_away/sp_poke_teleport_away.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sp_poke_teleport_away","path":"sprites/sp_poke_teleport_away/sp_poke_teleport_away.yy",},"resourceVersion":"1.0","name":"f2f86d00-be2b-4c37-a6e7-fcff80b74b59","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"1dd721c6-01e4-4926-8c79-aa4d3cc0e6c3","path":"sprites/sp_poke_teleport_away/sp_poke_teleport_away.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"1dd721c6-01e4-4926-8c79-aa4d3cc0e6c3","path":"sprites/sp_poke_teleport_away/sp_poke_teleport_away.yy",},"LayerId":{"name":"a39730d4-f22e-4d90-8c9b-0a53568d470b","path":"sprites/sp_poke_teleport_away/sp_poke_teleport_away.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sp_poke_teleport_away","path":"sprites/sp_poke_teleport_away/sp_poke_teleport_away.yy",},"resourceVersion":"1.0","name":"1dd721c6-01e4-4926-8c79-aa4d3cc0e6c3","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"4ff57938-4f45-4bc4-8a8f-85825026faa8","path":"sprites/sp_poke_teleport_away/sp_poke_teleport_away.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"4ff57938-4f45-4bc4-8a8f-85825026faa8","path":"sprites/sp_poke_teleport_away/sp_poke_teleport_away.yy",},"LayerId":{"name":"a39730d4-f22e-4d90-8c9b-0a53568d470b","path":"sprites/sp_poke_teleport_away/sp_poke_teleport_away.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sp_poke_teleport_away","path":"sprites/sp_poke_teleport_away/sp_poke_teleport_away.yy",},"resourceVersion":"1.0","name":"4ff57938-4f45-4bc4-8a8f-85825026faa8","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"d0e06a25-a2e9-4286-a40c-ee671abf59d8","path":"sprites/sp_poke_teleport_away/sp_poke_teleport_away.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"d0e06a25-a2e9-4286-a40c-ee671abf59d8","path":"sprites/sp_poke_teleport_away/sp_poke_teleport_away.yy",},"LayerId":{"name":"a39730d4-f22e-4d90-8c9b-0a53568d470b","path":"sprites/sp_poke_teleport_away/sp_poke_teleport_away.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sp_poke_teleport_away","path":"sprites/sp_poke_teleport_away/sp_poke_teleport_away.yy",},"resourceVersion":"1.0","name":"d0e06a25-a2e9-4286-a40c-ee671abf59d8","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"6610fc10-b1b5-49eb-8c06-c1305bae0e51","path":"sprites/sp_poke_teleport_away/sp_poke_teleport_away.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"6610fc10-b1b5-49eb-8c06-c1305bae0e51","path":"sprites/sp_poke_teleport_away/sp_poke_teleport_away.yy",},"LayerId":{"name":"a39730d4-f22e-4d90-8c9b-0a53568d470b","path":"sprites/sp_poke_teleport_away/sp_poke_teleport_away.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sp_poke_teleport_away","path":"sprites/sp_poke_teleport_away/sp_poke_teleport_away.yy",},"resourceVersion":"1.0","name":"6610fc10-b1b5-49eb-8c06-c1305bae0e51","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"75f0a002-fd07-42a7-9ac1-9ba0c2d8a207","path":"sprites/sp_poke_teleport_away/sp_poke_teleport_away.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"75f0a002-fd07-42a7-9ac1-9ba0c2d8a207","path":"sprites/sp_poke_teleport_away/sp_poke_teleport_away.yy",},"LayerId":{"name":"a39730d4-f22e-4d90-8c9b-0a53568d470b","path":"sprites/sp_poke_teleport_away/sp_poke_teleport_away.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sp_poke_teleport_away","path":"sprites/sp_poke_teleport_away/sp_poke_teleport_away.yy",},"resourceVersion":"1.0","name":"75f0a002-fd07-42a7-9ac1-9ba0c2d8a207","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"e2ea37f9-e94d-4b96-81f8-d3c3e3a27352","path":"sprites/sp_poke_teleport_away/sp_poke_teleport_away.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"e2ea37f9-e94d-4b96-81f8-d3c3e3a27352","path":"sprites/sp_poke_teleport_away/sp_poke_teleport_away.yy",},"LayerId":{"name":"a39730d4-f22e-4d90-8c9b-0a53568d470b","path":"sprites/sp_poke_teleport_away/sp_poke_teleport_away.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sp_poke_teleport_away","path":"sprites/sp_poke_teleport_away/sp_poke_teleport_away.yy",},"resourceVersion":"1.0","name":"e2ea37f9-e94d-4b96-81f8-d3c3e3a27352","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"00902e3c-c0a5-4b97-a147-93870fa9f0cc","path":"sprites/sp_poke_teleport_away/sp_poke_teleport_away.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"00902e3c-c0a5-4b97-a147-93870fa9f0cc","path":"sprites/sp_poke_teleport_away/sp_poke_teleport_away.yy",},"LayerId":{"name":"a39730d4-f22e-4d90-8c9b-0a53568d470b","path":"sprites/sp_poke_teleport_away/sp_poke_teleport_away.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sp_poke_teleport_away","path":"sprites/sp_poke_teleport_away/sp_poke_teleport_away.yy",},"resourceVersion":"1.0","name":"00902e3c-c0a5-4b97-a147-93870fa9f0cc","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"9caf3d62-bcd9-443f-bf9e-d1ca08f7136f","path":"sprites/sp_poke_teleport_away/sp_poke_teleport_away.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"9caf3d62-bcd9-443f-bf9e-d1ca08f7136f","path":"sprites/sp_poke_teleport_away/sp_poke_teleport_away.yy",},"LayerId":{"name":"a39730d4-f22e-4d90-8c9b-0a53568d470b","path":"sprites/sp_poke_teleport_away/sp_poke_teleport_away.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sp_poke_teleport_away","path":"sprites/sp_poke_teleport_away/sp_poke_teleport_away.yy",},"resourceVersion":"1.0","name":"9caf3d62-bcd9-443f-bf9e-d1ca08f7136f","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"930844de-fc0e-484e-a3bc-e04a4b1a21a9","path":"sprites/sp_poke_teleport_away/sp_poke_teleport_away.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"930844de-fc0e-484e-a3bc-e04a4b1a21a9","path":"sprites/sp_poke_teleport_away/sp_poke_teleport_away.yy",},"LayerId":{"name":"a39730d4-f22e-4d90-8c9b-0a53568d470b","path":"sprites/sp_poke_teleport_away/sp_poke_teleport_away.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sp_poke_teleport_away","path":"sprites/sp_poke_teleport_away/sp_poke_teleport_away.yy",},"resourceVersion":"1.0","name":"930844de-fc0e-484e-a3bc-e04a4b1a21a9","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"6fd8f21d-4b8f-44e5-98a1-da0aa14a878f","path":"sprites/sp_poke_teleport_away/sp_poke_teleport_away.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"6fd8f21d-4b8f-44e5-98a1-da0aa14a878f","path":"sprites/sp_poke_teleport_away/sp_poke_teleport_away.yy",},"LayerId":{"name":"a39730d4-f22e-4d90-8c9b-0a53568d470b","path":"sprites/sp_poke_teleport_away/sp_poke_teleport_away.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sp_poke_teleport_away","path":"sprites/sp_poke_teleport_away/sp_poke_teleport_away.yy",},"resourceVersion":"1.0","name":"6fd8f21d-4b8f-44e5-98a1-da0aa14a878f","tags":[],"resourceType":"GMSpriteFrame",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"68e76201-cfd9-4c6d-8c75-18c1df02716f",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"f2f86d00-be2b-4c37-a6e7-fcff80b74b59",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"1dd721c6-01e4-4926-8c79-aa4d3cc0e6c3",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"4ff57938-4f45-4bc4-8a8f-85825026faa8",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"d0e06a25-a2e9-4286-a40c-ee671abf59d8",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"6610fc10-b1b5-49eb-8c06-c1305bae0e51",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"75f0a002-fd07-42a7-9ac1-9ba0c2d8a207",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"e2ea37f9-e94d-4b96-81f8-d3c3e3a27352",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"00902e3c-c0a5-4b97-a147-93870fa9f0cc",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"9caf3d62-bcd9-443f-bf9e-d1ca08f7136f",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"930844de-fc0e-484e-a3bc-e04a4b1a21a9",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"6fd8f21d-4b8f-44e5-98a1-da0aa14a878f",},
   ],
   "sequence": {
-    "spriteId": {"name":"sp_poke_teleport_away","path":"sprites/sp_poke_teleport_away/sp_poke_teleport_away.yy",},
+    "resourceType": "GMSequence",
+    "resourceVersion": "1.4",
+    "name": "sp_poke_teleport_away",
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 10.0,
@@ -73,7 +54,7 @@
     "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
-      {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
+      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
             {"id":"c8c7049d-65ec-4324-a321-4b651584bfd6","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"68e76201-cfd9-4c6d-8c75-18c1df02716f","path":"sprites/sp_poke_teleport_away/sp_poke_teleport_away.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"7a7dc584-6ca8-465e-bd79-646c5acfd607","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"f2f86d00-be2b-4c37-a6e7-fcff80b74b59","path":"sprites/sp_poke_teleport_away/sp_poke_teleport_away.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"56e80731-8044-4bbc-a7df-6a922ebc04ee","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"1dd721c6-01e4-4926-8c79-aa4d3cc0e6c3","path":"sprites/sp_poke_teleport_away/sp_poke_teleport_away.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
@@ -86,7 +67,7 @@
             {"id":"21dd401b-08c7-43cc-b785-de1a9f461f6e","Key":9.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"9caf3d62-bcd9-443f-bf9e-d1ca08f7136f","path":"sprites/sp_poke_teleport_away/sp_poke_teleport_away.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"e40e1f56-6e9c-4cd9-977e-02f23a0113dc","Key":10.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"930844de-fc0e-484e-a3bc-e04a4b1a21a9","path":"sprites/sp_poke_teleport_away/sp_poke_teleport_away.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
             {"id":"3cd6ffa1-cbac-4357-b14e-fb92685c9b2f","Key":11.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"6fd8f21d-4b8f-44e5-98a1-da0aa14a878f","path":"sprites/sp_poke_teleport_away/sp_poke_teleport_away.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
+          ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
     "lockOrigin": false,
@@ -102,22 +83,13 @@
     "yorigin": 48,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"sp_poke_teleport_away","path":"sprites/sp_poke_teleport_away/sp_poke_teleport_away.yy",},
-    "resourceVersion": "1.4",
-    "name": "sp_poke_teleport_away",
-    "tags": [],
-    "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"a39730d4-f22e-4d90-8c9b-0a53568d470b","tags":[],"resourceType":"GMImageLayer",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"a39730d4-f22e-4d90-8c9b-0a53568d470b","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
     "name": "Overworld",
     "path": "folders/Sprites/Battle/Overworld.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "sp_poke_teleport_away",
-  "tags": [],
-  "resourceType": "GMSprite",
 }

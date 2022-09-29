@@ -1,6 +1,8 @@
 /// @desc
 
-// Inherit the parent event
+if pokemon_id.trainer = -1
+	exit;
+	
 event_inherited();
 
 with pokemon_id {
