@@ -80,3 +80,33 @@ ability in copied action of other objects is destroyed... This causes a crash
 	ob_bar
 		- при первом появлении в него записывается изначальное значение как максимальное
 
+
+26.10.22
+	Изменение кода столкновений:
+	
+		Делаю общий компонент cmp_collidable.
+	Каждый объект имеющий его, (ob_player, ob_bullet) изменяет в create event и userEvent0 (init), под себя (маска, размер, кадр)
+	вместо того, чтобы иметь разные компоненты для каждого объекта.
+	
+		Основная функция ob_collidable это создание и перемещение ob_collision_area. 
+	ob_collision_area сделать несколько видов для разных типов столкновений (habitat, hazard, air, buried)
+	Collision_area нужен для того, чтобы столкновения обрабатывались нативно by GameMaker
+
+	ob_coliision_area types:
+		- land (hazard)
+		- air
+		- buried
+		- bullet (?)
+		
+	if ob_collide should fly over ob_collide of same type, they change their solid property = false
+
+	sc_set_coll_areas
+	   changes sprite (and mask) for created ob_collides
+	   
+	Осталось вызывать скрипт привязки ob_collide (sc_set_coll_areas) в нужных местах:
+	 - ob_player -> User 0 (Init), взлет, закапывание, телепортация, other User Events
+	 - ob_bullet
+	 - ob_hazard (?) same as land? hazard is always stops only objs with ob_collide_land
+	 - ob_hab_water (evey habitat obj creates its own ob_collide)
+	 
+	   

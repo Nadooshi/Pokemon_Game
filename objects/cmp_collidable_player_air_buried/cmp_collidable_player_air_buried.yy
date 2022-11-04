@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMObject",
+  "resourceVersion": "1.0",
+  "name": "cmp_collidable_player_air_buried",
   "spriteId": {
     "name": "sp_shadowworld",
     "path": "sprites/sp_shadowworld/sp_shadowworld.yy",
@@ -9,8 +12,8 @@
   "spriteMaskId": null,
   "persistent": false,
   "parentObjectId": {
-    "name": "cmp_collidable_player",
-    "path": "objects/cmp_collidable_player/cmp_collidable_player.yy",
+    "name": "cmp_collidable",
+    "path": "objects/cmp_collidable/cmp_collidable.yy",
   },
   "physicsObject": false,
   "physicsSensor": false,
@@ -25,7 +28,7 @@
   "physicsKinematic": false,
   "physicsShapePoints": [],
   "eventList": [
-    {"isDnD":false,"eventNum":11,"eventType":7,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":11,"eventType":7,"collisionObjectId":null,},
   ],
   "properties": [],
   "overriddenProperties": [],
@@ -33,8 +36,4 @@
     "name": "components",
     "path": "folders/Objects/Battle/components.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "cmp_collidable_player_air_buried",
-  "tags": [],
-  "resourceType": "GMObject",
 }

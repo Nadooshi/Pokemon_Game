@@ -1,4 +1,6 @@
 /// @desc Init
 
-coll_area.image_index = size
+event_inherited()
+
 mask_index = sp_shadow_path
+

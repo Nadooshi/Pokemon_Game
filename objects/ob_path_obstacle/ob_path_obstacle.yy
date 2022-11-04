@@ -1,4 +1,7 @@
 {
+  "resourceType": "GMObject",
+  "resourceVersion": "1.0",
+  "name": "ob_path_obstacle",
   "spriteId": null,
   "solid": true,
   "visible": true,
@@ -25,8 +28,4 @@
     "name": "landscape",
     "path": "folders/Objects/Battle/landscape.yy",
   },
-  "resourceVersion": "1.0",
-  "name": "ob_path_obstacle",
-  "tags": [],
-  "resourceType": "GMObject",
 }

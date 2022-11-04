@@ -1,20 +1,17 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "cmp_collidable_bullet",
+  "name": "ob_collide",
   "spriteId": {
-    "name": "sp_pr_attack_1",
-    "path": "sprites/sp_pr_attack_1/sp_pr_attack_1.yy",
+    "name": "sp_shadow_path",
+    "path": "sprites/sp_shadow_path/sp_shadow_path.yy",
   },
   "solid": false,
-  "visible": true,
+  "visible": false,
   "managed": true,
   "spriteMaskId": null,
   "persistent": false,
-  "parentObjectId": {
-    "name": "cmp_collidable",
-    "path": "objects/cmp_collidable/cmp_collidable.yy",
-  },
+  "parentObjectId": null,
   "physicsObject": false,
   "physicsSensor": false,
   "physicsShape": 1,
@@ -29,13 +26,12 @@
   "physicsShapePoints": [],
   "eventList": [
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,},
-    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":11,"eventType":7,"collisionObjectId":null,},
-    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":1,"eventType":3,"collisionObjectId":null,},
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":10,"eventType":7,"collisionObjectId":null,},
   ],
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "components",
-    "path": "folders/Objects/Battle/components.yy",
+    "name": "Battle",
+    "path": "folders/Objects/Battle.yy",
   },
 }
