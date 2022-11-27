@@ -20,7 +20,7 @@ if health_cur = 0 {
 			sc_logging_death(_p_attack, id, _action)
 		if trainer != _p_attack.trainer {
 			_p_attack.frags++
-			sc_gain_exp(_p_attack, poke_exp.kill, pokemon_map[? "level"], string(_p_attack.pokemon_map[?"title"]) + " made " + string(_p_attack.frags) + " frags!")
+			sc_gain_exp(_p_attack, poke_exp.kill, pokemon_map, string(_p_attack.pokemon_map[?"title"]) + " made " + string(_p_attack.frags) + " frags!")
 		}
 	}
 	event_perform(ev_destroy, 0)

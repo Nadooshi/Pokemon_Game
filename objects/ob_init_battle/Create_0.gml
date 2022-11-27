@@ -29,7 +29,7 @@ enum act_exp {
 globalvar exps;
 exps[poke_exp.damage] = 2
 exps[poke_exp.dodge	] = 1
-exps[poke_exp.kill	] = 500 // based on level difference between attacking and killed
+exps[poke_exp.kill	] = 2 // mod force value of dead pokemon and changed lvl killer pokemon.
 exps[act_exp.use	] = 1
 exps[act_exp.success] = 6
 
