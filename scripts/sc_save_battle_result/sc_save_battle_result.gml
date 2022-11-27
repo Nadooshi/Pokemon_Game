@@ -1,13 +1,14 @@
 function sc_save_battle_result() {
 	// show exp of pokemons and actions from inside trainer map
-	var prise = 1
-	if current_trainer = trainer_loser
-		prise = 0.5
+	var prise = 100
+	if current_trainer = trainer_loser 
+		prise = 0
+	
 	
 	var _a_map, _a
 	for (var i=0; i<ds_list_size(current_trainer[? "pokemon_ids"]); i++) {
 		var _id = current_trainer[? "pokemon_ids"][| i]
-		_id.pokemon_map[? "exp"] += (_id.cur_exp * prise)
+		_id.pokemon_map[? "exp"] += (_id.cur_exp + (prise)* _id.pokemon_map[? "level"])
 		
 		for (_a = 0; _a < ds_list_size(_id.action_list); _a++) {
 			_a_map = _id.action_list[| _a]

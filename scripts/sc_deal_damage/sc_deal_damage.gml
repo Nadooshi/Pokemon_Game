@@ -68,13 +68,15 @@ function sc_deal_damage(_action, _pokemon_attack) {
 		if _r_ <= _rate
 			sc_apply_state(_state_obj, _dmg, _pokemon_attack, _action);
 	}
-
-	sc_gain_exp(_pokemon_attack, poke_exp.damage, _dmg, undefined)
-	if _dmg > 0
-		sc_gain_exp(_action, act_exp.success, _dmg, _pokemon_attack)
-	else
-		sc_gain_exp(_action, act_exp.success, _action[? "rating"], _pokemon_attack)
-		
+	
+	if _pokemon_attack.trainer != trainer {
+		sc_gain_exp(_pokemon_attack, poke_exp.damage, _dmg, undefined)
+		if _dmg > 0
+			sc_gain_exp(_action, act_exp.success, _dmg, _pokemon_attack)
+		else
+			sc_gain_exp(_action, act_exp.success, _action[? "rating"], _pokemon_attack)
+	}
+	
 	sc_logging_damage(_pokemon_attack, id, _action, _dmg)
 
 }

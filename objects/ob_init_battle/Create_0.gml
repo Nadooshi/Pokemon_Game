@@ -18,7 +18,6 @@ enum poke_exp {
 	damage,
 	dodge,
 	kill,
-	win,
 	count
 }
 
@@ -30,9 +29,9 @@ enum act_exp {
 globalvar exps;
 exps[poke_exp.damage] = 2
 exps[poke_exp.dodge	] = 1
-exps[poke_exp.kill	] = 750 // based on level difference between attacking and killed
-exps[poke_exp.win	] = 2// multiply for accumulated exp. per battle
+exps[poke_exp.kill	] = 500 // based on level difference between attacking and killed
 exps[act_exp.use	] = 1
 exps[act_exp.success] = 6
 
-
+#macro base_lvlup_value_action 1000
+#macro base_lvlup_value 1000 // for pokemon

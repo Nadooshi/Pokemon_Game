@@ -271,10 +271,6 @@ function sc_logging_experience (_object, _value, _event) {
 		_ev = "frag"
 		_mod = false
 		break;
-	case poke_exp.win:
-		_ev = "victory"
-		_mod = false
-		break;
 	case act_exp.use:
 		_ev = "training skill"
 		_mod = true
