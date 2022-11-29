@@ -40,7 +40,7 @@ function sc_deal_damage(_action, _pokemon_attack) {
 		var _s = ds_list_size(states)
 		for (var i = 0; i < _s ; i++) {
 			ok = true
-			if states[| i] > 0 // перед смертью тут -4
+			if states[| i] > 0
 			if states[| i].object_index = ob_state_reflect {
 				ok = false
 				if sc_does_exist(_action[? "active"]) 

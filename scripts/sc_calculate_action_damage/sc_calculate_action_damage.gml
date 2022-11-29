@@ -127,8 +127,7 @@ function sc_calculate_action_damage(_action, p_id_target, _p_attack) {
 			}
 		}
 		// apply state 'revenge' for action
-		if potential_damage > 0
-		if _abil[? "state"] = _ABILITY_STATE.revenge {
+		if _abil[? "state"] = _ABILITY_STATE.revenge{
 			potential_damage = _p_attack.health_max - _p_attack.health_cur
 			var _val_txt = "looking forward to revenge by " + string(potential_damage) +"."
 			sc_logging_state_cursed(_p_attack, _abil[? "name"], _val_txt)

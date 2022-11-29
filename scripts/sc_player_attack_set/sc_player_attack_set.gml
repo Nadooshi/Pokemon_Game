@@ -174,8 +174,9 @@ function sc_player_attack_set() {
 			attack_ob_id = instance_create_layer(x, y, "Particles", ob_attack)
 
 	}
-	for (var i=0; i<ds_list_size(states); i++) // apple state revenge for master pokemon
-		if states[| i].object_index = ob_state_revenge {
+	for (var i=0; i<ds_list_size(states); i++) // apple state 'revenge' for master pokemon
+		if states[| i].object_index = ob_state_revenge 
+		if _a_map[? "affect"] = _ATTACK_AFFECT.enemy {
 			var _coef = _a_map[? "dmg_material"] / _a_map[? "dmg_element"]
 			_a_map[? "damage"] = (health_max - health_cur)
 			_a_map[? "dmg_material"] = _a_map[? "damage"] * _coef

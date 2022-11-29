@@ -8,11 +8,12 @@ function sc_hurt(argument0, argument1, argument2) {
 var _dmg = argument0
 var _p_attack = argument1
 var _action = argument2
-	
 
+// ==========================================================================
 health_cur = max(0, health_cur - _dmg)
 hurt_cur += _dmg
-		
+//===========================================================================
+
 // death
 if health_cur = 0 {
 	if trainer > -1 {
