@@ -9,3 +9,4 @@ while not is_undefined(_k) {
 	instance_destroy(coll_areas[? _k])
 	_k = ds_map_find_next(coll_areas, _k)
 }
+ds_map_destroy(coll_areas)

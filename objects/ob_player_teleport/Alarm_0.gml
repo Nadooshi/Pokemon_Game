@@ -10,7 +10,7 @@ if collision_line(x, y+_z, tg_x, tg_y, ob_hazard, false, true) {
 		var _newdir = _dirtotg+(random(90)-45)
 		tg_x = tg_x + cos(degtorad(_newdir))*_d
 		tg_y = tg_y + sin(degtorad(_newdir))*_d
-		_ok = not position_meeting(tg_x, tg_y, ob_collision_area)
+		_ok = not position_meeting(tg_x, tg_y, ob_collide)
 		if _ok break
 	}
 } else {

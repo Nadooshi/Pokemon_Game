@@ -1,10 +1,10 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "cmp_collidable_player_air_buried",
+  "name": "_old_cmp_collidable_bullet",
   "spriteId": {
-    "name": "sp_shadowworld",
-    "path": "sprites/sp_shadowworld/sp_shadowworld.yy",
+    "name": "sp_pr_attack_1",
+    "path": "sprites/sp_pr_attack_1/sp_pr_attack_1.yy",
   },
   "solid": false,
   "visible": true,
@@ -28,7 +28,9 @@
   "physicsKinematic": false,
   "physicsShapePoints": [],
   "eventList": [
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,},
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":11,"eventType":7,"collisionObjectId":null,},
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":1,"eventType":3,"collisionObjectId":null,},
   ],
   "properties": [],
   "overriddenProperties": [],

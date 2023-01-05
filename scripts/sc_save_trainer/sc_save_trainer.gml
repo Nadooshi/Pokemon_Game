@@ -10,7 +10,7 @@ function sc_save_trainer() {
 	ds_map_add_list(current_trainer, "active_pokemon_list", _nums)
 
 	// round values
-	sc_map_floor_all_reals(current_trainer)
+	//sc_map_floor_all_reals(current_trainer)
 
 	var fname  = "trainer_saves/" + string_lettersdigits(current_trainer[? "name"])+".txt"
 	var f = file_text_open_write(fname)

@@ -1,5 +1,8 @@
 /// @desc
 
+move_component_index = sc_composed_add_component(cmp_moving)
+sc_composed_add_component(cmp_collidable)
+
 event_inherited()
 
 enum d {

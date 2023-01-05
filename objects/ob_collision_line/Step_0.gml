@@ -11,7 +11,7 @@ if not parent.init
 with parent {
 	ds_list_clear(other.coll_list)
 	ds_list_clear(collided_with_list)
-	var _count = collision_line_list(x1, y1, x2, y2, ob_collision_area, false, false, other.coll_list, false)
+	var _count = collision_line_list(x1, y1, x2, y2, ob_collide, false, false, other.coll_list, false)
 	for (var i=0; i<_count; i++)
 		collided_with_list[| i] = other.coll_list[| i].parent
 	if _count > 0

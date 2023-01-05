@@ -9,7 +9,10 @@
   "solid": false,
   "visible": true,
   "managed": true,
-  "spriteMaskId": null,
+  "spriteMaskId": {
+    "name": "sp_shadow_path",
+    "path": "sprites/sp_shadow_path/sp_shadow_path.yy",
+  },
   "persistent": false,
   "parentObjectId": {
     "name": "ob_composed",

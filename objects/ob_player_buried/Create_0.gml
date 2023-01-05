@@ -6,6 +6,7 @@ if sprite_exists(_sp)
 	sprite_index = _sp
 
 sc_player_stop_set()
+sc_set_coll_areas(false, false, true)
 
 o_maxSpeed = maxSpeed
 maxSpeed *= 0.66

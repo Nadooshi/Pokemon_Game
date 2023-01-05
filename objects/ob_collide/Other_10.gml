@@ -1,10 +1,12 @@
 /// @desc  Common collision code
 
-if not sc_does_exist(parent) or not sc_does_exist(other.parent) {
+if not sc_does_exist(parent) {
 	noParent = true
 	instance_destroy()
 	exit
 }
+if not sc_does_exist(other.parent)
+	exit
 
 other.parent.collided_with = parent
 other.parent.collided_from = other.id

@@ -3,6 +3,8 @@
 alarm_set(1, 30)
 alarm_set(2, 30)
 
+sc_set_coll_areas(true, false, false)
+
 depth = (room_height - bbox_top) * 0.5
 tiles = []
 tiles_count = 0

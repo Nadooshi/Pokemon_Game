@@ -335,7 +335,7 @@ function sc_ai_wait_warmup_start() {
 			var _newdir = _dirtotg+(random(90)-45)
 			tgX = target.x + cos(degtorad(_newdir))*_neededDist
 			tgY = target.y + sin(degtorad(_newdir))*_neededDist
-			_ok = not position_meeting(tgX, tgY, ob_collision_area)
+			_ok = not position_meeting(tgX, tgY, ob_collide)
 			if _ok break
 		}
 //		if not _ok	
