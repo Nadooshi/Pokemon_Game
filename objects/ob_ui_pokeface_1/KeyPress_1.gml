@@ -18,7 +18,7 @@ if sc_does_exist(list[| _i]) {
 			if instance_exists(selected_id)
 			with selected_id {
 				sc_composed_remove_component(cmp_control_keyb)
-				sc_composed_add_component(cmp_control_ai)
+				sc_composed_add_component(cmp_control_ai, true)
 				control_component = cmp_control_ai
 			}
 			selected_id = id
