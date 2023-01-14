@@ -1,5 +1,7 @@
 /// @desc 
 
+event_inherited()
+
 ds_map_destroy(action)
 action = noone
 ds_list_destroy(list_missed)
