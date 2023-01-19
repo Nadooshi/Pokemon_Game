@@ -99,7 +99,7 @@ ability in copied action of other objects is destroyed... This causes a crash
 		- bullet (?)
 		
 	if ob_collide should fly over ob_collide of same type, they change their solid property = false
-ob_collide are always created for ob_player
+
 	sc_set_coll_areas
 	   changes sprite (and mask) for created ob_collides
 	   
@@ -111,5 +111,5 @@ ob_collide are always created for ob_player
 	 
 	 В объектах имеющих ob_collide в User 1 (After collision) прописать изменение solid при необходимости.
 	 Или при Create.
-	 
+
 	 

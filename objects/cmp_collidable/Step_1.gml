@@ -1,4 +1,4 @@
-/// @desc
+/// @desc Stick ob_collide to object
 
 	
 var _x = x + hspeed

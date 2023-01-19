@@ -26,6 +26,12 @@ if not shot_done {
 	bullet.image_angle = bullet.direction
 	bullet.sprite_index = asset_get_index(action[? "p_anim"])
 	bullet.image_blend = sc_make_attack_colour(action)
+	with bullet
+	sc_set_coll_areas(
+		(action[? "tgTo"] & _ATTACK_TG.ground) > 0,
+		(action[? "tgTo"] & _ATTACK_TG.air) > 0,
+		(action[? "tgTo"] & _ATTACK_TG.underground) > 0
+	)
 	var _snd = choose(snd_attack_range_0, snd_attack_range_1, snd_attack_range_2)
 	sc_play_sound(_snd, false)
 	sc_play_sound_element("element")
