@@ -7,8 +7,10 @@ selected_id = noone
 
 globalvar dTime;
 globalvar minFPS;
+globalvar debug;
 dTime = 0
 minFPS = 30
+debug = false
 
 watching = ds_list_create()
 globalvar fx_system_damage;

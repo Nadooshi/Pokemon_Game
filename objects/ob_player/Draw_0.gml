@@ -1,7 +1,8 @@
 /// @desc
 event_inherited()
 
-draw_sprite(sp_shadowworld, size, x, y + 12)
+if not debug
+	draw_sprite(sp_shadowworld, size, x, y + 12)
 
 draw_self()
 

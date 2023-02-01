@@ -6,3 +6,4 @@ init = false
 collided_with = noone
 collided_from = noone // id of area that is in collision
 
+bouncing = false

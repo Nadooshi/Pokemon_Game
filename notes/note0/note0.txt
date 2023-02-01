@@ -112,4 +112,9 @@ ability in copied action of other objects is destroyed... This causes a crash
 	 В объектах имеющих ob_collide в User 1 (After collision) прописать изменение solid при необходимости.
 	 Или при Create.
 
-	 
+25.01.23
+	Solid = false не меняет поведение при столкновении с объектом solid = true. Они застревают друг в друге.
+	Чтобы не застревали у обоих должен быть solid = false.
+	
+	Нельзя скомпилировать часть проекта, не используя некоторые ресурсы, чтобы запуск был быстрее. Configs для этого не подходят
+

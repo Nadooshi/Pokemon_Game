@@ -1,8 +1,5 @@
 /// @desc init
 
-collided_with = noone
-collided_from = noone // id of area that is in collision
-
-coll_areas = ds_map_create() // "land", "air", "buried"
+sc_composed_add_component(cmp_collidable, true)
 
 alarm_set(0, 30)
