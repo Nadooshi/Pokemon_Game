@@ -4,8 +4,8 @@
 event_perform_object(ob_bullet, ev_create, 0)
 
 sc_composed_remove_all_components(true)
-sc_composed_add_component(cmp_collidable_ray, true)
-sc_composed_add_component(cmp_animated, true)
+sc_composed_add_component(cmp_collidable_ray)
+sc_composed_add_component(cmp_animated)
 
 event_inherited();
 

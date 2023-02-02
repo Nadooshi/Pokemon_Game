@@ -24,5 +24,7 @@ if not instance_exists(pokemon_id) {
 	pokemon_id.x  = bullet.x
 	pokemon_id.y  = bullet.y
 	pokemon_id._z = bullet._z
+	with pokemon_id	
+		event_perform(ev_step, ev_step_begin)
 }
 

@@ -18,9 +18,7 @@ timeout = init_timeout
 sc_logging_state_cursed(pokemon_id, name, "captured by " + pokemon_id_attack.pokemon_map[? "title"])
 
 with pokemon_id {
-	instance_change(ob_player_swoop, false)
-	sc_composed_remove_component(cmp_collidable_player, true)
-	event_perform_object(ob_player_swoop, ev_create, 0)
+	event_perform(ev_other, ev_user5)
 	doActionNum = -1
 	sc_player_stop_set()
 }

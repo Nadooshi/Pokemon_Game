@@ -24,3 +24,5 @@ if not instance_exists(pokemon_id)
 	sc_play_sound(_snd, false)
 	sc_play_sound_element("element")
 	sc_play_sound_element("material")
+
+	init = true

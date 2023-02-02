@@ -23,6 +23,6 @@ with pokemon_id {
 	if health_cur<=0
 		event_perform_object(ob_player, ev_destroy, 0)
 		
-	sc_composed_add_component(cmp_collidable_player, true)
+	event_perform(ev_step, ev_step_begin)
 	sc_canMove(true)
 }

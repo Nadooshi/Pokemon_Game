@@ -17,7 +17,6 @@ with instance_create_layer(x, y, "Game", ob_player_teleport_start) {
 	t_dist = other.hurt_timeout
 }
 
-sc_composed_remove_component(cmp_collidable_player, true)
 position_stage = _ATTACK_TG.teleport
 image_alpha = 0
 timeout = 0 //на всякий случай

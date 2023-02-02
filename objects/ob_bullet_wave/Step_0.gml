@@ -20,6 +20,8 @@ for (var i=0; i<dot_count; i++) {
 		dot[i].y = y + cos(_angle) * _step * (_h_count + i)
 		dot[i].timeout = timeout
 		dot[i].radius = _step * 0.4
+		with dot[i]
+			event_perform(ev_step, ev_step_begin) // move coll_areas accordingly
 	} else {
 		_collided = true
 		break

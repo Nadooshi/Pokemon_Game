@@ -5,8 +5,8 @@ with pokemon_id {
 	y = other.y
 	sc_canMove(true)
 	sc_ai_give_up()
-	sc_composed_add_component(cmp_collidable_player, true)
 	position_stage = other.o_position_stage
+	event_perform(ev_step, ev_step_begin)
 	image_alpha = 1
 	if sc_does_exist(passive_state1)
 		alarm_set(0, (passive_state1[? "state_time"] + passive_state1[? "state_cooldown"]) * 60)

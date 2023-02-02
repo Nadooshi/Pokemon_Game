@@ -1,6 +1,6 @@
 /// @desc After collision (from step)
 
-event_inherited()
+//event_inherited()
 
 var _dot_alive = false,
 	_chain_count = 0,
@@ -31,7 +31,8 @@ for (var i=0; i<dot_count; i++) {
 	}
 }
 
-if _chain_count>0 {
+if _chain_count > 0
+if size/5 * _chain_count > 0.5 {
 	_wave_dots[_wave_count] = _chain_count
 	_wave_x[_wave_count] = _chain_x / _chain_count
 	_wave_y[_wave_count] = _chain_y / _chain_count
@@ -39,8 +40,7 @@ if _chain_count>0 {
 }
 
 // create waves
-for (var i=0; i<_wave_count; i++) 
-if size/5 * _wave_dots[i] > 0.5 {
+for (var i=0; i<_wave_count; i++) {
 	// create bullet
 	bullet = instance_create_layer(_wave_x[i], _wave_y[i], "Particles", ob_bullet_wave)
 	ds_map_copy(bullet.action, action)

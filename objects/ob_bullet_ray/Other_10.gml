@@ -1,4 +1,5 @@
 /// @desc Init
+
 x1 = x
 y1 = y
 x2 = x1 + lengthdir_x(length, direction)
@@ -18,3 +19,5 @@ if ds_exists(action, ds_type_map) {
 	for (var i=0; i < count; i++)
 		sc_particle_fx_bullet(x1 + _x*i, y1 + _y*i, sprites, 1, 1, 0.5, 1)
 }
+
+init = true

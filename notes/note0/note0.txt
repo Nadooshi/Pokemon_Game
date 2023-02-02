@@ -118,3 +118,8 @@ ability in copied action of other objects is destroyed... This causes a crash
 	
 	Нельзя скомпилировать часть проекта, не используя некоторые ресурсы, чтобы запуск был быстрее. Configs для этого не подходят
 
+
+2.02.23
+	ob_collision_line наследуется от ob_collision_area_old(!)
+	Проверка на попадание в Step учитывает все ob_collide(!) не зависимо от position_stage (no matter whether atttack targeted on air, land or buried)
+	

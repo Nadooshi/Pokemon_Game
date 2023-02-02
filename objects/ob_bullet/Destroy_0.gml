@@ -21,6 +21,8 @@ if ds_map_find_value(action[? "active"], "state") = _ABILITY_STATE.blast {
 with instance_create_layer(x, y, "Particles", ob_damage_area) {
 	ds_map_copy(action, other.action)
 	accuracy_done_for = other.accuracy_done_for
+	if variable_instance_exists(other.id, "list_missed")
+		ds_list_copy(list_missed, other.list_missed)
 	radius = max(action[? "radius"] * 8, 1)
 	pokemon_id = other.pokemon_id
 	hurt_time = other.hurt_time

@@ -23,6 +23,7 @@ with pokemon_id {
 	
 	x += lengthdir_x(other.attract_speed, -tgAngle)
 	y += lengthdir_y(other.attract_speed, -tgAngle)
+	event_perform(ev_step, ev_step_begin)
 	_z = other._z
 }
 

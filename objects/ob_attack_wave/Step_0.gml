@@ -7,6 +7,7 @@ event_perform_object(ob_composed, ev_step, ev_step_normal)
 
 if not shot_done {
 	shot_done = true
+	action[? "ex_anim"] = ""
 	// create bullet
 	bullet = instance_create_layer(x, y+9, "Particles", ob_bullet_wave)
 	ds_map_copy(bullet.action, action)
