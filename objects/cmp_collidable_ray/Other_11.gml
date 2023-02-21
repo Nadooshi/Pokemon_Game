@@ -34,11 +34,14 @@ if sc_does_exist(collided_with_list[| i]) {
 				accuracy_done_for = collided_with				
 				// shorten
 				if action[? "bullet_phys"] != _BULLET_PH.piercer {
-					length = point_distance(x1, y1, collided_with.x, collided_with.y)
+					length = min(length, point_distance(x1, y1, collided_with.x, collided_with.y))
 					x2 = x1 + lengthdir_x(length, direction)
 					y2 = y1 + lengthdir_y(length, direction)
 					x = collided_with.x
 					y = collided_with.y
+					count = length / 8
+					_x = lengthdir_x(8, direction)
+					_y = lengthdir_y(8, direction)
 					// do damage
 					with instance_copy(false) {
 						instance_change(ob_bullet, false)
@@ -54,9 +57,12 @@ if sc_does_exist(collided_with_list[| i]) {
 		}
 	} else 	// shorten
 	if action[? "bullet_phys"] != _BULLET_PH.piercer {
-		length = point_distance(x1, y1, collided_with.x, collided_with.y)
+		length = min(length, point_distance(x1, y1, collided_with.x, collided_with.y))
 		x2 = x1 + lengthdir_x(length, direction)
 		y2 = y1 + lengthdir_y(length, direction)
+		count = length / 8
+		_x = lengthdir_x(8, direction)
+		_y = lengthdir_y(8, direction)
 		x = collided_with.x
 		y = collided_with.y
 		// do damage

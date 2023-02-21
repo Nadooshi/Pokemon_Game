@@ -123,3 +123,11 @@ ability in copied action of other objects is destroyed... This causes a crash
 	ob_collision_line наследуется от ob_collision_area_old(!)
 	Проверка на попадание в Step учитывает все ob_collide(!) не зависимо от position_stage (no matter whether atttack targeted on air, land or buried)
 	
+
+
+21.02.23
+	sc_reach_target в gоведении retreat для покемона с 0-ой скоростью (abra) крашит игру
+
+	_HABITAT (amphibian, water, ground) указывает может ли покемон зарываться и ходить в зарытом состоянии по *воде*.
+	cmp_moving_path должен строить путь согласно _HABITAT
+	ob_hab_water это не просто препятствие с ob_collide_buried! а среда, учитываемая при построении пути в cmp_moving_path

@@ -35,7 +35,7 @@ with sc_create_player(_list[| i], player2_trainer) {
 	}
 	
 //=================================================================	
-	sc_composed_add_component(cmp_control_keyb, true) // AI control
+	sc_composed_add_component(cmp_control_ai, true) // AI control
 //=================================================================	
 
 
