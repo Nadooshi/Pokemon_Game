@@ -15,3 +15,4 @@ with instance_create_layer(bbox_left, bbox_bottom + 8 * bar_count, "UI_bar", ob_
 	image_xscale = (other.bbox_right - other.bbox_left) / sprite_get_width(sprite_index)
 }
 bar_count++
+init = true
