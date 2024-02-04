@@ -8,6 +8,9 @@ var _tg_p = argument1
 var _action = argument2
 
 var _rate_coeff = 1;
+if not ds_exists(_obj.list_missed, ds_type_list)
+	return false
+	
 if ds_list_find_index(_obj.list_missed, _tg_p) = -1 {
 	switch _tg_p.pokemon_map[? "size"] {
 	case _SIZE.tiny:

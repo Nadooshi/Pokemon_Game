@@ -47,7 +47,7 @@ if weather = _WEATHER.cloudy{
 }
 
 
-
+if timeline_exists(timeline_index)
 if timeline_position > timeline_max_moment(timeline_index) {
 	with obj_rel_fallout
 		instance_destroy()

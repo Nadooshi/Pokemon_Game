@@ -21,7 +21,7 @@ if not _ok {
 if instance_exists(_en) {
 	var _tgNeeded = true
 	if sc_does_exist(target)
-		_tgNeeded = not is_like(target, ob_fake_target)
+		_tgNeeded = not is_like(target.object_index, ob_fake_target)
 	if _tgNeeded {
 		_pl = sc_average_point([_en, _tg])
 		target = instance_create_layer(_pl[0], _pl[1], "Game", ob_fake_target)

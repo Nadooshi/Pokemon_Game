@@ -56,8 +56,9 @@ function sc_ai_new_target() {
 			plannedActionNum = -1
 		}
 		// check position stage
+		if plannedActionNum >= 0 then
 		if ds_list_find_index(att_tgFroms[position_stage], plannedActionNum) = -1 {
-			switch att_tgFroms[position_stage][? "tgFrom"] {
+			switch action_list[| plannedActionNum][? "tgFrom"] {
 				case _ATTACK_TG.air:
 					event_perform(ev_other, ev_user4)
 				break;
@@ -195,11 +196,11 @@ function sc_ai_target_group() {
 		ds_map_clear(ai_groups)
 		var _self = id
 		with ob_player
-		if not is_like(id, ob_barrier)
+		if not is_like(id.object_index, ob_barrier)
 		if id != _self.id {
 			_self.ai_groups[? id] = [id]
 			with ob_player
-			if not is_like(id, ob_barrier)
+			if not is_like(id.object_index, ob_barrier)
 			if (id != other.id) and (id != _self.id)
 			if distance_to_point(other.x, other.y) <= _neededDist * 2 
 				array_push(_self.ai_groups[? other.id], id)

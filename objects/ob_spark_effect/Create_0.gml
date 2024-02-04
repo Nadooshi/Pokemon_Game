@@ -8,3 +8,5 @@ timeout = 0
 sparkcolor = c_white
 speedX = 0
 speedY = 0
+
+toDestroy = false
