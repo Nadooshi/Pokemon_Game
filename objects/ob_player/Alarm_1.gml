@@ -1,6 +1,6 @@
 /// @desc apply passive state
 //STAT
-if sc_does_exist(passive_state2) {
+if sc_does_exist(passive_state2, undefined, "'passive_state2' in Alarm1") {
 	var _state_obj = state_object[passive_state2[? "state"]];
 	if not object_exists(_state_obj) {
 		ds_map_destroy(passive_state2)

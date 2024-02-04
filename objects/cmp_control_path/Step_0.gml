@@ -9,7 +9,7 @@ counter++
 if counter mod 100 = 0 {
 	target = instance_find(ob_cursor, 0)
 
-	if sc_does_exist(target) {
+	if sc_does_exist(target, undefined, "'target' in Step") {
 		tgX = target.x
 		tgY = target.y
 		instance_deactivate_object(coll_area)

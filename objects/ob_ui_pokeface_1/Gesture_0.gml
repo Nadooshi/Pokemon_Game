@@ -8,7 +8,7 @@ with ob_ui_pokeface_1
 if id != other.id
 	selected = false
 
-if sc_does_exist(list[| index]) {
+if sc_does_exist(list[| index], undefined, "'list[| index]' in Tap") {
 	selected = not selected
 	_map = list[| index]
 	// find pokemon id with pokemon_map = _map

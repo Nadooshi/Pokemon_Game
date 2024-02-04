@@ -6,7 +6,7 @@
 function sc_find_nearest_target() {
 
 	var _att_p = argument[0]
-	if not sc_does_exist(_att_p) {
+	if not sc_does_exist(_att_p, undefined, "'att_p' in sc_find_nearest_target") {
 		show_debug_message("sc_find_nearest_target: no attacking pokemon")
 		return noone
 	}

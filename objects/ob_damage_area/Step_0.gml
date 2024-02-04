@@ -4,6 +4,11 @@
 
 var _d = 0
 
+if not sc_does_exist(just_damaged, ds_type_list, "'just_damaged' in Step") 
+	exit
+if not sc_does_exist(last_damaged, ds_type_list, "'last_damaged' in Step") 
+	exit
+
 ds_list_clear(just_damaged) // list to be damaged
 
 var _action = action
@@ -15,7 +20,7 @@ _action[? "lastY"] = y
 _action[? "dir"] = direction
 _action[? "hurt_time"] = hurt_time
 
-if sc_does_exist(accuracy_done_for)
+if sc_does_exist(accuracy_done_for, undefined, "'accuracy_done_for' in Step")
 if ds_list_find_index(last_damaged, accuracy_done_for) = -1 
 	ds_list_add(just_damaged, accuracy_done_for)
 
@@ -45,7 +50,7 @@ for (var i=0; i<ds_list_size(just_damaged); i++)
 if ds_list_size(just_damaged) > 0
 if _action[? "bullet_phys"] = _BULLET_PH.chain {
 	chain_dmg_target = sc_chain_damage()
-	if sc_does_exist(chain_dmg_target) {
+	if sc_does_exist(chain_dmg_target, undefined, "'chain_dmg_target' in Step") {
 		with instance_create_layer(chain_dmg_target.x, chain_dmg_target.y, "Particles", ob_pivot) {
 			ds_map_copy(action, other.action)
 			action[? "type"] = _ATTACK_TYPE.pivot

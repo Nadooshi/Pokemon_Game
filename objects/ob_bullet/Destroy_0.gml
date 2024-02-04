@@ -1,6 +1,6 @@
 /// @desc 
 
-if sc_does_exist(action)
+if sc_does_exist(action, undefined, "'action' in Destroy")
 if not is_undefined(action[? "active"])
 // STAT
 if ds_map_find_value(action[? "active"], "state") = _ABILITY_STATE.blast {

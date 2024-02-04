@@ -26,7 +26,7 @@ with ob_emitter_weather {
 }
 
 with ob_bullet 
-if sc_does_exist(action) {
+if sc_does_exist(action, undefined, "'action' in Step") {
 	if action[? "bullet_phys"] = _BULLET_PH.soft {
 		x += lengthdir_x(other.wind_power, other.wind_dir)
 		y += lengthdir_y(other.wind_power, other.wind_dir)

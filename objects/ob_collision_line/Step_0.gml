@@ -1,6 +1,6 @@
 /// @desc 
 
-if not sc_does_exist(parent) {
+if not sc_does_exist(parent, undefined, "'parent' in Step") {
 	instance_destroy()
 	exit
 }

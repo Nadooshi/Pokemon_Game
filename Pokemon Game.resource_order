@@ -547,7 +547,7 @@
     {"name":"sc_composed_add_component","order":7,"path":"scripts/sc_composed_add_component/sc_composed_add_component.yy",},
     {"name":"sc_composed_remove_component","order":8,"path":"scripts/sc_composed_remove_component/sc_composed_remove_component.yy",},
     {"name":"sc_composed_remove_all_components","order":9,"path":"scripts/sc_composed_remove_all_components/sc_composed_remove_all_components.yy",},
-    {"name":"sc_does_exist","order":10,"path":"scripts/sc_does_exist/sc_does_exist.yy",},
+    {"name":"sc_does_exist_debug","order":10,"path":"scripts/sc_does_exist_debug/sc_does_exist_debug.yy",},
     {"name":"sc_play_sound","order":11,"path":"scripts/sc_play_sound/sc_play_sound.yy",},
     {"name":"sp_pr_attack_24","order":25,"path":"sprites/sp_pr_attack_24/sp_pr_attack_24.yy",},
     {"name":"sc_play_sound_element","order":12,"path":"scripts/sc_play_sound_element/sc_play_sound_element.yy",},

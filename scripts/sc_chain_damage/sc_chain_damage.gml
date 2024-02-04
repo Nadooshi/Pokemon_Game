@@ -10,7 +10,7 @@ function sc_chain_damage() {
 		)
 		
 		//create chain particle	
-		if sc_does_exist(_chain_dmg_target_id) {
+		if sc_does_exist(_chain_dmg_target_id, undefined, "'_chain_dmg_target_id' in sc_chain_damage") {
 			var _dist = distance_to_point(_chain_dmg_target_id.x, _chain_dmg_target_id.y)
 			var _dir  = point_direction(x, y, _chain_dmg_target_id.x, _chain_dmg_target_id.y)
 			with instance_create_layer(x, y, "Particles", ob_particle) {

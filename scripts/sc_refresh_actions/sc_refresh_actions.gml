@@ -37,7 +37,7 @@ function sc_refresh_actions() {
 			if not is_undefined(map[? "active"]) {
 				var _map_abil = ds_map_create()
 				ds_map_read(_map_abil, ini_read_string("abilities", map[? "active"], ""))
-				if sc_does_exist(_map_abil)
+				if sc_does_exist(_map_abil, undefined, "'_map_abil' in sc_refresh_actions")
 					map[? "active"] = _map_abil
 			}
 			// set ui properties

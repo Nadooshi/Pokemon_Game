@@ -1,5 +1,5 @@
 function sc_precalc_action_values(a_map, pokemon_id){
-	if not sc_does_exist(a_map) or not sc_does_exist(pokemon_id)
+	if not sc_does_exist(a_map, undefined, "'a_map' in sc_precalc_..") or not sc_does_exist(pokemon_id, undefined, "'pokemon_id' in sc_precalc_..")
 		return false
 		
 	// _ATTACK_TYPE.range

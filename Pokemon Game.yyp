@@ -597,7 +597,7 @@
     {"id":{"name":"sc_composed_add_component","path":"scripts/sc_composed_add_component/sc_composed_add_component.yy",},},
     {"id":{"name":"sc_composed_remove_component","path":"scripts/sc_composed_remove_component/sc_composed_remove_component.yy",},},
     {"id":{"name":"sc_composed_remove_all_components","path":"scripts/sc_composed_remove_all_components/sc_composed_remove_all_components.yy",},},
-    {"id":{"name":"sc_does_exist","path":"scripts/sc_does_exist/sc_does_exist.yy",},},
+    {"id":{"name":"sc_does_exist_debug","path":"scripts/sc_does_exist_debug/sc_does_exist_debug.yy",},},
     {"id":{"name":"sc_play_sound","path":"scripts/sc_play_sound/sc_play_sound.yy",},},
     {"id":{"name":"sp_pr_attack_24","path":"sprites/sp_pr_attack_24/sp_pr_attack_24.yy",},},
     {"id":{"name":"sc_play_sound_element","path":"scripts/sc_play_sound_element/sc_play_sound_element.yy",},},

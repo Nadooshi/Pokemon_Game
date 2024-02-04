@@ -24,7 +24,7 @@ if action[? "bullet_phys"] != _BULLET_PH.piercer {
 }
 
 for (i=0; i<ds_list_size(collided_with_list); i++)
-if sc_does_exist(collided_with_list[| i]) {
+if sc_does_exist(collided_with_list[| i], undefined, "'collided_with_list[| i]' in User1") {
 	collided_with = collided_with_list[| i];
 	if is_like(collided_with.object_index, ob_player) {
 		if (action[? "tgTo"] & collided_with.position_stage) != 0 {

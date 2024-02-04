@@ -66,7 +66,7 @@ function sc_calculate_action_damage(_action, p_id_target, _p_attack) {
 	var	_d_rate = 0
 
 
-	if sc_does_exist(_abil) {
+	if sc_does_exist(_abil, undefined, "'_abil' in sc_calculate_action_damage") {
 		_mlt = _abil[? "multiply"]
 		_mlt_rate = 25 * (_abil[? "multiply_rate"] +1)
 	
@@ -107,7 +107,7 @@ function sc_calculate_action_damage(_action, p_id_target, _p_attack) {
 		}
 	}
 	//STAT -----------------------------------------------------
-	if sc_does_exist(_abil) {
+	if sc_does_exist(_abil, undefined, "'_abil in sc_calculate_action_damage") {
 		// apply state 'random damage'
 		if _abil[? "state"] = _ABILITY_STATE.random_x {
 			_r_ = _abil[? "state_value"]

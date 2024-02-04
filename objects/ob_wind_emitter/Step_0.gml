@@ -7,7 +7,7 @@ var _n = collision_circle_list(x, y, radius, ob_bullet, false, false, _col_list,
 
 for (var i = 0; i < _n; i++) {// blowing of things
 		with _col_list[| i]
-		if sc_does_exist(action) {
+		if sc_does_exist(action, undefined, "'action' in Step") {
 			if action[? "bullet_phys"] = _BULLET_PH.soft {
 				x += lengthdir_x(other.wind_power * 1.3, other.wind_dir)
 				y += lengthdir_y(other.wind_power * 1.3, other.wind_dir)

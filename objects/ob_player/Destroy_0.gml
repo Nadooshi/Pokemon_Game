@@ -19,11 +19,11 @@ if instance_exists(states[| i]) {
 	states[| i] = noone
 }
 
-if sc_does_exist(passive_state1) {
+if sc_does_exist(passive_state1, undefined, "'passive_state1' in Destroy") {
 	ds_map_destroy(passive_state1)
 	passive_state1 = noone
 }
-if sc_does_exist(passive_state2) {
+if sc_does_exist(passive_state2, undefined, "'passive_state2' in Destroy") {
 	ds_map_destroy(passive_state2)
 	passive_state2 = noone
 }

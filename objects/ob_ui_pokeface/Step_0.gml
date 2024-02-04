@@ -22,7 +22,7 @@ for (var i=0; i < ds_list_size(pokemon_id.in_biome); i++) {
 	_coeff *= sc_element_coeff(pokemon_id.in_biome[| i], pokemon_id.pokemon_map[? "material_type"])
 	
 	if _coeff != 1 {
-		if not sc_does_exist(sparkle_objs[? pokemon_id.in_biome[| i]]) {
+		if not sc_does_exist(sparkle_objs[? pokemon_id.in_biome[| i]], undefined, "'sparkle_objs[? pokemon_id.in_biome[| i]]' in Step") {
 			var _sp_id = instance_create_layer(_x-4, biomes_y, "UI", ob_spark_effect)
 			_sp_id.active = true
 			sparkle_objs[? pokemon_id.in_biome[| i]] = _sp_id

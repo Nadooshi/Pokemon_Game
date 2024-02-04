@@ -7,7 +7,7 @@ if not (_i>=0 and _i<=5) exit
 var _map_id = noone
 
 
-if sc_does_exist(list[| _i]) {
+if sc_does_exist(list[| _i], undefined, "'list[| _i]' in KeyPress Any") {
 	selected = (_i = index)
 	_map_id = list[| index]
 	if selected 

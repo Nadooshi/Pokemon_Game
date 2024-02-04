@@ -1,6 +1,6 @@
 function sc_check_reaching_target() {
 	// for ob_pokemon
-	if sc_does_exist(target)
+	if sc_does_exist(target, undefined, "'target' in sc_check_reaching_target")
 	if position_stage = _ATTACK_TG.ground {
 		if collision_line(x, y+12, target.x, target.y+12, ob_hazard, false, false) {
 			//sc_set_move_component(cmp_moving_path)

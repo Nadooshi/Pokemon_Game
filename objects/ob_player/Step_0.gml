@@ -12,10 +12,10 @@ mark_hostile.x = x
 mark_hostile.y = y
 // refresh animation passive
 if selected {
-if sc_does_exist(passive_state1)
+if sc_does_exist(passive_state1, undefined, "'passive_state1' in Step")
 	if alarm_get(0) < (passive_state1[? "state_cooldown"] * frames_rate)
 		animation_set[? "anim"][? "first"] = "cooldown"
-if sc_does_exist(passive_state2)
+if sc_does_exist(passive_state2, undefined, "'passive_state2' in Step")
 	if alarm_get(1) < (passive_state2[? "state_cooldown"] * frames_rate)
 		animation_set[? "anim"][? "second"] = "cooldown"
 }

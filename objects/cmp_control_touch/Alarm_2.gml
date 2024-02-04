@@ -26,7 +26,7 @@ if array_length(_tgList) > 0 {
 	_closest_id = floor(_tgList[0] - floor(_tgList[0] / 1000000)*1000000)
 }
 
-if sc_does_exist(_closest_id) {
+if sc_does_exist(_closest_id, undefined, "'_closest_id' in Alarm2") {
 	autotarget_found = true
 	with ob_cursor{
 		event_perform(ev_other, ev_user0) // update ob_cursor

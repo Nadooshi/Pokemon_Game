@@ -1,11 +1,11 @@
 /// @desc
 
-if not sc_does_exist(parent) or
+if not sc_does_exist(parent, undefined, "'parent' in Step") or
    array_length(group) = 0 {
 	instance_destroy()
 	exit
 }
-if sc_does_exist(parent.target) and parent.target != id {
+if sc_does_exist(parent.target, undefined, "'parent.target' in Step") and parent.target != id {
 	instance_destroy()
 	exit
 }

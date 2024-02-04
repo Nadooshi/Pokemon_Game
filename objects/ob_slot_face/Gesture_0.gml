@@ -11,7 +11,7 @@ with ob_frame_pokemon {
 
 //sc_endbattle_refresh_actions()
 
-if sc_does_exist(current_pokemon) {
+if sc_does_exist(current_pokemon, undefined, "'current_pokemon' in Tap") {
 	sc_refresh_actions()
 
 	room_height = max(1080, 16 + 96 * ds_map_size(current_pokemon[? "actions"]))

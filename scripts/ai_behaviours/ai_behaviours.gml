@@ -86,7 +86,7 @@ function sc_ai_new_target() {
 	var _affect = _a[_action[? "role"]] & _action[? "affect"]
 	target = sc_find_nearest_target(id, _affect, infinity, _action[? "tgTo"])
 	
-	if sc_does_exist(target) {
+	if sc_does_exist(target, undefined, "'target' in ai_new_target") {
 //		sc_logging_state_over(id, "decided to use " + _action[? "name"] + " as " + attack_affect_text[_affect])
 		tgAngle = point_direction(x, y+12, target.x, target.y+12)
 		tgX = target.x
@@ -122,7 +122,7 @@ function sc_ai_new_target() {
 }
 
 function sc_ai_follow_target() {
-	if not sc_does_exist(target) {
+	if not sc_does_exist(target, undefined, "'target' in sc_ai_follow_target") {
 		sc_player_stop_set()
 		sc_set_behaviour(sc_player_stop_set)
 		return false
@@ -175,7 +175,7 @@ function sc_ai_follow_target() {
 }
 
 function sc_ai_target_group() {
-	if not sc_does_exist(target) {
+	if not sc_does_exist(target, undefined, "'target' in sc_ai_target_group") {
 		sc_player_stop_set()
 		sc_set_behaviour(sc_player_stop_set)
 		return false
@@ -253,7 +253,7 @@ function sc_ai_get_to_point() {
 }
 
 function sc_ai_hit_target() {
-	if not sc_does_exist(target) {
+	if not sc_does_exist(target, undefined, "'target' in sc_ai_hit_target") {
 		sc_player_stop_set()
 		sc_set_behaviour(sc_player_stop_set)
 		sc_set_move_component(cmp_moving)
@@ -366,7 +366,7 @@ function sc_ai_wait_warmup() {
 }
 
 function sc_ai_wait_power() {
-	if not sc_does_exist(target) {
+	if not sc_does_exist(target, undefined, "'target' in sc_ai_wait_power") {
 		sc_set_behaviour(sc_player_stop_set)
 		return false
 	}

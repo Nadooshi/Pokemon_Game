@@ -643,3 +643,4 @@ gpu_set_texrepeat(true)
 #macro PixPerDist 18 // distance // 60 * 0.1 * 3
 
 #macro frames_rate 60
+#macro verbose_debug_mode true

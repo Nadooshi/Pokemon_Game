@@ -8,7 +8,7 @@ var _c_obj = [ob_collide_land, ob_collide_air, ob_collide_buried]
 
 	for (var i=0; i < array_length(_cond); i++)
 	if _cond[i] {
-		if not sc_does_exist(coll_areas[? i])
+		if not sc_does_exist(coll_areas[? i], undefined, "'coll_areas[? i]' in sc_set_coll_areas")
 			coll_areas[? i]= instance_create_layer(x, y, "Game", _c_obj[i])
 		coll_areas[? i].parent = id
 		if sprite_exists(mask_index)

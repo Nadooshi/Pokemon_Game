@@ -20,7 +20,7 @@ if not _ok {
 
 if instance_exists(_en) {
 	var _tgNeeded = true
-	if sc_does_exist(target)
+	if sc_does_exist(target, ds_type_map, "'target' in sc_set_barrier_target")
 		_tgNeeded = not is_like(target.object_index, ob_fake_target)
 	if _tgNeeded {
 		_pl = sc_average_point([_en, _tg])

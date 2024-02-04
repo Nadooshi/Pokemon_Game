@@ -3,7 +3,7 @@
 // Inherit the parent event
 event_inherited();
 
-if sc_does_exist(parent) {
+if sc_does_exist(parent, undefined, "'parent' in User0") {
 	if map[? "levelup"] {
 		image_speed = 1
 		skeleton_animation_set("Active")

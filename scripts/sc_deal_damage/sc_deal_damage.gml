@@ -14,7 +14,7 @@ function sc_deal_damage(_action, _pokemon_attack) {
 	sc_hurt(_dmg, _pokemon_attack, _action);
 
 	// apply state
-	if sc_does_exist(_action[? "active"]) {
+	if sc_does_exist(_action[? "active"], undefined, "'_action[? active]' in sc_deal_damage") {
 		var _state = ds_map_find_value(_action[? "active"], "state")
 		var _state_obj = state_object[_state];
 		var _rate = ds_map_find_value(_action[? "active"], "state_rate")
@@ -29,7 +29,7 @@ function sc_deal_damage(_action, _pokemon_attack) {
 		ok = true
 	}
 
-		if sc_does_exist(_action[? "active"]) 
+		if sc_does_exist(_action[? "active"], undefined, "'_action[? active]' in sc_deal_damage") 
 		if state_object[_state] = _ABILITY_STATE.wreck
 			ok = true	
 	if _action[? "role"] = _ATTACK_ROLE.debuff
@@ -43,7 +43,7 @@ function sc_deal_damage(_action, _pokemon_attack) {
 			if states[| i] > 0
 			if states[| i].object_index = ob_state_reflect {
 				ok = false
-				if sc_does_exist(_action[? "active"]) 
+				if sc_does_exist(_action[? "active"], undefined, "'_action[? active]' in sc_deal_damage") 
 				if state_object[_state] = _ABILITY_STATE.wreck{
 					ok = true
 					break;
@@ -59,7 +59,7 @@ function sc_deal_damage(_action, _pokemon_attack) {
 		}
 	} else ok = true;
 	
-	if sc_does_exist(_action[? "active"]) 
+	if sc_does_exist(_action[? "active"], undefined, "'_action[? active]' in sc_deal_damage") 
 	if ok {
 		_rate = 25*(_rate + 1)
 		var _r_ = random_range(0, 100)

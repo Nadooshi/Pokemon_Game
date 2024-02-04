@@ -4,7 +4,7 @@ if not instance_exists(selected_id)
 
 if selected_id.doActionNum = parent.index {
 	var _action = selected_id.action_list[| selected_id.doActionNum]
-	if sc_does_exist(_action) {	
+	if sc_does_exist(_action, undefined, "'_action' in Destroy") {	
 		var _warm_max = _action[? "warmup"]+0.001
 		warm_coeff = selected_id.attack_warmup / _warm_max
 	}		

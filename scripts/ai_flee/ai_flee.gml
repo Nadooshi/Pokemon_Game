@@ -2,13 +2,13 @@ function sc_ai_set_flee() {
 	
 	//sc_logging_info(trainer[? "name"] +"'s "+ pokemon_map[? "title"] + " (" + string(id) + ") try hiding behind cover. Run away")
 	var _get_new_cover = true
-	if sc_does_exist(target)
+	if sc_does_exist(target, undefined, "'target' in sc_ai_set_flee")
 		_get_new_cover = (not is_like(target.object_index, ob_hiding_mark))
 		
 	if _get_new_cover
 		target = sc_find_cover()
 		
-	if sc_does_exist(target)
+	if sc_does_exist(target, undefined, "'target' in sc_ai_set_flee")
 		sc_set_behaviour(sc_ai_flee)
 	else {
 		target = noone
@@ -22,7 +22,7 @@ function sc_ai_set_flee() {
 }
 
 function sc_ai_flee() {
-	if sc_does_exist(target) {
+	if sc_does_exist(target, undefined, "'target' in sc_ai_flee") {
 		tgX = target.x
 		tgY = target.y
 		tgAngle = point_direction(x, y+12, target.x, target.y+12)
@@ -58,7 +58,7 @@ function sc_find_cover() {
 
 function sc_ai_retreat_start() {
 	var _enemy = sc_find_nearest_target(id)
-	if sc_does_exist(_enemy) {
+	if sc_does_exist(_enemy, undefined, "'_enemy' in sc_ai_retreat_start") {
 		var _neededDist = retreat_dist
 		var _dirtotg = point_direction(_enemy.x, _enemy.y+12, x, y+12)
 		var _newdir = _dirtotg+random(30)-15
