@@ -1,6 +1,6 @@
 // ini file should be already opened
 // returns action map 
-
+// Parameters for action are in 'sc_new_action', 'sc_load_action', 'sc_load_pokemon'
 function sc_load_action(_name, _pokemon_map){
 	var map = ds_map_create()
 	
@@ -10,7 +10,7 @@ function sc_load_action(_name, _pokemon_map){
 	if map[? "damage"] != 0
 		_ratio = map[? "dmg_element"] / map[? "damage"]
 	
-	map[? "damage"] = sc_calculate_formula(5, map[? "act_force"], _pokemon_map[? "actions"][? _name][? "pa_lvl"], map[? "ap"], map[? "damage" ], map[? "level"])
+	map[? "damage"] = sc_calculate_formula(5, map[? "act_force"], _pokemon_map[? "actions"][? _name][? "pa_lvl"], map[? "act_force"], map[? "damage" ], map[? "level"])
 	map[? "dmg_element" ] = map[? "damage"] * _ratio
 	map[? "dmg_material"] = map[? "damage"] - map[? "dmg_element"]
 	//

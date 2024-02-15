@@ -1,6 +1,10 @@
 /// @desc 
-
-speed = moveSpeed
+try {
+	speed = moveSpeed
+}
+catch (_exeption){
+	speed = 0
+}
 
 depth = (room_height - y) * 0.5
 

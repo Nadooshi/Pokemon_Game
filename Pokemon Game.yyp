@@ -276,6 +276,7 @@
     {"id":{"name":"sp_pokeworld_59","path":"sprites/sp_pokeworld_59/sp_pokeworld_59.yy",},},
     {"id":{"name":"sp_pokeworld_143","path":"sprites/sp_pokeworld_143/sp_pokeworld_143.yy",},},
     {"id":{"name":"sp_pokeworld_60","path":"sprites/sp_pokeworld_60/sp_pokeworld_60.yy",},},
+    {"id":{"name":"rm_const_overworld","path":"rooms/rm_const_overworld/rm_const_overworld.yy",},},
     {"id":{"name":"sp_pokeworld_61","path":"sprites/sp_pokeworld_61/sp_pokeworld_61.yy",},},
     {"id":{"name":"sc_particle_fx_bullet","path":"scripts/sc_particle_fx_bullet/sc_particle_fx_bullet.yy",},},
     {"id":{"name":"ob_ui_affect","path":"objects/ob_ui_affect/ob_ui_affect.yy",},},
@@ -943,6 +944,7 @@
     {"roomId":{"name":"rm_evolve","path":"rooms/rm_evolve/rm_evolve.yy",},},
     {"roomId":{"name":"rm_battle","path":"rooms/rm_battle/rm_battle.yy",},},
     {"roomId":{"name":"rm_battle_ui","path":"rooms/rm_battle_ui/rm_battle_ui.yy",},},
+    {"roomId":{"name":"rm_const_overworld","path":"rooms/rm_const_overworld/rm_const_overworld.yy",},},
   ],
   "templateType": null,
   "TextureGroups": [

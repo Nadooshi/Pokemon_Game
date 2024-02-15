@@ -1,3 +1,20 @@
+/* if object_exists(id) then
+//	show_message("ID ( "+string(id) +")("+object_get_name(id)+")  = object_index (" +string(object_index) +")(" + object_get_name(object_index)+") ? ")
+
+//if object_exists(object_index) then
+//	show_message("Object_index ( "+string(object_index)+") named " +object_get_name(object_index) +" exists. OK!")
+
+//if is_struct(object_index) then
+//	show_message("Object_index is a STRUCT!!???")
+
+//var someStruct = {
+//	exists: true
+//}
+
+//if object_exists(someStruct) then
+	show_message("is_struct = " + string(is_struct(someStruct)) +"("+object_get_name(someStruct)+")  recognised as OBJECT!? ")
+*/
+
 /// @desc Set AI player
 
 var _start_area = instance_find(ob_start_area, 0)

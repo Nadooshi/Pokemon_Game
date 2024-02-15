@@ -8,14 +8,15 @@ if action[? "bullet_phys"] != _BULLET_PH.piercer {
 	var _dists = ds_list_create()
 	var _coll_ids = ds_list_create()
 	ds_list_copy(_coll_ids, collided_with_list);
-	for (var i=0; i<ds_list_size(collided_with_list); i++) {
-		_dists[| i] = floor(point_distance(x, y, collided_with_list[| i].x, collided_with_list[| i].y)) * 1000
-		_dists[| i] += i
-	}
+	for (var i=0; i<ds_list_size(collided_with_list); i++)
+		if instance_exists(collided_with_list[| i]) {
+			_dists[| i] = floor(point_distance(x, y, collided_with_list[| i].x, collided_with_list[| i].y)) * 1000
+			_dists[| i] += i
+		}
 	ds_list_sort(_dists, true);
 	ds_list_clear(collided_with_list)
 	var _i
-	for (var i=0; i<ds_list_size(_coll_ids); i++) {
+	for (var i=0; i<ds_list_size(_dists); i++) {
 		_i = _dists[| i] - _dists[| i] div 1000 * 1000
 		collided_with_list[| i] = _coll_ids[| _i]
 	}

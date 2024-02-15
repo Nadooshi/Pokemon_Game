@@ -12,5 +12,3 @@ if not ds_exists(att_tgFroms[_ATTACK_TG.ground], ds_type_list)
 	ds_list_destroy(att_tgFroms[_ATTACK_TG.ground])
 if not ds_exists(att_tgFroms[_ATTACK_TG.underground], ds_type_list)
 	ds_list_destroy(att_tgFroms[_ATTACK_TG.underground])
-
-ob_cursor.visible = false

@@ -43,11 +43,12 @@ if _ok {
 _cx = camera_get_view_x(view_camera[0])
 _cy = camera_get_view_y(view_camera[0])
 
-// move UI objects
-with (ob_ui_object) {
+//// move UI objects
+with (ob_control_touch) {
 	x = _cx + oX
 	y = _cy + oY
 }
+
 with (ob_frame) {
 	x = _cx + oX
 	y = _cy + oY

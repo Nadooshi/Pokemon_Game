@@ -58,6 +58,3 @@ if not ds_exists(att_tgFroms[_ATTACK_TG.underground], ds_type_list)
 scBehaviour = sc_player_stop_set
 
 ai_groups = ds_map_create()
-
-ob_cursor.visible = true
-

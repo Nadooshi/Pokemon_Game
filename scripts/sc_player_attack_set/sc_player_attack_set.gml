@@ -177,10 +177,14 @@ function sc_player_attack_set() {
 	for (var i=0; i<ds_list_size(states); i++) // apple state 'revenge' for master pokemon
 		if states[| i].object_index = ob_state_revenge 
 		if _a_map[? "affect"] = _ATTACK_AFFECT.enemy {
-			var _coef = _a_map[? "dmg_material"] / _a_map[? "dmg_element"]
-			_a_map[? "damage"] = (health_max - health_cur)
-			_a_map[? "dmg_material"] = _a_map[? "damage"] * _coef
-			_a_map[? "dmg_element"] = _a_map[? "damage"] - _a_map[? "dmg_material"]
+			var _newdmg = health_max - health_cur
+			var _coef = _newdmg / _a_map[? "damage"]
+			if is_nan(_coef) _coef = 1
+			
+			_a_map[? "damage"] = _newdmg
+			
+			_a_map[? "dmg_material"] = _a_map[? "dmg_material"] * _coef
+			_a_map[? "dmg_element"]  = _a_map[? "dmg_element"]  * _coef
 		}
 	with attack_ob_id {
 		ds_map_copy(action, _a_map)

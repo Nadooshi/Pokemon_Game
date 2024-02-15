@@ -9,6 +9,5 @@ var _t = ds_map_find_value(action[? "active"], "state_time");
 hit_count = _t * 2
 
 alarm[0] = period;
-damage = ds_map_find_value(action[? "active"], "state_value");
-damage *= 1 + action[? "lvlup_mod"]
+damage = sc_calculate_formula(5, action[? "act_force"], action[? "pa_lvl"], action[? "act_force"], ds_map_find_value(action[? "active"], "state_value"), action[? "level"])
 

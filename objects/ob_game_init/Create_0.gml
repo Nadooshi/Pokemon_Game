@@ -468,11 +468,6 @@ coef_lvlup[_FORCE.elite		] = 1.46
 coef_lvlup[_FORCE.legendary	] = 1.68
 coef_lvlup[_FORCE.incredible] = 1.86
 
-enum custom {
-	_health = 150, //custom 1st healt proferred force
-	_dmg = 100,
-}
-
 #endregion
 //////////////////////////////////
 enum _SIZE {
@@ -635,6 +630,11 @@ gpu_set_texrepeat(true)
 //gesture_drag_time(0.075)
 //gesture_drag_distance()
 
+enum custom {
+	_health = 150, //custom 1st healt proferred force
+	_dmg = 100,
+}
+
 #macro retreat_dist 200
 #macro t_process_courage 10 // frames
 #macro courage_max_regen 2 // 12 in 60 framerate
@@ -643,4 +643,4 @@ gpu_set_texrepeat(true)
 #macro PixPerDist 18 // distance // 60 * 0.1 * 3
 
 #macro frames_rate 60
-#macro verbose_debug_mode true
+#macro verbose_debug_mode false

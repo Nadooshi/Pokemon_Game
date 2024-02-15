@@ -240,6 +240,7 @@
     {"name":"sp_pokeworld_59","order":61,"path":"sprites/sp_pokeworld_59/sp_pokeworld_59.yy",},
     {"name":"sp_pokeworld_143","order":145,"path":"sprites/sp_pokeworld_143/sp_pokeworld_143.yy",},
     {"name":"sp_pokeworld_60","order":62,"path":"sprites/sp_pokeworld_60/sp_pokeworld_60.yy",},
+    {"name":"rm_const_overworld","order":8,"path":"rooms/rm_const_overworld/rm_const_overworld.yy",},
     {"name":"sp_pokeworld_61","order":63,"path":"sprites/sp_pokeworld_61/sp_pokeworld_61.yy",},
     {"name":"sc_particle_fx_bullet","order":1,"path":"scripts/sc_particle_fx_bullet/sc_particle_fx_bullet.yy",},
     {"name":"ob_ui_affect","order":15,"path":"objects/ob_ui_affect/ob_ui_affect.yy",},

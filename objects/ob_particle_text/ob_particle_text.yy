@@ -29,6 +29,7 @@
   "physicsStartAwake": true,
   "properties": [
     {"resourceType":"GMObjectProperty","resourceVersion":"1.0","name":"caption","filters":[],"listItems":[],"multiselect":false,"rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"value":"\"\"","varType":2,},
+    {"resourceType":"GMObjectProperty","resourceVersion":"1.0","name":"xy_scale","filters":[],"listItems":[],"multiselect":false,"rangeEnabled":false,"rangeMax":1.0,"rangeMin":0.1,"value":"0.15","varType":0,},
   ],
   "solid": false,
   "spriteId": null,

@@ -16,7 +16,7 @@ function sc_gain_exp(_object, _event, _value, _context) {
 			sc_logging_experience(_pokemon, _val, _event)
 		break;
 	case poke_exp.kill: // _pokemon = pokemon_attack; _value = pokemon recipient
-		_val = round(_value[? "rating"] * exps[_event] * (_value[? "level"] / _pokemon.pokemon_map[? "level"])* coef_force[_pokemon.pokemon_map[? "force"]])
+		_val = round(_value[? "rating"] * exps[_event] * (_value[? "level"] / _pokemon.pokemon_map[? "level"])* coef_lvlup[_pokemon.pokemon_map[? "force"]])
 		_pokemon.cur_exp += _val
 		if _val > 0
 			sc_logging_experience(_pokemon, _val, _event)

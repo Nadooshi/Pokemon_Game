@@ -22,9 +22,17 @@ function sc_calculate_formula() {
 	var act_lvl = 0
 	if argument_count > 5
 		 act_lvl = argument[5]
-	 
-	var _lvl = lvl-act_lvl // level to upgrade
 
+	if is_undefined(lvl)
+		lvl = act_lvl
+	var _lvl = -1 
+	try {
+		_lvl = lvl-act_lvl // level to upgrade
+	}
+	catch (_extention) {
+		return dmg
+	}
+	
 	if _lvl < 0
 		return dmg
 
@@ -34,12 +42,12 @@ function sc_calculate_formula() {
 	case 2:
 		return custom._health * coef_force[force] + lvl * coef_level[force] * custom._health * coef_force[force]
 	case 3: // calculate damage
-		return custom._dmg * coef_force[force] + (lvl * coef_level[force] * custom._dmg * coef_force[force] * 0.01 * pow)
+		return custom._dmg * coef_force[force] + (lvl * coef_level[force] * coef_force[force] * pow)
 	case 4:
-		return custom._dmg * coef_force[_FORCE.preferred] + (lvl * coef_level[_FORCE.preferred] * custom._dmg * coef_force[_FORCE.preferred] * 0.01 * pow)
+		return custom._dmg * coef_force[_FORCE.preferred] + (lvl * coef_level[_FORCE.preferred] * coef_force[_FORCE.preferred] * pow)
 	case 5: // upgrade damage
 		if dmg > 0
-			return dmg + (_lvl * coef_level[force] * custom._dmg * coef_force[force] * 0.01 * pow)
+			return dmg + (_lvl * coef_level[force] * coef_force[force] * pow)
 	}
 
 	return dmg

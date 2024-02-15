@@ -29,8 +29,9 @@ if sc_does_exist(passive_state1, undefined, "'passive_state1' in Alarm0") {
 	animation_set[? "anim"][? "first"] = "other_lock"
 		
 	var p_action = ds_map_create()
-	p_action[? "active"] = passive_state1
 	p_action[? "lvlup_mod"] = 0
+	p_action[? "active"] = passive_state1
+	
 	animation_set[? "check_state"][? "first"] = ds_map_find_value(p_action[? "active"], "in_state_sign")
 	if not sc_state_check_compatible(p_action) {
 		animation_set[? "state_anim"][? "first"] = "state_lock"

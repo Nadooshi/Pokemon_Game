@@ -30,7 +30,8 @@ if health_cur = 0 {
 if _dmg > 0
 instance_create_layer(x + random(20)-10, y + random(20)-10, "Particles", ob_particle_text, {
 	caption : "-" + string(_dmg),
-	image_blend : c_red
+	image_blend : c_white,
+	xy_scale : 0.3
 })
 
 if ds_exists(_action, ds_type_map) {

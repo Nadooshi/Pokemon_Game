@@ -27,8 +27,6 @@ function sc_new_pokemon(argument0) {
 		_ds[? "level"] = 1 // 1 lvl in start
 		_ds[? "rating"] = 0
 		_ds[? "habitat"] = _HABITAT.amphibian
-		//_ds[? "loses"] = 0
-		//_ds[? "wins"] = 0
 		_ds[? "artefact"] = noone
 		_ds[? "berry"] = noone
 		_ds[? "potion"] = noone

@@ -29,11 +29,11 @@ enum act_exp {
 }
 
 globalvar exps;
-exps[poke_exp.damage] = 2
-exps[poke_exp.dodge	] = 1
-exps[poke_exp.kill	] = 2 // mod force value of dead pokemon and changed lvl killer pokemon.
+exps[poke_exp.damage] = 1
+exps[poke_exp.dodge	] = 2
+exps[poke_exp.kill	] = 3 // mod force value of dead pokemon and changed lvl killer pokemon.
 exps[act_exp.use	] = 1
-exps[act_exp.success] = 6
+exps[act_exp.success] = 8
 
 #macro base_lvlup_value_action 1000
 #macro base_lvlup_value 1000 // for pokemon

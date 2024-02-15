@@ -9,7 +9,9 @@ if not parent.init
 	exit
 
 with parent {
-	ds_list_clear(other.coll_list)
+	if ds_exists(other.coll_list, ds_type_list)
+		ds_list_clear(other.coll_list)
+	if ds_exists(collided_with_list, ds_type_list)
 	ds_list_clear(collided_with_list)
 	var _count = 0
 	if (action[? "tgTo"] & _ATTACK_TG.ground) > 0

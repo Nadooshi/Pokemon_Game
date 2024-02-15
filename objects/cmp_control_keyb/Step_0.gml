@@ -27,7 +27,13 @@ if keys[k.Down ] { newangle += dirangle[d.Down ]; dcount++ }
 if dcount>0	newangle = newangle / dcount
 
 ob_cursor.x = mouse_x
-ob_cursor.y = mouse_y
+ob_cursor.y = mouse_y + camera_get_view_height(view_camera[1]) // mouse runs in ui (view_1 offscreen). Correcting it back to screen 
+
+ob_cursor.x *= camera_get_view_width (view_camera[0]) / camera_get_view_width (view_camera[1]) // mouse movement scaling
+ob_cursor.y *= camera_get_view_height(view_camera[0]) / camera_get_view_height(view_camera[1])
+
+ob_cursor.x += camera_get_view_x(view_camera[0])	// move along camera
+ob_cursor.y += camera_get_view_y(view_camera[0])
 
 tgX = ob_cursor.x
 tgY = ob_cursor.y

@@ -1,4 +1,6 @@
 /// @desc
 
-if not instance_exists(pokemon_id)
+if not instance_exists(pokemon_id) {
 	instance_destroy()
+	exit
+}

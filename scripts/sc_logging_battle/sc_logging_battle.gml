@@ -2,8 +2,8 @@
 /// @arg recipient_id
 /// @arg action_map
 /// @arg value
-function sc_logging_damage() {}
-function sc_logging_damage_(argument0, argument1, argument2, argument3){
+
+function sc_logging_damage(argument0, argument1, argument2, argument3){
 	var _subject	= argument0	// initiator pokemon
 	var _object		= argument1 // recipient pokemon or another ob_player
 	var _action		= argument2 // action or ob_state
@@ -36,8 +36,8 @@ function sc_logging_damage_(argument0, argument1, argument2, argument3){
 
 ///@arg iniciator
 ///@arg action_map
-function sc_logging_action(argument0, argument1){}
-function sc_logging_action_(argument0, argument1){
+
+function sc_logging_action(argument0, argument1){
 	var _subject	= argument0
 	var _action		= argument1
 	var _what_do	= ""
@@ -85,8 +85,8 @@ function sc_logging_action_(argument0, argument1){
 ///@arg iniciator_id
 ///@arg	recipient_id
 ///@arg	action_map
-function sc_logging_miss(argument0, argument1, argument2){}
-function sc_logging_miss_(argument0, argument1, argument2){
+
+function sc_logging_miss(argument0, argument1, argument2){
 	var _subject	= argument0
 	var _object		= argument1
 	var _action		= argument2
@@ -117,8 +117,8 @@ function sc_logging_miss_(argument0, argument1, argument2){
 ///@arg iniciator_id
 ///@arg	recipient_id
 ///@arg	action_map
-function sc_logging_death(argument0, argument1, argument2){}
-function sc_logging_death_(argument0, argument1, argument2){
+
+function sc_logging_death(argument0, argument1, argument2){
 	var _subject	= argument0
 	var _object		= argument1
 	var _action		= argument2
@@ -144,8 +144,8 @@ function sc_logging_death_(argument0, argument1, argument2){
 ///@arg	txt_what_do
 ///@arg	txt_param_val
 ///@arg	value
-function sc_logging_state_loses(argument0, argument1, argument2, argument3, argument4){}
-function sc_logging_state_loses_(argument0, argument1, argument2, argument3, argument4){
+
+function sc_logging_state_loses(argument0, argument1, argument2, argument3, argument4){
 	var _object		= argument0
 	var _state		= argument1
 	var _what_do	= argument2
@@ -171,8 +171,8 @@ function sc_logging_state_loses_(argument0, argument1, argument2, argument3, arg
 ///@arg	txt_what_do
 ///@arg	txt_param_val
 ///@arg	value
-function sc_logging_state_rises(argument0, argument1, argument2, argument3, argument4){}
-function sc_logging_state_rises_(argument0, argument1, argument2, argument3, argument4){
+
+function sc_logging_state_rises(argument0, argument1, argument2, argument3, argument4){
 	var _object		= argument0
 	var _state		= argument1
 	var _what_do	= argument2
@@ -196,8 +196,8 @@ function sc_logging_state_rises_(argument0, argument1, argument2, argument3, arg
 ///@arg recipient_id
 ///@arg	txt_state_name
 ///@arg	txt_what_do
-function sc_logging_state_cursed(argument0, argument1, argument2){}
-function sc_logging_state_cursed_(argument0, argument1, argument2){
+
+function sc_logging_state_cursed(argument0, argument1, argument2){
 	var _object		= argument0
 	var _state		= argument1
 	var _what_do	= argument2
@@ -220,8 +220,8 @@ function sc_logging_state_cursed_(argument0, argument1, argument2){
 ///@arg	txt_what_do
 ///@arg	txt_param_val
 ///@arg	value
-function sc_logging_state_powered(argument0, argument1, argument2, argument3, argument4){}
-function sc_logging_state_powered_(argument0, argument1, argument2, argument3, argument4){
+
+function sc_logging_state_powered(argument0, argument1, argument2, argument3, argument4){
 	var _object		= argument0
 	var _state		= argument1
 	var _what_do	= argument2
@@ -242,8 +242,8 @@ function sc_logging_state_powered_(argument0, argument1, argument2, argument3, a
 
 ///@arg recipient_id
 ///@arg	txt_state_name
-function sc_logging_state_over(argument0, argument1){}
-function sc_logging_state_over_(argument0, argument1){
+
+function sc_logging_state_over(argument0, argument1){
 	var _subject	= argument0
 	var _state		= argument1
 
@@ -258,8 +258,8 @@ function sc_logging_state_over_(argument0, argument1){
 	ds_list_add(log_battle, _log)
 }
 
-function sc_logging_experience (_object, _value, _event) {}
-function sc_logging_experience_(_object, _value, _event) {
+
+function sc_logging_experience(_object, _value, _event) {
 	var _log = ""
 	if is_undefined(_value)
 		_value = 0
@@ -300,8 +300,8 @@ function sc_logging_experience_(_object, _value, _event) {
 	ds_list_add(log_battle, _log)
 }
 
-function sc_logging_info (_text) {}
-function sc_logging_info_(_text) {
+
+function sc_logging_info(_text) {
 	var _log = "[" + date_time_string(date_current_datetime())+ "]: " + _text
 	ds_list_add(log_battle, _log)
 }

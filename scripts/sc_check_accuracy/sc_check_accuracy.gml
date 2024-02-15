@@ -27,6 +27,7 @@ if ds_list_find_index(_obj.list_missed, _tg_p) = -1 {
 		break
 	}
 	_rate_coeff += _tg_p.dodge_mod // !!! dodge_mod reduce dodge 
+	if _action[? "lvlup_mod"] > 0 show_message(string((_action[? "lvlup_mod"])))
 	var _real_accur = _action[? "accuracy"] + (_action[? "lvlup_mod"])
 	var _hit_rate = _real_accur * (_rate_coeff + _obj.accuracy_mod)
 	var _random = random(1.0)
