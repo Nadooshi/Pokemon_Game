@@ -176,7 +176,7 @@ function sc_player_attack_set() {
 	}
 	for (var i=0; i<ds_list_size(states); i++) // apple state 'revenge' for master pokemon
 		if states[| i].object_index = ob_state_revenge 
-		if _a_map[? "affect"] = _ATTACK_AFFECT.enemy {
+		if (_a_map[? "affect"] && _ATTACK_AFFECT.enemy) > 0 {
 			var _newdmg = health_max - health_cur
 			var _coef = _newdmg / _a_map[? "damage"]
 			if is_nan(_coef) _coef = 1
@@ -185,6 +185,8 @@ function sc_player_attack_set() {
 			
 			_a_map[? "dmg_material"] = _a_map[? "dmg_material"] * _coef
 			_a_map[? "dmg_element"]  = _a_map[? "dmg_element"]  * _coef
+			var _val_txt = "looking forward to revenge by " + string(_newdmg) +"."
+			sc_logging_state_cursed(id, _a_map[? "active"][? "name"], _val_txt)
 		}
 	with attack_ob_id {
 		ds_map_copy(action, _a_map)

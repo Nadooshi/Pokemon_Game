@@ -25,7 +25,7 @@ function sc_save_battle_result() {
 							_a_map[? "level"]++
 							_a_map[? "levelup"] = true
 							if is_undefined(_p_action[? "pa_lvlup_mod"]) _p_action[? "pa_lvlup_mod"] = 0
-							_p_action[? "pa_lvlup_mod"] += 0.01 // modificator in % for any stats and buffes
+							_a_map[? "lvlup_mod"] += 0.01 // modificator in % for any stats and buffes
 						} else {
 							// border max exp with nextlvl_exp 
 							_a_map[? "battle_exp"] = _result.nextlvl_exp

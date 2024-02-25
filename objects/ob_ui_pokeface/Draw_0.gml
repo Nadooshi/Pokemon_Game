@@ -19,7 +19,7 @@ for (var i=0; i<ds_list_size(pokemon_id.states); i++) {
 	if sc_does_exist(_state, undefined, "'_state' in Draw") {
 		var _xx = x + (_state.sprite_width * 0.5 * i) - states_w * 0.5
 		var _x = _xx - _state.sprite_width * 0.5
-		draw_sprite_ext(_state.sprite_index, _state.image_index, _x, states_y, 0.15, 0.15, 0, c_white, 1)
+		draw_sprite_ext(_state.sprite_index, _state.image_index, _x, states_y, 0.1, 0.1, 0, c_white, 1)
 	}
 }
 var sp_sz = sprite_get_width(sp_elemental) * 0.09

@@ -105,6 +105,8 @@ function sc_apply_state() {
 				name = ds_map_find_value(_action[? "active"], "name");
 				action = ds_map_create() // без этой строчки происходят неведовые вещи. Вылетает из-за пустого action
 				ds_map_copy(action, _action);
+				if is_undefined(_action[? "lvlup_mod"])
+					ds_map_add(_action, "lvlup_mod", 0)
 			}
 		}
 		ds_list_add(states, _state_inst)

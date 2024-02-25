@@ -1,7 +1,4 @@
-/// @arg object
-/// @arg event
-/// @arg value
-/// @arg attacking_pokemon_id
+
 function sc_gain_exp(_object, _event, _value, _context) {
 	var _pokemon = _object
 	var _action = _object

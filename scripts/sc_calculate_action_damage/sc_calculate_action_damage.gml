@@ -128,10 +128,8 @@ function sc_calculate_action_damage(_action, p_id_target, _p_attack) {
 		}
 		// apply state 'revenge' for action
 		if _abil[? "state"] = _ABILITY_STATE.revenge{
-			if is_like(_p_attack.object_index, ob_player.object_index)
+			if is_like(_p_attack.object_index, ob_player)
 				potential_damage = _p_attack.health_max - _p_attack.health_cur
-			if is_like(_p_attack.object_index, ob_damage_area.object_index)
-				potential_damage = _p_attack.pokemon_id.health_max - _p_attack.pokemon_id.health_cur			
 			var _val_txt = "looking forward to revenge by " + string(potential_damage) +"."
 			sc_logging_state_cursed(_p_attack, _abil[? "name"], _val_txt)
 		}

@@ -7,6 +7,7 @@ if not instance_exists(pokemon_id){
 
 
 timeout = frames_rate * ds_map_find_value(action[? "active"], "state_time");
+timeout *= 1 + action[?"lvlup_mod"]
 trainer = pokemon_id.trainer
 pokemon_id.trainer = pokemon_id_attack.trainer
 

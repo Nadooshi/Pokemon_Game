@@ -6,6 +6,7 @@ if not instance_exists(pokemon_id){
 }
 
 var _t = ds_map_find_value(action[? "active"], "state_time");
+_t *= 1 + action[? "lvlup_mod"]
 hit_count = _t * 2
 
 alarm[0] = period;

@@ -22,7 +22,7 @@ onDamage = function (_dmg, _damaged_player_id, _action, _pokemon_id_attack, _sta
 		stun_active[? "state"] = _ABILITY_STATE.stun
 		stun_active[? "in_state"] = _ABILITY_STATE.none
 		stun_active[? "biome"] = _ELEMENTAL.none
-		stun_active[? "state_time"] = 6 // 3 sec
+		stun_active[? "state_time"] = 6 * (1 + _action[? "lvlup_mod"]) // 3 sec * lvl up
 		stun_action[? "active"] = stun_active
 		with _pokemon_id_attack
 			sc_apply_state(ob_state_stun, 0, _damaged_player_id, stun_action);

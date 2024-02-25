@@ -29,10 +29,10 @@ function sc_process_courage(mod_boost) {
 			_fr_force += (_tg.pokemon_map[? "rating"] + _tg.pokemon_map[? "level"] + _tg.health_cur) * _rd
 		}
 	}
-	var _mod_courage = (_fr_force + _u_force - _en_force) / _u_force + (0.06 * power_cur)
-	_mod_courage *= mod_boost
+	var _mod_courage = ((_fr_force + _u_force - _en_force)/ _u_force) * (power_cur * 0.01) * mod_boost
 	_result = _mod_courage
 	
+	fear_cur *= 0.99
 	return _result
 
 }
